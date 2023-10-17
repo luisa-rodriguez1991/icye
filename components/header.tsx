@@ -26,7 +26,7 @@ export default function Header({navigation}) {
         <div className=" flex flex-1 justify-end">
 
         <a href="#" className="hidden lg:flex text-sm font-semibold leading-6 text-white">
-            EN ES 
+            EN ES FR
           </a>
         <div className="flex lg:hidden">
             <button
