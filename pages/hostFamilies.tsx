@@ -1,9 +1,9 @@
 import Layout from "@/components/layout";
 
-export default function About() {
+export default function Hostfamilies() {
   return (
     <Layout>
-esto es about
+esto es Host families
     </Layout>
    
   )

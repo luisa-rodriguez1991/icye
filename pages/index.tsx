@@ -1,27 +1,21 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import SubHeader from "@/components/sub-header";
+import Layout from "@/components/layout";
+import { useIntl } from "react-intl";
+import Intro from "@/components/intro"
 
 
-const list = [
-  { name: 'Quienes somos', href: '#' },
-  { name: 'Proyectos', href: '#' },
-  { name: 'Noticias', href: '#' },
-  { name: 'Eventos', href: '#' },
-  { name: 'Pagos', href: '#' },
-  { name: 'Patrocinadores', href: '#' },
-  { name: 'Familias hospederas', href: '#' },
-]
 
 export default function Home() {
+  const intl = useIntl()
+
+
   return (
-    <div>
-      <Header navigation={list}/>      
-      <SubHeader navigation={list}/>      <h1 className="text-4xl">hola</h1>
-
-      <Footer/> 
-
-      </div>
+    
+    <Layout>
+      <Intro/>
+    </Layout>
    
   )
 }

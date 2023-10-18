@@ -1,9 +1,9 @@
 import Layout from "@/components/layout";
 
-export default function About() {
+export default function News() {
   return (
     <Layout>
-esto es about
+esto es news
     </Layout>
    
   )
