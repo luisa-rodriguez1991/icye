@@ -1,4 +1,12 @@
 {
+    "header_item_1":"Quienes somos",
+    "header_item_2":"Proyectos",
+    "header_item_3":"Noticias",
+    "header_item_4":"Eventos",
+    "header_item_5":"Pagos",
+    "header_item_6":"Patrocinadores",
+    "header_item_7":"Familias hospederas",
+    "trust_org":"Con la confianza de las organizaciones más importantes del mundo.",
     "footer_col-1-title":"Asociacion colombiana para el intercambio cultural juvenil",
     "footer_contact":"Contacto",
     "footer_datat":"Tratamiento de datos",
@@ -11,13 +19,7 @@
     "footer_terms":"Terminos y condiciones",
     "footer_news":"Subscríbete a nuestro boletín informativo",
     "footer_news_p":"Ultimos eventos y noticias",
-    "footer_button":"Subscríbete",
-    "header_item_1":"Quienes somos",
-    "header_item_2":"Proyectos",
-    "header_item_3":"Noticias",
-    "header_item_4":"Eventos",
-    "header_item_5":"Pagos",
-    "header_item_6":"Patrocinadores",
-    "header_item_7":"Familias hospederas"
+    "footer_button":"Subscríbete"
+ 
 
 }

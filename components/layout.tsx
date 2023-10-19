@@ -11,7 +11,6 @@ export default function Layout({ children }) {
             <div className="min-h-screen">
                 <Header/>
                 <SubHeader/> 
-                
                 <main>{children}</main>
             </div>
             <Footer/>  

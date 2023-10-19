@@ -1,5 +1,13 @@
 
 {
+    "header_item_1":"About us",
+    "header_item_2":"Projects",
+    "header_item_3":"News",
+    "header_item_4":"Events",
+    "header_item_5":"Pay",
+    "header_item_6":"Sponsors",
+    "header_item_7":"Host families",
+    "trust_org":"Trusted by the worlds most important organizations.",
     "footer_col-1-title":"The Colombian Association for Youth Cultural Exchange",
     "footer_contact":"Contact",
     "footer_datat":"Data treatment",
@@ -12,12 +20,6 @@
     "footer_terms": "Terms and conditions",
     "footer_news":"Subscribe to our newsletter",
     "footer_news_p":"The latest news, articles, and resources, sent to your inbox weekly.",
-    "footer_button":"Subscribe",
-    "header_item_1":"About us",
-    "header_item_2":"Projects",
-    "header_item_3":"News",
-    "header_item_4":"Events",
-    "header_item_5":"Pay",
-    "header_item_6":"Sponsors",
-    "header_item_7":"Host families"
+    "footer_button":"Subscribe"
+    
 }

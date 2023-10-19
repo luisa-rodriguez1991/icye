@@ -8,7 +8,7 @@ export default function SubHeader() {
   const intl = useIntl()
   const {locale} = useRouter()
   return (
-    <header className="bg-white  hidden lg:flex lg:sticky lg:top-0">
+    <header className="bg-white  hidden lg:flex lg:sticky lg:top-0 z-[20]">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex flex-1">
           <div className="hidden lg:flex lg:gap-x-12">

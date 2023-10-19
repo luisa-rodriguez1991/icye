@@ -6,6 +6,7 @@ import Search from './search'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useIntl } from "react-intl";
+import Image from 'next/image'
 
 
 export default function Header() {
@@ -15,13 +16,13 @@ export default function Header() {
   const intl = useIntl()
 
   return (
-    <header className="bg-cyan-600 sticky top-0 lg:static">
+    <header className="bg-accent-2 sticky top-0 lg:static z-[20]">
       <nav className="mx-auto flex max-w-7xl items-center justify-around p-5 lg:px-8" aria-label="Global">
         <div className="flex flex-1 min-w-[55px] justify-start">
           <a href="#" className="-m-1.5 p-1.5 flex">
             <span className="sr-only">Your Company</span>
-            <img className="h-6 w-6 " src="https://tailwindui.com/img/logos/mark.svg?color=red" alt="" />
-            <img className="h-6 w-6 " src="./public/img/icye_logo.png" alt="" />
+            <Image width={45} height={44} className="" src="/img/icon.png" alt="Icono ICYE Colombia" />
+            <Image width={66} height={44} className="hidden lg:flex ml-2" src="/img/logo.png" alt="Logo ICYE Colombia" />
           </a>
         </div>
       
@@ -30,32 +31,31 @@ export default function Header() {
         </div>
         <div className=" flex flex-1 justify-end">
           {locale === "en" ?
-            (<Link locale="es" href="#" className="hidden lg:flex text-sm font-semibold leading-6 text-white">ES</Link>)
+            (<Link locale="es" href="#" className="hidden lg:flex text-sm font-semibold leading-6 text-acent-1">ES</Link>)
             :
-            (<Link locale="en" href="#" className="hidden lg:flex text-sm font-semibold leading-6 text-white">EN</Link>)
+            (<Link locale="en" href="#" className="hidden lg:flex text-sm font-semibold leading-6 text-acent-1">EN</Link>)
           }
         
-        <div className="flex lg:hidden place-content-center min-w-[55px]">
+          <div className="flex lg:hidden place-content-center min-w-[55px]">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-accent-1"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-        
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 left-0 z-10 w-full overflow-y-auto bg-white px-6 py-6">
+        <Dialog.Panel className="fixed inset-y-0 left-0 z-[30] w-full overflow-y-auto bg-white px-6 py-6">
           <div className="flex items-center justify-between">
             <div className="flex flex-1">
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                className="-m-2.5 rounded-md p-2.5 text-accent-1"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
@@ -64,17 +64,16 @@ export default function Header() {
             </div>
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
+              <Image width={45} height={44}
+                src="/img/icon.png"
+                alt="Icono ICYE Colombia"
               />
             </a>
             <div className="flex flex-1 justify-end">
             {locale === "en" ?
-            (<Link locale="es" href="#" className="hidden lg:flex text-sm font-semibold leading-6 text-white">ES</Link>)
+            (<Link locale="es" href="#" className="text-sm font-semibold leading-6 text-accent-1">ES</Link>)
             :
-            (<Link locale="en" href="#" className="hidden lg:flex text-sm font-semibold leading-6 text-white">EN</Link>)
+            (<Link locale="en" href="#" className="text-sm font-semibold leading-6 text-accent-1">EN</Link>)
           }
             </div>
           </div>

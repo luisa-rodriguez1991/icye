@@ -2,8 +2,13 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import SubHeader from "@/components/sub-header";
 import Layout from "@/components/layout";
+import Intro from "@/components/intro";
+import Trust from "@/components/trust";
+import Trajectory from "@/components/trajectory";
+import Culture from "@/components/culture";
 import { useIntl } from "react-intl";
-import Intro from "@/components/intro"
+
+
 
 
 
@@ -15,7 +20,11 @@ export default function Home() {
     
     <Layout>
       <Intro/>
+      <Trust/>
+      <Trajectory/>
+      <Culture/>
     </Layout>
+    
    
   )
 }
