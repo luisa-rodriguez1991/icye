@@ -6,7 +6,14 @@ import Intro from "@/components/intro";
 import Trust from "@/components/trust";
 import Trajectory from "@/components/trajectory";
 import Culture from "@/components/culture";
+import Testimonials from "@/components/testimonials";
+import Plans from "@/components/plans";
+import Hparticipate from "@/components/hparticipate";
+import Faqs from "@/components/faqs";
+import Sponsors from "@/components/sponsors";
+import Calendar from "@/components/calendar";
 import { useIntl } from "react-intl";
+
 
 
 
@@ -22,7 +29,14 @@ export default function Home() {
       <Intro/>
       <Trust/>
       <Trajectory/>
+      <Hparticipate/>
+
       <Culture/>
+      <Testimonials/>
+      <Plans/>
+      <Faqs/>
+      <Sponsors/>
+      <Calendar/>
     </Layout>
     
    
