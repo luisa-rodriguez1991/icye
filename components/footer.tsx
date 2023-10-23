@@ -1,6 +1,6 @@
 import { useIntl } from "react-intl";
 import {Battery0Icon} from "@heroicons/react/24/solid";
-
+import Image from 'next/image'
   
   export default function Footer() {
     const intl = useIntl()
@@ -18,7 +18,13 @@ import {Battery0Icon} from "@heroicons/react/24/solid";
           <div className="grow grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <div className="mt-10 md:mt-0">
                 <div className="mb-5">
-                <img className="h-6 w-6 " src="./public/img/icye_logo.png" alt="" />
+                <div className="flex flex-1 min-w-[55px] justify-start">
+                  <a href="#" className="-m-1.5 p-1.5 flex">
+                    <span className="sr-only">Your Company</span>
+                    <Image width={45} height={44} className="" src="/img/icon.png" alt="Icono ICYE Colombia" />
+                    <Image width={66} height={44} className="hidden lg:flex ml-2" src="/img/logo.png" alt="Logo ICYE Colombia" />
+                  </a>
+                </div>
                 </div>
                   <div>
                     <p className="text-sm leading-6 text-gray-600 hover:text-gray-900">{intl.formatMessage({id:"footer_col-1-title"})}</p>

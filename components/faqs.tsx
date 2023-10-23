@@ -1,3 +1,5 @@
+import { useIntl } from "react-intl";
+
 const faqs = [
     {
       id: 1,
@@ -11,15 +13,15 @@ const faqs = [
   export default function Faqs() {
     
     return (
-      <div className="bg-white">
+      <div className="bg-white py-24">
          <div className="mx-auto max-w-4xl text-center">
             <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
-            Frequently asked questions
+            {/* Frequently asked questions */} Preguntas frecuentes
             </p>
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
           Have a different question and can’t find the answer you’re looking for? Reach out to our support team by{' '}
-            <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+            <a href="#" className="font-semibold text-[#011f7fb3] hover:text-accent-1">
               sending us an email
             </a>{' '}
             and we’ll get back to you as soon as we can.          </p>

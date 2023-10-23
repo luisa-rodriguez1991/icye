@@ -1,11 +1,11 @@
 import Layout from "@/components/layout";
 import Breadcrumb from "@/components/breadcrump";
 
-export default function About() {
+export default function HostFamilies() {
   return (
     <Layout>
-      <Breadcrumb miVariable={"About us"}/>
-esto es about
+       <Breadcrumb miVariable={"Host families"}/>
+      esto es Host families
     </Layout>
    
   )

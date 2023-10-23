@@ -12,10 +12,6 @@ export default function Testimonials() {
     <div className="bg-white pb-16 py-24 sm:pb-24 sm:pt-32 xl:pb-32">
 
 
-
-       
-
-
 <div className="mb-20">
 <div className="mx-auto max-w-4xl text-center ">
             <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">

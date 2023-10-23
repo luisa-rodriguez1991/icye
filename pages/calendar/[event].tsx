@@ -1,9 +1,9 @@
 import Layout from "@/components/layout";
 
-export default function Hostfamilies() {
+export default function Events() {
   return (
     <Layout>
-esto es Host families
+esto es Events
     </Layout>
    
   )

@@ -19,11 +19,11 @@ export default function Header() {
     <header className="bg-accent-2 sticky top-0 lg:static z-[20]">
       <nav className="mx-auto flex max-w-7xl items-center justify-around p-5 lg:px-8" aria-label="Global">
         <div className="flex flex-1 min-w-[55px] justify-start">
-          <a href="#" className="-m-1.5 p-1.5 flex">
+          <Link locale={locale} href="/" className="-m-1.5 p-1.5 flex">
             <span className="sr-only">Your Company</span>
             <Image width={45} height={44} className="" src="/img/icon.png" alt="Icono ICYE Colombia" />
             <Image width={66} height={44} className="hidden lg:flex ml-2" src="/img/logo.png" alt="Logo ICYE Colombia" />
-          </a>
+          </Link>
         </div>
       
         <div className=" flex items-center text-white">
@@ -62,13 +62,13 @@ export default function Header() {
                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link locale={locale} href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <Image width={45} height={44}
                 src="/img/icon.png"
                 alt="Icono ICYE Colombia"
               />
-            </a>
+            </Link>
             <div className="flex flex-1 justify-end">
             {locale === "en" ?
             (<Link locale="es" href="#" className="text-sm font-semibold leading-6 text-accent-1">ES</Link>)
@@ -80,11 +80,13 @@ export default function Header() {
           <div className="mt-6 space-y-2">
               <Link locale={locale} href='/about'className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_1"})}</Link>
               <Link locale={locale} href='/projects'className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_2"})}</Link>
-              <Link locale={locale} href='/news'className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_3"})}</Link>
-              <Link locale={locale} href='/events'className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_4"})}</Link>
+              <Link locale={locale} href='/blog'className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_3"})}</Link>
+              <Link locale={locale} href='/calendar'className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_4"})}</Link>
               <Link locale={locale} href='/pay'className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_5"})}</Link>
+              <Link locale={locale} href='/host-families'className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_7"})}</Link>
               <Link locale={locale} href='/sponsors'className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_6"})}</Link>
-              <Link locale={locale} href='/hostFamilies'className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_7"})}</Link>
+              <Link locale={locale} href='/contact'className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_8"})}</Link>
+
           </div>
         </Dialog.Panel>
       </Dialog>
