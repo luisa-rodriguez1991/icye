@@ -1,6 +1,3 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import SubHeader from "@/components/sub-header";
 import Layout from "@/components/layout";
 import Intro from "@/components/intro";
 import Trust from "@/components/trust";
@@ -13,23 +10,8 @@ import Faqs from "@/components/faqs";
 import Sponsors from "@/components/sponsors";
 import Calendar from "@/components/calendar-events";
 import ListBlog from "@/components/list-blog";
-import ContactContent from "@/components/contact-content";
-
-import { useIntl } from "react-intl";
-
-
-
-
-
-
-
-
-
-
 
 export default function Home() {
-  const intl = useIntl()
-
 
   return (
     
