@@ -102,7 +102,7 @@
 
 
 
-      export default function Blog({showAll}) {
+      export default function Blog({showAll}:any) {
 
         const getFirst3Blogs = blogs.filter((blog) => (blog.id < 4) )
 
