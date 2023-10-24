@@ -3,7 +3,15 @@ import type { AppProps } from 'next/app'
 import {IntlProvider} from 'react-intl'
 import {useRouter} from "next/router";
 
+const languages:any = {
+  en: require('../lang/en.json'),
+  es: require('../lang/es.json')
+};
 
+interface Local {
+  locale:String,
+  defaultLocale: String
+}
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -12,26 +20,11 @@ export default function App({ Component, pageProps }: AppProps) {
   const { locale, defaultLocale }:any = router;
 
 
-
-  const langs:ObjectType = languages;
   
-
-  
-  // Solution 1: When the type of the object is known
-  const temp = langs[locale as keyof ObjectType]
-  
-  // Solution 2: When the type of the object is not known
+  const messages = languages[locale];
 
 
-
-
-
-
-
-  
-
-
-  return <IntlProvider messages={temp} locale={locale} defaultLocale={defaultLocale} >
+  return <IntlProvider messages={messages} locale={locale} defaultLocale={defaultLocale} >
           <Component {...pageProps} />
 </IntlProvider>
 }
