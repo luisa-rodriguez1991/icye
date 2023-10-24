@@ -9,60 +9,60 @@ const meetings = [
     date: 'January 10th, 2022',
     time: '5:00 PM',
     datetime: '2022-01-10T17:00',
-    name: 'Leslie Alexander',
+    name: 'Event title created by ICYE Colombia',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    location: 'Starbucks',
+    location: 'Bogotá',
   },
   {
     id: 2,
     date: 'January 10th, 2022',
     time: '5:00 PM',
     datetime: '2022-01-10T17:00',
-    name: 'Leslie Alexander',
+    name: 'Event title created by ICYE Colombia',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    location: 'Starbucks',
+    location: 'Bogotá',
   },
   {
     id: 3,
     date: 'January 10th, 2022',
     time: '5:00 PM',
     datetime: '2022-01-10T17:00',
-    name: 'Leslie Alexander',
+    name: 'Event title created by ICYE Colombia',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    location: 'Starbucks',
+    location: 'Bogotá',
   },
   {
     id: 4,
     date: 'January 10th, 2022',
     time: '5:00 PM',
     datetime: '2022-01-10T17:00',
-    name: 'Leslie Alexander',
+    name: 'Event title created by ICYE Colombia',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    location: 'Starbucks',
+    location: 'Bogotá',
   },
   {
     id: 5,
     date: 'January 10th, 2022',
     time: '5:00 PM',
     datetime: '2022-01-10T17:00',
-    name: 'Leslie Alexander',
+    name: 'Event title created by ICYE Colombia',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    location: 'Starbucks',
+    location: 'Bogotá',
   },
   {
     id: 6,
     date: 'January 10th, 2022',
     time: '5:00 PM',
     datetime: '2022-01-10T17:00',
-    name: 'Leslie Alexander',
+    name: 'Event title created by ICYE Colombia',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    location: 'Starbucks',
+    location: 'Bogotá',
   },
   // More meetings...
 ]
@@ -189,7 +189,8 @@ export default function Calendar({showAll}) {
 
 
   return (
-    <div className='mx-auto max-w-2xl py-24 '>
+   <div className='bg-white'>
+     <div className='mx-auto max-w-2xl py-24 '>
       <h2 className="text-base font-semibold leading-6 text-gray-900"></h2>
       <div className="mx-auto max-w-4xl text-center ">
             <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
@@ -205,5 +206,6 @@ export default function Calendar({showAll}) {
         </ol> 
       </div>
     </div>
+   </div>
   )
 }

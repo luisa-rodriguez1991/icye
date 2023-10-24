@@ -14,7 +14,7 @@ export default function Trajectory() {
             <div className="basis-12/12 lg:basis-6/12 flex items-center">
                 <div className=" flex flex-col">
                     <div className="flex">
-                        <div className="text-base  leading-7 text-gray-500 bg-accent-2 rounded-3xl px-6 py-1">Trayectoria & colavoracion</div>
+                        <div className="text-base  leading-7 text-gray-500 bg-accent-2 rounded-3xl px-6 py-1">Trayectoria & colaboración</div>
                     </div>
 
                     

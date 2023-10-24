@@ -19,7 +19,8 @@ export default function ContactContent() {
 
     
 
-    <div className="bg-white mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32 relative">
+    <div className="bg-white ">
+    <div className="mx-auto max-w-7xl px-6 pb-8   lg:px-8 relative">
       <div className="lg:absolute lg:top-0 lg:bottom-0 lg:left-1/2 lg:right-1">
         <img
           className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-[70%]"
@@ -27,17 +28,17 @@ export default function ContactContent() {
           alt=""
         />
       </div>
-      <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-24">
+      <div className="pb-24  sm:pb-32 sm:pb-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pb-24">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-4xl font-bold tracking-tight text-accent-1">
-              Let's work together
+            <h2 className="text-4xl font-bold tracking-tight text-accent-1 pt-16 lg:pt-0">
+              Contact
             </h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
               Proin volutpat consequat porttitor cras nullam gravida at orci
               molestie a eu arcu sed ut tincidunt magna.
             </p>
-            <form action="#" method="POST" className="mt-16 py-24">
+            <form action="#" method="POST" className="mt-16 pb-24">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
                   <label
@@ -144,6 +145,8 @@ export default function ContactContent() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+      </div>
+    
   );
 }

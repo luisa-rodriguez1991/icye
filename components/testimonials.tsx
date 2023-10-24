@@ -58,7 +58,7 @@ export default function Testimonials() {
             </blockquote>
             <figcaption className="mt-8 text-base">
               <div className="font-semibold text-gray-900">Judith Black</div>
-              <div className="mt-1 text-gray-600">CEO of Workcation</div>
+              <div className="mt-1 text-gray-600">Volunteer Germany</div>
             </figcaption>
           </figure>
         </div>

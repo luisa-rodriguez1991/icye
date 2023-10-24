@@ -7,7 +7,6 @@ export default function Contact() {
     <Layout>
       <Breadcrumb miVariable={"Contact"}/>
       <ContactContent/>
-esto es about
     </Layout>
    
   )

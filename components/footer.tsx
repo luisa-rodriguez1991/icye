@@ -33,20 +33,37 @@ import Image from 'next/image'
                     <ul role="list" className="mt-6 flex gap-3">
                         <li>
                           <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                          <Battery0Icon className="h-8 w-8 text-black" aria-hidden="true" />
+                           <img
+                            className="col-span-2 max-h-8 w-auto object-contain lg:col-span-1 text-accent-1"
+                            src="/img/facebook.svg"
+                            alt="Reform"
+                            width={158}
+                            height={48}
+                        />
 
                           </a>
                         </li>
                         <li>
                           <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                          <Battery0Icon className="h-8 w-8 text-black" aria-hidden="true" />
+                           <img
+                            className="col-span-2 max-h-8 w-auto object-contain lg:col-span-1 text-accent-1"
+                            src="/img/twitterx.svg"
+                            alt="Reform"
+                            width={158}
+                            height={48}
+                        />
 
                           </a>
                         </li>
                         <li>
                           <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                          <Battery0Icon className="h-8 w-8 text-black" aria-hidden="true" />
-
+                           <img
+                            className="col-span-2 max-h-8 w-auto object-contain lg:col-span-1 text-accent-1"
+                            src="/img/instagram.svg"
+                            alt="Reform"
+                            width={50}
+                        />
+ 
                           </a>
                         </li>
                     </ul>
@@ -114,12 +131,12 @@ import Image from 'next/image'
                   autoComplete="email"
                   required
                   className="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
-                  placeholder="Enter your email"
+                  placeholder={intl.formatMessage({id:"news_text"})}
                 />
                 <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
                   <button
                     type="submit"
-                    className="flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="flex w-full items-center justify-center rounded-md bg-accent-1 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     {intl.formatMessage({id:"footer_button"})}
                   </button>
