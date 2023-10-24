@@ -48,7 +48,7 @@ export default function Header() {
             (<Link locale="en" href="#" className="flex font-semibold text-acent-1">EN</Link>)
           }
        
-          <Link locale={locale} href="#" title="Como participar" className="ml-4 fixed top-auto bottom-0 left-0 rounded-[0px] lg:rounded-[40px] w-full lg:static text-center  lg:w-auto bg-accent-1 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-2 hover:text-accent-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          <Link locale={locale} href="#" title="Como participar" className="lg:ml-4 fixed top-auto bottom-0 left-0 rounded-[0px] lg:rounded-[40px] w-full lg:static text-center  lg:w-auto bg-accent-1 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-2 hover:text-accent-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
             ¿Como participar?
           </Link>  
         </div>
