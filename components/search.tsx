@@ -1,3 +1,4 @@
+import {MagnifyingGlassIcon} from "@heroicons/react/24/solid";
 
 /*
   This example requires some changes to your config:
@@ -15,8 +16,10 @@
 */
 export default function Search() {
   return (
-    <div>
-      <div className="relative flex items-center">
+    <div >
+      <MagnifyingGlassIcon className="text-accent-1 h-6 w-6"/>
+
+      {/* <div className="relative flex items-center">
         <input
           placeholder="Buscar"
           type="text"
@@ -29,7 +32,7 @@ export default function Search() {
             ⌘K
           </kbd>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -122,6 +122,7 @@ export default function Calendar({showAll}) {
   const first3 = getFirst3Meetings.map((meeting) =>  (
 
     <li key={meeting.id} className="relative flex space-x-6 py-6 xl:static bg-accent-2 my-2">
+      
             <img src={meeting.imageUrl} alt="" className="h-14 w-14 flex-none rounded-full mx-4" />
             <div className="flex-auto ">
               <h3 className="pr-10 font-semibold text-gray-900 xl:pr-0">{meeting.name}</h3>

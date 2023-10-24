@@ -1,5 +1,4 @@
 import { useIntl } from "react-intl";
-import {Battery0Icon} from "@heroicons/react/24/solid";
 import Image from 'next/image'
   
   export default function Footer() {
