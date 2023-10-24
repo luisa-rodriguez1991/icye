@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header className="bg-accent-2 sticky top-0  z-[20]">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 gap-4 h-20" aria-label="Global">
-        <div className="flex min-w-[45px] lg:min-w-[120px] justify-start mr-2">
+        <div className="flex min-w-[45px] lg:min-w-[120px] justify-start">
           <Link locale={locale} href="/" className="flex">
             <span className="sr-only">Your Company</span>
             <Image width={45} height={44} className="" src="/img/icon.png" alt="Icono ICYE Colombia" />
@@ -28,11 +28,11 @@ export default function Header() {
     
         <div className="flex flex-row overflow-x-auto">
               
-              <Link locale={locale} href='/about'className="whitespace-nowrap  block rounded-lg px-3 py-2 text-md font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_1"})}</Link>
-              <Link locale={locale} href='/projects'className=" whitespace-nowrap  block rounded-lg px-3 py-2 text-md font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_2"})}</Link>
-              <Link locale={locale} href='/blog'className="whitespace-nowrap   block rounded-lg px-3 py-2 text-md font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_3"})}</Link>
-              <Link locale={locale} href='/calendar'className=" whitespace-nowrap  block rounded-lg px-3 py-2 text-md font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_4"})}</Link>
-              <Link locale={locale} href='/contact'className="whitespace-nowrap   block rounded-lg px-3 py-2 text-md font-semibold leading-7 text-gray-900 hover:bg-gray-50">{intl.formatMessage({id:"header_item_8"})}</Link>
+              <Link locale={locale} href='/about'className="whitespace-nowrap  block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_1"})}</Link>
+              <Link locale={locale} href='/projects'className=" whitespace-nowrap  block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_2"})}</Link>
+              <Link locale={locale} href='/blog'className="whitespace-nowrap   block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_3"})}</Link>
+              <Link locale={locale} href='/calendar'className=" whitespace-nowrap  block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_4"})}</Link>
+              <Link locale={locale} href='/contact'className="whitespace-nowrap   block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_8"})}</Link>
           
         </div>
      
