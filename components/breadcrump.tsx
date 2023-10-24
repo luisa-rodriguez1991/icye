@@ -2,7 +2,7 @@ import { HomeIcon } from '@heroicons/react/20/solid'
 
 
 
-export default function Breadcrumb({miVariable}) {
+export default function Breadcrumb({miVariable}:any) {
 
  
   return (
