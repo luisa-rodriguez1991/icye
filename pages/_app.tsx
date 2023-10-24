@@ -12,14 +12,15 @@ export default function App({ Component, pageProps }: AppProps) {
 
 
   const router = useRouter()
-  const { locale, defaultLocale } = router;
+  const { locale, defaultLocale }:any = router;
+
+
+  
   const messages = languages[locale];
 
 
   return <IntlProvider messages={messages} locale={locale} defaultLocale={defaultLocale} >
-  {/* <PayPalScriptProvider options={initialOptions}> */}
           <Component {...pageProps} />
-  {/* </PayPalScriptProvider> */}
 </IntlProvider>
 }
 
