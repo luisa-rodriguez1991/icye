@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 
-export default function Button({link,text,title}) {
+export default function Button({link,text,title}:any) {
 
   const router = useRouter();
   const {locale} = router
