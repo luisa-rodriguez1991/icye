@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <header className="bg-accent-2 sticky top-0  z-[20]">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 gap-4 h-20" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 gap-3 h-20" aria-label="Global">
         <div className="flex min-w-[45px] lg:min-w-[120px] justify-start">
           <Link locale={locale} href="/" className="flex">
             <span className="sr-only">Your Company</span>
