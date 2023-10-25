@@ -2,6 +2,7 @@ import {
   CalendarIcon,
   MapPinIcon,
 } from '@heroicons/react/20/solid'
+import { useIntl } from 'react-intl'
 
 const meetings = [
   {
@@ -119,6 +120,8 @@ export default function Calendar({showAll}:any) {
 
   const getFirst3Meetings = meetings.filter((meeting) => (meeting.id < 4) )
 
+  const intl = useIntl()
+
   const first3 = getFirst3Meetings.map((meeting) =>  (
 
     <li key={meeting.id} className="relative flex space-x-6 py-6 xl:static bg-accent-2 my-2">
@@ -195,7 +198,7 @@ export default function Calendar({showAll}:any) {
       <h2 className="text-base font-semibold leading-6 text-gray-900"></h2>
       <div className="mx-auto max-w-4xl text-center ">
             <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
-            Upcoming meetings
+            {intl.formatMessage({id:"calendar_title"})}
             </p>
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">

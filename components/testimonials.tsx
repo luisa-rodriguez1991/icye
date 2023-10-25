@@ -15,7 +15,7 @@ export default function Testimonials() {
 <div className="mb-20">
 <div className="mx-auto max-w-4xl text-center ">
             <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
-             Testimonios
+             {intl.formatMessage({id:"testimonial_title"})}
             </p>
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">

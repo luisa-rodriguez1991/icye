@@ -1,5 +1,6 @@
 import { CheckIcon } from '@heroicons/react/24/solid'
 import {Battery0Icon} from "@heroicons/react/24/solid";
+import { useIntl } from 'react-intl';
 
 const incentives = [
   {
@@ -20,6 +21,9 @@ const incentives = [
   },
 ]
 export default function HowToParticipate() {
+  
+  const intl = useIntl()
+
   return (
     <div className="bg-accent-2">
       <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
@@ -28,7 +32,7 @@ export default function HowToParticipate() {
             <div className="text-center">
               <div className="mx-auto max-w-4xl text-center">
               <p className="mb-24 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
-              ¿Como participar?
+               {intl.formatMessage({id:"how_to_participate_title"})}
               </p>
             </div>
             </div>

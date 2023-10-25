@@ -12,7 +12,7 @@ export default function Sponsors() {
 
        
             <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
-             Organizaciones Aliadas
+              {intl.formatMessage({id:"sponsors_title"})}
             </p>
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">

@@ -3,10 +3,56 @@
     "header_item_2":"Proyectos",
     "header_item_3":"Blog",
     "header_item_4":"Eventos",
-    "header_item_5":"Pagos",
-    "header_item_6":"Patrocinadores",
-    "header_item_7":"Familias hospederas",
     "header_item_8":"Contacto",
+    "header_button":"¿Como participar?",
+
+    "intro_title":" Programa de intercambio y voluntariado",
+    "intro_paragraph":"vive la mejor experiencia de tu vida durante un año en el extranjero.",
+
+    "trajectory_sub_title":"Trayectoria & colaboración",
+    "trajectory_title":"Mas de 40 años cambiando vidas de jóvenes",
+    "trajectory_paragraph":"ICYE Colombia es miembro de la federación internacional de ICYE, fundada hace más de 70 años y que tiene su sede en Berlin, Alemania. Año tras año hemos facilitado a jóvenes, colombianos y extranjeros, el vivir una experiencia en nuestros diferentes programas: Intercambio, Voluntariado y EVS/ESC.",
+
+    "how_to_participate_title":"¿Como participar?",
+
+    "culrute_sub_title":"INTERCAMBIO O VOLUNTARIADO",
+    "culrute_title":"Descubre una nueva cultura",
+    "culrute_paragraph":"Tanto el Intercambio como el Voluntariado te permitirán",
+
+    "testimonial_title":" Testimonios",
+
+    "plans_title":"Nuestros Programas",
+    "plans_title_plan":"INTERCAMBIO ICY",
+    "plans_paragraph":"1 Año en alguno de 42 países miembros que incluye:",
+    "plans_button":"Quiero inscribirme",
+    "plans_including1":"Proceso de Preparación en Colombia",
+    "plans_including2":"Seguro Médico y de Vida",
+    "plans_including3":"Hospedaje y Alimentación",
+    "plans_including4":"Dinero de Bolsillo Mensual",
+    "plans_including5":"Campamentos, Encuentros y Actividades",
+    "plans_including6":"Curso Básico de Idioma",
+    "plans_including7":"Costos Administrativos",
+    "plans_including8":"Reunión de Retorno",
+    "plans_including9":"Febrero y Agosto",
+    "plans_including10":"18 a 26 años (Excepciones Posibles)",
+    "plans_including11":" Hospedar un Extranjero",
+
+
+    "faqs_title":"Preguntas frecuentes",
+    "faqs_paragraph":"Tienes una pregunta diferente y no puedes encontrar la respuesta que estás buscando? Ponte en contacto con nuestro equipo de soporte",
+    "faqs_in_paragraph":"Enviándonos un correo",
+    "faqs_paragraph+":"y te responderemos tan pronto como sea posible.",
+
+    "sponsors_title":"Organizaciones Aliadas",
+
+    "calendar_title":"Próximas reuniones",
+
+    "about_us_title":"Nosotros",
+    "about_us_mission":"Nuestra misión",
+    "about_us_vision":"Nuestra visión",
+    "about_us_team":"Nuestro equipo",
+
+
     "trust_org":"Con la confianza de las organizaciones más importantes del mundo.",
     "footer_col-1-title":"Asociacion colombiana para el intercambio cultural juvenil",
     "footer_contact":"Contacto",

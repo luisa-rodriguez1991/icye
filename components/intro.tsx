@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Button from './button'
+import { useIntl } from 'react-intl'
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -12,6 +13,7 @@ const navigation = [
 ]
 
 export default function Intro() {
+  const intl = useIntl()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -22,10 +24,10 @@ export default function Intro() {
               <div className="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
                     <h1 className="text-4xl font-bold tracking-tight text-accent-1 sm:text-6xl">
-                    Programa de intercambio y voluntariado
+                      {intl.formatMessage({id:"intro_title"})}
                     </h1>
                     <p className="mt-6 text-lg leading-8 text-gray-800">
-                        vive la mejor experiencia de tu vida durante un año en el extranjero.
+                        {intl.formatMessage({id:"intro_paragraph"})}
                     </p>
                     <div className="mt-10 flex items-center gap-x-6">
                     <Button title="Como participar en ICYE" link="#" text="¿Como participar?"/>
