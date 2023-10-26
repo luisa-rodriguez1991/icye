@@ -10,13 +10,20 @@
     "header_item_8":"Contact",
     "header_button":"How to participate?",
 
+    "breadcrumb_contact":"Contact",
+    "breadcrumb_blog":"Blog",
+    "breadcrumb_events":"Events",
+    "breadcrumb_about":"About us",
+    "breadcrumb_projects":"Projects",
+
 
     "intro_title":"Exchange and Volunteer Programs",
-    "intro_paragraph":"Live the best experience of your life for a year abroad.",
+    "intro_paragraph":"Live the best experience of your life for a year abroad.Live the best experience of your life for a year abroad.Live the best experience of your life for a year abroad.",
 
     "trajectory_sub_title":"Trayectory & Collaboration",
     "trajectory_title":"More than 40 years changing the lives of young people.",
     "trajectory_paragraph":"ICYE Colombia is a member of the international federation of ICYE, founded over 70 years ago and headquartered in Berlin, Germany. Year after year, we have provided young people, both Colombians and foreigners, with the opportunity to have an experience in our various programs: Exchange, Volunteering, and EVS/ESC.",
+    "trajectory_button":"More about us",
 
     "how_to_participate_title":"How to participate ?",
 
@@ -26,10 +33,18 @@
 
     "testimonial_title":" Personal Experiencess",
 
+
+    "how_to_participate_sub_title1": "Online Registration",
+    "how_to_participate_paragraph1": "Register using the button at the end of the description for each program below and read the document we will send you.",
+    "how_to_participate_sub_title2": "1-on-1 Interview",
+    "how_to_participate_paragraph2": "You will receive a link to schedule a personalized appointment where we will address all your questions and explain what comes next.",
+    "how_to_participate_sub_title3": "Allocation of Slot",
+    "how_to_participate_paragraph3": "Once everything is clear, we will request $50,000 to initiate the administrative process, sign some documents, and secure your slot.",
+
     "plans_title":"Our Programs ",
     "plans_title_plan":"ICY EXCHANGE",
     "plans_paragraph":"1 Year in one of 42 member countries, including:",
-    "plans_button": "I want to register",
+    "plans_button": "Sing up",
     "plans_including1":"Preparation Process in Colombia",
     "plans_including2":"Medical and Life Insurance",
     "plans_including3":"Accommodation and Meals",
@@ -49,7 +64,7 @@
 
     "sponsors_title":"Allied Organizations",
 
-    "calendar_title":"Upcoming meetings",
+    "calendar_title":"Events",
 
     "about_us_title":"About us",
     "about_us_mission":" Our mission",
@@ -72,6 +87,18 @@
     "footer_news":"Subscribe to our newsletter",
     "news_text":"Please enter your email",
     "footer_news_p":"The latest news, articles, and resources, sent to your inbox weekly.",
-    "footer_button":"Subscribe"
+    "footer_button":"Subscribe",
     
+    "contact_content_title": "Contact",
+    "contact_form_firstname":"First name",
+    "contact_form_lastname":"Last name",
+    "contact_form_email":"Email",
+    "contact_form_phone":"Phone",
+    "contact_form_phone_optional":"Optional",
+    "contact_form_hcwh":"How can we help you?",
+    "contact_form_hcwh_size":"Max 500 characters",
+
+    "project_button":"View the project",
+    "projects_title":"Projects"
+
 }

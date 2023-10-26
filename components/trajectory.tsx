@@ -23,7 +23,7 @@ export default function Trajectory() {
                     {intl.formatMessage({id:"trajectory_paragraph"})}
                     </p>
                     <div className="flex mt-6 ">
-                    <Button title="Como participar en ICYE" link="#" text="¿Quienes somos?"/>
+                    <Button title={intl.formatMessage({id:"trajectory_button"})} link="/about" text={intl.formatMessage({id: "trajectory_button"})}/>
                     </div>
                 </div>
             </div>        

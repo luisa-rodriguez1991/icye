@@ -194,7 +194,7 @@ export default function Calendar({showAll}:any) {
 
   return (
    <div className='bg-white'>
-     <div className='mx-auto max-w-2xl py-24 '>
+     <div className='mx-auto max-w-2xl py-4 '>
       <h2 className="text-base font-semibold leading-6 text-gray-900"></h2>
       <div className="mx-auto max-w-4xl text-center ">
             <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">

@@ -6,13 +6,21 @@
     "header_item_8":"Contacto",
     "header_button":"¿Como participar?",
 
+    "breadcrumb_contact":"Contacto",
+    "breadcrumb_blog":"Blog",
+    "breadcrumb_events":"Eventos",
+    "breadcrumb_about":"Nosotros",
+    "breadcrumb_projects":"Projectos",
+
     "intro_title":" Programa de intercambio y voluntariado",
-    "intro_paragraph":"vive la mejor experiencia de tu vida durante un año en el extranjero.",
+    "intro_paragraph":"vive la mejor experiencia de tu vida durante un año en el extranjero.vive la mejor experiencia de tu vida durante un año en el extranjero.vive la mejor experiencia de tu vida durante un año en el extranjero.",
 
     "trajectory_sub_title":"Trayectoria & colaboración",
     "trajectory_title":"Mas de 40 años cambiando vidas de jóvenes",
     "trajectory_paragraph":"ICYE Colombia es miembro de la federación internacional de ICYE, fundada hace más de 70 años y que tiene su sede en Berlin, Alemania. Año tras año hemos facilitado a jóvenes, colombianos y extranjeros, el vivir una experiencia en nuestros diferentes programas: Intercambio, Voluntariado y EVS/ESC.",
+    "trajectory_button":"Quienes somos",
 
+    
     "how_to_participate_title":"¿Como participar?",
 
     "culrute_sub_title":"INTERCAMBIO O VOLUNTARIADO",
@@ -20,6 +28,15 @@
     "culrute_paragraph":"Tanto el Intercambio como el Voluntariado te permitirán",
 
     "testimonial_title":" Testimonios",
+
+
+
+    "how_to_participate_sub_title1":"Inscripcion en linea",
+    "how_to_participate_paragraph1":"Inscribete en el botón al final de la descripción de cada programa que aparece más abajo y lee el documento que te enviaremos.",
+    "how_to_participate_sub_title2":"Entrvista 1 a 1",
+    "how_to_participate_paragraph2":"Recibirás un link para que agendes una cita personalizada en la que aclararemos todas tus dudas y te explicaremos lo que sigue.",
+    "how_to_participate_sub_title3":"Asignacion de cupo",
+    "how_to_participate_paragraph3":"Una vez todo este claro, te pediremos $50.000 para comenzar el proceso administrativo, firmaremos algunos documentos y tendrás tu cupo.",
 
     "plans_title":"Nuestros Programas",
     "plans_title_plan":"INTERCAMBIO ICY",
@@ -45,7 +62,7 @@
 
     "sponsors_title":"Organizaciones Aliadas",
 
-    "calendar_title":"Próximas reuniones",
+    "calendar_title":"Eventos",
 
     "about_us_title":"Nosotros",
     "about_us_mission":"Nuestra misión",
@@ -67,7 +84,19 @@
     "footer_news":"Subscríbete a nuestro boletín informativo",
     "news_text":"Ingresa tu email",
     "footer_news_p":"Ultimos eventos y noticias",
-    "footer_button":"Subscríbete"
+    "footer_button":"Subscríbete",
+
+    "contact_content_title": "Contacto",
+    "contact_form_firstname": "Nombre",
+    "contact_form_lastname": "Apellido",
+    "contact_form_email": "Correo electrónico",
+    "contact_form_phone": "Teléfono",
+    "contact_form_phone_optional": "Opcional",
+    "contact_form_hcwh": "¿Cómo podemos ayudarte?",
+    "contact_form_hcwh_size": "Máximo 500 caracteres",
+
+    "project_button":"Conoce el proyecto",
+    "projects_title":"Proyectos"
  
 
 }

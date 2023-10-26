@@ -37,19 +37,57 @@ export default function HowToParticipate() {
             </div>
             </div>
             <div className="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-x-8 gap-y-10 sm:max-w-none lg:grid-cols-3">
-              {incentives.map((incentive) => (
-                <div key={incentive.name} className="text-center sm:flex sm:text-left lg:block lg:text-center">
+
+
+
+
+                 <div className="text-center sm:flex sm:text-left lg:block lg:text-center">
                   <div className="sm:flex-shrink-0">
                     <div className="flow-root">
-                      <img className="mx-auto h-16 w-16 " src={incentive.imageSrc} alt="" />
+                    <img className="mx-auto h-16 w-16 " src='/img/form.svg' alt="" />
                     </div>
-                  </div>
-                  <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
-                    <h3 className="text-xl font-bold text-gray-900">{incentive.name}</h3>
-                    <p className="mt-2  text-gray-600">{incentive.description}</p>
-                  </div>
-                </div>
-              ))}
+                    </div>
+                    <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
+                      <h3 className="text-xl font-bold text-gray-900">{intl.formatMessage({id:"how_to_participate_sub_title1"})}</h3>        
+                      <p className="mt-2  text-gray-600">{intl.formatMessage({id:"how_to_participate_paragraph1"})}</p> 
+                    </div>
+                 </div>     
+                 
+                 <div  className="text-center sm:flex sm:text-left lg:block lg:text-center">
+
+                  <div className="sm:flex-shrink-0">
+                    <div className="flow-root">
+                    <img className="mx-auto h-16 w-16 " src='/img/chat.svg' alt="" />
+                    </div>
+                    </div>
+                    <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
+                      <h3 className="text-xl font-bold text-gray-900">{intl.formatMessage({id:"how_to_participate_sub_title2"})}</h3>        
+                      <p className="mt-2  text-gray-600">{intl.formatMessage({id:"how_to_participate_paragraph2"})}</p>
+                    </div>
+                 
+                 </div>     
+                 
+                 <div className="text-center sm:flex sm:text-left lg:block lg:text-center">
+                      <div className="sm:flex-shrink-0">
+                      <div className="flow-root">
+                      <img className="mx-auto h-16 w-16 " src='/img/like.svg' alt="" />
+                      </div>
+                      </div>
+                      <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
+                        <h3 className="text-xl font-bold text-gray-900">{intl.formatMessage({id:"how_to_participate_sub_title3"})}</h3>        
+                        <p className="mt-2  text-gray-600">{intl.formatMessage({id:"how_to_participate_paragraph3"})}</p>
+                      </div>
+                 
+                 </div>
+
+
+
+
+
+
+
+
+             
             </div>
           </div>
         </div>
@@ -57,3 +95,7 @@ export default function HowToParticipate() {
     </div>
   )
 }
+
+
+
+

@@ -108,7 +108,7 @@
 
         const first3 = getFirst3Blogs.map((blog) =>  (
 
-            <article key={blog.id} className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
+            <article key={blog.id} className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 ">
             <img src={blog.imageUrl} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" />
             <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
             <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
@@ -159,7 +159,7 @@
 
         return (
           <div className="bg-white ">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8 py-4">
             <div className="mx-auto max-w-4xl text-center ">
             <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
             Blog

@@ -62,7 +62,7 @@ export default function Culture() {
 
                     </ul>
                     <div className="flex mt-6 ">
-                    <Button title="Como participar en ICYE" link="#" text="¿Como participar?"/>
+                    <Button title={intl.formatMessage({id:"header_button"})} link="#" text={intl.formatMessage({id:"header_button"})}/>
                     </div>
                 </div>
             </div>        

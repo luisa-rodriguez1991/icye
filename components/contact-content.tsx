@@ -1,3 +1,4 @@
+import { useIntl } from "react-intl";
 import Button from "./button";
 
 /*
@@ -15,12 +16,16 @@ import Button from "./button";
   ```
 */
 export default function ContactContent() {
+
+  const intl = useIntl()
+
+
   return (
 
     
 
     <div className="bg-white ">
-    <div className="mx-auto max-w-7xl px-6 pb-8   lg:px-8 relative">
+    <div className="mx-auto max-w-7xl px-6 pb-8 py-8  lg:px-8 relative">
       <div className="lg:absolute lg:top-0 lg:bottom-0 lg:left-1/2 lg:right-1">
         <img
           className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-[70%]"
@@ -31,8 +36,8 @@ export default function ContactContent() {
       <div className="pb-24  sm:pb-32 sm:pb-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pb-24">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-4xl font-bold tracking-tight text-accent-1 pt-16 lg:pt-0">
-              Contact
+            <h2 className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
+             {intl.formatMessage({id:"contact_content_title"})}
             </h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
               Proin volutpat consequat porttitor cras nullam gravida at orci
@@ -45,7 +50,7 @@ export default function ContactContent() {
                     htmlFor="first-name"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
-                    First name
+                   {intl.formatMessage({id:"contact_form_firstname"})}
                   </label>
                   <div className="mt-2.5">
                     <input
@@ -62,7 +67,7 @@ export default function ContactContent() {
                     htmlFor="last-name"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
-                    Last name
+                 {intl.formatMessage({id:"contact_form_lastname"})}
                   </label>
                   <div className="mt-2.5">
                     <input
@@ -79,7 +84,7 @@ export default function ContactContent() {
                     htmlFor="email"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
-                    Email
+                    {intl.formatMessage({id:"contact_form_email"})}
                   </label>
                   <div className="mt-2.5">
                     <input
@@ -97,10 +102,10 @@ export default function ContactContent() {
                       htmlFor="phone"
                       className="block font-semibold text-gray-900"
                     >
-                      Phone
+                     {intl.formatMessage({id:"contact_form_phone"})}
                     </label>
                     <p id="phone-description" className="text-gray-400">
-                      Optional
+                     {intl.formatMessage({id:"contact_form_phone_optional"})}
                     </p>
                   </div>
                   <div className="mt-2.5">
@@ -120,10 +125,10 @@ export default function ContactContent() {
                       htmlFor="message"
                       className="block text-sm font-semibold leading-6 text-gray-900"
                     >
-                      How can we help you?
+                   {intl.formatMessage({id:"contact_form_hcwh"})}
                     </label>
                     <p id="message-description" className="text-gray-400">
-                      Max 500 characters
+                     {intl.formatMessage({id:"contact_form_hcwh_size"})}
                     </p>
                   </div>
                   <div className="mt-2.5">
@@ -139,7 +144,7 @@ export default function ContactContent() {
                 </div>
               </div>
               <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
-              <Button title="Como participar en ICYE" link="#" text="Send message"/>
+              <Button title="Como participar en ICYE" link="#" text={intl.formatMessage({id:"header_button"})}/>
               </div>
             </form>
           </div>
