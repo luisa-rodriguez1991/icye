@@ -133,10 +133,10 @@ export default function Header() {
 
       
                           <Link locale={locale} href='/about'className="whitespace-nowrap  block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_1"})}</Link>
-              <Link locale={locale} href='/projects'className=" whitespace-nowrap  block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_2"})}</Link>
-              <Link locale={locale} href='/blog'className="whitespace-nowrap   block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_3"})}</Link>
-              <Link locale={locale} href='/calendar'className=" whitespace-nowrap  block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_4"})}</Link>
-              <Link locale={locale} href='/contact'className="whitespace-nowrap   block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_8"})}</Link>
+                          <Link locale={locale} href='/projects'className=" whitespace-nowrap  block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_2"})}</Link>
+                          <Link locale={locale} href='/blog'className="whitespace-nowrap   block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_3"})}</Link>
+                          <Link locale={locale} href='/calendar'className=" whitespace-nowrap  block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_4"})}</Link>
+                          <Link locale={locale} href='/contact'className="whitespace-nowrap   block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900">{intl.formatMessage({id:"header_item_8"})}</Link>
           
 
 
@@ -164,9 +164,9 @@ export default function Header() {
                 {/* Cart */}
                 <div className="ml-4 flow-root ">
                 {locale === "en" ?
-                    (<Link locale="es" href="#" className="flex font-semibold  text-acent-1">ES</Link>)
+                    (<Link locale="es" href="#" className="flex font-semibold  text-acent-1">Español</Link>)
                     :
-                    (<Link locale="en" href="#" className="flex font-semibold text-acent-1">EN</Link>)
+                    (<Link locale="en" href="#" className="flex font-semibold text-acent-1">English</Link>)
                   }
                 </div>
 

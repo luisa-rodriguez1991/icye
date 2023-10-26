@@ -1,5 +1,5 @@
-import Flag from "react-flagpack"
 import { useIntl } from "react-intl"
+import Flag from 'react-world-flags'
 
 export default function Project() {
 
@@ -25,7 +25,8 @@ export default function Project() {
               <div>
                 <div className="flex gap-3 items-center py-3">
                     <div>
-                        BANDERA
+                    <Flag code="co" width="20" height="16"/>
+
                     </div>
                     <h2 className="text-xl font-bold text-white">Workspace Collection</h2>
                 </div>

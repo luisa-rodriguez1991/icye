@@ -34,7 +34,7 @@ import Image from 'next/image'
                           <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                            <img
                             className="col-span-2 max-h-8 w-auto object-contain lg:col-span-1 text-accent-1"
-                            src="/img/facebook.svg"
+                            src="/img/fb.svg"
                             alt="Reform"
                             width={158}
                             height={48}
@@ -45,7 +45,7 @@ import Image from 'next/image'
                         <li>
                           <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                            <img
-                            className="col-span-2 max-h-8 w-auto object-contain lg:col-span-1 text-accent-1"
+                            className="col-span-2  max-h-8 w-auto object-contain lg:col-span-1 text-accent-1"
                             src="/img/twitterx.svg"
                             alt="Reform"
                             width={158}
@@ -57,7 +57,7 @@ import Image from 'next/image'
                         <li>
                           <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                            <img
-                            className="col-span-2 max-h-8 w-auto object-contain lg:col-span-1 text-accent-1"
+                            className="col-span-2 hover:fill-accent-1 max-h-8 w-auto object-contain lg:col-span-1 text-accent-1"
                             src="/img/instagram.svg"
                             alt="Reform"
                             width={50}
