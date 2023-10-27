@@ -1,10 +1,6 @@
 
 
-const tabs = [
 
-    { name: 'Colombia', href: '#', count: '100', current: true },
-    { name: 'Worldwide', count: '200', href: '#', current: false }
-  ]
 
 
 

@@ -10,8 +10,10 @@ import Faqs from "@/components/faqs";
 import Sponsors from "@/components/sponsors";
 import Calendar from "@/components/calendar-events";
 import ListBlog from "@/components/list-blog";
+import { getAllPost, getAllEvents } from "@/lib/api";
+import { GetStaticProps } from "next";
 
-export default function Home() {
+export default function Home({posts, eventsList}) {
 
   return (
     
@@ -25,12 +27,23 @@ export default function Home() {
       <Plans/>
       <Faqs/>
       <Sponsors/>
-      <Calendar showAll={false}/>
+      <Calendar events={eventsList} showAll={false}/>
       <div className="bg-white py-24 sm:py-32">
-        <ListBlog showAll={false}/>
+        <ListBlog posts={posts} showAll={false}/>
       </div>
     </Layout>
     
    
   )
 }
+
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPostsData = await getAllPost("en")
+  const eventsList = await getAllEvents() 
+
+  return {
+      props: {posts: allPostsData, eventsList: eventsList}
+  }
+}
+
