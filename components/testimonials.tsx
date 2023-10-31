@@ -9,7 +9,7 @@ export default function Testimonials({text, Image1, message1, name1,location1}) 
     const intl = useIntl()
 
   return (
-    <div className="bg-white py-6 sm:pb-24 sm:pt-32 xl:pb-32">
+    <div className="bg-white py-6">
 
 
 <div className="mb-20 p-6">

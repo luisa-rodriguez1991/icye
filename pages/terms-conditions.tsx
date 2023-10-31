@@ -14,8 +14,8 @@ export default function Terms() {
 
       <Breadcrumb miVariable={intl.formatMessage({id:"breadcrumb_terms"})}/>
 
-      <div className="bg-white px-6 pb-24 lg:px-8">
-      <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+      <div className="bg-white pb-24">
+      <div className="mx-auto  max-w-4xl sm:px-6 lg:px-8 text-base leading-7 text-gray-700">
         <p className="text-base font-semibold leading-7 text-indigo-600">ICYE</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{intl.formatMessage({id:"breadcrumb_terms"})}</h1>
         <p className="mt-6 text-xl leading-8">

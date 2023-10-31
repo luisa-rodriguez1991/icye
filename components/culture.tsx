@@ -10,7 +10,7 @@ export default function Culture({title, text, item1, item2, item3, item4,}) {
 
   return (
     <div className="relative isolate overflow-hidden bg-white px-5 py-24 sm:py-32 lg:overflow-visible lg:px-0">
-        <div className="flex gap-24 flex-col lg:flex-row mx-auto max-w-7xl  justify-around pt-5 lg:px-8"> 
+        <div className="flex gap-12 lg:gap-24 flex-col lg:flex-row mx-auto max-w-7xl  justify-around pt-5 lg:px-8"> 
             <div className="basis-12/12 lg:basis-6/12 flex w-full justify-center">
                 <Image
                     width={1056}

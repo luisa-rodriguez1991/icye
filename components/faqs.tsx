@@ -15,7 +15,7 @@ const faqs = [
     const intl = useIntl()
     
     return (
-      <div className="bg-white px-5">
+      <div className="bg-accent-2 px-5 py-20 ">
           <div className="mx-auto max-w-4xl text-center ">
             <p className=" text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
             {/* Frequently asked questions */} {intl.formatMessage({id:"faqs_title"})}

@@ -12,8 +12,8 @@ export default function Calendar({text, pageInfo, events, showAll}:any) {
   const intl = useIntl()
   const all = events.map((meeting) =>  (
 
-          <li key={meeting.id} className="relative flex space-x-6 py-6 xl:static bg-accent-2 my-2">
-            <img src={meeting.jetpack_featured_media_url} alt="" className="h-14 w-14 flex-none rounded-full mx-4" />
+          <li key={meeting.id} className="rounded-xl border-accent-1 relative flex space-x-3 p-6 xl:static bg-white my-2">
+            <img src={meeting.jetpack_featured_media_url} alt="" className="h-14 w-14 flex-none rounded-full mx-2 lg:mx-4" />
             <div className="flex-auto ">
               <h3 className="pr-10 font-semibold text-gray-900 xl:pr-0">{meeting.title.rendered}</h3>
                 <dl className="mt-2 flex flex-col text-gray-500 xl:flex-row justify-between">
@@ -47,7 +47,7 @@ export default function Calendar({text, pageInfo, events, showAll}:any) {
   ))
 
   return (
-   <div className='bg-white p-5'>
+   <div className=' p-5 bg-accent-2 py-20'>
      <div className='mx-auto max-w-2xl  '>
       <h2 className="text-base font-semibold leading-6 text-gray-900"></h2>
       <div className="mx-auto max-w-4xl text-center ">
