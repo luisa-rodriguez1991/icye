@@ -9,9 +9,9 @@ export default function Plans ({ text, title1, price1, cyantext1, item1, item2, 
     const intl = useIntl()
 
     return (
-      <div className="bg-white  sm:py-32">
+      <div className="bg-white py-24 sm:py-32">
         <div className="bg-white  ">
-        <div className="py-6 mx-auto max-w-7xl px-6 lg:px-8">
+        <div className=" mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <p className="mt-2 text-4xl font-bold tracking-tight text-w sm:text-5xl text-accent-1">
             {intl.formatMessage({id:"plans_title"})}
@@ -20,7 +20,7 @@ export default function Plans ({ text, title1, price1, cyantext1, item1, item2, 
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 text-accent-2">
           {text}
           </p>
-          <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
+          <div className="isolate py-6 mx-auto mt-4 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
 
         
                 <div>

@@ -6,7 +6,7 @@ export default function Sponsors({text, icon1, icon2, icon3, icon4}) {
     const intl = useIntl()
 
     return (
-        <div className="bg-white py-6 sm:py-32">
+        <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center ">
 
@@ -19,7 +19,7 @@ export default function Sponsors({text, icon1, icon2, icon3, icon4}) {
             {text}
           </p>
         {/* <h2 className=" text-center text-2xl font-bold leading-10 tracking-tight text-accent-1">Organizaciones aliadas</h2> */}
-            <div className="mx-auto mt-20 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10  lg:mx-0 lg:max-w-none lg:grid-cols-4">
+            <div className="mx-auto mt-20 mb-8 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10  lg:mx-0 lg:max-w-none lg:grid-cols-4">
                 <img
                     className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                     src={icon1}

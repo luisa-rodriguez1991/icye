@@ -15,7 +15,7 @@ import Button from "./button";
   }
   ```
 */
-export default function ContactContent() {
+export default function ContactContent({text}) {
 
   const intl = useIntl()
 
@@ -40,8 +40,7 @@ export default function ContactContent() {
              {intl.formatMessage({id:"contact_content_title"})}
             </h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
-              Proin volutpat consequat porttitor cras nullam gravida at orci
-              molestie a eu arcu sed ut tincidunt magna.
+              {text}
             </p>
             <form action="#" method="POST" className="mt-16 pb-24">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

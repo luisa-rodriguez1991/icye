@@ -25,9 +25,9 @@ export default function HowToParticipate({title1, title2, title3, text1, text2, 
   const intl = useIntl()
 
   return (
-    <div className="bg-accent-2">
+    <div className="bg-accent-2 ">
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <div className="rounded-2xl bg-accent-2 px-6 py-16 sm:p-16">
+        <div className="rounded-2xl bg-accent-2 px-5 py-16 sm:p-16">
           <div className="mx-auto max-w-xl lg:max-w-none">
             <div className="text-center">
               <div className="mx-auto max-w-4xl text-center">

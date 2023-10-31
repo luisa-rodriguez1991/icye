@@ -9,10 +9,10 @@ export default function Testimonials({text, Image1, message1, name1,location1}) 
     const intl = useIntl()
 
   return (
-    <div className="bg-white pb-16 py-6 sm:pb-24 sm:pt-32 xl:pb-32">
+    <div className="bg-white py-6 sm:pb-24 sm:pt-32 xl:pb-32">
 
 
-<div className="mb-20">
+<div className="mb-20 p-6">
 <div className="mx-auto max-w-4xl text-center ">
             <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
              {intl.formatMessage({id:"testimonial_title"})}
