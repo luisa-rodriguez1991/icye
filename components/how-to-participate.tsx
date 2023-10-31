@@ -20,7 +20,7 @@ const incentives = [
       "Una vez todo este claro, te pediremos $50.000 para comenzar el proceso administrativo, firmaremos algunos documentos y tendrás tu cupo..",
   },
 ]
-export default function HowToParticipate() {
+export default function HowToParticipate({title1, title2, title3, text1, text2, text3}) {
   
   const intl = useIntl()
 
@@ -48,8 +48,8 @@ export default function HowToParticipate() {
                     </div>
                     </div>
                     <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
-                      <h3 className="text-xl font-bold text-gray-900">{intl.formatMessage({id:"how_to_participate_sub_title1"})}</h3>        
-                      <p className="mt-2  text-gray-600">{intl.formatMessage({id:"how_to_participate_paragraph1"})}</p> 
+                      <h3 className="text-xl font-bold text-gray-900">{title1}</h3>        
+                      <p className="mt-2  text-gray-600">{text1}</p> 
                     </div>
                  </div>     
                  
@@ -61,8 +61,8 @@ export default function HowToParticipate() {
                     </div>
                     </div>
                     <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
-                      <h3 className="text-xl font-bold text-gray-900">{intl.formatMessage({id:"how_to_participate_sub_title2"})}</h3>        
-                      <p className="mt-2  text-gray-600">{intl.formatMessage({id:"how_to_participate_paragraph2"})}</p>
+                      <h3 className="text-xl font-bold text-gray-900">{title2}</h3>        
+                      <p className="mt-2  text-gray-600">{text2}</p>
                     </div>
                  
                  </div>     
@@ -74,8 +74,8 @@ export default function HowToParticipate() {
                       </div>
                       </div>
                       <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
-                        <h3 className="text-xl font-bold text-gray-900">{intl.formatMessage({id:"how_to_participate_sub_title3"})}</h3>        
-                        <p className="mt-2  text-gray-600">{intl.formatMessage({id:"how_to_participate_paragraph3"})}</p>
+                        <h3 className="text-xl font-bold text-gray-900">{title3}</h3>        
+                        <p className="mt-2  text-gray-600">{text3}</p>
                       </div>
                  
                  </div>

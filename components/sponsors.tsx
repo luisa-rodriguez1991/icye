@@ -1,7 +1,7 @@
 import { useIntl } from "react-intl";
 
 
-export default function Sponsors() {
+export default function Sponsors({text, icon1, icon2, icon3, icon4}) {
     
     const intl = useIntl()
 
@@ -16,38 +16,37 @@ export default function Sponsors() {
             </p>
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore velit esse ad. Magnam cupiditate cum ipsam cumque debitis ad, qui mollitia sed maiores dolores omnis, sit vitae corrupti laborum inventore.
-
+            {text}
           </p>
         {/* <h2 className=" text-center text-2xl font-bold leading-10 tracking-tight text-accent-1">Organizaciones aliadas</h2> */}
             <div className="mx-auto mt-20 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10  lg:mx-0 lg:max-w-none lg:grid-cols-4">
                 <img
                     className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                    src="/img/onu.png"
+                    src={icon1}
                     alt="Reform"
-                    width={158}
-                    height={48}
+                    width={150}
+                    height={100}
                 />
                 <img
                     className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                    src="/img/unesco.png"
+                    src={icon2}
                     alt="Tuple"
-                    width={158}
-                    height={48}
+                    width={150}
+                    height={100}
                 />
                 <img
                     className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                    src="/img/erasmus.png"
+                    src={icon3}
                     alt="SavvyCal"
-                    width={158}
-                    height={48}
+                    width={150}
+                    height={100}
                 />
                 <img
                     className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                    src="/img/ccivs.png"
+                    src={icon4}
                     alt="Statamic"
-                    width={158}
-                    height={48}
+                    width={150}
+                    height={100}
                 />
             </div>
         </div>

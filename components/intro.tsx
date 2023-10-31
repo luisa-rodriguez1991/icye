@@ -12,7 +12,7 @@ const navigation = [
   { name: 'Log in', href: '#' },
 ]
 
-export default function Intro() {
+export default function Intro({text,title}) {
   const intl = useIntl()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -24,10 +24,10 @@ export default function Intro() {
               <div className="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
                     <h1 className="text-4xl font-bold tracking-tight text-accent-1 sm:text-6xl">
-                      {intl.formatMessage({id:"intro_title"})}
+                      {title}
                     </h1>
                     <p className="mt-6 text-lg leading-8 text-gray-800">
-                        {intl.formatMessage({id:"intro_paragraph"})}
+                        {text}
                     </p>
                     <div className="mt-10 flex items-center gap-x-6">
                     <Button title={intl.formatMessage({id:"header_button"})} link="#" text= {intl.formatMessage({id:"header_button"})}/>

@@ -1,7 +1,8 @@
 import { useIntl } from "react-intl"
 import Flag from 'react-world-flags'
 
-export default function Project() {
+export default function Project({item}) {
+
 
       const intl = useIntl()
   
@@ -14,8 +15,8 @@ export default function Project() {
           <div className="relative overflow-hidden rounded-lg lg:h-96">
             <div className="absolute inset-0">
               <img
-                src="/img/portada_bg.jpg"
-                alt=""
+                src={item.jetpack_featured_media_url}
+                alt={item.title.rendered}
                 className="h-full w-full object-cover object-center"
               />
             </div>
@@ -25,14 +26,12 @@ export default function Project() {
               <div>
                 <div className="flex gap-3 items-center py-3">
                     <div>
-                    <Flag code="co" width="20" height="16"/>
+                    <Flag code={item.acf.country} width="20" height="16"/>
 
                     </div>
-                    <h2 className="text-xl font-bold text-white">Workspace Collection</h2>
+                    <h2 className="text-xl font-bold text-white">{item.title.rendered}</h2>
                 </div>
-                <p className="mt-1 text-sm text-gray-300">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quos ab, officia, veniam excepturi, reiciendis culpa accusantium ratione libero deleniti nostrum facilis veritatis minus fugit eligendi qui ex ipsum tempora.
-                </p>
+                <div className="mt-1 text-sm text-gray-300" dangerouslySetInnerHTML={{__html:item.content.rendered}} />
               </div>
               <a
                 href="#"

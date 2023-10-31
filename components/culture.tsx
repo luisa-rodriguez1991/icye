@@ -5,7 +5,7 @@ import {CheckIcon} from "@heroicons/react/24/solid";
 import Image from 'next/image'
 
 
-export default function Culture() {
+export default function Culture({title, text, item1, item2, item3, item4,}) {
     const intl = useIntl()
 
   return (
@@ -27,8 +27,8 @@ export default function Culture() {
                     </div>
 
                     
-                    <h1 className="mt-6 text-3xl font-bold tracking-tight text-accent-1 sm:text-4xl">{intl.formatMessage({id:"culrute_title"})}</h1>
-                    <p className="mt-6 text-xl leading-8 text-gray-700">{intl.formatMessage({id:"culrute_paragraph"})}
+                    <h1 className="mt-6 text-3xl font-bold tracking-tight text-accent-1 sm:text-4xl">{title}</h1>
+                    <p className="mt-6 text-xl leading-8 text-gray-700">{text}
                     
                     </p>
                     <ul className="mt-6 text-xl leading-8 text-gray-700">
@@ -36,28 +36,28 @@ export default function Culture() {
                             <div className="w-8 h-8 p-2 bg-accent-2 rounded-[50%] mr-2">
                                 <CheckIcon className="h-4 w-4 text-accent-1" aria-hidden="true" />
                             </div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            {item1}
                         </li>
 
                         <li className="flex item-center mt-3">
                             <div className="w-8 h-8 p-2 bg-accent-2 rounded-[50%] mr-2">
                                 <CheckIcon className="h-4 w-4 text-accent-1" aria-hidden="true" />
                             </div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            {item2}
                         </li>
 
                         <li className="flex item-center  mt-3">
                             <div className="w-8 h-8 p-2 bg-accent-2 rounded-[50%] mr-2">
                                 <CheckIcon className="h-4 w-4 text-accent-1" aria-hidden="true" />
                             </div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            {item3}
                         </li>
 
                         <li className="flex item-center  mt-3">
                             <div className="w-8 h-8 p-2 bg-accent-2 rounded-[50%] mr-2">
                                 <CheckIcon className="h-4 w-4 text-accent-1" aria-hidden="true" />
                             </div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            {item4}
                         </li> 
 
                     </ul>

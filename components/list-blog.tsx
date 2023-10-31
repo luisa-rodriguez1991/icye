@@ -7,7 +7,7 @@ import {getAllPost} from "../lib/api"
 
 
 
-export default function Blog({posts, showAll }:any) {
+export default function Blog({ text, pageInfo, posts, showAll }:any) {
 
   const all = posts.map((post) =>  (
 
@@ -46,7 +46,7 @@ export default function Blog({posts, showAll }:any) {
       </p>
     </div>
     <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore velit esse ad. Magnam cupiditate cum ipsam cumque debitis ad, qui mollitia sed maiores dolores omnis, sit vitae corrupti laborum inventore.
+    {text}
     </p>
         <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         { all }

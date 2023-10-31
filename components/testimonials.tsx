@@ -5,7 +5,7 @@ import {CheckIcon} from "@heroicons/react/24/solid";
 import Image from 'next/image'
 
 
-export default function Testimonials() {
+export default function Testimonials({text, Image1, message1, name1,location1}) {
     const intl = useIntl()
 
   return (
@@ -19,7 +19,7 @@ export default function Testimonials() {
             </p>
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore velit esse ad. Magnam cupiditate cum ipsam cumque debitis ad, qui mollitia sed maiores dolores omnis, sit vitae corrupti laborum inventore.
+          {text}
           </p>
 </div>
 
@@ -51,14 +51,12 @@ export default function Testimonials() {
             </svg>
             <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9">
               <p>
-                Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt
-                nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh scelerisque
-                bibendum.
+               {message1}
               </p>
             </blockquote>
             <figcaption className="mt-8 text-base">
-              <div className="font-semibold text-gray-900">Judith Black</div>
-              <div className="mt-1 text-gray-600">Volunteer Germany</div>
+              <div className="font-semibold text-gray-900">{name1}</div>
+              <div className="mt-1 text-gray-600">{location1}</div>
             </figcaption>
           </figure>
         </div>

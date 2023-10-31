@@ -4,7 +4,7 @@ import Button from "./button";
 import Image from 'next/image'
 
 
-export default function Trajectory() {
+export default function Trajectory({title, text, image}) {
     const intl = useIntl()
 
   return (
@@ -18,9 +18,9 @@ export default function Trajectory() {
                     </div>
 
                     
-                    <h1 className="mt-6 text-3xl font-bold tracking-tight text-accent-1 sm:text-4xl">{intl.formatMessage({id:"trajectory_title"})}</h1>
+                    <h1 className="mt-6 text-3xl font-bold tracking-tight text-accent-1 sm:text-4xl">{title}</h1>
                     <p className="mt-6 text-xl leading-8 text-gray-700">
-                    {intl.formatMessage({id:"trajectory_paragraph"})}
+                    {text}
                     </p>
                     <div className="flex mt-6 ">
                     <Button title={intl.formatMessage({id:"trajectory_button"})} link="/about" text={intl.formatMessage({id: "trajectory_button"})}/>
@@ -30,10 +30,10 @@ export default function Trajectory() {
             <div className=" flex basis-12/12 lg:basis-6/12 justify-center">
            
                 <Image
-                      width={1056}
-                      height={950}
+                      width={1024}
+                      height={921}
                     className="max-w-[100%]"
-                    src="/img/trajec.png"
+                    src={image}
                     alt=""
                 />
             </div>   

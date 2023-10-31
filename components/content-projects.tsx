@@ -70,7 +70,7 @@ const filters = [
 
 
 
-export default function ContentProjects() {
+export default function ContentProjects({list}) {
 
   const intl = useIntl()
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
@@ -271,16 +271,10 @@ export default function ContentProjects() {
               {/* Product grid */}
               <div className="lg:col-span-3">
 
-              <Project/>
-              <Project/>
-              <Project/>
-              <Project/>
-              <Project/>
-              <Project/>
-              <Project/>
-              <Project/>
-              <Project/>
-              <Project/>
+                {list.map((hola:any)=>(<Project item={hola}/>))}
+
+              
+           
               </div>
             </div>
           </section>

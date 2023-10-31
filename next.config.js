@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: ["184.72.130.92"]
+  },
 
   i18n: {
     // These are all the locales you want to support in

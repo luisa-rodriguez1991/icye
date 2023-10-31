@@ -5,7 +5,7 @@ import { CheckIcon } from '@heroicons/react/20/solid'
   
   
 
-export default function Plans () {
+export default function Plans ({ text, title1, price1, cyantext1, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, title2, price2, cyantext2, list2item1, list2item2, list2item3, list2item4, list2item5, list2item6, list2item7, list2item8, list2item9, list2item10, list2item11, title3, price3, cyantext3, list3item1, list3item2, list3item3, list3item4, list3item5, list3item6, list3item7, list3item8, list3item9, list3item10, list3item11, title4, price4, cyantext4, list4item1, list4item2, list4item3, list4item4, list4item5, list4item6, list4item7, list4item8, list4item9, list4item10, list4item11 }) {
     const intl = useIntl()
 
     return (
@@ -18,18 +18,17 @@ export default function Plans () {
             </p>
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 text-accent-2">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore velit esse ad. Magnam cupiditate cum ipsam cumque debitis ad, qui mollitia sed maiores dolores omnis, sit vitae corrupti laborum inventore.
+          {text}
           </p>
           <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
 
         
-             
                 <div>
                         <div className='ring-1 ring-accent-1 rounded-3xl p-4'>
-                            <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">{intl.formatMessage({id:"plans_title_plan"})}</h3>
+                            <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">{title1}</h3>
                             <p className="mt-6 flex flex-col items-baseline gap-x-1">
-                            <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">€ 6.700</span>
-                            <span className="text-sm font-semibold leading-6 text-cyan-500">{intl.formatMessage({id:"plans_paragraph"})}</span>
+                            <span className="text-4xl font-bold tracking-tight text-accent-1 m-2"> {price1}</span>
+                            <span className="text-sm font-semibold leading-6 text-cyan-500">{cyantext1}</span>
                             </p>
                             <a
                             href="cosas y cosas"
@@ -41,69 +40,70 @@ export default function Plans () {
                             <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-600">
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including1"})}
+                                {item1}
                                
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including2"})}
+                                {item2}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including3"})}
+                                {item3}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including4"})}
+                                {item4}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including5"})}
+                                {item5}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including6"})}
+                                {item6}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including7"})}
+                                {item7}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including8"})}
+                                {item8}
                               
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including9"})}
+                                {item9}
                                
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including10"})}
+                                {item10}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including11"})}
+                                {item11}
                                
                                 </li>
                             </ul>
                             
                         </div>
                 </div>
+
                 <div>
                         <div className='ring-1 ring-accent-1 rounded-3xl p-4'>
-                            <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">{intl.formatMessage({id:"plans_title_plan"})}</h3>
+                            <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">{title2}</h3>
                             <p className="mt-6 flex flex-col items-baseline gap-x-1">
-                            <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">€ 6.700</span>
-                            <span className="text-sm font-semibold leading-6 text-cyan-500">{intl.formatMessage({id:"plans_paragraph"})}</span>
+                            <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">{price2}</span>
+                            <span className="text-sm font-semibold leading-6 text-cyan-500">{cyantext2}</span>
                             </p>
                             <a
                             href="cosas y cosas"
@@ -115,69 +115,70 @@ export default function Plans () {
                             <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-600">
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including1"})}
+                                {list2item1}
                                
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including2"})}
+                                {list2item2}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including3"})}
+                                {list2item3}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including4"})}
+                                {list2item4}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including5"})}
+                                {list2item5}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including6"})}
+                                {list2item6}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including7"})}
+                                {list2item7}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including8"})}
+                                {list2item8}
                               
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including9"})}
+                                {list2item9}
                                
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including10"})}
+                                {list2item10}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including11"})}
+                                {list2item11}
                                
                                 </li>
                             </ul>
                             
                         </div>
                 </div>
+
                 <div>
                         <div className='ring-1 ring-accent-1 rounded-3xl p-4'>
-                            <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">{intl.formatMessage({id:"plans_title_plan"})}</h3>
+                            <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">{title3}</h3>
                             <p className="mt-6 flex flex-col items-baseline gap-x-1">
-                            <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">€ 6.700</span>
-                            <span className="text-sm font-semibold leading-6 text-cyan-500">{intl.formatMessage({id:"plans_paragraph"})}</span>
+                            <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">{price3}</span>
+                            <span className="text-sm font-semibold leading-6 text-cyan-500">{cyantext3}</span>
                             </p>
                             <a
                             href="cosas y cosas"
@@ -189,69 +190,70 @@ export default function Plans () {
                             <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-600">
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including1"})}
+                                {list3item1}
                                
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including2"})}
+                                {list3item2}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including3"})}
+                                {list3item3}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including4"})}
+                                {list3item4}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including5"})}
+                                {list3item5}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including6"})}
+                                {list3item6}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including7"})}
+                                {list3item7}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including8"})}
+                                {list3item8}
                               
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including9"})}
+                                {list3item9}
                                
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including10"})}
+                                {list3item10}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including11"})}
+                                {list3item11}
                                
                                 </li>
                             </ul>
                             
                         </div>
                 </div>
+                
                 <div>
                         <div className='ring-1 ring-accent-1 rounded-3xl p-4'>
-                            <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">{intl.formatMessage({id:"plans_title_plan"})}</h3>
+                            <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">{title4}</h3>
                             <p className="mt-6 flex flex-col items-baseline gap-x-1">
-                            <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">€ 6.700</span>
-                            <span className="text-sm font-semibold leading-6 text-cyan-500">{intl.formatMessage({id:"plans_paragraph"})}</span>
+                            <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">{price4}</span>
+                            <span className="text-sm font-semibold leading-6 text-cyan-500">{cyantext4}</span>
                             </p>
                             <a
                             href="cosas y cosas"
@@ -263,57 +265,57 @@ export default function Plans () {
                             <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-600">
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including1"})}
+                                {list4item1}
                                
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including2"})}
+                                {list4item2}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including3"})}
+                                {list4item3}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including4"})}
+                                {list4item4}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including5"})}
+                                {list4item5}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including6"})}
+                                {list4item6}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including7"})}
+                                {list4item7}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including8"})}
+                                {list4item8}
                               
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including9"})}
+                                {list4item9}
                                
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including10"})}
+                                {list4item10}
                                 
                                 </li>
                                 <li className="flex gap-x-3 text-accent-1">
                                 <CheckIcon className="h-6 w-5 flex-none text-pink-dark" aria-hidden="true" />
-                                {intl.formatMessage({id:"plans_including11"})}
+                                {list4item11}
                                
                                 </li>
                             </ul>

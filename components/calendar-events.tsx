@@ -8,7 +8,7 @@ import { useIntl } from 'react-intl'
 //   return classes.filter(Boolean).join(' ')
 // }
 
-export default function Calendar({events, showAll}:any) {
+export default function Calendar({text, pageInfo, events, showAll}:any) {
   const intl = useIntl()
   const all = events.map((meeting) =>  (
 
@@ -56,7 +56,7 @@ export default function Calendar({events, showAll}:any) {
             </p>
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore velit esse ad. Magnam cupiditate cum ipsam cumque debitis ad, qui mollitia sed maiores dolores omnis, sit vitae corrupti laborum inventore.
+         {text}
           </p>
       <div className="lg:grid lg:grid-cols-12 mx-auto max-w-4xl px-6 pb-8 pt-20 sm:pt-24 lg:px-8 ">
         <ol className="mt-4 divide-y divide-gray-100 text-sm leading-6 lg:col-span-12 ">
