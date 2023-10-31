@@ -1,12 +1,6 @@
 import {getAllPost} from "../lib/api"      
       
-      
-
-
-
-
-
-
+  
 export default function Blog({ text, pageInfo, posts, showAll }:any) {
 
   const all = posts.map((post) =>  (
@@ -38,7 +32,7 @@ export default function Blog({ text, pageInfo, posts, showAll }:any) {
     ))
 
   return (
-    <div className="bg-white ">
+    <div className="bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-4">
       <div className="mx-auto max-w-4xl text-center ">
       <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">

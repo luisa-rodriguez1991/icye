@@ -1,8 +1,12 @@
 import { useIntl } from "react-intl";
 import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
   
   export default function Footer() {
     const intl = useIntl()
+    const router = useRouter();
+    const {locale} = router
 
     return (
       <footer className="bg-white" aria-labelledby="footer-heading">
@@ -94,19 +98,20 @@ import Image from 'next/image'
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">{intl.formatMessage({id:"footer_datat"})}</h3>
                   <ul role="list" className="mt-6 space-y-4">
                       <li >
-                        <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                        {intl.formatMessage({id:"footer_requests"})}
-                        </a>
+                        
+                        <Link locale={locale} href='/request-complains'className="text-sm leading-6 text-gray-600 hover:text-gray-900">{intl.formatMessage({id:"footer_requests"})}</Link>
                       </li>
                       <li >
-                        <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                        {intl.formatMessage({id:"footer_privacy"})}
-                        </a>
+                        <Link locale={locale} href='/privacy-policy'className="text-sm leading-6 text-gray-600 hover:text-gray-900">{intl.formatMessage({id:"footer_privacy"})}</Link>
+                        {/* <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                        {intl.formatMessage({id:"footer_privacy"})} {intl.formatMessage({id:"footer_privacy"})}
+                        </a> */}
                       </li>
                       <li >
-                        <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                      <Link locale={locale} href='/terms-conditions'className="text-sm leading-6 text-gray-600 hover:text-gray-900">{intl.formatMessage({id:"footer_terms"})}</Link>
+                        {/* <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                         {intl.formatMessage({id:"footer_terms"})}
-                        </a>
+                        </a> */}
                       </li>
                   </ul>
                 </div>

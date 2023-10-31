@@ -47,8 +47,8 @@ export default function Calendar({text, pageInfo, events, showAll}:any) {
   ))
 
   return (
-   <div className='bg-white'>
-     <div className='mx-auto max-w-2xl py-4 '>
+   <div className='bg-white py-6'>
+     <div className='mx-auto max-w-2xl  '>
       <h2 className="text-base font-semibold leading-6 text-gray-900"></h2>
       <div className="mx-auto max-w-4xl text-center ">
             <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
@@ -58,7 +58,7 @@ export default function Calendar({text, pageInfo, events, showAll}:any) {
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
          {text}
           </p>
-      <div className="lg:grid lg:grid-cols-12 mx-auto max-w-4xl px-6 pb-8 pt-20 sm:pt-24 lg:px-8 ">
+      <div className="lg:grid lg:grid-cols-12 mx-auto max-w-4xl px-6 pb-8 pt-12 sm:pt-24 lg:px-8 ">
         <ol className="mt-4 divide-y divide-gray-100 text-sm leading-6 lg:col-span-12 ">
         {all }
         </ol> 

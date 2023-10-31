@@ -15,7 +15,7 @@ const faqs = [
     const intl = useIntl()
     
     return (
-      <div className="bg-white py-24">
+      <div className="bg-white py-6">
          <div className="mx-auto max-w-4xl text-center">
             <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
             {/* Frequently asked questions */} {intl.formatMessage({id:"faqs_title"})}
@@ -28,7 +28,7 @@ const faqs = [
             </a>{' '}
             {intl.formatMessage({id:"faqs_paragraph+"})}        
           </p>
-        <div className="mx-auto max-w-7xl px-6 mt-10 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 mt-12 lg:px-8">
           <div className="">
             <dl className="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10">
                 <div>

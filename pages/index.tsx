@@ -171,7 +171,7 @@ export default function Home({posts, eventsList, page}) {
       showAll={false}/>
 
 
-      <div className="bg-white py-24 sm:py-32">
+      <div className="bg-white sm:py-32">
         <ListBlog  text={page.acf.blog_text}  posts={posts} showAll={false}/>
       </div>
     </Layout>
