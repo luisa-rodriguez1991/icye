@@ -38,9 +38,9 @@ const tabs = [
 
 
 const subCategories = [
-  { name: 'Long time', href: '#' },
-  { name: 'Medium time', href: '#' },
-  { name: 'Short time', href: '#' },
+  { name: 'Long term', href: '#' },
+  { name: 'Medium term', href: '#' },
+  { name: 'Short term', href: '#' },
  
 ]
 const filters = [
@@ -76,17 +76,8 @@ export default function ContentProjects({list}) {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
   return (
-
     <div className="bg-white">
-
-    
-
-    
-
     <TabProjects/>
-
-
-
       <div>
         {/* Mobile filter dialog */}
         <Transition.Root show={mobileFiltersOpen} as={Fragment}>
@@ -271,7 +262,9 @@ export default function ContentProjects({list}) {
               {/* Product grid */}
               <div className="lg:col-span-3">
 
-                {list.map((hola:any)=>(<Project item={hola}/>))}
+                {list.map((i:any)=>(
+                  <Project item={i}/>
+                ))}
 
               
            

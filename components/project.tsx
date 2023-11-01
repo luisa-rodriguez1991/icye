@@ -1,8 +1,11 @@
+import Link from "next/link"
+import { useRouter } from "next/router";
 import { useIntl } from "react-intl"
 import Flag from 'react-world-flags'
 
 export default function Project({item}) {
-
+  const router = useRouter();
+  const {locale} = router
 
       const intl = useIntl()
   
@@ -29,16 +32,26 @@ export default function Project({item}) {
                     <Flag code={item.acf.country} width="20" height="16"/>
 
                     </div>
-                    <h2 className="text-xl font-bold text-white">{item.title.rendered}</h2>
+                    <h2 className="text-xl font-bold text-white flex items-center">{item.title.rendered}
+                      <span className="ml-2 inline-flex items-center gap-x-1.5 rounded-full bg-accent-2 px-2 py-1 text-xs font-medium text-accent-1">
+                      <svg className="h-1.5 w-1.5 fill-gray-400" viewBox="0 0 6 6" aria-hidden="true">
+                        <circle cx={3} cy={3} r={3} />
+                      </svg>
+                      {item.acf.project_code}
+                    </span>               
+
+                   
+                    
+                    </h2>
                 </div>
-                <div className="mt-1 text-sm text-gray-300" dangerouslySetInnerHTML={{__html:item.content.rendered}} />
+                <div className="mt-1 text-sm text-gray-300" dangerouslySetInnerHTML={{__html:item.excerpt.rendered}} />
               </div>
-              <a
-                href="#"
+              <Link locale={locale}
+                href={`/projects/${item.slug}`}
                 className="mt-6 flex flex-shrink-0 items-center justify-center rounded-md border border-white border-opacity-25 bg-white bg-opacity-0 px-4 py-3 text-base font-medium text-white hover:bg-opacity-10 sm:ml-8 sm:mt-0 lg:ml-0 lg:w-full"
               >
                 {intl.formatMessage({id:"project_button"})}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

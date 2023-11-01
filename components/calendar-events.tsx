@@ -2,6 +2,8 @@ import {
   CalendarIcon,
   MapPinIcon,
 } from '@heroicons/react/20/solid'
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl'
 
 // function classNames(...classes) {
@@ -9,11 +11,17 @@ import { useIntl } from 'react-intl'
 // }
 
 export default function Calendar({text, pageInfo, events, showAll}:any) {
+  const router = useRouter();
+  const {locale} = router
   const intl = useIntl()
   const all = events.map((meeting) =>  (
 
-          <li key={meeting.id} className="rounded-xl border-accent-1 relative flex space-x-3 p-6 xl:static bg-white my-2">
-            <img src={meeting.jetpack_featured_media_url} alt="" className="h-14 w-14 flex-none rounded-full mx-2 lg:mx-4" />
+          <li key={meeting.id} className="rounded-xl border-accent-1 relative flex space-x-3 p-6  bg-white my-2 relative">
+          <Link locale={locale} className='absolute left-0 top-0 cursor-pointer w-full h-full' href={`/events/${meeting.slug}`}>
+            <span className="absolute inset-0" />
+           
+          </Link>
+                      <img src={meeting.jetpack_featured_media_url} alt="" className="h-14 w-14 flex-none rounded-full mx-2 lg:mx-4" />
             <div className="flex-auto ">
               <h3 className="pr-10 font-semibold text-gray-900 xl:pr-0">{meeting.title.rendered}</h3>
                 <dl className="mt-2 flex flex-col text-gray-500 xl:flex-row justify-between">
@@ -29,7 +37,7 @@ export default function Calendar({text, pageInfo, events, showAll}:any) {
                     de  <span className='capitalize'>{new Date(meeting.acf.event_date).toLocaleDateString("es-CO", { month: "long"})} </span>
                     del <span className='capitalize'>{new Date(meeting.acf.event_date).toLocaleDateString("es-CO", { year: "numeric"})} </span>
                     
-                     <span className='font-semibold'> {new Date(meeting.acf.event_date).toLocaleTimeString("es-CO",{ hour: "2-digit", minute: "2-digit", hour12: true })} </span>
+                     <span className='font-semibold'> {new Date(meeting.acf.event_date).toLocaleTimeString("es-CO",{ hour: "2-digit", minute: "2-digit", hour12: true })} {meeting.acf.timezone}</span>
                     </time>
                   </dd>
               </div>

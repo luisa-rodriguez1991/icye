@@ -1,8 +1,11 @@
-import {getAllPost} from "../lib/api"      
+import Link from "next/link";
+import { useRouter } from "next/router";
+
       
   
 export default function Blog({ text, pageInfo, posts, showAll }:any) {
-
+  const router = useRouter();
+  const {locale} = router
   const all = posts.map((post) =>  (
 
         <article key={post.slug} className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
@@ -22,10 +25,10 @@ export default function Blog({ text, pageInfo, posts, showAll }:any) {
         
         </div>
         <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-          <a href={post.slug}>
+          <Link locale={locale} href={`/blog/${post.slug}`}>
             <span className="absolute inset-0" />
             {post.title.rendered}
-          </a>
+          </Link>
         </h3>
       </article>
 

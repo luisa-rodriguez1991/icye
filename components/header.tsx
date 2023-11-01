@@ -10,7 +10,7 @@ export default function Header() {
   const {locale} = router
   const intl = useIntl()
   return (
-    <div className="bg-white">
+    <div className="bg-white sticky top-0 z-40">
       <header className="relative bg-white">
         <nav aria-label="Top" className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="border-b border-gray-200 px-4 pb-14 sm:px-0 sm:pb-0">

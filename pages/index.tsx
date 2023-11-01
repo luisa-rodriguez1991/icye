@@ -12,6 +12,7 @@ import Calendar from "@/components/calendar-events";
 import ListBlog from "@/components/list-blog";
 import { getAllPost, getAllEvents, getPage } from "@/lib/api";
 import { GetStaticProps } from "next";
+import Contributors from "@/components/contributors";
 
 export default function Home({posts, eventsList, page}) {
 
@@ -174,7 +175,32 @@ export default function Home({posts, eventsList, page}) {
       <div className="bg-white sm:py-32">
         <ListBlog  text={page.acf.blog_text}  posts={posts} showAll={false}/>
       </div>
+
+
+      <Contributors
+      // title={}
+      // text={}
+      // icon1={}
+      // icontext1={}
+      // icon2={}
+      // icontext2={}
+      // icon3={}
+      // icontext3={}
+      // icon4={}
+      // icontext4={}
+      // icon5={}
+      // icontext5={}
+      // icon6={}
+      // icontext6={}
+      
+
+      />
+
+
+
     </Layout>
+    
+
     
    
   )
@@ -182,7 +208,7 @@ export default function Home({posts, eventsList, page}) {
 
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = await getAllPost("en")
+  const allPostsData = await getAllPost()
   const eventsList = await getAllEvents() 
   const pageInfo = await getPage(11) 
 

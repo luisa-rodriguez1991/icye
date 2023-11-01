@@ -24,7 +24,7 @@ export default function Index({posts}) {
 
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = await getAllPost("en")
+  const allPostsData = await getAllPost()
 
   return {
       props: {posts: allPostsData}
