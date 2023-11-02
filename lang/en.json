@@ -74,6 +74,8 @@
     "about_us_vision":"Our vision",
     "about_us_team":"Our Team",
 
+    "contributors_contact_us":"Contact us",
+
 
    
     "trust_org":"Trusted by the worlds most important organizations.",
@@ -83,7 +85,7 @@
     "footer_direccion1": "Carrera 15 No. 36-40",
     "footer_direccion2": "Second Floor. Bogotá, D.C. Colombia",
     "footer_email": "icyecol@icyecolombia.com",
-    "footer_whatsapp": "+57 (601) 340 36 08 - +57 (601) 232 12 51",
+    "footer_whatsapp": "+57 310 7346918",
     "footer_requests": "Requests, complaints and claims",
     "footer_privacy": "Privacy policies",
     "footer_terms": "Terms and conditions",

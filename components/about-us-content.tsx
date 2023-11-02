@@ -2,12 +2,7 @@ import { useState } from 'react'
 import { useIntl } from "react-intl";
 
 
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Resources', href: '#' },
-  { name: 'Company', href: '#' },
-]
+
 const stats = [
   { label: 'Transactions every 24 hours', value: '44 million' },
   { label: 'Assets under holding', value: '$119 trillion' },
@@ -47,7 +42,9 @@ const values = [
 ]
 
 
-export default function AboutUs() {
+export default function AboutUs({text, img1, img2, img3, img4, img5, missiontext1, missiontext2, missiontext3, dataanalytic1, dataanalytic2, dataanalytic3, dataanalyticlabel1, dataanalyticlabel2, dataanalyticlabel3, visiontext, visionsubtitle1, visiontext1, visionsubtitle2, visiontext2, visionsubtitle3, visiontext3, visionsubtitle4, visiontext4, visionsubtitle5, visiontext5, visionsubtitle6, visiontext6, Ourteam}) {
+  
+  
   const intl = useIntl()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -101,8 +98,7 @@ export default function AboutUs() {
                   {intl.formatMessage({id:"about_us_title"})}
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. A debitis vero, harum nulla facere aut dicta. Quisquam nihil dolorum voluptatibus a, ut ullam sunt nemo et excepturi sed corrupti nostrum.
-                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. A debitis vero, harum nulla facere aut dicta. Quisquam nihil dolorum voluptatibus a, ut ullam sunt nemo et excepturi sed corrupti nostrum.
+                    {text}
                    
                   </p>
                 </div>
@@ -110,7 +106,7 @@ export default function AboutUs() {
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">
                       <img
-                        src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                        src={img1}
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
@@ -120,7 +116,7 @@ export default function AboutUs() {
                   <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                     <div className="relative">
                       <img
-                        src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                        src={img2}
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
@@ -128,7 +124,7 @@ export default function AboutUs() {
                     </div>
                     <div className="relative">
                       <img
-                        src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
+                        src={img3}
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
@@ -138,7 +134,7 @@ export default function AboutUs() {
                   <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                     <div className="relative">
                       <img
-                        src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
+                        src={img4}
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
@@ -146,7 +142,7 @@ export default function AboutUs() {
                     </div>
                     <div className="relative">
                       <img
-                        src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                        src={img5}
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
@@ -166,32 +162,35 @@ export default function AboutUs() {
             <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
               <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
                 <p className="text-xl leading-8 text-gray-600">
-                  Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam
-                  eget aliquam. Quisque id at vitae feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget.
-                  Eleifend egestas fringilla sapien.
+                  {missiontext1}
                 </p>
                 <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
                   <p>
-                    Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed
-                    amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius
-                    sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim.
-                    Mattis mauris semper sed amet vitae sed turpis id.
+                  {missiontext2}
                   </p>
                   <p className="mt-10">
-                    Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                    auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et
-                    ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
+                  {missiontext3}
                   </p>
                 </div>
               </div>
               <div className="lg:flex lg:flex-auto lg:justify-center">
                 <dl className="w-64 space-y-8 xl:w-80">
-                  {stats.map((stat) => (
-                    <div key={stat.label} className="flex flex-col-reverse gap-y-4">
-                      <dt className="text-base leading-7 text-gray-600">{stat.label}</dt>
-                      <dd className="text-5xl font-semibold tracking-tight text-accent-1">{stat.value}</dd>
-                    </div>
-                  ))}
+
+                  <div className="flex flex-col-reverse gap-y-4">
+                    <dt className="text-base leading-7 text-gray-600">{dataanalyticlabel1}</dt>
+                    <dd className="text-5xl font-semibold tracking-tight text-accent-1">{dataanalytic1}</dd>
+                  </div>
+                  
+                  <div className="flex flex-col-reverse gap-y-4">
+                    <dt className="text-base leading-7 text-gray-600">{dataanalyticlabel2}</dt>
+                    <dd className="text-5xl font-semibold tracking-tight text-accent-1">{dataanalytic2}</dd>
+                  </div>
+
+                  <div className="flex flex-col-reverse gap-y-4">
+                    <dt className="text-base leading-7 text-gray-600">{dataanalyticlabel3}</dt>
+                    <dd className="text-5xl font-semibold tracking-tight text-accent-1">{dataanalytic3}</dd>
+                  </div>
+
                 </dl>
               </div>
             </div>
@@ -204,23 +203,49 @@ export default function AboutUs() {
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-accent-1 sm:text-4xl">{intl.formatMessage({id:"about_us_vision"})}</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-              accusamus quisquam.
+              {visiontext}
             </p>
           </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {values.map((value) => (
-              <div key={value.name}>
-                <dt className="font-semibold text-xl text-gray-900">{value.name}</dt>
-                <dd className="mt-1 text-gray-600">{value.description}</dd>
-              </div>
-            ))}
+            
+            <div>
+              <dt className="font-semibold text-xl text-gray-900">{visionsubtitle1}</dt>
+              <dd className="mt-1 text-gray-600">{visiontext1}</dd>
+            </div>
+
+            <div>
+              <dt className="font-semibold text-xl text-gray-900">{visionsubtitle2}</dt>
+              <dd className="mt-1 text-gray-600">{visiontext1}</dd>
+            </div>
+
+            <div>      
+              <dt className="font-semibold text-xl text-gray-900">{visionsubtitle3}</dt>
+              <dd className="mt-1 text-gray-600">{visiontext1}</dd>
+            </div>  
+
+            <div>
+              <dt className="font-semibold text-xl text-gray-900">{visionsubtitle4}</dt>
+              <dd className="mt-1 text-gray-600">{visiontext1}</dd>
+            </div>
+
+            <div>
+              <dt className="font-semibold text-xl text-gray-900">{visionsubtitle5}</dt>
+              <dd className="mt-1 text-gray-600">{visiontext1}</dd>
+            </div>
+
+            <div>
+              <dt className="font-semibold text-xl text-gray-900">{visionsubtitle6}</dt>
+              <dd className="mt-1 text-gray-600">{visiontext1}</dd>
+            </div>
+
+
+         
           </dl>
         </div>
 
 
 
-        {/* Image section */}
+        {/* Our team */} 
 
         <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8 mb-32">
             <div className="mb-20">
@@ -230,7 +255,7 @@ export default function AboutUs() {
                     </p>
                 </div>
                     <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore velit esse ad. Magnam cupiditate cum ipsam cumque debitis ad, qui mollitia sed maiores dolores omnis, sit vitae corrupti laborum inventore.
+                    {Ourteam}
                     </p>
             </div>
 

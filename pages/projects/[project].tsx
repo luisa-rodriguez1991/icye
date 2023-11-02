@@ -60,7 +60,7 @@ const product = {
     'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
 }
 
-
+// vista projecto
 
 export default function Project({page, listCategories}) {
 
@@ -73,7 +73,7 @@ export default function Project({page, listCategories}) {
       
 
               {/* Image gallery */}
-              <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
+              <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8 ">
                 <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
                   <img
                     src={product.images[0].src}

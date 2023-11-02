@@ -129,12 +129,7 @@ export default function Home({posts, eventsList, page}) {
       list4item10={page.acf.program_list_4_item_10}
       list4item11={page.acf.program_list_4_item_11}
 
-
-
-
       />
-
-
       <Faqs  
       text={page.acf.faqs_text}
 
@@ -156,7 +151,6 @@ export default function Home({posts, eventsList, page}) {
       question6={page.acf.faqs_question_6}
       answer6={page.acf.faqs_answer_6}
       
-    
       />
       <Sponsors 
       text={page.acf.sponsors_text}
@@ -166,34 +160,31 @@ export default function Home({posts, eventsList, page}) {
       icon4={page.acf.sponsors_Icon_4.sizes.thumbnail}
       />
 
-
       <Calendar  text={page.acf.event_text} 
       events={eventsList} 
       showAll={false}/>
-
-
+      
       <div className="bg-white sm:py-32">
         <ListBlog  text={page.acf.blog_text}  posts={posts} showAll={false}/>
       </div>
 
 
       <Contributors
-      // title={}
-      // text={}
-      // icon1={}
-      // icontext1={}
-      // icon2={}
-      // icontext2={}
-      // icon3={}
-      // icontext3={}
-      // icon4={}
-      // icontext4={}
-      // icon5={}
-      // icontext5={}
-      // icon6={}
-      // icontext6={}
-      
 
+      title={page.acf.contributors_title}
+      text={page.acf.contributors_text}
+      icon1={page.acf.contributors_icon_1}
+      icontext1={page.acf.contributors_icon_text_1}
+      icon2={page.acf.contributors_icon_2}
+      icontext2={page.acf.contributors_icon_text_2}
+      icon3={page.acf.contributors_icon_3}
+      icontext3={page.acf.contributors_icon_text_3}
+      icon4={page.acf.contributors_icon_4}
+      icontext4={page.acf.contributors_icon_text_4}
+      icon5={page.acf.contributors_icon_5}
+      icontext5={page.acf.contributors_icon_text_5}
+      icon6={page.acf.contributors_icon_6}
+      icontext6={page.acf.contributors_icon_text_6}
       />
 
 

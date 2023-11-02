@@ -23,7 +23,6 @@ import { useRouter } from 'next/router'
                 <div className="mb-5">
                 <div className="flex flex-1 min-w-[55px] justify-start">
                   <a href="#" className="-m-1.5 p-1.5 flex">
-                    <span className="sr-only">Your Company</span>
                     <Image width={45} height={44} className="" src="/img/icon.png" alt="Icono ICYE Colombia" />
                     <Image width={66} height={44} className="hidden lg:flex ml-2" src="/img/logo.png" alt="Logo ICYE Colombia" />
                   </a>
