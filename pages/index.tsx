@@ -173,17 +173,17 @@ export default function Home({posts, eventsList, page}) {
 
       title={page.acf.contributors_title}
       text={page.acf.contributors_text}
-      icon1={page.acf.contributors_icon_1}
+      icon1={page.acf.contributors_icon_1.sizes.thumbnail}
       icontext1={page.acf.contributors_icon_text_1}
-      icon2={page.acf.contributors_icon_2}
+      icon2={page.acf.contributors_icon_2.sizes.thumbnail}
       icontext2={page.acf.contributors_icon_text_2}
-      icon3={page.acf.contributors_icon_3}
+      icon3={page.acf.contributors_icon_3.sizes.thumbnail}
       icontext3={page.acf.contributors_icon_text_3}
-      icon4={page.acf.contributors_icon_4}
+      icon4={page.acf.contributors_icon_4.sizes.thumbnail}
       icontext4={page.acf.contributors_icon_text_4}
-      icon5={page.acf.contributors_icon_5}
+      icon5={page.acf.contributors_icon_5.sizes.thumbnail}
       icontext5={page.acf.contributors_icon_text_5}
-      icon6={page.acf.contributors_icon_6}
+      icon6={page.acf.contributors_icon_6.sizes.thumbnail}
       icontext6={page.acf.contributors_icon_text_6}
       />
 
@@ -198,9 +198,9 @@ export default function Home({posts, eventsList, page}) {
 }
 
 
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = await getAllPost()
-  const eventsList = await getAllEvents() 
+export const getStaticProps: GetStaticProps = async ({locale}) => {
+  const allPostsData = await getAllPost(locale)
+  const eventsList = await getAllEvents(locale) 
   const pageInfo = await getPage(11) 
 
   return {

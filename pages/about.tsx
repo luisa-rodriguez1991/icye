@@ -17,11 +17,12 @@ export default function About({page}) {
 
     <AboutUs 
     text={page.acf.about_us_text}
-    img1={page.acf.about_us_img_1}
-    img2={page.acf.about_us_img_2}
-    img3={page.acf.about_us_img_3}
-    img4={page.acf.about_us_img_4}
-    img5={page.acf.about_us_img_5}
+    img1={page.acf.about_us_img_1.sizes.large}
+    img2={page.acf.about_us_img_2.sizes.large}
+    img3={page.acf.about_us_img_3.sizes.large}
+    img4={page.acf.about_us_img_4.sizes.large}
+    img5={page.acf.about_us_img_5.sizes.large}
+
 
     missiontext1={page.acf.about_us_mission_text_1}
     missiontext2={page.acf.about_us_mission_text_2}
@@ -48,7 +49,8 @@ export default function About({page}) {
     visionsubtitle6={page.acf.about_us_vision_sub_title_6}
     visiontext6={page.acf.about_us_vision_text_6}
 
-    Ourteam={page.acf.about_us_our_team_text}
+    ourteamtext={page.acf.about_us_our_team_text}
+    ourteamimg={page.acf.about_us_our_team_img.sizes.large}
     
     />
     

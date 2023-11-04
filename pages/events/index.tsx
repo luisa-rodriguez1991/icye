@@ -3,6 +3,7 @@ import Layout from "@/components/layout";
 import Calendar from "@/components/calendar-events";
 import { useIntl } from "react-intl";
 import { getAllEvents } from "@/lib/api";
+import { getAllPost } from "@/lib/api";
 
 export default function Index({events}) {
   const intl = useIntl()
@@ -11,7 +12,9 @@ export default function Index({events}) {
   return (
     <Layout> 
     <Breadcrumb miVariable={intl.formatMessage({id:"breadcrumb_events"})}/>
-    <Calendar events={events} showAll={true}/>
+    <Calendar events={events}   showAll={true}/>
+
+
     </Layout>
   )
 }
@@ -20,10 +23,11 @@ export default function Index({events}) {
 
 
 
-export const getStaticProps: GetStaticProps = async () => {
-  const allEvents = await getAllEvents()
+export const getStaticProps: GetStaticProps = async ({locale}) => {
+  const allEvents = await getAllEvents(locale)
 
   return {
+    
       props: {events: allEvents}
   }
 }

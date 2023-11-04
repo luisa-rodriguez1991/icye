@@ -1,39 +1,9 @@
 import { useIntl } from "react-intl";
-
-
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
+import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import TabProjects from "./tab-projects";
+import { FunnelIcon, MinusIcon, PlusIcon,} from '@heroicons/react/20/solid'
 import Project from "./project";
-
-
-
-
-
-
-
-const tabs = [
-
-    { name: 'Colombia', href: '#', count: '100', current: true },
-    { name: 'Worldwide', count: '200', href: '#', current: false }
-  ]
-  
 
 
 
@@ -211,6 +181,8 @@ export default function ContentProjects({list}) {
                 <form className="hidden lg:block">
                   <h3 className="sr-only">Categories</h3>
                   <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
+
+                    
                     {subCategories.map((category) => (
                       <li key={category.name}>
                         <a href={category.href}>{category.name}</a>

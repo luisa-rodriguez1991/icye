@@ -2,6 +2,7 @@ import Breadcrumb from "@/components/breadcrump";
 import Layout from "@/components/layout";
 import ListBlog from "@/components/list-blog";
 import { getAllPost } from "@/lib/api";
+import { GetStaticProps } from "next";
 import { useIntl } from "react-intl";
 
 
@@ -23,8 +24,8 @@ export default function Index({posts}) {
 
 
 
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = await getAllPost()
+export const getStaticProps: GetStaticProps = async ({locale}) => {
+  const allPostsData = await getAllPost(locale)
 
   return {
       props: {posts: allPostsData}

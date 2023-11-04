@@ -1,22 +1,22 @@
-export async function getAllPost() {
+export async function getAllPost(locale) {
 
-  const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts?categories=3&_fields=jetpack_featured_media_url,id,content,slug,date,title`)
+  const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts?categories=3&_fields=jetpack_featured_media_url,id,content,slug,date,title&lang=${locale}`)
   const list = await data.json();
     return list
   }
 
 
 
-  export async function getAllEvents() {
-    const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts?categories=5&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title&orderby=id&orderasc`)
+  export async function getAllEvents(locale) {
+    const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts?categories=5&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title&orderby=id&orderasc&lang=${locale}`)
     const list = await data.json();
       return list
   }
 
 
   
-  export async function getAllProjects() {
-    const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts?categories=4&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,excerpt,categories`)
+  export async function getAllProjects(locale) {
+    const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts?categories=4&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,excerpt,categories&lang=${locale}`)
     const list = await data.json();
       return list
   }
@@ -28,8 +28,8 @@ export async function getAllPost() {
   }
 
 
-  export async function getDetailProject(slug) {
-    const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts?slug=${slug}&acf_format=standard&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,categories`)
+  export async function getDetailProject(slug, locale) {
+    const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts?slug=${slug}&acf_format=standard&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,categories&lang=${locale}`)
     const info = await data.json();
       return info
   }

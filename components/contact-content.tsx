@@ -1,20 +1,7 @@
 import { useIntl } from "react-intl";
 import Button from "./button";
 
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+
 export default function ContactContent({text}) {
 
   const intl = useIntl()
