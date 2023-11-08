@@ -10,7 +10,7 @@ export default function Trajectory({title, text, image}) {
   return (
     <div className="relative isolate overflow-hidden bg-white px-6 pb-6 pt-12 sm:pt-6 lg:overflow-visible lg:px-0">
 
-        <div className="flex flex-col lg:flex-row mx-auto max-w-7xl  justify-around p-5 lg:px-8">        
+        <div className="flex flex-col lg:flex-row mx-auto max-w-7xl px-14 justify-around p-5 lg:px-8">        
             <div className="basis-12/12 lg:basis-6/12 flex items-center">
                 <div className=" flex flex-col">
                     <div className="flex">

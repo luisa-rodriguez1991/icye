@@ -12,9 +12,10 @@ export default function Index({events}) {
   return (
     <Layout> 
     <Breadcrumb miVariable={intl.formatMessage({id:"breadcrumb_events"})}/>
+
+    <div className=" p-5 bg-accent-2 ">
     <Calendar events={events}   showAll={true}/>
-
-
+    </div>
     </Layout>
   )
 }

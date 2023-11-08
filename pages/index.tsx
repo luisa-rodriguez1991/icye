@@ -30,6 +30,11 @@ export default function Home({posts, eventsList, page}) {
         item2={page.acf.trust_icon_2.sizes.thumbnail} 
         item3={page.acf.trust_icon_3.sizes.thumbnail} 
         item4={page.acf.trust_icon_4.sizes.thumbnail} 
+        item1text={page.acf.trust_icon_text_1} 
+        item2text={page.acf.trust_icon_text_2}
+        item3text={page.acf.trust_icon_text_3}
+        item4text={page.acf.trust_icon_text_4}      
+
       />
 
       <Trajectory
@@ -158,11 +163,16 @@ export default function Home({posts, eventsList, page}) {
       icon2={page.acf.sponsors_Icon_2.sizes.thumbnail}
       icon3={page.acf.sponsors_Icon_3.sizes.thumbnail}
       icon4={page.acf.sponsors_Icon_4.sizes.thumbnail}
+      texticon1={page.acf.sponsors_icon_text_1}
+      texticon2={page.acf.sponsors_icon_text_2}
+      texticon3={page.acf.sponsors_icon_text_3}
+      texticon4={page.acf.sponsors_icon_text_4}
       />
-
+      <div className=" p-5 bg-accent-2 py-20">
       <Calendar  text={page.acf.event_text} 
       events={eventsList} 
       showAll={false}/>
+      </div>
       
       <div className="bg-white sm:py-32">
         <ListBlog  text={page.acf.blog_text}  posts={posts} showAll={false}/>
@@ -201,7 +211,7 @@ export default function Home({posts, eventsList, page}) {
 export const getStaticProps: GetStaticProps = async ({locale}) => {
   const allPostsData = await getAllPost(locale)
   const eventsList = await getAllEvents(locale) 
-  const pageInfo = await getPage(11) 
+  const pageInfo = await getPage(11,locale) 
 
   return {
       props: {posts: allPostsData, eventsList: eventsList, page: pageInfo}

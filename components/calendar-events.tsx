@@ -101,7 +101,7 @@ export default function Calendar({ text, pageInfo, events, showAll }: any) {
 
   return (
 
-    <div className=" p-5 bg-accent-2 py-20">
+    
       <div className="mx-auto max-w-2xl  ">
         <h2 className="text-base font-semibold leading-6 text-gray-900"></h2>
         <div className="mx-auto max-w-4xl text-center ">
@@ -119,7 +119,7 @@ export default function Calendar({ text, pageInfo, events, showAll }: any) {
           </ol>
         </div>
       </div>
-    </div>
+    
 
   );
 }

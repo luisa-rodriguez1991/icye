@@ -21,8 +21,8 @@ export async function getAllPost(locale) {
       return list
   }
 
-  export async function getPage(id) {
-    const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/pages/${id}?acf_format=standard&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title`)
+  export async function getPage(id, locale) {
+    const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/pages/${id}?acf_format=standard&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title&lang=${locale}`)
     const page = await data.json();
       return page
   }
@@ -30,6 +30,12 @@ export async function getAllPost(locale) {
 
   export async function getDetailProject(slug, locale) {
     const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts?slug=${slug}&acf_format=standard&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,categories&lang=${locale}`)
+    const info = await data.json();
+      return info
+  }
+
+  export async function getCategoriesByParent(id, locale) {
+    const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/categories?parent=${id}&acf_format=standard&_fields=name,id,slug&lang=${locale}`)
     const info = await data.json();
       return info
   }

@@ -104,6 +104,11 @@
     "contact_form_hcwh_size":"Max 500 characters",
 
     "project_button":"View the project",
-    "projects_title":"Projects"
-
+    "projects_title":"Projects",
+    "project_filter":"Filters",
+    "project_filter_title_1":"Duration time",
+    "project_filter_title_2":"Countries",
+    "project_filter_title_3":"Areas of interest"
+    
+    
 }

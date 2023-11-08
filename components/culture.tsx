@@ -9,8 +9,10 @@ export default function Culture({title, text, item1, item2, item3, item4,}) {
     const intl = useIntl()
 
   return (
+
+
     <div className="relative isolate overflow-hidden bg-white px-5 py-24 sm:py-32 lg:overflow-visible lg:px-0">
-        <div className="flex gap-12 lg:gap-24 flex-col lg:flex-row mx-auto max-w-7xl  justify-around pt-5 lg:px-8"> 
+        <div className="flex gap-12 lg:gap-24 flex-col lg:flex-row mx-auto max-w-7xl px-14 justify-around pt-5 lg:px-8"> 
             <div className="basis-12/12 lg:basis-6/12 flex w-full justify-center">
                 <Image
                     width={1056}
@@ -20,8 +22,8 @@ export default function Culture({title, text, item1, item2, item3, item4,}) {
                     alt=""
                 />
             </div>         
-            <div className="basis-12/12 lg:basis-6/12 flex items-center">
-                <div className=" flex flex-col">
+            <div className="basis-12/12 lg:basis-6/12 flex">
+                <div className=" flex flex-col ">
                     <div className="flex">
                         <div className="text-sm  leading-7 text-gray-500 bg-accent-2 rounded-3xl px-6 py-1">{intl.formatMessage({id:"culrute_sub_title"})}</div>
                     </div>
