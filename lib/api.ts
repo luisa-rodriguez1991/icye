@@ -1,8 +1,8 @@
-export async function getAllPost(locale) {
 
-  const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts?categories=3&_fields=jetpack_featured_media_url,id,content,slug,date,title&lang=${locale}`)
-  const list = await data.json();
-    return list
+export async function getAllPost(locale) {
+    const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts?categories=3&_fields=jetpack_featured_media_url,id,content,slug,date,title&lang=${locale}`)
+    const list = await data.json();
+      return list
   }
 
 

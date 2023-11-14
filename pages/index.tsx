@@ -14,8 +14,11 @@ import { getAllPost, getAllEvents, getPage } from "@/lib/api";
 import { GetStaticProps } from "next";
 import Contributors from "@/components/contributors";
 
+
+
 export default function Home({posts, eventsList, page}) {
 
+  
   return (
     
     <Layout>
@@ -63,11 +66,57 @@ export default function Home({posts, eventsList, page}) {
       
       />
       <Testimonials 
-
+      image1={page.acf.testimonials_img_user_1.sizes.large}
       text={page.acf.testimonials_text}
       message1={page.acf.testimonials_user_message_1}
       name1={page.acf.testimonials_user_name_1}
       location1={page.acf.testimonials_user_location_1}
+
+      image2={page.acf.testimonials_img_user_2.sizes.large}
+      message2={page.acf.testimonials_user_message_2}
+      name2={page.acf.testimonials_user_name_2}
+      location2={page.acf.testimonials_user_location_2}
+
+      image3={page.acf.testimonials_img_user_3.sizes.large}
+      message3={page.acf.testimonials_user_message_3}
+      name3={page.acf.testimonials_user_name_3}
+      location3={page.acf.testimonials_user_location_3}
+
+      image4={page.acf.testimonials_img_user_4.sizes.large}
+      message4={page.acf.testimonials_user_message_4}
+      name4={page.acf.testimonials_user_name_4}
+      location4={page.acf.testimonials_user_location_4}
+
+      image5={page.acf.testimonials_img_user_5.sizes.large}
+      message5={page.acf.testimonials_user_message_5}
+      name5={page.acf.testimonials_user_name_5}
+      location5={page.acf.testimonials_user_location_5}
+
+      image6={page.acf.testimonials_img_user_6.sizes.large}
+      message6={page.acf.testimonials_user_message_6}
+      name6={page.acf.testimonials_user_name_6}
+      location6={page.acf.testimonials_user_location_6}
+
+      image7={page.acf.testimonials_img_user_7.sizes.large}
+      message7={page.acf.testimonials_user_message_7}
+      name7={page.acf.testimonials_user_name_7}
+      location7={page.acf.testimonials_user_location_7}
+
+      image8={page.acf.testimonials_img_user_8.sizes.large}
+      message8={page.acf.testimonials_user_message_8}
+      name8={page.acf.testimonials_user_name_8}
+      location8={page.acf.testimonials_user_location_8}
+
+      image9={page.acf.testimonials_img_user_9.sizes.large}
+      message9={page.acf.testimonials_user_message_9}
+      name9={page.acf.testimonials_user_name_9}
+      location9={page.acf.testimonials_user_location_9}
+
+      image10={page.acf.testimonials_img_user_10.sizes.large}
+      message10={page.acf.testimonials_user_message_10}
+      name10={page.acf.testimonials_user_name_10}
+      location10={page.acf.testimonials_user_location_10}
+
 
       />
       <Plans
@@ -196,6 +245,13 @@ export default function Home({posts, eventsList, page}) {
       icon6={page.acf.contributors_icon_6.sizes.thumbnail}
       icontext6={page.acf.contributors_icon_text_6}
       />
+
+
+
+
+
+
+
 
 
 
