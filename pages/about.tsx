@@ -6,9 +6,11 @@ import { useIntl } from "react-intl";
 import { getPage } from "@/lib/api";
 import { GetStaticProps } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 export default function About({page}:any) {
-  
+  const router = useRouter();
+  const { locale } = router;
   const intl = useIntl()
   
   return (
@@ -64,8 +66,8 @@ export default function About({page}:any) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => { 
-  const pageInfo = await getPage(419) 
+export const getStaticProps: GetStaticProps = async (locale) => { 
+  const pageInfo = await getPage(419,locale) 
 
   return {
       props: {page: pageInfo}

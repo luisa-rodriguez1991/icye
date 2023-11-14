@@ -4,9 +4,11 @@ import { useIntl } from "react-intl";
 import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/solid';
 import { getPage } from "@/lib/api";
 import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
 
 export default function Terms({page}:any) {
-  
+  const router = useRouter();
+  const { locale } = router;
 
   console.log(page)
   const intl = useIntl()
@@ -30,8 +32,8 @@ export default function Terms({page}:any) {
    
   )
 }
-export const getStaticProps: GetStaticProps = async () => { 
-  const pageInfo = await getPage(581) 
+export const getStaticProps: GetStaticProps = async (locale) => { 
+  const pageInfo = await getPage(581,locale) 
 
   return {
       props: {page: pageInfo}
