@@ -87,8 +87,8 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
 export const getStaticPaths: GetStaticPaths = async (locale) => {
   const allProjects = await getAllEvents(locale);
   let finalArray = [];
-  const en = allProjects.map((i) => `/en/events/${i.slug}`);
-  const es = allProjects.map((i) => `/es/events/${i.slug}`);
+  const en = allProjects.map((i:any) => `/en/events/${i.slug}`);
+  const es = allProjects.map((i:any) => `/es/events/${i.slug}`);
   finalArray = [...es, ...en];
 
   return {

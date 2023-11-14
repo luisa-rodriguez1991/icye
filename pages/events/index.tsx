@@ -4,6 +4,7 @@ import Calendar from "@/components/calendar-events";
 import { useIntl } from "react-intl";
 import { getAllEvents } from "@/lib/api";
 import { getAllPost } from "@/lib/api";
+import { GetStaticProps } from "next";
 
 export default function Index({events}:any) {
   const intl = useIntl()
