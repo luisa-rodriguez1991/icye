@@ -23,13 +23,7 @@ export default function Projects({ listCountries, listInterests, listTerms }) {
   const [excludedListFilters, setExcludedListFilters] = useState([]);
 
   useEffect(() => {
-    console.log(
-      `http://184.72.130.92/wp-json/wp/v2/posts?categories=4&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,excerpt,categories&lang=${locale}${
-        Object.keys(excludedListFilters).length > 0
-          ? `&categories_exclude=${excludedListFilters}`
-          : ""
-      }`
-    );
+  
 
     fetch(
       `http://184.72.130.92/wp-json/wp/v2/posts?categories=4&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,excerpt,categories&lang=${locale}${
@@ -42,15 +36,15 @@ export default function Projects({ listCountries, listInterests, listTerms }) {
       .then((dog) => setList(dog));
   }, [excludedListFilters, locale]); // Only re-run the effect if count changes
 
-  const setFilters = (categoryId, checked) => {
+  const setFilters = (categoryId:any, checked:any) => {
     checked ? removeCategory(categoryId) : addCategory(categoryId);
   };
 
-  const removeCategory = (categoryId) => {
+  const removeCategory = (categoryId:any) => {
     setExcludedListFilters(excludedListFilters.filter((a) => a !== categoryId));
   };
 
-  const addCategory = (categoryId) => {
+  const addCategory = (categoryId:any) => {
     setExcludedListFilters([...excludedListFilters, categoryId]);
   };
 
@@ -288,7 +282,7 @@ export default function Projects({ listCountries, listInterests, listTerms }) {
                       </span>
                     </h3>
 
-                    {listTerms.map((option) => (
+                    {listTerms.map((option:any) => (
                       <div key={option.id} className="flex items-center">
                         <input
                           id="lt"
@@ -319,7 +313,7 @@ export default function Projects({ listCountries, listInterests, listTerms }) {
                     </h3>
 
                     <div className="space-y-4  ">
-                      {listCountries.map((option, optionIdx) => (
+                      {listCountries.map((option:any, optionIdx:any) => (
                         <div key={option.id} className="flex items-center">
                           <input
                             id={`filter-${option.id}-${optionIdx}`}
@@ -352,7 +346,7 @@ export default function Projects({ listCountries, listInterests, listTerms }) {
                     </h3>
 
                     <div className="space-y-4">
-                      {listInterests.map((option, optionIdx) => (
+                      {listInterests.map((option:any, optionIdx:any) => (
                         <div key={option.id} className="flex items-center">
                           <input
                             id={`filter-${option.id}-${optionIdx}`}
