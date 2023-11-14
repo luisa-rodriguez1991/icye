@@ -53,7 +53,7 @@ export default function Testimonials({
   message10,
   name10,
   location10,
-}) {
+}:any) {
   const intl = useIntl();
   const [emblaRef] = useEmblaCarousel();
   return (

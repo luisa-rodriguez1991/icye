@@ -5,7 +5,7 @@ import {CheckIcon} from "@heroicons/react/24/solid";
 import Image from 'next/image'
 
 
-export default function Culture({title, text, item1, item2, item3, item4,}) {
+export default function Culture({title, text, item1, item2, item3, item4,}:any) {
     const intl = useIntl()
 
   return (

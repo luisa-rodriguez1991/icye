@@ -5,7 +5,7 @@ import { useIntl } from "react-intl";
 import Image from 'next/image'
 
 
-export default function Header({onOpenForm}) {
+export default function Header({onOpenForm}:any) {
   const router = useRouter();
   const {locale} = router
   const intl = useIntl()

@@ -1,6 +1,6 @@
 import { useIntl } from "react-intl";
 
-export default function Trust({ title, item1, item2, item3, item4, item1text, item2text, item3text, item4text}) {
+export default function Trust({ title, item1, item2, item3, item4, item1text, item2text, item3text, item4text}:any) {
   const intl = useIntl();
 
   return (

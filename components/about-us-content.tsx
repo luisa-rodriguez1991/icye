@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useIntl } from "react-intl";
 
 
-export default function AboutUs({text, img1, img2, img3, img4, img5, missiontext1, missiontext2, missiontext3, dataanalytic1, dataanalytic2, dataanalytic3, dataanalyticlabel1, dataanalyticlabel2, dataanalyticlabel3, visiontext, visionsubtitle1, visiontext1, visionsubtitle2, visiontext2, visionsubtitle3, visiontext3, visionsubtitle4, visiontext4, visionsubtitle5, visiontext5, visionsubtitle6, visiontext6, ourteamtext, ourteamimg}) {
+export default function AboutUs({text, img1, img2, img3, img4, img5, missiontext1, missiontext2, missiontext3, dataanalytic1, dataanalytic2, dataanalytic3, dataanalyticlabel1, dataanalyticlabel2, dataanalyticlabel3, visiontext, visionsubtitle1, visiontext1, visionsubtitle2, visiontext2, visionsubtitle3, visiontext3, visionsubtitle4, visiontext4, visionsubtitle5, visiontext5, visionsubtitle6, visiontext6, ourteamtext, ourteamimg}:any) {
   
   
   const intl = useIntl()

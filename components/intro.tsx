@@ -13,7 +13,7 @@ const navigation = [
   { name: 'Log in', href: '#' },
 ]
 
-export default function Intro({text,title}) {
+export default function Intro({text,title}:any) {
   const intl = useIntl()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 

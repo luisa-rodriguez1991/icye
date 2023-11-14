@@ -28,7 +28,7 @@
     "trajectory_paragraph":"ICYE Colombia is a member of the international federation of ICYE, founded over 70 years ago and headquartered in Berlin, Germany. Year after year, we have provided young people, both Colombians and foreigners, with the opportunity to have an experience in our various programs: Exchange, Volunteering, and EVS/ESC.",
     "trajectory_button":"More about us",
 
-    "how_to_participate_title":"How to participate ?",
+    "how_to_participate_title":"How  to <span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'>participate</span>  ?",
 
     "culrute_sub_title":"Exchange or Volunteering.",
     "culrute_title":"Discover a new culture",

@@ -4,7 +4,7 @@ import Button from "./button";
 import Image from 'next/image'
 
 
-export default function Trajectory({title, text, image}) {
+export default function Trajectory({title, text, image}:any) {
     const intl = useIntl()
 
   return (

@@ -2,7 +2,7 @@ import { useIntl } from "react-intl";
 import Button from "./button";
 
 
-export default function ContactContent({text}) {
+export default function ContactContent({text}:any) {
 
   const intl = useIntl()
 

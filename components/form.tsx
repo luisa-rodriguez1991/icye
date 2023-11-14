@@ -26,7 +26,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Form({ openIndicator, onSetOpen }) {
+export default function Form({ openIndicator, onSetOpen }:any) {
   const [agreed, setAgreed] = useState(false);
   const intl = useIntl();
 

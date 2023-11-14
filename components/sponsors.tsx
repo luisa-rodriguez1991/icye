@@ -1,6 +1,6 @@
 import { useIntl } from "react-intl";
 
-export default function Sponsors({ text, icon1, icon2, icon3, icon4, texticon1, texticon2, texticon3, texticon4 }) {
+export default function Sponsors({ text, icon1, icon2, icon3, icon4, texticon1, texticon2, texticon3, texticon4 }:any) {
   const intl = useIntl();
 
   return (

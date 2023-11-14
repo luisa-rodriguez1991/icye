@@ -7,7 +7,7 @@ import { useIntl } from "react-intl";
 //   return classes.filter(Boolean).join(' ')
 // }
 
-export default function Calendar({ text, pageInfo, events, showAll }: any) {
+export default function Calendar({ text, pageInfo, events, showAll }:any) {
 
   const router = useRouter();
   const { locale } = router;

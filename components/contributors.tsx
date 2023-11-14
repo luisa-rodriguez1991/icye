@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 
 
-export default function Contributors({title, text, icon1,icontext1, icon2, icontext2, icon3, icontext3, icon4, icontext4, icon5, icontext5, icon6, icontext6}) {
+export default function Contributors({title, text, icon1,icontext1, icon2, icontext2, icon3, icontext3, icon4, icontext4, icon5, icontext5, icon6, icontext6}:any) {
 
     const intl = useIntl()
     const router = useRouter();

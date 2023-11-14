@@ -1,6 +1,6 @@
 import { CheckIcon } from '@heroicons/react/24/solid'
 import {Battery0Icon} from "@heroicons/react/24/solid";
-import { useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const incentives = [
   {
@@ -20,9 +20,10 @@ const incentives = [
       "Una vez todo este claro, te pediremos $50.000 para comenzar el proceso administrativo, firmaremos algunos documentos y tendrás tu cupo..",
   },
 ]
-export default function HowToParticipate({title1, title2, title3, text1, text2, text3}) {
-  
+export default function HowToParticipate({title1, title2, title3, text1, text2, text3}:any) {
   const intl = useIntl()
+
+
 
   return (
     <div className="bg-accent-2 ">
@@ -31,9 +32,12 @@ export default function HowToParticipate({title1, title2, title3, text1, text2, 
           <div className="mx-auto max-w-xl lg:max-w-none">
             <div className="text-center">
               <div className="mx-auto max-w-4xl text-center">
-              <p className="mb-24 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
-               {intl.formatMessage({id:"how_to_participate_title"})}
-              </p>
+      
+              <div className="mb-24 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl" >
+              <span className='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'></span> 
+              <div dangerouslySetInnerHTML={{__html: intl.formatMessage({id:"how_to_participate_title"})}} />
+                {/* How to <span className='bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text'>   participate ?</span> */}
+              </div>
             </div>
             </div>
             <div className="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-x-8 gap-y-10 sm:max-w-none lg:grid-cols-3">

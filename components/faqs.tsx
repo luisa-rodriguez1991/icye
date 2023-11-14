@@ -10,7 +10,7 @@ const faqs = [
     // More questions...
   ]
   
-  export default function Faqs({text, question1, answer1, question2, answer2, question3, answer3, question4, answer4, question5, answer5, question6, answer6}) {
+  export default function Faqs({text, question1, answer1, question2, answer2, question3, answer3, question4, answer4, question5, answer5, question6, answer6}:any) {
 
     const intl = useIntl()
     

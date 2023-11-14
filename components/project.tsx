@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useIntl } from "react-intl"
 import Flag from 'react-world-flags'
 
-export default function Project({item}) {
+export default function Project({item}:any) {
   const router = useRouter();
   const {locale} = router
 
