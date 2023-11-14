@@ -5,7 +5,7 @@ import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/soli
 import { GetStaticProps } from "next";
 import { getPage } from "@/lib/api";
 
-export default function Privacy({page}) {
+export default function Privacy({page}:any) {
   
 
   console.log(page)

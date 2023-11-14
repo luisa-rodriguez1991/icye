@@ -7,7 +7,7 @@ import { getPage } from "@/lib/api";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 
-export default function About({page}) {
+export default function About({page}:any) {
   
   const intl = useIntl()
   

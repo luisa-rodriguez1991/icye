@@ -7,7 +7,7 @@ import { GetStaticProps } from "next";
 import  Head  from "next/head";
 import { useRouter } from "next/router";
 
-export default function Contact({page}) {
+export default function Contact({page}:any) {
   const intl = useIntl()
   const router = useRouter();
   const { locale } = router;

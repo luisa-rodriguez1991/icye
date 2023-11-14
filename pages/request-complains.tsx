@@ -5,7 +5,7 @@ import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/soli
 import { getPage } from "@/lib/api";
 import { GetStaticProps } from "next";
 
-export default function Request({page}) {
+export default function Request({page}:any) {
 
 
   console.log(page)

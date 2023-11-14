@@ -16,7 +16,7 @@ import Contributors from "@/components/contributors";
 
 
 
-export default function Home({posts, eventsList, page}) {
+export default function Home({posts, eventsList, page}:any) {
 
   
   return (
