@@ -5,7 +5,7 @@ import { useIntl } from "react-intl";
 import { getAllEvents } from "@/lib/api";
 import { getAllPost } from "@/lib/api";
 
-export default function Index({events}) {
+export default function Index({events}:any) {
   const intl = useIntl()
   
 

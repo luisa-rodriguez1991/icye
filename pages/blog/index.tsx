@@ -7,7 +7,7 @@ import { useIntl } from "react-intl";
 
 
 
-export default function Index({posts}) {
+export default function Index({posts}:any) {
 
   const intl = useIntl()
 

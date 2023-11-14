@@ -14,7 +14,7 @@ import { list } from "postcss";
 import { useRouter } from "next/router";
 import { useIntl } from "react-intl";
 
-export default function Projects({ listCountries, listInterests, listTerms }) {
+export default function Projects({ listCountries, listInterests, listTerms }:any) {
   const router = useRouter();
   const { locale } = router;
   const intl = useIntl();

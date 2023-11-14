@@ -35,7 +35,7 @@ const product = {
 
 // vista projecto
 
-export default function Project({page, listCategories}) {
+export default function Project({page, listCategories}:any) {
 
 
   return (

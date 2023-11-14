@@ -4,7 +4,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Breadcrumb from "@/components/breadcrump";
 import { CalendarIcon } from "@heroicons/react/20/solid";
 
-export default function Blog({ page }) {
+export default function Blog({ page }:any) {
   console.log(page);
 
   return (
