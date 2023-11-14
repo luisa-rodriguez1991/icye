@@ -56,6 +56,7 @@
     "plans_including9":"Febrero y Agosto",
     "plans_including10":"18 a 26 años (Excepciones Posibles)",
     "plans_including11":" Hospedar un Extranjero",
+    "plans_button_pdf":"Descargar PDF",
 
 
     "faqs_title":"Preguntas frecuentes",
@@ -107,7 +108,22 @@
     "project_filter":"Filtros",
     "project_filter_title_1":"Duración",
     "project_filter_title_2":"Paises",
-    "project_filter_title_3":"Areas de interes"
+    "project_filter_title_3":"Areas de interes",
+
+    "Registration_form_title":"Formulario en linea",
+    "Registration_form_name":"Nombre",
+    "Registration_form_name2":"Apellido",
+    "Registration_form_email":"Email",
+    "Registration_form_phone":"Telefono",
+    "Registration_form_program":"Programa de interes",
+    "Registration_form_option1":"Workcamp",
+    "Registration_form_option2":"Un año",
+    "Registration_form_option3":"Seis meses",
+    "Registration_form_option4":"Tres meses",
+    "Registration_form_Ppolicy":"Al seleccionar esto, aceptas nuestra",
+    "Registration_form_Ppolicy_accent":"política de privacidad.",
+    "Registration_form_button1":"Cancelar",
+    "Registration_form_button2":"Enviar"
 
  
 }

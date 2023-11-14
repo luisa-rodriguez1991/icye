@@ -3,6 +3,7 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Button from './button'
 import { useIntl } from 'react-intl'
+import Head from 'next/head'
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -18,6 +19,17 @@ export default function Intro({text,title}) {
 
   return (
     <div className="bg-white">
+      <Head>
+        <script type='text/javascript' src='/bolas.js'/>
+        <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+
+
+      </Head>
+             <div className="absolute w-full" id="particles-js"></div>  <div className="count-particles"> <span className="js-count-particles"></span>  </div>
+
+      <div>
+   
+      </div>
       <div className="relative">
         <div className="mx-auto max-w-7xl">
             <div className="relative z-10 pt-6 lg:pt-14 lg:w-full lg:max-w-2xl">

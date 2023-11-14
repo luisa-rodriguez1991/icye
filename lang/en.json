@@ -59,6 +59,7 @@
     "plans_including9":"February and August",
     "plans_including10":"18 to 26 years old (Possible Exceptions)",
     "plans_including11":"Host a Foreigner",
+    "plans_button_pdf":"Download PDF",
 
     "faqs_title":"Frequently asked questions",
     "faqs_paragraph":"Have a different question and can’t find the answer you’re looking for? Reach out to our support team by",
@@ -108,7 +109,25 @@
     "project_filter":"Filters",
     "project_filter_title_1":"Duration time",
     "project_filter_title_2":"Countries",
-    "project_filter_title_3":"Areas of interest"
+    "project_filter_title_3":"Areas of interest",
+
+
+    "Registration_form_title":"Online form",
+    "Registration_form_name":"First name",
+    "Registration_form_name2":"Last name",
+    "Registration_form_email":"Email",
+    "Registration_form_phone":"Phone number",
+    "Registration_form_program":"Program of interest",
+    "Registration_form_option1":"Workcamp",
+    "Registration_form_option2":"One year",
+    "Registration_form_option3":"Six months",
+    "Registration_form_option4":"Three months",
+    "Registration_form_Ppolicy":"By selecting this, you agree to our",
+    "Registration_form_Ppolicy_accent":"Privacy Policy",
+    "Registration_form_button1":"Cancel",
+    "Registration_form_button2":"Send"
+
+    
     
     
 }

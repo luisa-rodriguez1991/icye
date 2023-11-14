@@ -1,11 +1,12 @@
 import { useIntl } from "react-intl";
 import { CheckIcon } from '@heroicons/react/20/solid'
+import { DocumentArrowDownIcon } from '@heroicons/react/20/solid'
 
 
   
   
 
-export default function Plans ({ text, title1, price1, cyantext1, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, title2, price2, cyantext2, list2item1, list2item2, list2item3, list2item4, list2item5, list2item6, list2item7, list2item8, list2item9, list2item10, list2item11, title3, price3, cyantext3, list3item1, list3item2, list3item3, list3item4, list3item5, list3item6, list3item7, list3item8, list3item9, list3item10, list3item11, title4, price4, cyantext4, list4item1, list4item2, list4item3, list4item4, list4item5, list4item6, list4item7, list4item8, list4item9, list4item10, list4item11 }) {
+export default function Plans ({ page, text, title1, price1, cyantext1, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, pdf1, title2, price2, cyantext2, list2item1, list2item2, list2item3, list2item4, list2item5, list2item6, list2item7, list2item8, list2item9, list2item10, list2item11, pdf2, title3, price3, cyantext3, list3item1, list3item2, list3item3, list3item4, list3item5, list3item6, list3item7, list3item8, list3item9, list3item10, list3item11, pdf3, title4, price4, cyantext4, list4item1, list4item2, list4item3, list4item4, list4item5, list4item6, list4item7, list4item8, list4item9, list4item10, list4item11, pdf4 }) {
     const intl = useIntl()
 
     return (
@@ -93,6 +94,17 @@ export default function Plans ({ text, title1, price1, cyantext1, item1, item2, 
                                 {item11}
                                
                                 </li>
+
+                                <div>
+
+                                    <a  className=' flex justify-center items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white'
+                                        href={pdf1} target='_blank' title={`Download PDF file about the project: ${title1}`}
+                                        ><DocumentArrowDownIcon className=' h-4 w-4 mr-1'/>{intl.formatMessage({id:"plans_button_pdf"})}
+                                    </a>
+                                    
+                                </div>
+
+
                             </ul>
                             
                         </div>
@@ -168,6 +180,15 @@ export default function Plans ({ text, title1, price1, cyantext1, item1, item2, 
                                 {list2item11}
                                
                                 </li>
+
+                                <div>
+
+                                    <a  className=' flex justify-center items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white'
+                                        href={pdf1} target='_blank' title={`Download PDF file about the project: ${title1}`}
+                                        ><DocumentArrowDownIcon className=' h-4 w-4 mr-1'/>{intl.formatMessage({id:"plans_button_pdf"})}
+                                    </a>
+                                    
+                                </div>
                             </ul>
                             
                         </div>
@@ -243,6 +264,16 @@ export default function Plans ({ text, title1, price1, cyantext1, item1, item2, 
                                 {list3item11}
                                
                                 </li>
+
+                                <div>
+
+                                    <a  className=' flex justify-center items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white'
+                                        href={pdf1} target='_blank' title={`Download PDF file about the project: ${title1}`}
+                                        ><DocumentArrowDownIcon className=' h-4 w-4 mr-1'/>{intl.formatMessage({id:"plans_button_pdf"})}
+                                    </a>
+                                    
+                                </div>
+
                             </ul>
                             
                         </div>
@@ -318,6 +349,15 @@ export default function Plans ({ text, title1, price1, cyantext1, item1, item2, 
                                 {list4item11}
                                
                                 </li>
+
+                                <div>
+
+                                    <a  className=' flex justify-center items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white'
+                                        href={pdf1} target='_blank' title={`Download PDF file about the project: ${title1}`}
+                                        ><DocumentArrowDownIcon className=' h-4 w-4 mr-1'/>{intl.formatMessage({id:"plans_button_pdf"})}
+                                    </a>
+                                    
+                                </div>
                             </ul>
                             
                         </div>

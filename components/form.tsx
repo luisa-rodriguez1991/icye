@@ -15,51 +15,12 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import {
-  LinkIcon,
-  PlusIcon,
-  QuestionMarkCircleIcon,
-} from "@heroicons/react/20/solid";
 
-const team = [
-  {
-    name: "Tom Cook",
-    email: "tom.cook@example.com",
-    href: "#",
-    imageUrl:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-  {
-    name: "Whitney Francis",
-    email: "whitney.francis@example.com",
-    href: "#",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-  {
-    name: "Leonard Krasner",
-    email: "leonard.krasner@example.com",
-    href: "#",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-  {
-    name: "Floyd Miles",
-    email: "floyd.miles@example.com",
-    href: "#",
-    imageUrl:
-      "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-  {
-    name: "Emily Selman",
-    email: "emily.selman@example.com",
-    href: "#",
-    imageUrl:
-      "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-];
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+
+
+
 import { Switch } from "@headlessui/react";
+import { useIntl } from "react-intl";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -67,6 +28,7 @@ function classNames(...classes) {
 
 export default function Form({ openIndicator, onSetOpen }) {
   const [agreed, setAgreed] = useState(false);
+  const intl = useIntl();
 
   return (
     <Transition.Root show={openIndicator} as={Fragment}>
@@ -122,7 +84,7 @@ export default function Form({ openIndicator, onSetOpen }) {
                         </div>
                         <div className="mx-auto max-w-2xl text-center">
                           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                            Formulario en linea
+                           {intl.formatMessage({ id: "Registration_form_title"})}
                           </h2>
                           <p className="mt-2 text-lg leading-8 text-gray-600">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, nesciunt ipsum. Assumenda, explicabo eligendi.
@@ -139,7 +101,7 @@ export default function Form({ openIndicator, onSetOpen }) {
                                 htmlFor="first-name"
                                 className="block text-sm font-semibold leading-6 text-gray-900"
                               >
-                                First name
+                                {intl.formatMessage({ id: "Registration_form_name"})}
                               </label>
                               <div className="mt-2.5">
                                 <input
@@ -156,7 +118,7 @@ export default function Form({ openIndicator, onSetOpen }) {
                                 htmlFor="last-name"
                                 className="block text-sm font-semibold leading-6 text-gray-900"
                               >
-                                Last name
+                                {intl.formatMessage({ id: "Registration_form_name2"})}
                               </label>
                               <div className="mt-2.5">
                                 <input
@@ -173,7 +135,7 @@ export default function Form({ openIndicator, onSetOpen }) {
                                 htmlFor="email"
                                 className="block text-sm font-semibold leading-6 text-gray-900"
                               >
-                                Email
+                                {intl.formatMessage({ id: "Registration_form_email"})}
                               </label>
                               <div className="mt-2.5">
                                 <input
@@ -190,7 +152,7 @@ export default function Form({ openIndicator, onSetOpen }) {
                                 htmlFor="phone-number"
                                 className="block text-sm font-semibold leading-6 text-gray-900"
                               >
-                                Phone number
+                                {intl.formatMessage({ id: "Registration_form_phone"})}
                               </label>
                               <div className="relative mt-2.5">
                             
@@ -210,7 +172,7 @@ export default function Form({ openIndicator, onSetOpen }) {
                                 htmlFor="phone-number"
                                 className="block text-sm font-semibold leading-6 text-gray-900"
                               >
-                                Programa de Interes
+                                {intl.formatMessage({ id: "Registration_form_program"})}
                               </label>
 
                               <div className="mt-2 -space-y-px rounded-md shadow-sm">
@@ -224,10 +186,10 @@ export default function Form({ openIndicator, onSetOpen }) {
                                     autoComplete="country-name"
                                     className="relative block w-full rounded-none rounded-t-md border-0 bg-transparent py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                   >
-                                    <option>Workcamp</option>
-                                    <option>1 Año</option>
-                                    <option>6 Meses</option>
-                                    <option>3 Meses</option>
+                                    <option>{intl.formatMessage({ id: "Registration_form_option1"})}</option>
+                                    <option>{intl.formatMessage({ id: "Registration_form_option2"})}</option>
+                                    <option>{intl.formatMessage({ id: "Registration_form_option3"})}</option>
+                                    <option>{intl.formatMessage({ id: "Registration_form_option4"})}</option>
                                   </select>
                                 </div>
                               </div>
@@ -260,12 +222,12 @@ export default function Form({ openIndicator, onSetOpen }) {
                                 </Switch>
                               </div>
                               <Switch.Label className="text-sm leading-6 text-gray-600">
-                                By selecting this, you agree to our{" "}
+                                {intl.formatMessage({ id: "Registration_form_Ppolicy"})}{" "}
                                 <a
                                   href="#"
                                   className="font-semibold text-accent-1"
                                 >
-                                  privacy&nbsp;policy
+                                  {intl.formatMessage({ id: "Registration_form_Ppolicy_accent"})}
                                 </a>
                                 .
                               </Switch.Label>
@@ -284,13 +246,13 @@ export default function Form({ openIndicator, onSetOpen }) {
                           className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
                           onClick={() => onSetOpen(false)}
                         >
-                          Cancel
+                          {intl.formatMessage({ id: "Registration_form_button1"})}
                         </button>
                         <button
                           type="submit"
                           className="inline-flex justify-center rounded-md bg-accent-1 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
-                          Send
+                          {intl.formatMessage({ id: "Registration_form_button2"})}
                         </button>
                       </div>
                     </div>

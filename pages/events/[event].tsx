@@ -4,10 +4,15 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Breadcrumb from "@/components/breadcrump";
 
 import { CalendarIcon, MapPinIcon } from "@heroicons/react/20/solid";
+import Head from "next/head";
 
 export default function Event({ page }) {
   return (
     <Layout>
+      <Head>
+        <link rel="canonical" href={`https://www.icyecolombia.com/${page.slug}`} />
+        <meta name="robots" content="noindex, nofollow"/>
+      </Head>
       <Breadcrumb
         middleRoute="/events"
         middleRouteName="Events"

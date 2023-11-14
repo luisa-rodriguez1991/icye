@@ -5,6 +5,7 @@ import AboutUs from "@/components/about-us-content";
 import { useIntl } from "react-intl";
 import { getPage } from "@/lib/api";
 import { GetStaticProps } from "next";
+import Head from "next/head";
 
 export default function About({page}) {
   
@@ -12,6 +13,10 @@ export default function About({page}) {
   
   return (
     <Layout>
+      <Head>
+        <link rel="canonical" href="https://www.icyecolombia.com/about" />
+        <meta name="robots" content="noindex, nofollow"/>
+      </Head>
        <Breadcrumb miVariable={intl.formatMessage({id:"breadcrumb_about"})}/>
        {/* <ContactContent text={page.acf.contact_text}/> */}
 
