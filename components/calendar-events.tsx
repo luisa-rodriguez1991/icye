@@ -17,7 +17,7 @@ export default function Calendar({ text, pageInfo, events, showAll }:any) {
     events[o].event_date = new Date (events[o].acf.event_date)
 }
 
-  const sortedList = events.sort((a,b) => a.event_date - b.event_date);
+  const sortedList = events.sort((a,b):any => a.event_date - b.event_date);
   const all = sortedList.map((meeting) => (
     <li
       key={meeting.id}
