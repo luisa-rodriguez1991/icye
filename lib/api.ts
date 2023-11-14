@@ -42,7 +42,7 @@ export async function getAllPost(locale:any) {
 
   export async function getCategoryNameById(list:any) {
     let listNames: any = []
-    return Promise.all(list.map(item => {
+    return Promise.all(list.map((item: any) => {
       //item.full_name returns the repositorie name
       return fetch(`http://184.72.130.92/wp-json/wp/v2/categories?include=${item}`)
         .then(data => {
