@@ -18,7 +18,7 @@ export default function Calendar({ text, pageInfo, events, showAll }:any) {
 }
 
   const sortedList = events.sort((a:any,b:any) => a.event_date - b.event_date);
-  const all = sortedList.map((meeting) => (
+  const all = sortedList.map((meeting:any) => (
     <li
       key={meeting.id}
       className="rounded-xl relative flex space-x-2 p-6  bg-white my-2 relative"
