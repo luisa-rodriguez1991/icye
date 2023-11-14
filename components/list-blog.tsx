@@ -20,23 +20,23 @@ export default function Blog({ text, pageInfo, posts, showAll }: any) {
       <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
         <time dateTime={post.date} className="mr-8">
           <span className="capitalize">
-            {new Date(post.date).toLocaleDateString("es-CO", {
+            {new Date(post.date).toLocaleDateString(locale, {
               weekday: "long",
             })}
             ,{" "}
           </span>
           <span className="capitalize">
-            {new Date(post.date).toLocaleDateString("es-CO", {
+            {new Date(post.date).toLocaleDateString(locale, {
               day: "numeric",
             })}{" "}
           </span>
           de{" "}
           <span className="capitalize">
-            {new Date(post.date).toLocaleDateString("es-CO", { month: "long" })}{" "}
+            {new Date(post.date).toLocaleDateString(locale, { month: "long" })}{" "}
           </span>
           del{" "}
           <span className="capitalize">
-            {new Date(post.date).toLocaleDateString("es-CO", {
+            {new Date(post.date).toLocaleDateString(locale, {
               year: "numeric",
             })}{" "}
           </span>

@@ -30,11 +30,12 @@ export default function Trajectory({title, text, image}) {
             <div className=" flex basis-12/12 lg:basis-6/12 justify-center">
            
                 <Image
-                      width={1024}
-                      height={921}
+                     
                     className="max-w-[100%]"
                     src={image}
                     alt=""
+                    width={1024}
+                    height={921}
                 />
             </div>   
         </div>

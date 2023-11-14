@@ -253,13 +253,14 @@ export default function Projects({ listCountries, listInterests, listTerms }) {
             </Dialog>
           </Transition.Root>
 
+          {/* //al rededor */}
           <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 ">
+            <div className="flex items-baseline justify-between border-b border-gray-200 pb-6">
               <h1 className="mt-6 mb-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
                 {intl.formatMessage({ id: "projects_title" })}
               </h1>
 
-              <div className="flex items-center">
+              <div className="flex items-center ">
                 <button
                   type="button"
                   className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
@@ -271,7 +272,7 @@ export default function Projects({ listCountries, listInterests, listTerms }) {
               </div>
             </div>
 
-            <section aria-labelledby="products-heading" className="pb-24">
+            <section aria-labelledby="products-heading" className="pb-24  ">
               <h2 id="products-heading" className="sr-only">
                 Products
               </h2>
@@ -311,7 +312,7 @@ export default function Projects({ listCountries, listInterests, listTerms }) {
                   <div className="space-y-4 border-b border-gray-300 pb-6 text-sm font-medium text-gray-900">
                     <h3 className="mt-3 flow-root flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                       <span className="font-medium text-gray-900">
-                        {/* version en ingles meter */}
+                        
                         {intl.formatMessage({id:"project_filter_title_2"})}
                       
                       </span>
@@ -344,7 +345,7 @@ export default function Projects({ listCountries, listInterests, listTerms }) {
                   <div className="space-y-4 border-b border-gray-300 pb-6 text-sm font-medium text-gray-900">
                     <h3 className="mt-3 flow-root flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                       <span className="font-medium text-gray-900">
-                        {/* version en ingles meter */}
+                       
                         {intl.formatMessage({id:"project_filter_title_3"})}
                        
                       </span>

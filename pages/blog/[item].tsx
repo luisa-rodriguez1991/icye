@@ -16,24 +16,28 @@ export default function Blog({ page }) {
       />
       <div className="bg-white pt-6">
         <div className="mx-auto max-w-7xl px-6 pb-8 py-8  lg:px-8 relative">
-
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-
-          <h2 className="text-2xl font-bold text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight ">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+            <h2 className="text-2xl font-bold text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight ">
               {page.title.rendered}
-          </h2>
-        </div>
+            </h2>
+          </div>
 
-          <div className="relative isolate overflow-hidden bg-white py-12 lg:overflow-visible ">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+          <div className="relative isolate overflow-hidden bg-white py-8 lg:overflow-visible ">
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-6">
 
-                 <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6">
-                <div className="mt-2 flex items-center text-gray-500">
+              
+              <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6 ">
+                
+              </div>
+
+              <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 ">
+                <div className="lg:pr-4">
+                <div className="mb-4 flex items-start text-gray-500">
                   <CalendarIcon
                     className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
                     aria-hidden="true"
                   />
-                  <div className="ml-auto mr-auto flex flex-wrap items-center gap-y-1 overflow-hidden  leading-6">
+                  <div className=" flex flex-wrap items-center gap-y-1 overflow-hidden  leading-6">
                     <time dateTime={page.date} className="mr-8">
                       <span className="capitalize">
                         {new Date(page.date).toLocaleDateString("es-CO", {
@@ -60,15 +64,7 @@ export default function Blog({ page }) {
                       </span>
                     </time>
                   </div>
-
                 </div>
-                
-              </div>
-
-              <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 ">
-                
-                
-                <div className="lg:pr-4">
                   <div
                     className="lg:max-w-lg"
                     dangerouslySetInnerHTML={{ __html: page.content.rendered }}

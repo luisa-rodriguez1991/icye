@@ -94,19 +94,21 @@ export default function Footer() {
                   {intl.formatMessage({ id: "footer_contact" })}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
+                  {/* direccion */}
                   <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                    <p
+                      
+                      className="text-sm leading-6 text-gray-600 "
                     >
                       {intl.formatMessage({ id: "footer_direccion1" })}
                       <br></br>
                       {intl.formatMessage({ id: "footer_direccion2" })}
-                    </a>
+                    </p>
                   </li>
+                  {/* email */}
                   <li>
                     <a
-                      href="#"
+                      href="mailto:icyecol@icyecolombia.com"
                       className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                     >
                       {intl.formatMessage({ id: "footer_email" })}
@@ -114,7 +116,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="tel:+57 310 7346918"
                       className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                     >
                       {intl.formatMessage({ id: "footer_whatsapp" })}

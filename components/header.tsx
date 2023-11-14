@@ -5,7 +5,7 @@ import { useIntl } from "react-intl";
 import Image from 'next/image'
 
 
-export default function Header() {
+export default function Header({onOpenForm}) {
   const router = useRouter();
   const {locale} = router
   const intl = useIntl()
@@ -82,7 +82,7 @@ export default function Header() {
                   }
                 </div>
 
-                  <Link locale={locale} href="#" title="Como participar" className="z-[999999] lg:z-[0] lg:ml-7 fixed top-auto bottom-0 left-0 rounded-[0px] lg:rounded-[40px] w-full lg:static text-center lg:w-auto  lg:min-w-[147px] bg-accent-1 p-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-2 hover:text-accent-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                  <Link locale={locale} href="#" onClick={()=>onOpenForm(true)} title="Como participar" className="z-[999999] lg:z-[0] lg:ml-7 fixed top-auto bottom-0 left-0 rounded-[0px] lg:rounded-[40px] w-full lg:static text-center lg:w-auto  lg:min-w-[147px] bg-accent-1 p-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-2 hover:text-accent-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                     {intl.formatMessage({id:"header_button"})}
                   </Link> 
               

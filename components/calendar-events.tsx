@@ -13,7 +13,12 @@ export default function Calendar({ text, pageInfo, events, showAll }: any) {
   const { locale } = router;
   const intl = useIntl();
 
-  const all = events.map((meeting) => (
+  for(var o in events) {
+    events[o].event_date = new Date (events[o].acf.event_date)
+}
+
+  const sortedList = events.sort((a,b) => a.event_date - b.event_date);
+  const all = sortedList.map((meeting) => (
     <li
       key={meeting.id}
       className="rounded-xl relative flex space-x-2 p-6  bg-white my-2 relative"
@@ -48,35 +53,35 @@ export default function Calendar({ text, pageInfo, events, showAll }: any) {
               <time dateTime={meeting.date}>
                 <span className="capitalize">
                   {new Date(meeting.acf.event_date).toLocaleDateString(
-                    "es-CO",
+                    locale,
                     { weekday: "long" }
                   )}
                   ,{" "}
                 </span>
                 <span className="capitalize">
                   {new Date(meeting.acf.event_date).toLocaleDateString(
-                    "es-CO",
+                    locale,
                     { day: "numeric" }
                   )}{" "}
                 </span>
                 de{" "}
                 <span className="capitalize">
                   {new Date(meeting.acf.event_date).toLocaleDateString(
-                    "es-CO",
+                    locale,
                     { month: "long" }
                   )}{" "}
                 </span>
                 del{" "}
                 <span className="capitalize">
                   {new Date(meeting.acf.event_date).toLocaleDateString(
-                    "es-CO",
+                    locale,
                     { year: "numeric" }
                   )}{" "}
                 </span>
                 <span className="font-semibold">
                   {" "}
                   {new Date(meeting.acf.event_date).toLocaleTimeString(
-                    "es-CO",
+                    locale,
                     { hour: "2-digit", minute: "2-digit", hour12: true }
                   )}{" "}
                   {meeting.acf.timezone}
@@ -98,7 +103,6 @@ export default function Calendar({ text, pageInfo, events, showAll }: any) {
       </div>
     </li>
   ));
-
   return (
 
     

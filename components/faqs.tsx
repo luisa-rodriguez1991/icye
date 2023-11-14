@@ -21,13 +21,7 @@ const faqs = [
             {/* Frequently asked questions */} {intl.formatMessage({id:"faqs_title"})}
             </p>
           </div>
-          <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
-             {intl.formatMessage({id:"faqs_paragraph"})} {' '}
-            <a href="#" className="font-semibold text-[#011f7fb3] hover:text-accent-1">
-               {intl.formatMessage({id:"faqs_in_paragraph"})}
-            </a>{' '}
-            {intl.formatMessage({id:"faqs_paragraph+"})}        
-          </p>
+          <div className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600" dangerouslySetInnerHTML={{__html:text}} />
         <div className="mx-auto max-w-7xl px-6 mt-12 lg:px-8">
           <div className="">
             <dl className="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10">
