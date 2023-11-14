@@ -102,7 +102,7 @@ export default function Project({page, listCategories}:any) {
                   <div className='flex flex-col'>
                     Categories: 
                     <div className='flex items-center gap-2 my-3'>
-                      {listCategories.map((category)=>(
+                      {listCategories.map((category:any)=>(
                         <span className="inline-flex items-center  rounded-full bg-accent-2 px-2 py-1 text-xs font-medium text-accent-1">
                          
                           {category}
