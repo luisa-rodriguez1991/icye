@@ -22,7 +22,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Switch } from "@headlessui/react";
 import { useIntl } from "react-intl";
 
-function classNames(...classes) {
+function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 

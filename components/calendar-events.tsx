@@ -3,9 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useIntl } from "react-intl";
 
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(' ')
-// }
 
 export default function Calendar({ text, pageInfo, events, showAll }:any) {
 
