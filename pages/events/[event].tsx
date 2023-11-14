@@ -5,8 +5,13 @@ import Breadcrumb from "@/components/breadcrump";
 
 import { CalendarIcon, MapPinIcon } from "@heroicons/react/20/solid";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 export default function Event({ page }:any) {
+
+  const router = useRouter();
+  const { locale } = router;
+  
   return (
     <Layout>
       <Head>
@@ -79,8 +84,8 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const allProjects = await getAllEvents();
+export const getStaticPaths: GetStaticPaths = async (locale) => {
+  const allProjects = await getAllEvents(locale);
   let finalArray = [];
   const en = allProjects.map((i) => `/en/events/${i.slug}`);
   const es = allProjects.map((i) => `/es/events/${i.slug}`);

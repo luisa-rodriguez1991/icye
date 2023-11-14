@@ -3,8 +3,11 @@ import { getAllPost, getDetailProject } from "@/lib/api";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Breadcrumb from "@/components/breadcrump";
 import { CalendarIcon } from "@heroicons/react/20/solid";
+import { useRouter } from "next/router";
 
 export default function Blog({ page }:any) {
+  const router = useRouter();
+  const { locale } = router;
   console.log(page);
 
   return (
@@ -94,8 +97,8 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const allProjects = await getAllPost();
+export const getStaticPaths: GetStaticPaths = async (locale) => {
+  const allProjects = await getAllPost(locale);
   let finalArray = [];
   const en = allProjects.map((i) => `/en/blog/${i.slug}`);
   const es = allProjects.map((i) => `/es/blog/${i.slug}`);
