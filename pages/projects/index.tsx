@@ -107,7 +107,7 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
                         role="list"
                         className="px-2 py-3 font-medium text-gray-900"
                       >
-                        {listTerms.map((option, optionIdx) => (
+                        {listTerms.map((option:any, optionIdx:any) => (
                           <div key={option.id} className="flex items-center">
                             <input
                               id="lt"
@@ -160,7 +160,7 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
                             <Disclosure.Panel className="pt-6">
                               <div className="space-y-6">
                                 {/* lista paises responsive */}
-                                {listCountries.map((option, optionIdx) => (
+                                {listCountries.map((option:any, optionIdx:any) => (
                                   <div
                                     key={option.id}
                                     className="flex items-center"
@@ -215,7 +215,7 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
                             </h3>
                             <Disclosure.Panel className="pt-6">
                               <div className="space-y-6">
-                                {listInterests.map((option, optionIdx) => (
+                                {listInterests.map((option:any, optionIdx:any) => (
                                   <div
                                     key={option.id}
                                     className="flex items-center"
