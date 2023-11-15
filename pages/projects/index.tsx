@@ -20,7 +20,7 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
   const intl = useIntl();
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [list, setList] = useState([]);
-  const [excludedListFilters, setExcludedListFilters] = useState([]);
+  const [excludedListFilters, setExcludedListFilters] = useState<any[]>([]);
 
   useEffect(() => {
   
@@ -45,7 +45,7 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
   };
 
   const addCategory = (categoryId:any) => {
-    setExcludedListFilters({...excludedListFilters, categoryId});
+    setExcludedListFilters([...excludedListFilters, categoryId]);
   };
 
   return (
