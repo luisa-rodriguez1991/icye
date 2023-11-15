@@ -44,8 +44,8 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
     setExcludedListFilters(excludedListFilters.filter((a) => a !== categoryId));
   };
 
-  const addCategory = (categoryId) => {
-    setExcludedListFilters([...excludedListFilters, categoryId]);
+  const addCategory = (categoryId:any) => {
+    setExcludedListFilters({...excludedListFilters, categoryId});
   };
 
   return (
