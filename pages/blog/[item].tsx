@@ -3,6 +3,7 @@ import { getAllPost, getDetailProject } from "@/lib/api";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Breadcrumb from "@/components/breadcrump";
 import { CalendarIcon } from "@heroicons/react/20/solid";
+import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function Blog({ page }:any) {
@@ -12,6 +13,10 @@ export default function Blog({ page }:any) {
 
   return (
     <Layout>
+       <Head>
+        <link rel="canonical" href={`https://www.icyecolombia.com/${page.slug}`} />
+        <meta name="robots" content="noindex, nofollow"/>
+      </Head>
       <Breadcrumb
         middleRoute="/blog"
         middleRouteName="Blog"

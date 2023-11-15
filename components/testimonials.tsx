@@ -60,9 +60,13 @@ export default function Testimonials({
     <div className="bg-white py-6">
       <div className="mb-20 p-6">
         <div className="mx-auto max-w-4xl text-center ">
-          <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
+
+             <span className='  bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'></span> 
+              <div className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl" dangerouslySetInnerHTML={{__html: intl.formatMessage({id:"testimonial_title"})}} />
+
+          {/* <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
             {intl.formatMessage({ id: "testimonial_title" })}
-          </p>
+          </p> */}
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
           {text}

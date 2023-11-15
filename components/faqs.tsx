@@ -17,9 +17,13 @@ const faqs = [
     return (
       <div className="bg-accent-2 px-5 py-20 ">
           <div className="mx-auto max-w-4xl text-center ">
-            <p className=" text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
-            {/* Frequently asked questions */} {intl.formatMessage({id:"faqs_title"})}
-            </p>
+               <span className='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'></span> 
+              <div className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl" dangerouslySetInnerHTML={{__html: intl.formatMessage({id:"faqs_title"})}} />
+
+            {/* <p className=" text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
+             {intl.formatMessage({id:"faqs_title"})}
+            </p> */}
+
           </div>
           <div className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600" dangerouslySetInnerHTML={{__html:text}} />
         <div className="mx-auto max-w-7xl px-6 mt-12 lg:px-8">

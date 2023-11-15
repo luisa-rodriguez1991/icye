@@ -12,6 +12,8 @@ export default function Index({events}:any) {
 
   return (
     <Layout> 
+      
+
     <Breadcrumb miVariable={intl.formatMessage({id:"breadcrumb_events"})}/>
 
     <div className=" p-5 bg-accent-2 ">

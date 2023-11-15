@@ -4,7 +4,9 @@ import { useIntl } from "react-intl";
 import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/solid';
 import { getPage } from "@/lib/api";
 import { GetStaticProps } from "next";
+import Head from "next/head";
 import { useRouter } from "next/router";
+
 
 export default function Request({page}:any) {
   const router = useRouter();
@@ -14,6 +16,10 @@ export default function Request({page}:any) {
   const intl = useIntl()
   return (
     <Layout>
+       <Head>
+        <link rel="canonical" href={`https://www.icyecolombia.com/request-complains`} />
+        <meta name="robots" content="noindex, nofollow"/>
+      </Head>
       <Breadcrumb miVariable={intl.formatMessage({id:"breadcrumb_Request"})}/>
       
         <div className="bg-white px-6 pb-24 lg:px-8 pt-12"> 

@@ -5,6 +5,7 @@ import { getAllProjects, getCategoryNameById, getDetailProject } from "@/lib/api
 import { GetStaticPaths, GetStaticProps } from "next";
 import Breadcrumb from '@/components/breadcrump';
 import Flag from 'react-world-flags';
+import Head from "next/head";
 import { useRouter } from 'next/router';
 
 
@@ -42,6 +43,10 @@ export default function Project({page, listCategories}:any) {
   const { locale } = router;
   return (
     <Layout>
+       <Head>
+        <link rel="canonical" href={`https://www.icyecolombia.com/${page.slug}`} />
+        <meta name="robots" content="noindex, nofollow"/>
+      </Head>
       <Breadcrumb middleRoute="/projects" middleRouteName="Projects" miVariable={page.title.rendered}/>
 
         <div className="bg-white">

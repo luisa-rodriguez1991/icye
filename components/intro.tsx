@@ -5,13 +5,6 @@ import Button from './button'
 import { useIntl } from 'react-intl'
 import Head from 'next/head'
 
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
-  { name: 'Log in', href: '#' },
-]
 
 export default function Intro({text,title}:any) {
   const intl = useIntl()
@@ -35,9 +28,11 @@ export default function Intro({text,title}:any) {
             <div className="relative z-10 pt-6 lg:pt-14 lg:w-full lg:max-w-2xl">
               <div className="relative px-6 py-6 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-                    <h1 className="text-4xl font-bold tracking-tight text-accent-1 sm:text-6xl">
+                    <span className='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'></span> 
+                    <div className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl" dangerouslySetInnerHTML={{__html: intl.formatMessage({id:"intro_title"})}} />
+                    {/* <h1 className="text-4xl font-bold tracking-tight text-accent-1 sm:text-6xl">
                       {title}
-                    </h1>
+                    </h1> */}
                     <p className="mt-6 text-lg leading-8 text-gray-800">
                         {text}
                     </p>

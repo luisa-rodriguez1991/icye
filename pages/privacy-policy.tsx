@@ -4,18 +4,22 @@ import { useIntl } from "react-intl";
 import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/solid';
 import { GetStaticProps } from "next";
 import { getPage } from "@/lib/api";
+import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function Privacy({page}:any) {
   
   const router = useRouter();
   const { locale } = router;
-  console.log(page)
   const intl = useIntl()
 
   return (
 
     <Layout>
+      <Head>
+        <link rel="canonical" href={`https://www.icyecolombia.com/privacy-policy`} />
+        <meta name="robots" content="noindex, nofollow"/>
+      </Head>
 
       <Breadcrumb miVariable={intl.formatMessage({id:"breadcrumb_privacy"})}/>
 

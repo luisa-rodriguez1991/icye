@@ -17,8 +17,11 @@ export default function Trajectory({title, text, image}:any) {
                         <div className="text-base  leading-7 text-gray-500 bg-accent-2 rounded-3xl px-6 py-1">{intl.formatMessage({id:"trajectory_sub_title"})}</div>
                     </div>
 
+
+                    <span className='  bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'></span> 
+                     <div className="mt-6 text-3xl font-bold tracking-tight text-accent-1 sm:text-4xl" dangerouslySetInnerHTML={{__html: intl.formatMessage({id:"trajectory_title"})}} />
                     
-                    <h1 className="mt-6 text-3xl font-bold tracking-tight text-accent-1 sm:text-4xl">{title}</h1>
+                    {/* <h1 className="mt-6 text-3xl font-bold tracking-tight text-accent-1 sm:text-4xl">{title}</h1> */}
                     <p className="mt-6 text-xl leading-8 text-gray-700">
                     {text}
                     </p>

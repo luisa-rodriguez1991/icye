@@ -4,6 +4,7 @@ import { useIntl } from "react-intl";
 import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/solid';
 import { getPage } from "@/lib/api";
 import { GetStaticProps } from "next";
+import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function Terms({page}:any) {
@@ -16,6 +17,10 @@ export default function Terms({page}:any) {
   return (
 
     <Layout>
+       <Head>
+        <link rel="canonical" href={`https://www.icyecolombia.com/terms-conditions`} />
+        <meta name="robots" content="noindex, nofollow"/>
+      </Head>
 
       <Breadcrumb miVariable={intl.formatMessage({id:"breadcrumb_terms"})}/>
 

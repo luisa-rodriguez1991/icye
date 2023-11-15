@@ -20,11 +20,11 @@
     "breadcrumb_privacy":"Privacy policies",
 
 
-    "intro_title":"Exchange and Volunteer Programs",
+    "intro_title":"Exchange and <span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'>Volunteer</span> Programs",
     "intro_paragraph":"Live the best experience of your life for a year abroad.Live the best experience of your life for a year abroad.Live the best experience of your life for a year abroad.",
 
     "trajectory_sub_title":"Trayectory & Collaboration",
-    "trajectory_title":"More than 40 years changing the lives of young people.",
+    "trajectory_title":"More than <span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'>40</span>  years changing the lives of young people.",
     "trajectory_paragraph":"ICYE Colombia is a member of the international federation of ICYE, founded over 70 years ago and headquartered in Berlin, Germany. Year after year, we have provided young people, both Colombians and foreigners, with the opportunity to have an experience in our various programs: Exchange, Volunteering, and EVS/ESC.",
     "trajectory_button":"More about us",
 
@@ -34,7 +34,7 @@
     "culrute_title":"Discover a new culture",
     "culrute_paragraph":"Both Exchange and Volunteering will allow you to",
 
-    "testimonial_title":" Personal Experiencess",
+    "testimonial_title":" Personal <span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'>Experiencess</span> ",
 
 
     "how_to_participate_sub_title1": "Online Registration",
@@ -61,12 +61,12 @@
     "plans_including11":"Host a Foreigner",
     "plans_button_pdf":"Download PDF",
 
-    "faqs_title":"Frequently asked questions",
+    "faqs_title":"Frequently asked <span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'>questions</span>",
     "faqs_paragraph":"Have a different question and can’t find the answer you’re looking for? Reach out to our support team by",
     "faqs_in_paragraph":"sending us an email",
     "faqs_paragraph+":"and we’ll get back to you as soon as we can.",
 
-    "sponsors_title":"Allied Organizations",
+    "sponsors_title":"<span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'>Allied</span> Organizations",
 
     "calendar_title":"Events",
 

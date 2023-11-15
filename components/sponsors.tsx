@@ -7,9 +7,12 @@ export default function Sponsors({ text, icon1, icon2, icon3, icon4, texticon1, 
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center ">
-          <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
-            {intl.formatMessage({ id: "sponsors_title" })}
-          </p>
+
+             <span className='  bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'></span> 
+              <div className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl" dangerouslySetInnerHTML={{__html: intl.formatMessage({id:"sponsors_title"})}} />
+          {/* <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
+            {intl.formatMessage({ id:  })}
+          </p> */}
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
           {text}
