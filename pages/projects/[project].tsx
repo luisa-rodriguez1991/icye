@@ -11,6 +11,7 @@ import Flag from "react-world-flags";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { list } from "postcss";
 
 const product = {
   images: [
@@ -110,52 +111,44 @@ export default function Project({ page, listCategories }: any) {
             </div>
 
             {/* Options */}
-            <div className=" flex lg:flex-col pt-4 lg:row-span-3 px-6 lg:mt-0 bg-accent-2 lg:bg-white ">
-              <h2 className="text-3xl text-accent-1 font-bold ">
-                Basic Information
-              </h2>
-              <div className="mt-3">
-                Categories:
-                <div className="flex  items-center gap-2 my-3 ">
-                  {listCategories.map((category: any) => (
-                    <span className="inline-flex   rounded-full bg-accent-2 px-2 py-1 text-xs font-medium text-accent-1">
-                      {category}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex items-center mb-4 mt-2 ml-1 ">
-                Country:{" "}
-                <Flag
-                  className="ml-4 mt-1"
-                  code={page.acf.country}
-                  width="20"
-                  height="16"
-                />
-              </div>
-              </div>
-              {/* <div className="flex items-center mb-4 mt-2 mr-4">
-                Country:{" "}
-                <Flag
-                  className="ml-4 mt-1"
-                  code={page.acf.country}
-                  width="20"
-                  height="16"
-                />
-              </div>
-             */}
-              {page.acf.pdf && (
-                <div className="flex items-center">
-                  Download PDF:{" "}
-                  <a
-                    href={page.acf.pdf}
-                    target="_blank"
-                    title={`Download PDF file about the project: ${page.title.rendered}`}
-                  >
-                    <DocumentArrowDownIcon className="text-accent-1 h-6 w-6" />
-                  </a>
-                </div>
-              )}
-            
+            <div className=" flex flex-col pt-4 lg:row-span-3 px-6 lg:mt-0 bg-accent-2 lg:bg-white ">
+                  <div className=" bg-white p-6 rounded-lg lg:p-0 lg:rounded-none">
+                    <h2 className="text-3xl text-accent-1 font-bold ">
+                      Basic Information
+                    </h2>
+                    <div className="mt-3">
+                      Categories:
+                      <div className="flex  items-center gap-2 my-3 ">
+                        {listCategories.map((category: any) => (
+                          <span className="inline-flex   rounded-full bg-accent-2 px-2 py-1 text-xs font-medium text-accent-1">
+                            {category}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex items-center mb-4 mt-2 ml-1 ">
+                      Country:{" "}
+                      <Flag
+                        className="ml-4 mt-1"
+                        code={page.acf.country}
+                        width="20"
+                        height="16"
+                      />
+                    </div>
+                    </div>
+                  
+                      {page.acf.pdf && (
+                        <div className="flex items-center">
+                          Download PDF:{" "}
+                          <a
+                            href={page.acf.pdf}
+                            target="_blank"
+                            title={`Download PDF file about the project: ${page.title.rendered}`}
+                          >
+                            <DocumentArrowDownIcon className="text-accent-1 h-6 w-6" />
+                          </a>
+                        </div>
+                      )}
+                    </div>
             </div>
 
             <div className="py-10 px-6 rounded-b-xl  bg-accent-2  lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
@@ -179,7 +172,8 @@ export default function Project({ page, listCategories }: any) {
 export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
   const pageInfo = await getDetailProject(params?.project, locale);
   const listCategoriesIds = pageInfo[0].categories;
-  const categoryNames = await getCategoryNameById(listCategoriesIds);
+  const categoryNames = await getCategoryNameById(listCategoriesIds, locale);
+
 
   return {
     props: { page: pageInfo[0], listCategories: categoryNames },
@@ -187,10 +181,11 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async (locale) => {
-  const allProjects = await getAllProjects(locale);
+  const listEn = await getAllProjects("en");
+  const listEs = await getAllProjects("es");
   let finalArray = [];
-  const en = allProjects.map((i: any) => `/en/projects/${i.slug}`);
-  const es = allProjects.map((i: any) => `/es/projects/${i.slug}`);
+  const en = listEn.map((i: any) => `/en/projects/${i.slug}`);
+  const es = listEs.map((i: any) => `/es/projects/${i.slug}`);
   finalArray = [...es, ...en];
 
   return {

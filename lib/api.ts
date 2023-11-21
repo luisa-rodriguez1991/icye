@@ -40,14 +40,15 @@ export async function getAllPost(locale:any) {
       return info
   }
 
-  export async function getCategoryNameById(list:any) {
+  export async function getCategoryNameById(list:any, locale) {
     let listNames: any = []
     return Promise.all(list.map((item: any) => {
       //item.full_name returns the repositorie name
-      return fetch(`http://184.72.130.92/wp-json/wp/v2/categories?include=${item}`)
+      return fetch(`http://184.72.130.92/wp-json/wp/v2/categories?include=${item}&lang=${locale}`)
         .then(data => {
           return data.json()
         }).then((obj)=>{
+          console.log(obj[0])
           listNames.push(obj[0].name)
         })
     })).then(()=>listNames);

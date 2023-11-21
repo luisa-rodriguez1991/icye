@@ -14,7 +14,6 @@ export default function Terms({page}:any) {
   const router = useRouter();
   const { locale } = router;
 
-  console.log(page)
   const intl = useIntl()
 
   return (

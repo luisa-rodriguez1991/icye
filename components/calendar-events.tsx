@@ -17,7 +17,6 @@ export default function Calendar({ text, events }: any) {
   );
 
   sortedList = sortedList.filter((x:any)=>x.event_date>new Date())
-  console.log(sortedList)
 
 
   const all = sortedList.map((meeting: any) => (

@@ -221,6 +221,7 @@ export default function Home({ posts, eventsList, page }: any) {
       <div className="bg-white sm:py-32 lg:py-8">
         <ListBlog text={page.acf.blog_text} posts={posts} showAll={false} />
       </div>
+        <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     </Layout>
   );
 }

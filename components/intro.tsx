@@ -10,7 +10,6 @@ export default function Intro({ text, onOpenForm }: any) {
     <div className="bg-white">
       <Head>
         <script type="text/javascript" src="/bolas.js" />
-        <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
       </Head>
       <div className="absolute w-full" id="particles-js"></div>{" "}
       <div className="count-particles">

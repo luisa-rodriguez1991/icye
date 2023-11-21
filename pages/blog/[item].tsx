@@ -12,7 +12,6 @@ export default function Blog({ page }: any) {
 
   const router = useRouter();
   const { locale } = router;
-  console.log(page);
 
   return (
     <Layout onOpenForm={setOpen} openForm={open}>
@@ -111,7 +110,6 @@ export const getStaticPaths: GetStaticPaths = async (locale) => {
   const es = allProjects.map((i: any) => `/es/blog/${i.slug}`);
   finalArray = [...es, ...en];
 
-  console.log(finalArray);
 
   return {
     paths: finalArray || [],

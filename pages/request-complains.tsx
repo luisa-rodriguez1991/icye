@@ -15,7 +15,6 @@ export default function Request({page}:any) {
   const router = useRouter();
   const { locale } = router;
 
-  console.log(page)
   const intl = useIntl()
   return (
     <Layout onOpenForm={setOpen} openForm={open}>
