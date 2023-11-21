@@ -21,7 +21,7 @@ export default function Breadcrumb({middleRoute,middleRouteName,miVariable}:any)
               </Link>
             </div>
           </li>
-          {middleRoute && (
+          {middleRouteName && (
              <li >
              <div className="flex items-center">
                <svg
@@ -32,12 +32,21 @@ export default function Breadcrumb({middleRoute,middleRouteName,miVariable}:any)
                >
                  <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
                </svg>
-               <Link locale={locale} target='_self' title={`Back to ${middleRouteName}`}
-                 href={middleRoute}
+               {middleRoute ? (
+                <Link locale={locale} target='_self' title={`Back to ${middleRouteName}`}
+                href={middleRoute}
+                className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
+              >
+                {middleRouteName}
+              </Link>
+               ) : (
+                <span 
                  className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
                >
                  {middleRouteName}
-               </Link>
+               </span>
+               )}
+               
              </div>
            </li>
           )}
