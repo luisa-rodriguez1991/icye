@@ -10,17 +10,17 @@ export default function Header({onOpenForm}:any) {
   const {locale} = router
   const intl = useIntl()
   return (
-    <div className="bg-white sticky top-0 z-40">
-      <header className="relative bg-white">
-        <nav aria-label="Top" className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="border-b border-gray-200 px-4 pb-14 sm:px-0 sm:pb-0">
+    <div className="bg-white sticky top-0 z-40 bg-white  shadow">
+      <header className="relative ">
+        <nav aria-label="Top" className=" mx-auto max-w-7xl py-3 sm:px-6 lg:px-8">
+          <div className="px-4 pb-14 sm:px-0 sm:pb-0">
             <div className="flex h-16 items-center justify-between">
               {/* Logo */}
 
               <div className="flex flex-1 min-w-[45px] lg:min-w-[120px] justify-start">
            <Link locale={locale} href="/" className="flex">             <span className="sr-only">Your Company</span>
-             <Image width={45} height={44} className="" src="/img/icon.png" alt="Icono ICYE Colombia" />
-             <Image width={66} height={44} className="hidden lg:flex ml-2" src="/img/logo.png" alt="Logo ICYE Colombia" />
+             <Image width={48} height={55} className="" src="/img/icon.png" alt="Icono ICYE Colombia" />
+             <Image width={96} height={58} className="hidden lg:flex ml-4 mt-1" src="/img/logo.png" alt="Logo ICYE Colombia" />
            </Link>
          </div>
               {/* <div className="flex flex-1">
@@ -72,9 +72,10 @@ export default function Header({onOpenForm}:any) {
                 </a>
 
                 {/* Cart */}
+
                 <div className="ml-4 flow-root ">
                 {locale === "en" ?
-                    (<Link locale="es" href="#" className="flex font-semibold  text-acent-1">Español</Link>)
+                    (<Link href="#" locale="es" className="flex font-semibold  text-acent-1">Español</Link>)
                     :
                     (<Link locale="en" href="#" className="flex font-semibold text-acent-1">English</Link>)
                   }

@@ -6,8 +6,11 @@ import { getPage } from "@/lib/api";
 import { GetStaticProps } from "next";
 import  Head  from "next/head";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function Contact({page}:any) {
+  const [open, setOpen] = useState(false)
+
   const intl = useIntl()
   const router = useRouter();
   const { locale } = router;
@@ -15,7 +18,8 @@ export default function Contact({page}:any) {
 
 
   return (
-    <Layout>
+    <Layout onOpenForm={setOpen} openForm={open}>
+
       <Head>
         <link rel="canonical" href="https://www.icyecolombia.com/contact" />
         <meta name="robots" content="noindex, nofollow"/>
@@ -28,8 +32,8 @@ export default function Contact({page}:any) {
 }
 
 
-export const getStaticProps: GetStaticProps = async ({locale}) => { 
-  const pageInfo = await getPage(287,locale) 
+export const getStaticProps: GetStaticProps = async (locale) => { 
+  const pageInfo = await getPage(287, locale) 
 
   return {
       props: {page: pageInfo}

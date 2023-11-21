@@ -1,6 +1,8 @@
 import { useIntl } from "react-intl";
 
 import useEmblaCarousel from "embla-carousel-react";
+import { useCallback } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 
 export default function Testimonials({
   text,
@@ -53,32 +55,41 @@ export default function Testimonials({
   message10,
   name10,
   location10,
+  
 }:any) {
   const intl = useIntl();
-  const [emblaRef] = useEmblaCarousel();
+  const [emblaRef, emblaApi] = useEmblaCarousel();
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
+
   return (
-    <div className="bg-white py-6">
-      <div className="mb-20 p-6">
+    <div className="bg-white lg:py-6">
+      <div className="mb-20 px-6">
         <div className="mx-auto max-w-4xl text-center ">
 
              <span className='  bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'></span> 
               <div className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl" dangerouslySetInnerHTML={{__html: intl.formatMessage({id:"testimonial_title"})}} />
 
-          {/* <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
-            {intl.formatMessage({ id: "testimonial_title" })}
-          </p> */}
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
           {text}
+
+          {JSON.stringify(emblaApi)}
         </p>
       </div>
 
-      <div className="embla" ref={emblaRef}>
+      <div className="embla relative" ref={emblaRef}>
         {/* contenerdor slides */}
         <div className="embla__container">
           {/* 1 */}
           <div className="embla__slide">
-            <div className="bg-accent-2 my-24 pb-20 sm:pb-24 xl:pb-0">
+            <div className="bg-accent-2 my-12 pb-20 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
@@ -89,7 +100,7 @@ export default function Testimonials({
                     />
                   </div>
                 </div>
-                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24 h-[500px]">
                   <figure className="relative isolate pt-6 sm:pt-12">
                     <svg
                       viewBox="0 0 162 128"
@@ -120,7 +131,7 @@ export default function Testimonials({
           </div>
           {/* 2 */}
           <div className="embla__slide">
-            <div className="bg-accent-2 pb-20 my-24 sm:pb-24 xl:pb-0">
+            <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
@@ -131,7 +142,7 @@ export default function Testimonials({
                     />
                   </div>
                 </div>
-                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24 h-[500px]">
                   <figure className="relative isolate pt-6 sm:pt-12">
                     <svg
                       viewBox="0 0 162 128"
@@ -162,7 +173,7 @@ export default function Testimonials({
           </div>
           {/* 3 */}
           <div className="embla__slide">
-            <div className="bg-accent-2 pb-20 my-24 sm:pb-24 xl:pb-0">
+            <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
@@ -173,7 +184,7 @@ export default function Testimonials({
                     />
                   </div>
                 </div>
-                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24 h-[500px]">
                   <figure className="relative isolate pt-6 sm:pt-12">
                     <svg
                       viewBox="0 0 162 128"
@@ -204,7 +215,7 @@ export default function Testimonials({
           </div>
           {/* 4 */}
           <div className="embla__slide">
-            <div className="bg-accent-2 pb-20 my-24 sm:pb-24 xl:pb-0">
+            <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
@@ -215,7 +226,7 @@ export default function Testimonials({
                     />
                   </div>
                 </div>
-                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24 h-[500px]">
                   <figure className="relative isolate pt-6 sm:pt-12">
                     <svg
                       viewBox="0 0 162 128"
@@ -246,7 +257,7 @@ export default function Testimonials({
           </div>
           {/* 5 */}
           <div className="embla__slide">
-            <div className="bg-accent-2 pb-20 my-24 sm:pb-24 xl:pb-0">
+            <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
@@ -257,7 +268,7 @@ export default function Testimonials({
                     />
                   </div>
                 </div>
-                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24 h-[500px]">
                   <figure className="relative isolate pt-6 sm:pt-12">
                     <svg
                       viewBox="0 0 162 128"
@@ -288,7 +299,7 @@ export default function Testimonials({
           </div>
           {/* 6 */}
           <div className="embla__slide">
-            <div className="bg-accent-2 pb-20 my-24 sm:pb-24 xl:pb-0">
+            <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
@@ -299,7 +310,7 @@ export default function Testimonials({
                     />
                   </div>
                 </div>
-                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24 h-[500px]">
                   <figure className="relative isolate pt-6 sm:pt-12">
                     <svg
                       viewBox="0 0 162 128"
@@ -330,7 +341,7 @@ export default function Testimonials({
           </div>
           {/* 7 */}
           <div className="embla__slide">
-            <div className="bg-accent-2 pb-20 my-24 sm:pb-24 xl:pb-0">
+            <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
@@ -341,7 +352,7 @@ export default function Testimonials({
                     />
                   </div>
                 </div>
-                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24 h-[500px]">
                   <figure className="relative isolate pt-6 sm:pt-12">
                     <svg
                       viewBox="0 0 162 128"
@@ -372,18 +383,18 @@ export default function Testimonials({
           </div>
           {/* 8 */}
           <div className="embla__slide">
-            <div className="bg-accent-2 pb-20 my-24 sm:pb-24 xl:pb-0">
+            <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img
                       className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
-                      src={image9}
+                      src={image8}
                       alt=""
                     />
                   </div>
                 </div>
-                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24 h-[500px]">
                   <figure className="relative isolate pt-6 sm:pt-12">
                     <svg
                       viewBox="0 0 162 128"
@@ -401,11 +412,11 @@ export default function Testimonials({
                       />
                     </svg>
                     <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9">
-                      <p>{message9}</p>
+                      <p>{message8}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                      <div className="font-semibold text-gray-900">{name9}</div>
-                      <div className="mt-1 text-gray-600">{location9}</div>
+                      <div className="font-semibold text-gray-900">{name8}</div>
+                      <div className="mt-1 text-gray-600">{location8}</div>
                     </figcaption>
                   </figure>
                 </div>
@@ -414,7 +425,7 @@ export default function Testimonials({
           </div>
           {/* 9 */}
           <div className="embla__slide">
-            <div className="bg-accent-2 pb-20 my-24 sm:pb-24 xl:pb-0">
+            <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
@@ -425,7 +436,7 @@ export default function Testimonials({
                     />
                   </div>
                 </div>
-                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24 h-[500px]">
                   <figure className="relative isolate pt-6 sm:pt-12">
                     <svg
                       viewBox="0 0 162 128"
@@ -446,7 +457,7 @@ export default function Testimonials({
                       <p>{message9}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                      <div className="font-semibold text-gray-900">{name9}</div>
+                      <div className="font-semibold text-gray-900" dangerouslySetInnerHTML={{__html:name9?name9:"&nbsp;"}}/>
                       <div className="mt-1 text-gray-600">{location9}</div>
                     </figcaption>
                   </figure>
@@ -455,8 +466,9 @@ export default function Testimonials({
             </div>
           </div>
           {/* 10 */}
+
           <div className="embla__slide">
-            <div className="bg-accent-2 pb-20 my-24 sm:pb-24 xl:pb-0">
+            <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
@@ -467,7 +479,7 @@ export default function Testimonials({
                     />
                   </div>
                 </div>
-                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+                <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24 h-[500px]">
                   <figure className="relative isolate pt-6 sm:pt-12">
                     <svg
                       viewBox="0 0 162 128"
@@ -488,9 +500,7 @@ export default function Testimonials({
                       <p>{message10}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                      <div className="font-semibold text-gray-900">
-                        {name10}
-                      </div>
+                      <div className="font-semibold text-gray-900" dangerouslySetInnerHTML={{__html:name10?name10:"&nbsp;"}}/>
                       <div className="mt-1 text-gray-600">{location10}</div>
                     </figcaption>
                   </figure>
@@ -498,7 +508,18 @@ export default function Testimonials({
               </div>
             </div>
           </div>
+         
+        
         </div>
+        <button className="embla__next" onClick={scrollNext}>
+        <ChevronRightIcon className="h-8 w-8 text-gray-600 font-bold" />
+
+      </button>
+        <button className="embla__prev" onClick={scrollPrev}>
+        <ChevronLeftIcon className="h-8 w-8 text-gray-600 font-bold" />
+
+      </button>
+  
       </div>
     </div>
   );

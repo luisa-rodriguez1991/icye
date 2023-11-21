@@ -37,3 +37,10 @@ body {
   flex: 0 0 100%;
   min-width: 0;
 }
+
+.embla button {
+  position: absolute;
+  top: 38%;
+}
+
+.embla button:nth-child(2) {right:0}

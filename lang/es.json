@@ -15,19 +15,19 @@
     "breadcrumb_Request":"Peticiones, quejas y reclamos",
     "breadcrumb_privacy":"Politicas de privacidad",
 
-    "intro_title":" Programa de intercambio y voluntariado",
+    "intro_title":" Programa de <span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 text-transparent bg-clip-text'>intercambio</span> y voluntariado",
     "intro_paragraph":"vive la mejor experiencia de tu vida durante un año en el extranjero.vive la mejor experiencia de tu vida durante un año en el extranjero.vive la mejor experiencia de tu vida durante un año en el extranjero.",
 
     "trajectory_sub_title":"Trayectoria & colaboración",
-    "trajectory_title":"Mas de 40 años cambiando vidas de jóvenes",
+    "trajectory_title":"Mas de 40 años <span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 text-transparent bg-clip-text'>cambiando</span> vidas de jóvenes",
     "trajectory_paragraph":"ICYE Colombia es miembro de la federación internacional de ICYE, fundada hace más de 70 años y que tiene su sede en Berlin, Alemania. Año tras año hemos facilitado a jóvenes, colombianos y extranjeros, el vivir una experiencia en nuestros diferentes programas: Intercambio, Voluntariado y EVS/ESC.",
     "trajectory_button":"Quienes somos",
 
     
-    "how_to_participate_title":"¿Como participar?",
+    "how_to_participate_title":"¿Como <span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 text-transparent bg-clip-text'>participar</span>?",
 
     "culrute_sub_title":"INTERCAMBIO O VOLUNTARIADO",
-    "culrute_title":"Descubre una nueva cultura",
+    "culrute_title":"Descubre una nueva <span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 text-transparent bg-clip-text'>cultura</span>",
     "culrute_paragraph":"Tanto el Intercambio como el Voluntariado te permitirán",
 
     "testimonial_title":" Testimonios",
@@ -41,7 +41,7 @@
     "how_to_participate_sub_title3":"Asignacion de cupo",
     "how_to_participate_paragraph3":"Una vez todo este claro, te pediremos $50.000 para comenzar el proceso administrativo, firmaremos algunos documentos y tendrás tu cupo.",
 
-    "plans_title":"Nuestros Programas",
+    "plans_title":"Nuestros <span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 text-transparent bg-clip-text'>Programas</span>",
     "plans_title_plan":"INTERCAMBIO ICY",
     "plans_paragraph":"1 Año en alguno de 42 países miembros que incluye:",
     "plans_button":"Quiero inscribirme",
@@ -59,12 +59,12 @@
     "plans_button_pdf":"Descargar PDF",
 
 
-    "faqs_title":"Preguntas frecuentes",
+    "faqs_title":"<span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 text-transparent bg-clip-text'>Preguntas</span> frecuentes",
     "faqs_paragraph":"Tienes una pregunta diferente y no puedes encontrar la respuesta que estás buscando? Ponte en contacto con nuestro equipo de soporte",
     "faqs_in_paragraph":"Enviándonos un correo",
     "faqs_paragraph+":"y te responderemos tan pronto como sea posible.",
 
-    "sponsors_title":"Organizaciones Aliadas",
+    "sponsors_title":"Organizaciones <span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 text-transparent bg-clip-text'>Aliadas</span>",
 
     "calendar_title":"Eventos",
 
@@ -76,6 +76,7 @@
 
     "trust_org":"Con la confianza de las organizaciones más importantes del mundo.",
 
+    "contributors_title":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     "contributors_contact_us":"Contactanos",
 
     "footer_col-1-title":"Asociacion colombiana para el intercambio cultural juvenil",
@@ -102,6 +103,10 @@
     "contact_form_phone_optional": "Opcional",
     "contact_form_hcwh": "¿Cómo podemos ayudarte?",
     "contact_form_hcwh_size": "Máximo 500 caracteres",
+    "contact_form_button":"Enviar",
+    "contact_form_firstname_confirmation":"Por favor, añade un nombre",
+    "contact_form_lastname_confirmation":"Por favor, añade un apellido",
+    "contact_form_email_confirmation":"Por favor, añade una dirección de correo electrónico válida",
 
     "project_button":"Conoce el proyecto",
     "projects_title":"Proyectos",
@@ -111,6 +116,7 @@
     "project_filter_title_3":"Areas de interes",
 
     "Registration_form_title":"Formulario en linea",
+    "Registration_form_text":"Gracias por tu interés! Nos contactaremos contigo en el menor tiempo posible.",
     "Registration_form_name":"Nombre",
     "Registration_form_name2":"Apellido",
     "Registration_form_email":"Email",

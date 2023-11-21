@@ -5,17 +5,23 @@ import Breadcrumb from "@/components/breadcrump";
 import { CalendarIcon } from "@heroicons/react/20/solid";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
-export default function Blog({ page }:any) {
+export default function Blog({ page }: any) {
+  const [open, setOpen] = useState(false);
+
   const router = useRouter();
   const { locale } = router;
   console.log(page);
 
   return (
-    <Layout>
-       <Head>
-        <link rel="canonical" href={`https://www.icyecolombia.com/${page.slug}`} />
-        <meta name="robots" content="noindex, nofollow"/>
+    <Layout onOpenForm={setOpen} openForm={open}>
+      <Head>
+        <link
+          rel="canonical"
+          href={`https://www.icyecolombia.com/${page.slug}`}
+        />
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Breadcrumb
         middleRoute="/blog"
@@ -32,47 +38,43 @@ export default function Blog({ page }:any) {
 
           <div className="relative isolate overflow-hidden bg-white py-8 lg:overflow-visible ">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-6">
-
-              
-              <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6 ">
-                
-              </div>
+              <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6 "></div>
 
               <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 ">
                 <div className="lg:pr-4">
-                <div className="mb-4 flex items-start text-gray-500">
-                  <CalendarIcon
-                    className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
-                    aria-hidden="true"
-                  />
-                  <div className=" flex flex-wrap items-center gap-y-1 overflow-hidden  leading-6">
-                    <time dateTime={page.date} className="mr-8">
-                      <span className="capitalize">
-                        {new Date(page.date).toLocaleDateString("es-CO", {
-                          weekday: "long",
-                        })}
-                        ,{" "}
-                      </span>
-                      <span className="capitalize">
-                        {new Date(page.date).toLocaleDateString("es-CO", {
-                          day: "numeric",
-                        })}{" "}
-                      </span>
-                      de{" "}
-                      <span className="capitalize">
-                        {new Date(page.date).toLocaleDateString("es-CO", {
-                          month: "long",
-                        })}{" "}
-                      </span>
-                      del{" "}
-                      <span className="capitalize">
-                        {new Date(page.date).toLocaleDateString("es-CO", {
-                          year: "numeric",
-                        })}{" "}
-                      </span>
-                    </time>
+                  <div className="mb-4 flex items-start text-gray-500">
+                    <CalendarIcon
+                      className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
+                      aria-hidden="true"
+                    />
+                    <div className=" flex flex-wrap items-center gap-y-1 overflow-hidden  leading-6">
+                      <time dateTime={page.date} className="mr-8">
+                        <span className="capitalize">
+                          {new Date(page.date).toLocaleDateString("es-CO", {
+                            weekday: "long",
+                          })}
+                          ,{" "}
+                        </span>
+                        <span className="capitalize">
+                          {new Date(page.date).toLocaleDateString("es-CO", {
+                            day: "numeric",
+                          })}{" "}
+                        </span>
+                        de{" "}
+                        <span className="capitalize">
+                          {new Date(page.date).toLocaleDateString("es-CO", {
+                            month: "long",
+                          })}{" "}
+                        </span>
+                        del{" "}
+                        <span className="capitalize">
+                          {new Date(page.date).toLocaleDateString("es-CO", {
+                            year: "numeric",
+                          })}{" "}
+                        </span>
+                      </time>
+                    </div>
                   </div>
-                </div>
                   <div
                     className="lg:max-w-lg"
                     dangerouslySetInnerHTML={{ __html: page.content.rendered }}
@@ -105,8 +107,8 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
 export const getStaticPaths: GetStaticPaths = async (locale) => {
   const allProjects = await getAllPost(locale);
   let finalArray = [];
-  const en = allProjects.map((i:any) => `/en/blog/${i.slug}`);
-  const es = allProjects.map((i:any) => `/es/blog/${i.slug}`);
+  const en = allProjects.map((i: any) => `/en/blog/${i.slug}`);
+  const es = allProjects.map((i: any) => `/es/blog/${i.slug}`);
   finalArray = [...es, ...en];
 
   console.log(finalArray);

@@ -2,11 +2,38 @@ import { useIntl } from "react-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 
 export default function Footer() {
   const intl = useIntl();
   const router = useRouter();
   const { locale } = router;
+  const [userData, setUserData] = useState()
+  const [confirmation, setConfirmation] = useState(false)
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = (data: any) => setUserData(data);
+
+
+
+
+
+
+  useEffect(()=>{
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(userData)
+  };
+     
+    userData && fetch("http://localhost:5001/newsletter", requestOptions) // ⬅️ 1) llamada a la API, el resultado es una Promise
+    .then((response) => response.status === 200 && setConfirmation(true)); // ⬅️ 3) aquí ya tenemos la respuesta en formato objeto
+
+  
+  },[userData])
+
+
 
   return (
     <footer className="bg-accent-2" aria-labelledby="footer-heading">
@@ -21,15 +48,15 @@ export default function Footer() {
                   <div className="flex flex-1 min-w-[55px] justify-start">
                     <a href="#" className="-m-1.5 p-1.5 flex">
                       <Image
-                        width={45}
-                        height={44}
+                        width={48}
+                        height={55}
                         className=""
                         src="/img/icon.png"
                         alt="Icono ICYE Colombia"
                       />
                       <Image
-                        width={66}
-                        height={44}
+                        width={96}
+                        height={58}
                         className="hidden lg:flex ml-2"
                         src="/img/logo.png"
                         alt="Logo ICYE Colombia"
@@ -114,7 +141,14 @@ export default function Footer() {
                       {intl.formatMessage({ id: "footer_email" })}
                     </a>
                   </li>
-                  <li>
+                  <li className="flex ">
+                  <img
+                          className="col-span-2  max-h-6 w-auto object-contain lg:col-span-1 text-accent-1 mr-2"
+                          src="/img/whatsapp.svg"
+                          alt="Reform"
+                          width={158}
+                          height={48}
+                        />
                     <a
                       href="tel:+57 310 7346918"
                       className="text-sm leading-6 text-gray-600 hover:text-gray-900"
@@ -147,9 +181,7 @@ export default function Footer() {
                     >
                       {intl.formatMessage({ id: "footer_privacy" })}
                     </Link>
-                    {/* <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                        {intl.formatMessage({id:"footer_privacy"})} {intl.formatMessage({id:"footer_privacy"})}
-                        </a> */}
+                   
                   </li>
                   <li>
                     <Link
@@ -159,9 +191,7 @@ export default function Footer() {
                     >
                       {intl.formatMessage({ id: "footer_terms" })}
                     </Link>
-                    {/* <a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                        {intl.formatMessage({id:"footer_terms"})}
-                        </a> */}
+                  
                   </li>
                 </ul>
               </div>
@@ -178,19 +208,25 @@ export default function Footer() {
               <p className="mt-2 text-sm leading-6 text-gray-600">
                 {intl.formatMessage({ id: "footer_news_p" })}
               </p>
-              <form className="mt-6 sm:flex sm:max-w-md">
-                <label htmlFor="email-address" className="sr-only">
-                  Email address
-                </label>
-                <input
+
+
+
+
+
+              <form onSubmit={handleSubmit(onSubmit)} >
+                <div className="flex flex-col">
+                  <div  className="mt-6 sm:flex sm:max-w-md">
+                  <input
                   type="email"
-                  name="email-address"
+                  {...register("email", {required: true, pattern: /^\S+@\S+$/i})}
                   id="email-address"
-                  autoComplete="email"
-                  required
                   className="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
                   placeholder={intl.formatMessage({ id: "news_text" })}
                 />
+
+       
+          
+                
                 <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
                   <button
                     type="submit"
@@ -199,7 +235,24 @@ export default function Footer() {
                     {intl.formatMessage({ id: "footer_button" })}
                   </button>
                 </div>
+
+                  </div>
+                  <div className="mt-4">
+                    {errors.email && <span className="text-red-400 text-sm">{intl.formatMessage({id:"contact_form_email_confirmation"})}</span>}
+                    {confirmation && <span className="text-green-400 text-sm">{intl.formatMessage({id:"contact_form_email_sent"})}</span>}
+                  </div>
+                </div>
+                
               </form>
+
+
+
+
+
+
+
+
+
             </div>
 
           </div>

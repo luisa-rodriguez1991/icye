@@ -86,14 +86,14 @@ export default function Form({ openIndicator, onSetOpen }:any) {
                           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                            {intl.formatMessage({ id: "Registration_form_title"})}
                           </h2>
-                          <p className="mt-2 text-lg leading-8 text-gray-600">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, nesciunt ipsum. Assumenda, explicabo eligendi.
+                          <p className="mt-4 text-lg leading-8 text-gray-600">
+                          {intl.formatMessage({ id: "Registration_form_text"})}
                           </p>
                         </div>
                         <form
                           action="#"
                           method="POST"
-                          className="mx-auto mt-16 max-w-xl sm:mt-20"
+                          className="mx-auto mt-8 max-w-xl sm:mt-14"
                         >
                           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                             <div>

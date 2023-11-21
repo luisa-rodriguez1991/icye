@@ -27,13 +27,13 @@ export default function HowToParticipate({title1, title2, title3, text1, text2, 
 
   return (
     <div className="bg-accent-2 ">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="rounded-2xl bg-accent-2 px-5 py-16 sm:p-16">
+      <div className="mx-auto max-w-7xl px-4 lg:py-12 sm:px-6 lg:px-8">
+        <div className="rounded-2xl bg-accent-2 px-6 py-6 lg:py-16 ">
           <div className="mx-auto max-w-xl lg:max-w-none">
             <div className="text-center">
               <div className="mx-auto max-w-4xl text-center">
       
-              <div className="mb-24 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl" >
+              <div className="lg:mb-24 mb-16 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl" >
               <span className='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'></span> 
               <div dangerouslySetInnerHTML={{__html: intl.formatMessage({id:"how_to_participate_title"})}} />
                 {/* How to <span className='bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text'>   participate ?</span> */}
@@ -41,8 +41,6 @@ export default function HowToParticipate({title1, title2, title3, text1, text2, 
             </div>
             </div>
             <div className="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-x-8 gap-y-10 sm:max-w-none lg:grid-cols-3">
-
-
 
 
                  <div className="text-center sm:flex sm:text-left lg:block lg:text-center">
@@ -100,7 +98,7 @@ export default function HowToParticipate({title1, title2, title3, text1, text2, 
       </div>
       <div className=' h-[100px] lg:h-[200px]'>
       <svg  version="1.1" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%"  x="0px" y="0px" viewBox="0 0 500 250" enableBackground="new 0 0 500 250"  preserveAspectRatio="none">
-                <path fill="#f3f7f8" d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z">
+                <path fill="white" d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z">
                 </path>
             </svg>
       </div>

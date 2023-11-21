@@ -6,16 +6,19 @@ import { GetStaticProps } from "next";
 import { getPage } from "@/lib/api";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function Privacy({page}:any) {
-  
+  const [open, setOpen] = useState(false)
+
   const router = useRouter();
   const { locale } = router;
   const intl = useIntl()
 
   return (
 
-    <Layout>
+    <Layout onOpenForm={setOpen} openForm={open}>
+
       <Head>
         <link rel="canonical" href={`https://www.icyecolombia.com/privacy-policy`} />
         <meta name="robots" content="noindex, nofollow"/>

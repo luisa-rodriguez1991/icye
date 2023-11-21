@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function Blog({ text, pageInfo, posts, showAll }: any) {
+export default function Blog({ text, posts }: any) {
   const router = useRouter();
   const { locale } = router;
-  const all = posts.map((post:any) => (
+  const all = posts.map((post: any) => (
+    
     <article
       key={post.slug}
       className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
@@ -52,8 +53,10 @@ export default function Blog({ text, pageInfo, posts, showAll }: any) {
   ));
 
   return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-4">
+
+    // page list blog
+    <div className="bg-white pt-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8  pb-4">
         <div className="mx-auto max-w-4xl text-center ">
           <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
             Blog

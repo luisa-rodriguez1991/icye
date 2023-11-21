@@ -7,14 +7,18 @@ import { getPage } from "@/lib/api";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function About({page}:any) {
+  const [open, setOpen] = useState(false)
+
   const router = useRouter();
   const { locale } = router;
   const intl = useIntl()
   
   return (
-    <Layout>
+    <Layout onOpenForm={setOpen} openForm={open}>
+
       <Head>
         <link rel="canonical" href="https://www.icyecolombia.com/about" />
         <meta name="robots" content="noindex, nofollow"/>

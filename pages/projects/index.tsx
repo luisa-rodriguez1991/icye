@@ -4,7 +4,6 @@ import Layout from "@/components/layout";
 import { getAllPost, getAllProjects, getCategoriesByParent } from "@/lib/api";
 import { GetStaticProps } from "next";
 
-
 import { Fragment, useEffect, useState } from "react";
 import { Dialog, Disclosure, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
@@ -14,7 +13,13 @@ import { list } from "postcss";
 import { useRouter } from "next/router";
 import { useIntl } from "react-intl";
 
-export default function Projects({ listCountries, listInterests, listTerms }:any) {
+export default function Projects({
+  listCountries,
+  listInterests,
+  listTerms,
+}: any) {
+  const [open, setOpen] = useState(false);
+
   const router = useRouter();
   const { locale } = router;
   const intl = useIntl();
@@ -23,8 +28,6 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
   const [excludedListFilters, setExcludedListFilters] = useState<any[]>([]);
 
   useEffect(() => {
-  
-
     fetch(
       `http://184.72.130.92/wp-json/wp/v2/posts?categories=4&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,excerpt,categories&lang=${locale}${
         Object.keys(excludedListFilters).length > 0
@@ -36,20 +39,20 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
       .then((dog) => setList(dog));
   }, [excludedListFilters, locale]); // Only re-run the effect if count changes
 
-  const setFilters = (categoryId:any, checked:any) => {
+  const setFilters = (categoryId: any, checked: any) => {
     checked ? removeCategory(categoryId) : addCategory(categoryId);
   };
 
-  const removeCategory = (categoryId:any) => {
+  const removeCategory = (categoryId: any) => {
     setExcludedListFilters(excludedListFilters.filter((a) => a !== categoryId));
   };
 
-  const addCategory = (categoryId:any) => {
+  const addCategory = (categoryId: any) => {
     setExcludedListFilters([...excludedListFilters, categoryId]);
   };
 
   return (
-    <Layout>
+    <Layout onOpenForm={setOpen} openForm={open}>
       <Breadcrumb
         miVariable={intl.formatMessage({ id: "breadcrumb_projects" })}
       />
@@ -88,7 +91,7 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
                   <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
                     <div className="flex items-center justify-between px-4">
                       <h2 className="text-lg font-medium text-gray-900">
-                        {intl.formatMessage({id:"project_filter"})}
+                        {intl.formatMessage({ id: "project_filter" })}
                       </h2>
                       <button
                         type="button"
@@ -107,7 +110,7 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
                         role="list"
                         className="px-2 py-3 font-medium text-gray-900"
                       >
-                        {listTerms.map((option:any, optionIdx:any) => (
+                        {listTerms.map((option: any, optionIdx: any) => (
                           <div key={option.id} className="flex items-center">
                             <input
                               id="lt"
@@ -136,10 +139,12 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
                         {({ open }) => (
                           <>
                             <h3 className="-mx-2 -my-3 flow-root">
-                               {/* responsive paises categoria boton de + */}
+                              {/* responsive paises categoria boton de + */}
                               <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
                                 <span className="font-medium text-gray-900">
-                                  {intl.formatMessage({id:"project_filter_title_2"})}
+                                  {intl.formatMessage({
+                                    id: "project_filter_title_2",
+                                  })}
                                   {/* esto hay que ponerle version en ingle */}
                                 </span>
                                 <span className="ml-6 flex items-center">
@@ -160,26 +165,28 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
                             <Disclosure.Panel className="pt-6">
                               <div className="space-y-6">
                                 {/* lista paises responsive */}
-                                {listCountries.map((option:any, optionIdx:any) => (
-                                  <div
-                                    key={option.id}
-                                    className="flex items-center"
-                                  >
-                                    <input
-                                      id={`filter-mobile-${option.id}-${optionIdx}`}
-                                      name={`${option.id}[]`}
-                                      type="checkbox"
-                                      defaultChecked={true}
-                                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                    />
-                                    <label
-                                      htmlFor={`filter-mobile-${option.id}-${optionIdx}`}
-                                      className="ml-3 min-w-0 flex-1 text-gray-500"
+                                {listCountries.map(
+                                  (option: any, optionIdx: any) => (
+                                    <div
+                                      key={option.id}
+                                      className="flex items-center"
                                     >
-                                      {option.name}
-                                    </label>
-                                  </div>
-                                ))}
+                                      <input
+                                        id={`filter-mobile-${option.id}-${optionIdx}`}
+                                        name={`${option.id}[]`}
+                                        type="checkbox"
+                                        defaultChecked={true}
+                                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                      />
+                                      <label
+                                        htmlFor={`filter-mobile-${option.id}-${optionIdx}`}
+                                        className="ml-3 min-w-0 flex-1 text-gray-500"
+                                      >
+                                        {option.name}
+                                      </label>
+                                    </div>
+                                  )
+                                )}
                               </div>
                             </Disclosure.Panel>
                           </>
@@ -195,7 +202,9 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
                             <h3 className="-mx-2 -my-3 flow-root">
                               <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
                                 <span className="font-medium text-gray-900">
-                                  {intl.formatMessage({id:"project_filter_title_3"})}
+                                  {intl.formatMessage({
+                                    id: "project_filter_title_3",
+                                  })}
                                   {/* version en ingles meter paises*/}
                                 </span>
                                 <span className="ml-6 flex items-center">
@@ -215,26 +224,28 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
                             </h3>
                             <Disclosure.Panel className="pt-6">
                               <div className="space-y-6">
-                                {listInterests.map((option:any, optionIdx:any) => (
-                                  <div
-                                    key={option.id}
-                                    className="flex items-center"
-                                  >
-                                    <input
-                                      id={`filter-mobile-${option.id}-${optionIdx}`}
-                                      name={`${option.id}[]`}
-                                      type="checkbox"
-                                      defaultChecked={true}
-                                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                    />
-                                    <label
-                                      htmlFor={`filter-mobile-${option.id}-${optionIdx}`}
-                                      className="ml-3 min-w-0 flex-1 text-gray-500"
+                                {listInterests.map(
+                                  (option: any, optionIdx: any) => (
+                                    <div
+                                      key={option.id}
+                                      className="flex items-center"
                                     >
-                                      {option.name}
-                                    </label>
-                                  </div>
-                                ))}
+                                      <input
+                                        id={`filter-mobile-${option.id}-${optionIdx}`}
+                                        name={`${option.id}[]`}
+                                        type="checkbox"
+                                        defaultChecked={true}
+                                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                      />
+                                      <label
+                                        htmlFor={`filter-mobile-${option.id}-${optionIdx}`}
+                                        className="ml-3 min-w-0 flex-1 text-gray-500"
+                                      >
+                                        {option.name}
+                                      </label>
+                                    </div>
+                                  )
+                                )}
                               </div>
                             </Disclosure.Panel>
                           </>
@@ -278,11 +289,11 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
                   <div className="space-y-4 border-b border-gray-300 pb-6 text-sm font-medium text-gray-900">
                     <h3 className="mt-6 flow-root flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                       <span className="font-medium text-gray-900">
-                      {intl.formatMessage({id:"project_filter_title_1"})}
+                        {intl.formatMessage({ id: "project_filter_title_1" })}
                       </span>
                     </h3>
 
-                    {listTerms.map((option:any) => (
+                    {listTerms.map((option: any) => (
                       <div key={option.id} className="flex items-center">
                         <input
                           id="lt"
@@ -306,14 +317,12 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
                   <div className="space-y-4 border-b border-gray-300 pb-6 text-sm font-medium text-gray-900">
                     <h3 className="mt-3 flow-root flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                       <span className="font-medium text-gray-900">
-                        
-                        {intl.formatMessage({id:"project_filter_title_2"})}
-                      
+                        {intl.formatMessage({ id: "project_filter_title_2" })}
                       </span>
                     </h3>
 
                     <div className="space-y-4  ">
-                      {listCountries.map((option:any, optionIdx:any) => (
+                      {listCountries.map((option: any, optionIdx: any) => (
                         <div key={option.id} className="flex items-center">
                           <input
                             id={`filter-${option.id}-${optionIdx}`}
@@ -339,14 +348,12 @@ export default function Projects({ listCountries, listInterests, listTerms }:any
                   <div className="space-y-4 border-b border-gray-300 pb-6 text-sm font-medium text-gray-900">
                     <h3 className="mt-3 flow-root flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                       <span className="font-medium text-gray-900">
-                       
-                        {intl.formatMessage({id:"project_filter_title_3"})}
-                       
+                        {intl.formatMessage({ id: "project_filter_title_3" })}
                       </span>
                     </h3>
 
                     <div className="space-y-4">
-                      {listInterests.map((option:any, optionIdx:any) => (
+                      {listInterests.map((option: any, optionIdx: any) => (
                         <div key={option.id} className="flex items-center">
                           <input
                             id={`filter-${option.id}-${optionIdx}`}

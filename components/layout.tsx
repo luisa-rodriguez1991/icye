@@ -5,15 +5,14 @@ import Header from './header'
 import Form from './form'
 import { useState } from 'react'
 
-export default function Layout({ children }:any) {
-  const [open, setOpen] = useState(false)
+export default function Layout({ children, onOpenForm, openForm }:any) {
 
   return (
     <>
         <Meta />
             <div className="min-h-screen">
-                <Form openIndicator={open} onSetOpen={setOpen}/>
-                <Header onOpenForm={setOpen}/>
+                <Form openIndicator={openForm} onSetOpen={onOpenForm}/>
+                <Header onOpenForm={onOpenForm}/>
                 <main>{children}</main>
             </div>
             <Footer/>  

@@ -6,16 +6,20 @@ import { getPage } from "@/lib/api";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 
 export default function Request({page}:any) {
+  const [open, setOpen] = useState(false)
+
   const router = useRouter();
   const { locale } = router;
 
   console.log(page)
   const intl = useIntl()
   return (
-    <Layout>
+    <Layout onOpenForm={setOpen} openForm={open}>
+
        <Head>
         <link rel="canonical" href={`https://www.icyecolombia.com/request-complains`} />
         <meta name="robots" content="noindex, nofollow"/>

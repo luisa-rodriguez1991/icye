@@ -6,17 +6,22 @@ import Breadcrumb from "@/components/breadcrump";
 import { CalendarIcon, MapPinIcon } from "@heroicons/react/20/solid";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
-export default function Event({ page }:any) {
+export default function Event({ page }: any) {
+  const [open, setOpen] = useState(false);
 
   const router = useRouter();
   const { locale } = router;
-  
+
   return (
-    <Layout>
+    <Layout onOpenForm={setOpen} openForm={open}>
       <Head>
-        <link rel="canonical" href={`https://www.icyecolombia.com/${page.slug}`} />
-        <meta name="robots" content="noindex, nofollow"/>
+        <link
+          rel="canonical"
+          href={`https://www.icyecolombia.com/${page.slug}`}
+        />
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Breadcrumb
         middleRoute="/events"
@@ -87,8 +92,8 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
 export const getStaticPaths: GetStaticPaths = async (locale) => {
   const allProjects = await getAllEvents(locale);
   let finalArray = [];
-  const en = allProjects.map((i:any) => `/en/events/${i.slug}`);
-  const es = allProjects.map((i:any) => `/es/events/${i.slug}`);
+  const en = allProjects.map((i: any) => `/en/events/${i.slug}`);
+  const es = allProjects.map((i: any) => `/es/events/${i.slug}`);
   finalArray = [...es, ...en];
 
   return {
