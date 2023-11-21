@@ -40,7 +40,7 @@ export async function getAllPost(locale:any) {
       return info
   }
 
-  export async function getCategoryNameById(list:any, locale:any) {
+  export async function getCategoryNameById(list:any, locale:) {
     let listNames: any = []
     return Promise.all(list.map((item: any) => {
       //item.full_name returns the repositorie name
