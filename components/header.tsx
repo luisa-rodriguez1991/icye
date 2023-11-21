@@ -3,13 +3,83 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useIntl } from "react-intl";
 import Image from 'next/image'
-
+import { Fragment, useState } from 'react'
+import { Combobox, Dialog, Transition } from '@headlessui/react'
+import { XMarkIcon } from '@heroicons/react/24/outline'
+import React from 'react';
 
 export default function Header({onOpenForm}:any) {
+
+  const [openSearch, setOpenSearch] = useState(false)
+  const [key, setKey] = useState("")
+
   const router = useRouter();
   const {locale} = router
   const intl = useIntl()
+
+
+  const sendSearch = (e:any)=>{
+    e.preventDefault();
+    window.location.replace(`/search/${key}`);
+
+  }
   return (
+    <>
+    
+    
+    <Transition.Root show={openSearch} as={Fragment} afterLeave={() => alert('')} appear>
+      <Dialog as="div" className="relative z-40" onClose={setOpenSearch}>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-out duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-200"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 bg-gray-800 bg-opacity-75 transition-opacity" />
+        </Transition.Child>
+
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto p-4 sm:p-6 md:p-20">
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0 scale-95"
+            enterTo="opacity-100 scale-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95"
+          >
+            <Dialog.Panel className="mx-auto max-w-xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all">
+            <Combobox onChange={(person) => alert(window.location = person.url)}>
+              
+              <div className="relative">
+              <form className='flex flex-row align-center' onSubmit={sendSearch}>
+                  <MagnifyingGlassIcon
+                    className="pointer-events-none absolute left-4 top-3.5 h-5 w-5 text-gray-400"
+                    aria-hidden="true"
+                  />
+                 
+                    <Combobox.Input value={key} onChange={(e)=>setKey(e.target.value)}
+                      className="outline-0 h-12 w-full border-0 bg-transparent pl-11 pr-4 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
+                      placeholder="Search..."
+                    
+                    />
+                    <button className='align-center px-3 py-2 bg-accent-2 hover:bg-accent-1 text-accent-1 hover:text-accent-2' type='submit'>Search</button>
+
+          
+         
+              </form>
+                        
+              </div>
+
+               </Combobox>
+            </Dialog.Panel>
+          </Transition.Child>
+        </div>
+      </Dialog>
+    </Transition.Root>
     <div className="bg-white sticky top-0 z-40 bg-white  shadow">
       <header className="relative ">
         <nav aria-label="Top" className=" mx-auto max-w-7xl py-3 sm:px-6 lg:px-8">
@@ -66,13 +136,12 @@ export default function Header({onOpenForm}:any) {
 
               <div className="flex flex-1 items-center justify-end">
                 {/* Search */}
-                <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
+                <button onClick={()=>setOpenSearch(true)} className="p-2 text-gray-400 hover:text-gray-500">
                   <span className="sr-only">Search</span>
                   <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
-                </a>
+                </button>
 
                 {/* Cart */}
-
                 <div className="ml-4 flow-root ">
                 {locale === "en" ?
                     (<Link href="#" locale="es" className="flex font-semibold  text-acent-1">Español</Link>)
@@ -96,50 +165,10 @@ export default function Header({onOpenForm}:any) {
           </div>
         </nav>
       </header>
+      
     </div>
+    </>
+   
   )
 }
 
-// import { useState } from 'react'
-// import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-// import { Dialog } from '@headlessui/react'
-// import Search from './search'
-// import { useRouter } from 'next/router'
-// import Link from 'next/link'
-// import { useIntl } from "react-intl";
-// import Image from 'next/image'
-
-
-// export default function Header() {
-//   const router = useRouter();
-//   const {locale} = router
-//   const intl = useIntl()
-
-//   return (
-//     <header className="bg-accent-2 sticky top-0  z-[20]">
-//       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 gap-3 h-20" aria-label="Global">
-//         
-
-    
-//         <div className="flex flex-row overflow-x-auto">
-              
-//             
-          
-//         </div>
-     
-      
-        
-//         <div className="w-[50px] lg:w-[248px] flex justify-end items-center">
-//           <div className="mr-4 flex items-center text-accent-1">
-//             <Search/>
-//           </div>
-//           
-       
-//          
-//         </div>
-//       </nav>
-
-  
-//     </header>
-//   )
-// }
