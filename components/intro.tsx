@@ -1,10 +1,8 @@
-
 import Head from "next/head";
 import { useIntl } from "react-intl";
 
 export default function Intro({ text, onOpenForm }: any) {
   const intl = useIntl();
-  
 
   return (
     <div className="bg-white">

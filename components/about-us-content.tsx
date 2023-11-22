@@ -46,7 +46,7 @@ export default function AboutUs({
             aria-hidden="true"
           ></div>
           <div className="">
-            <div className="mx-auto max-w-7xl px-6 pb-32  sm:pt-8 lg:px-8 lg:pt-8">
+            <div className="mx-auto max-w-7xl px-6 pb-32  pt-12 lg:px-8 lg:pt-8">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-xl">
                   <h1 className="text-4xl font-bold tracking-tight text-accent-1 sm:text-6xl">
@@ -225,12 +225,13 @@ export default function AboutUs({
               {ourteamtext}
             </p>
           </div>
-
-          <img
-            src={ourteamimg}
-            alt=""
-            className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
-          />
+          <div className="px-6 ">
+            <img
+              src={ourteamimg}
+              alt=""
+              className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+            />
+          </div>
         </div>
       </main>
     </div>

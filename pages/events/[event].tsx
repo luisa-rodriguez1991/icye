@@ -2,7 +2,6 @@ import Layout from "@/components/layout";
 import { getAllEvents, getDetailProject, getAllPost } from "@/lib/api";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Breadcrumb from "@/components/breadcrump";
-
 import { CalendarIcon, MapPinIcon } from "@heroicons/react/20/solid";
 import Head from "next/head";
 import { useRouter } from "next/router";

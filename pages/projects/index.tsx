@@ -3,13 +3,10 @@ import ContentProjects from "@/components/content-projects";
 import Layout from "@/components/layout";
 import { getAllPost, getAllProjects, getCategoriesByParent } from "@/lib/api";
 import { GetStaticProps } from "next";
-
 import { Fragment, useEffect, useState } from "react";
 import { Dialog, Disclosure, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { FunnelIcon, MinusIcon, PlusIcon } from "@heroicons/react/20/solid";
-import Project from "@/components/project";
-import { list } from "postcss";
 import { useRouter } from "next/router";
 import { useIntl } from "react-intl";
 
@@ -205,7 +202,6 @@ export default function Projects({
                                   {intl.formatMessage({
                                     id: "project_filter_title_3",
                                   })}
-                                  {/* version en ingles meter paises*/}
                                 </span>
                                 <span className="ml-6 flex items-center">
                                   {open ? (
@@ -258,8 +254,7 @@ export default function Projects({
             </Dialog>
           </Transition.Root>
 
-          {/* //al rededor */}
-          <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <main className="mx-auto max-w-7xl px-6 pt-7 sm:px-6 lg:px-8">
             <div className="flex items-baseline justify-between border-b border-gray-200 pb-6">
               <h1 className="mt-6 mb-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
                 {intl.formatMessage({ id: "projects_title" })}

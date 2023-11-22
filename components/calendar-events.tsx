@@ -12,12 +12,9 @@ export default function Calendar({ text, events }: any) {
     events[o].event_date = new Date(events[o].acf.event_date);
   }
 
-  let sortedList = events.sort(
-    (a: any, b: any) => a.event_date - b.event_date
-  );
+  let sortedList = events.sort((a: any, b: any) => a.event_date - b.event_date);
 
-  sortedList = sortedList.filter((x:any)=>x.event_date>new Date())
-
+  sortedList = sortedList.filter((x: any) => x.event_date > new Date());
 
   const all = sortedList.map((meeting: any) => (
     <li
@@ -102,7 +99,7 @@ export default function Calendar({ text, events }: any) {
       </div>
     </li>
   ));
-  
+
   return (
     <div className="mx-auto max-w-2xl ">
       <h2 className="text-base font-semibold leading-6 text-gray-900"></h2>
@@ -115,7 +112,7 @@ export default function Calendar({ text, events }: any) {
       <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
         {text}
       </p>
-      <div className="lg:grid lg:grid-cols-12 mx-auto max-w-4xl px-6 pt-6 lg:pt-12 sm:pt-24 lg:px-8 ">
+      <div className="lg:grid lg:grid-cols-12 mx-auto max-w-4xl  pt-6 lg:pt-12 sm:pt-24 lg:px-8 ">
         <ol className=" divide-y divide-gray-100 text-sm leading-6 lg:col-span-12 ">
           {all}
         </ol>

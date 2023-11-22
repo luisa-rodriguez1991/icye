@@ -1,5 +1,4 @@
 import { useIntl } from "react-intl";
-
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
@@ -55,27 +54,29 @@ export default function Testimonials({
   message10,
   name10,
   location10,
-  
-}:any) {
+}: any) {
   const intl = useIntl();
   const [emblaRef, emblaApi] = useEmblaCarousel();
 
   const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev()
-  }, [emblaApi])
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   return (
     <div className="bg-white lg:py-6">
       <div className="mb-20 px-6">
         <div className="mx-auto max-w-4xl text-center ">
-
-             <span className='  bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'></span> 
-              <div className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl" dangerouslySetInnerHTML={{__html: intl.formatMessage({id:"testimonial_title"})}} />
-
+          <span className="  bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text"></span>
+          <div
+            className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl"
+            dangerouslySetInnerHTML={{
+              __html: intl.formatMessage({ id: "testimonial_title" }),
+            }}
+          />
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
           {text}
@@ -87,10 +88,6 @@ export default function Testimonials({
       <div className="embla relative" ref={emblaRef}>
         {/* contenerdor slides */}
         <div className="embla__container">
-
-
-
-          
           {/* 1 */}
           <div className="embla__slide">
             <div className="bg-accent-2 my-12 pb-20 sm:pb-24 xl:pb-0">
@@ -125,7 +122,12 @@ export default function Testimonials({
                       <p>{message1}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                    <div className="font-semibold text-gray-900" dangerouslySetInnerHTML={{__html:name1?name1:"&nbsp;"}}/>
+                      <div
+                        className="font-semibold text-gray-900"
+                        dangerouslySetInnerHTML={{
+                          __html: name1 ? name1 : "&nbsp;",
+                        }}
+                      />
                       <div className="mt-1 text-gray-600">{location1}</div>
                     </figcaption>
                   </figure>
@@ -133,13 +135,6 @@ export default function Testimonials({
               </div>
             </div>
           </div>
-
-
-
-
-
-
-
 
           {/* 2 */}
           <div className="embla__slide">
@@ -175,7 +170,12 @@ export default function Testimonials({
                       <p>{message2}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                    <div className="font-semibold text-gray-900" dangerouslySetInnerHTML={{__html:name2?name2:"&nbsp;"}}/>
+                      <div
+                        className="font-semibold text-gray-900"
+                        dangerouslySetInnerHTML={{
+                          __html: name2 ? name2 : "&nbsp;",
+                        }}
+                      />
                       <div className="mt-1 text-gray-600">{location2}</div>
                     </figcaption>
                   </figure>
@@ -183,12 +183,6 @@ export default function Testimonials({
               </div>
             </div>
           </div>
-
-
-
-
-
-
 
           {/* 3 */}
           <div className="embla__slide">
@@ -224,7 +218,12 @@ export default function Testimonials({
                       <p>{message3}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                    <div className="font-semibold text-gray-900" dangerouslySetInnerHTML={{__html:name3?name3:"&nbsp;"}}/>
+                      <div
+                        className="font-semibold text-gray-900"
+                        dangerouslySetInnerHTML={{
+                          __html: name3 ? name3 : "&nbsp;",
+                        }}
+                      />
                       <div className="mt-1 text-gray-600">{location3}</div>
                     </figcaption>
                   </figure>
@@ -232,12 +231,6 @@ export default function Testimonials({
               </div>
             </div>
           </div>
-
-
-
-
-
-
 
           {/* 4 */}
           <div className="embla__slide">
@@ -273,7 +266,12 @@ export default function Testimonials({
                       <p>{message4}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                    <div className="font-semibold text-gray-900" dangerouslySetInnerHTML={{__html:name4?name4:"&nbsp;"}}/>
+                      <div
+                        className="font-semibold text-gray-900"
+                        dangerouslySetInnerHTML={{
+                          __html: name4 ? name4 : "&nbsp;",
+                        }}
+                      />
                       <div className="mt-1 text-gray-600">{location4}</div>
                     </figcaption>
                   </figure>
@@ -281,11 +279,6 @@ export default function Testimonials({
               </div>
             </div>
           </div>
-
-
-
-
-
 
           {/* 5 */}
           <div className="embla__slide">
@@ -321,7 +314,12 @@ export default function Testimonials({
                       <p>{message5}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                      <div className="font-semibold text-gray-900" dangerouslySetInnerHTML={{__html:name5?name5:"&nbsp;"}}/>
+                      <div
+                        className="font-semibold text-gray-900"
+                        dangerouslySetInnerHTML={{
+                          __html: name5 ? name5 : "&nbsp;",
+                        }}
+                      />
                       <div className="mt-1 text-gray-600">{location5}</div>
                     </figcaption>
                   </figure>
@@ -329,9 +327,6 @@ export default function Testimonials({
               </div>
             </div>
           </div>
-
-
-
 
           {/* 6 */}
           <div className="embla__slide">
@@ -367,7 +362,12 @@ export default function Testimonials({
                       <p>{message6}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                    <div className="font-semibold text-gray-900" dangerouslySetInnerHTML={{__html:name6?name6:"&nbsp;"}}/>
+                      <div
+                        className="font-semibold text-gray-900"
+                        dangerouslySetInnerHTML={{
+                          __html: name6 ? name6 : "&nbsp;",
+                        }}
+                      />
                       <div className="mt-1 text-gray-600">{location6}</div>
                     </figcaption>
                   </figure>
@@ -375,9 +375,6 @@ export default function Testimonials({
               </div>
             </div>
           </div>
-
-
-
 
           {/* 7 */}
           <div className="embla__slide">
@@ -413,7 +410,12 @@ export default function Testimonials({
                       <p>{message7}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                    <div className="font-semibold text-gray-900" dangerouslySetInnerHTML={{__html:name7?name7:"&nbsp;"}}/>
+                      <div
+                        className="font-semibold text-gray-900"
+                        dangerouslySetInnerHTML={{
+                          __html: name7 ? name7 : "&nbsp;",
+                        }}
+                      />
                       <div className="mt-1 text-gray-600">{location7}</div>
                     </figcaption>
                   </figure>
@@ -421,7 +423,6 @@ export default function Testimonials({
               </div>
             </div>
           </div>
-
 
           {/* 8 */}
           <div className="embla__slide">
@@ -457,7 +458,12 @@ export default function Testimonials({
                       <p>{message8}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                    <div className="font-semibold text-gray-900" dangerouslySetInnerHTML={{__html:name8?name8:"&nbsp;"}}/>
+                      <div
+                        className="font-semibold text-gray-900"
+                        dangerouslySetInnerHTML={{
+                          __html: name8 ? name8 : "&nbsp;",
+                        }}
+                      />
                       <div className="mt-1 text-gray-600">{location8}</div>
                     </figcaption>
                   </figure>
@@ -465,8 +471,6 @@ export default function Testimonials({
               </div>
             </div>
           </div>
-
-
 
           {/* 9 */}
           <div className="embla__slide">
@@ -502,7 +506,12 @@ export default function Testimonials({
                       <p>{message9}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                    <div className="font-semibold text-gray-900" dangerouslySetInnerHTML={{__html:name9?name9:"&nbsp;"}}/>
+                      <div
+                        className="font-semibold text-gray-900"
+                        dangerouslySetInnerHTML={{
+                          __html: name9 ? name9 : "&nbsp;",
+                        }}
+                      />
                       <div className="mt-1 text-gray-600">{location9}</div>
                     </figcaption>
                   </figure>
@@ -510,8 +519,6 @@ export default function Testimonials({
               </div>
             </div>
           </div>
-
-
 
           {/* 10 */}
           <div className="embla__slide">
@@ -547,7 +554,12 @@ export default function Testimonials({
                       <p>{message10}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
-                      <div className="font-semibold text-gray-900" dangerouslySetInnerHTML={{__html:name10?name10:"&nbsp;"}}/>
+                      <div
+                        className="font-semibold text-gray-900"
+                        dangerouslySetInnerHTML={{
+                          __html: name10 ? name10 : "&nbsp;",
+                        }}
+                      />
                       <div className="mt-1 text-gray-600">{location10}</div>
                     </figcaption>
                   </figure>
@@ -555,18 +567,13 @@ export default function Testimonials({
               </div>
             </div>
           </div>
-         
-        
         </div>
         <button className="embla__next" onClick={scrollNext}>
-        <ChevronRightIcon className="h-8 w-8 text-gray-600 font-bold" />
-
-      </button>
+          <ChevronRightIcon className="h-8 w-8 text-gray-600 font-bold" />
+        </button>
         <button className="embla__prev" onClick={scrollPrev}>
-        <ChevronLeftIcon className="h-8 w-8 text-gray-600 font-bold" />
-
-      </button>
-  
+          <ChevronLeftIcon className="h-8 w-8 text-gray-600 font-bold" />
+        </button>
       </div>
     </div>
   );

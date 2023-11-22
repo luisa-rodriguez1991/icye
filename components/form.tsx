@@ -1,23 +1,6 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-
-
-
 
 import { Switch } from "@headlessui/react";
 import { useIntl } from "react-intl";
@@ -26,7 +9,7 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Form({ openIndicator, onSetOpen }:any) {
+export default function Form({ openIndicator, onSetOpen }: any) {
   const [agreed, setAgreed] = useState(false);
   const intl = useIntl();
 
@@ -79,15 +62,17 @@ export default function Form({ openIndicator, onSetOpen }:any) {
                         <div
                           className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
                           aria-hidden="true"
-                        >
-                         
-                        </div>
+                        ></div>
                         <div className="mx-auto max-w-2xl text-center">
                           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                           {intl.formatMessage({ id: "Registration_form_title"})}
+                            {intl.formatMessage({
+                              id: "Registration_form_title",
+                            })}
                           </h2>
                           <p className="mt-4 text-lg leading-8 text-gray-600">
-                          {intl.formatMessage({ id: "Registration_form_text"})}
+                            {intl.formatMessage({
+                              id: "Registration_form_text",
+                            })}
                           </p>
                         </div>
                         <form
@@ -101,7 +86,9 @@ export default function Form({ openIndicator, onSetOpen }:any) {
                                 htmlFor="first-name"
                                 className="block text-sm font-semibold leading-6 text-gray-900"
                               >
-                                {intl.formatMessage({ id: "Registration_form_name"})}
+                                {intl.formatMessage({
+                                  id: "Registration_form_name",
+                                })}
                               </label>
                               <div className="mt-2.5">
                                 <input
@@ -118,7 +105,9 @@ export default function Form({ openIndicator, onSetOpen }:any) {
                                 htmlFor="last-name"
                                 className="block text-sm font-semibold leading-6 text-gray-900"
                               >
-                                {intl.formatMessage({ id: "Registration_form_name2"})}
+                                {intl.formatMessage({
+                                  id: "Registration_form_name2",
+                                })}
                               </label>
                               <div className="mt-2.5">
                                 <input
@@ -135,7 +124,9 @@ export default function Form({ openIndicator, onSetOpen }:any) {
                                 htmlFor="email"
                                 className="block text-sm font-semibold leading-6 text-gray-900"
                               >
-                                {intl.formatMessage({ id: "Registration_form_email"})}
+                                {intl.formatMessage({
+                                  id: "Registration_form_email",
+                                })}
                               </label>
                               <div className="mt-2.5">
                                 <input
@@ -152,11 +143,11 @@ export default function Form({ openIndicator, onSetOpen }:any) {
                                 htmlFor="phone-number"
                                 className="block text-sm font-semibold leading-6 text-gray-900"
                               >
-                                {intl.formatMessage({ id: "Registration_form_phone"})}
+                                {intl.formatMessage({
+                                  id: "Registration_form_phone",
+                                })}
                               </label>
                               <div className="relative mt-2.5">
-                            
-                            
                                 <input
                                   type="tel"
                                   name="phone-number"
@@ -172,13 +163,15 @@ export default function Form({ openIndicator, onSetOpen }:any) {
                                 htmlFor="phone-number"
                                 className="block text-sm font-semibold leading-6 text-gray-900"
                               >
-                                {intl.formatMessage({ id: "Registration_form_program"})}
+                                {intl.formatMessage({
+                                  id: "Registration_form_program",
+                                })}
                               </label>
 
                               <div className="mt-2 -space-y-px rounded-md shadow-sm">
                                 <div>
                                   <label htmlFor="country" className="sr-only">
-                                    Program 
+                                    Program
                                   </label>
                                   <select
                                     id="country"
@@ -186,10 +179,26 @@ export default function Form({ openIndicator, onSetOpen }:any) {
                                     autoComplete="country-name"
                                     className="relative block w-full rounded-none rounded-t-md border-0 bg-transparent py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                   >
-                                    <option>{intl.formatMessage({ id: "Registration_form_option1"})}</option>
-                                    <option>{intl.formatMessage({ id: "Registration_form_option2"})}</option>
-                                    <option>{intl.formatMessage({ id: "Registration_form_option3"})}</option>
-                                    <option>{intl.formatMessage({ id: "Registration_form_option4"})}</option>
+                                    <option>
+                                      {intl.formatMessage({
+                                        id: "Registration_form_option1",
+                                      })}
+                                    </option>
+                                    <option>
+                                      {intl.formatMessage({
+                                        id: "Registration_form_option2",
+                                      })}
+                                    </option>
+                                    <option>
+                                      {intl.formatMessage({
+                                        id: "Registration_form_option3",
+                                      })}
+                                    </option>
+                                    <option>
+                                      {intl.formatMessage({
+                                        id: "Registration_form_option4",
+                                      })}
+                                    </option>
                                   </select>
                                 </div>
                               </div>
@@ -222,18 +231,21 @@ export default function Form({ openIndicator, onSetOpen }:any) {
                                 </Switch>
                               </div>
                               <Switch.Label className="text-sm leading-6 text-gray-600">
-                                {intl.formatMessage({ id: "Registration_form_Ppolicy"})}{" "}
+                                {intl.formatMessage({
+                                  id: "Registration_form_Ppolicy",
+                                })}{" "}
                                 <a
                                   href="#"
                                   className="font-semibold text-accent-1"
                                 >
-                                  {intl.formatMessage({ id: "Registration_form_Ppolicy_accent"})}
+                                  {intl.formatMessage({
+                                    id: "Registration_form_Ppolicy_accent",
+                                  })}
                                 </a>
                                 .
                               </Switch.Label>
                             </Switch.Group>
                           </div>
-
                         </form>
                       </div>
                     </div>
@@ -246,13 +258,17 @@ export default function Form({ openIndicator, onSetOpen }:any) {
                           className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
                           onClick={() => onSetOpen(false)}
                         >
-                          {intl.formatMessage({ id: "Registration_form_button1"})}
+                          {intl.formatMessage({
+                            id: "Registration_form_button1",
+                          })}
                         </button>
                         <button
                           type="submit"
                           className="inline-flex justify-center rounded-md bg-accent-1 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
-                          {intl.formatMessage({ id: "Registration_form_button2"})}
+                          {intl.formatMessage({
+                            id: "Registration_form_button2",
+                          })}
                         </button>
                       </div>
                     </div>

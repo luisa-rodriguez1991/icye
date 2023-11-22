@@ -110,7 +110,6 @@ export const getStaticPaths: GetStaticPaths = async (locale) => {
   const es = allProjects.map((i: any) => `/es/blog/${i.slug}`);
   finalArray = [...es, ...en];
 
-
   return {
     paths: finalArray || [],
     fallback: false,
