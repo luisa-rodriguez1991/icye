@@ -34,6 +34,9 @@ export async function getAllPost(locale:any) {
       return info
   }
 
+
+  
+
   export async function getCategoriesByParent(id:any, locale:any) {
     const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/categories?parent=${id}&acf_format=standard&_fields=name,id,slug&lang=${locale}`)
     const info = await data.json();

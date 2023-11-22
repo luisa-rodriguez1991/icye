@@ -6,14 +6,35 @@ import { GetStaticProps } from "next";
 import { getPage } from "@/lib/api";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from 'next/navigation';
 
-export default function Privacy({page}:any) {
-  const [open, setOpen] = useState(false)
 
+export default function Key({page}:any) {
   const router = useRouter();
-  const { locale } = router;
+  
+
+  const [open, setOpen] = useState(false)
+  const [results, setResults] = useState()
   const intl = useIntl()
+
+  useEffect(() => {
+    if (Object.keys(router.query).length > 0) {
+      fetch(`http://184.72.130.92/wp-json/wp/v2/search?search=${router.query.key}&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,categories`) // ⬅️ 1) llamada a la API, el resultado es una Promise
+      .then((response) => response.json()) // ⬅️ 2) cuando la petición finalice, transformamos la respuesta a JSON (response.json() también es una Promise)
+      .then((dog) => console.log(dog));
+    }
+  }, [router.query]);
+
+
+
+  useEffect(()=>{ 
+      
+
+
+  },[])
+
+
 
   return (
 
