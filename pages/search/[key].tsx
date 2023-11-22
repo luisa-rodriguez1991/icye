@@ -8,6 +8,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useParams } from 'next/navigation';
+import SearchContent from "@/components/search-content";
 
 
 export default function Key({page}:any) {
@@ -20,19 +21,14 @@ export default function Key({page}:any) {
 
   useEffect(() => {
     if (Object.keys(router.query).length > 0) {
-      fetch(`http://184.72.130.92/wp-json/wp/v2/search?search=${router.query.key}&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,categories`) // ⬅️ 1) llamada a la API, el resultado es una Promise
+      fetch(`http://184.72.130.92/wp-json/wp/v2/posts?search=${router.query.key}&_fields=id,title,categories,excerpt,slug`) // ⬅️ 1) llamada a la API, el resultado es una Promise
       .then((response) => response.json()) // ⬅️ 2) cuando la petición finalice, transformamos la respuesta a JSON (response.json() también es una Promise)
-      .then((dog) => console.log(dog));
+      .then((dog) => setResults(dog));
     }
   }, [router.query]);
 
 
 
-  useEffect(()=>{ 
-      
-
-
-  },[])
 
 
 
@@ -55,8 +51,10 @@ export default function Key({page}:any) {
          Search: {router.query.key} 
         </h1>
         <div className="mt-8">
+         
 
-          search
+        <SearchContent searchinfo={results}/>
+          
         </div>
 
       
