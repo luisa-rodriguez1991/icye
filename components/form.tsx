@@ -1,17 +1,52 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { CheckCircleIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
-import { Switch } from "@headlessui/react";
 import { useIntl } from "react-intl";
+import { Controller, useForm } from "react-hook-form";
+import { useRouter } from "next/router";
 
-function classNames(...classes: any) {
+import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import { Combobox } from "@headlessui/react";
+import StateMessage from "./state-message";
+
+
+function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Form({ openIndicator, onSetOpen }: any) {
-  const [agreed, setAgreed] = useState(false);
   const intl = useIntl();
+  const router = useRouter();
+  const { locale } = router;
+  const [userData, setUserData] = useState();
+  const [confirmation, setConfirmation] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    setValue,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data: any) => {
+    debugger;
+    setUserData(data);
+  };
+
+  console.log(watch("customerType"))
+
+  useEffect(() => {
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(userData),
+    };
+
+    userData &&
+      fetch("http://localhost:5001/form", requestOptions) 
+        .then((response) => response.status === 200 && setConfirmation(true)); // ⬅️ 3) aquí ya tenemos la respuesta en formato objeto
+  }, [userData]);
 
   return (
     <Transition.Root show={openIndicator} as={Fragment}>
@@ -35,7 +70,7 @@ export default function Form({ openIndicator, onSetOpen }: any) {
                 leaveTo="translate-x-full"
               >
                 <Dialog.Panel className="pointer-events-auto w-screen max-w-2xl">
-                  <form className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                  <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                     <div className="flex-1">
                       {/* Header */}
                       <div className="bg-accent-1 px-4 py-6 sm:px-6">
@@ -75,204 +110,426 @@ export default function Form({ openIndicator, onSetOpen }: any) {
                             })}
                           </p>
                         </div>
-                        <form
-                          action="#"
-                          method="POST"
-                          className="mx-auto mt-8 max-w-xl sm:mt-14"
-                        >
-                          <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                            <div>
-                              <label
-                                htmlFor="first-name"
-                                className="block text-sm font-semibold leading-6 text-gray-900"
-                              >
-                                {intl.formatMessage({
-                                  id: "Registration_form_name",
-                                })}
-                              </label>
-                              <div className="mt-2.5">
-                                <input
-                                  type="text"
-                                  name="first-name"
-                                  id="first-name"
-                                  autoComplete="given-name"
-                                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                />
-                              </div>
-                            </div>
-                            <div>
-                              <label
-                                htmlFor="last-name"
-                                className="block text-sm font-semibold leading-6 text-gray-900"
-                              >
-                                {intl.formatMessage({
-                                  id: "Registration_form_name2",
-                                })}
-                              </label>
-                              <div className="mt-2.5">
-                                <input
-                                  type="text"
-                                  name="last-name"
-                                  id="last-name"
-                                  autoComplete="family-name"
-                                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                />
-                              </div>
-                            </div>
-                            <div className="sm:col-span-2">
-                              <label
-                                htmlFor="email"
-                                className="block text-sm font-semibold leading-6 text-gray-900"
-                              >
-                                {intl.formatMessage({
-                                  id: "Registration_form_email",
-                                })}
-                              </label>
-                              <div className="mt-2.5">
-                                <input
-                                  type="email"
-                                  name="email"
-                                  id="email"
-                                  autoComplete="email"
-                                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                />
-                              </div>
-                            </div>
-                            <div className="sm:col-span-2">
-                              <label
-                                htmlFor="phone-number"
-                                className="block text-sm font-semibold leading-6 text-gray-900"
-                              >
-                                {intl.formatMessage({
-                                  id: "Registration_form_phone",
-                                })}
-                              </label>
-                              <div className="relative mt-2.5">
-                                <input
-                                  type="tel"
-                                  name="phone-number"
-                                  id="phone-number"
-                                  autoComplete="tel"
-                                  className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                />
-                              </div>
-                            </div>
 
-                            <div className="sm:col-span-2">
-                              <label
-                                htmlFor="phone-number"
-                                className="block text-sm font-semibold leading-6 text-gray-900"
-                              >
-                                {intl.formatMessage({
-                                  id: "Registration_form_program",
-                                })}
-                              </label>
+                        {confirmation ? (
+                          <StateMessage h1="Gracias por tu interes!" p="Estaremos pronto en contacto!" p2=" Si tienes preguntas, comunicate al: TODO" icon="checkicon"/>
+                        ) : (
 
-                              <div className="mt-2 -space-y-px rounded-md shadow-sm">
+                          // Formulario despues de titulo y texto
+                          <form  
+                            onSubmit={handleSubmit(onSubmit)}
+                            className="mt-16 pb-24"
+                          >
+                            
+                            <div>
+                              {/* Tipo de participante menu */}
+                              <h3 className="text-xl font-bold text-gray-900 pb-4 mb-8">Quiero Participar como:</h3>
+
+                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                  {watch("customerType") === "mentor" ? (
+                                    <div className="relative  border-accent-1 bg-accent-1 text-white px-4 py-3 rounded-lg ">
+                                      {/* boton full */}
+                                      <input
+                                        className="opacity-0 left-0 top-0 absolute h-full w-full "
+                                        {...register("customerType")}
+                                        type="radio"
+                                        value="mentor"
+                                      />
+
+                                      <span className="flex justify-start ">
+                                        <span className="flex flex-col">
+                                          <label className=" text-sm font-medium text-white">
+                                      Mentor
+                                          </label>
+                                          
+                                        </span>
+                                      </span>
+                                      <CheckCircleIcon
+                                        className={classNames(
+                                          watch("customerType") !== "mentor"
+                                            ? "invisible"
+                                            : "",
+                                          "absolute top-1 right-1 h-5 w-5 font-semibold text-white"
+                                        )}
+                                        aria-hidden="true"
+                                      />
+                                    </div>
+                                  ) : (
+                                    <div className="relative  border-accent-2 bg-accent-2 text-accent-1 px-4 py-3 rounded-lg ">
+                                      <input
+                                        className="opacity-0  left-0 top-0 absolute h-full w-full "
+                                        {...register("customerType")}
+                                        type="radio"
+                                        value="mentor"
+                                      />
+
+                                      <span className="flex justify-start">
+                                        <span className="flex flex-col ">
+
+                                          <label className="block text-sm font-medium text-gray-900">
+                                        Mentor
+                                          </label>
+
+                                        </span>
+                                      </span>
+                                    </div>
+                                  )}
+
+                                  {watch("customerType") === "familias" ? (
+                                    <div className="relative  border-accent-1 bg-accent-1 text-white px-4 py-3 rounded-lg ">
+                                      {/* boton full */}
+                                      <input
+                                        className="opacity-0 left-0 top-0 absolute h-full w-full "
+                                        {...register("customerType")}
+                                        type="radio"
+                                        value="familias"
+                                      />
+
+                                      <span className="flex justify-center ">
+                                        <span className="flex flex-col">
+                                          <label className=" text-sm font-medium text-white">
+                                          Familias Hospedera
+                                          </label>
+                                          
+                                        </span>
+                                      </span>
+                                      <CheckCircleIcon
+                                        className={classNames(
+                                          watch("customerType") !== "familias"
+                                            ? "invisible"
+                                            : "",
+                                          "absolute top-1 right-1 h-5 w-5 font-semibold text-white"
+                                        )}
+                                        aria-hidden="true"
+                                      />
+                                    </div>
+                                  ) : (
+                                    <div className="relative  border-accent-2 bg-accent-2 text-accent-1 px-4 py-3 rounded-lg ">
+                                      <input
+                                        className="opacity-0  left-0 top-0 absolute h-full w-full "
+                                        {...register("customerType")}
+                                        type="radio"
+                                        value="familias"
+                                      />
+
+                                      <span className="flex justify-start">
+                                        <span className="flex flex-col ">
+
+                                          <label className="block text-sm font-medium text-gray-900">
+                                          Familias Hospedera
+                                          </label>
+
+                                        </span>
+                                      </span>
+                                    </div>
+                                  )}
+
+                                  {watch("customerType") === "participante" ? (
+                                    <div className="relative  border-accent-1 bg-accent-1 text-white px-4 py-3 rounded-lg ">
+                                    <input
+                                        className="opacity-0  left-0 top-0 absolute h-full w-full "
+                                        {...register("customerType")}
+                                        type="radio"
+                                        value="participante"
+                                      />
+                                      <span className="flex justify-start">
+                                        <span className="flex flex-col">
+                                          
+                                          <label className="block text-sm font-medium text-white">
+                                            Participante
+                                          </label>
+                                          
+                                        </span>
+                                      </span>
+                                      <CheckCircleIcon
+                                        className={classNames(
+                                          watch("customerType") !== "participante"
+                                            ? "invisible"
+                                            : "",
+                                          "absolute top-1 right-1 h-5 w-5 font-semibold text-white"
+                                        )}
+                                        aria-hidden="true"
+                                      />
+                                    </div>
+                                  ) : (
+                                    <div className="relative  border-accent-2 bg-accent-2 text-accent-1 px-4 py-3 rounded-lg ">
+                                      <input
+                                        className="opacity-0  left-0 top-0 absolute h-full w-full "
+                                        {...register("customerType")}
+                                        type="radio"
+                                        value="participante"
+                                      />
+                                      <span className="flex justify-start">
+                                        <span className="flex flex-col">
+                                          <label className="block text-sm font-medium text-gray-900">
+                                            Participante
+                                          </label>
+                                        </span>
+                                      </span>
+                                    </div>
+                                  )}
+
+                                  {watch("customerType") === "donante" ? (
+                                    <div className="relative  border-accent-1 bg-accent-1 text-white px-4 py-3 rounded-lg ">
+                                    <input
+                                        className="opacity-0  left-0 top-0 absolute h-full w-full "
+                                        {...register("customerType")}
+                                        type="radio"
+                                        value="donante"
+                                      />
+                                      <span className="flex justify-start">
+                                        <span className="flex flex-col">
+                                          
+                                          <label className="block text-sm font-medium text-white">
+                                          Donante
+                                          </label>
+                                          
+                                        </span>
+                                      </span>
+                                      <CheckCircleIcon
+                                        className={classNames(
+                                          watch("customerType") !== "donante"
+                                            ? "invisible"
+                                            : "",
+                                          "absolute top-1 right-1 h-5 w-5 font-semibold text-white"
+                                        )}
+                                        aria-hidden="true"
+                                      />
+                                    </div>
+                                  ) : (
+                                    <div className="relative  border-accent-2 bg-accent-2 text-accent-1 px-4 py-3 rounded-lg ">
+                                      <input
+                                        className="opacity-0  left-0 top-0 absolute h-full w-full "
+                                        {...register("customerType")}
+                                        type="radio"
+                                        value="donante"
+                                      />
+                                      <span className="flex justify-start">
+                                        <span className="flex flex-col">
+                                          <label className="block text-sm font-medium text-gray-900">
+                                          Donante
+                                          </label>
+                                        </span>
+                                      </span>
+                                    </div>
+                                  )}
+                              </div>
+                            </div>
+                            
+                            {/* registro de datos y elecciones */}
+                            <input
+                              type="hidden"
+                              {...register("local")}
+                              value={locale}
+                            />
+                              {watch("customerType") && (
+
+                                <div className="my-12 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                                {/* primer nombre */}
                                 <div>
-                                  <label htmlFor="country" className="sr-only">
-                                    Program
+                                  <label
+                                    htmlFor="firstname"
+                                    className="block text-sm font-semibold leading-6 text-gray-900"
+                                  >
+                                    {intl.formatMessage({
+                                      id: "contact_form_firstname",
+                                    })}
+                                  </label>
+                                  <div className="mt-2.5">
+                                    <input
+                                      type="text"
+                                      {...register("firstname", {
+                                        required: true,
+                                        maxLength: 80,
+                                      })}
+                                      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    />
+                                    {errors.firstname && (
+                                      <span className="text-red-400">
+                                        {intl.formatMessage({
+                                          id: "contact_form_firstname_confirmation",
+                                        })}
+                                      </span>
+                                    )}
+                                  </div>
+                                </div>
+                                {/* apellido */}
+                                <div>
+                                  <label
+                                    htmlFor="lastname"
+                                    className="block text-sm font-semibold leading-6 text-gray-900"
+                                  >
+                                    {intl.formatMessage({
+                                      id: "contact_form_lastname",
+                                    })}
+                                  </label>
+                                  <div className="mt-2.5">
+                                    <input
+                                      type="text"
+                                      {...register("lastname", {
+                                        required: true,
+                                        maxLength: 100,
+                                      })}
+                                      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    />
+                                    {errors.lastname && (
+                                      <span className="text-red-400">
+                                        {intl.formatMessage({
+                                          id: "contact_form_lastname_confirmation",
+                                        })}
+                                      </span>
+                                    )}
+                                  </div>
+                                </div>
+                                {/* email */}
+                                <div >
+                                  <label
+                                    htmlFor="email"
+                                    className="block text-sm font-semibold leading-6 text-gray-900"
+                                  >
+                                    {intl.formatMessage({
+                                      id: "contact_form_email",
+                                    })}
+                                  </label>
+                                  <div className="mt-2.5">
+                                    <input
+                                      type="email"
+                                      {...register("email", {
+                                        required: true,
+                                        pattern: /^\S+@\S+$/i,
+                                      })}
+                                      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    />
+                                    {errors.email && (
+                                      <span className="text-red-400">
+                                        {intl.formatMessage({
+                                          id: "contact_form_email_confirmation",
+                                        })}
+                                      </span>
+                                    )}
+                                  </div>
+                                </div>
+                                {/* telefono */}
+                                <div >
+                                  <div className="flex justify-between text-sm leading-6">
+                                    <label
+                                      htmlFor="phone"
+                                      className="block font-semibold text-gray-900"
+                                    >
+                                      {intl.formatMessage({
+                                        id: "contact_form_phone",
+                                      })}
+                                    </label>
+                                    <p
+                                      id="phone-description"
+                                      className="text-gray-400"
+                                    >
+                                      {intl.formatMessage({
+                                        id: "contact_form_phone_optional",
+                                      })}
+                                    </p>
+                                  </div>
+                                  <div className="mt-2.5">
+                                    <input
+                                      type="text"
+                                      {...register("Phone", { maxLength: 20 })}
+                                      aria-describedby="phone-description"
+                                      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    />
+                                  </div>
+                                </div>
+
+                                {/* Eleccion programa */}
+                                {watch("customerType")!=="donante"&& (
+                                  <div>
+                                    <label htmlFor="programm" className="block text-sm font-medium leading-6 text-gray-900">
+                                      Programm
+                                    </label>
+                                    <select
+                                      id="programm"
+                                      {...register("programm")}
+
+                                      className="mt-2 block w-full rounded-md border-0 py-2 h-[40px] pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-accent-1 sm:text-sm sm:leading-6"
+                                    >
+                                      <option></option>
+                                      <option>Long Term</option>
+                                      <option>Short Term</option>
+                                    </select>
+                                  </div>
+                                )} 
+
+                                {/* Pais */}
+                                {watch("customerType")!=="donante"&& (<div>
+                                  <label htmlFor="location" className="block text-sm font-medium leading-6 text-gray-900">
+                                    Pais
                                   </label>
                                   <select
-                                    id="country"
-                                    name="country"
-                                    autoComplete="country-name"
-                                    className="relative block w-full rounded-none rounded-t-md border-0 bg-transparent py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                  >
-                                    <option>
-                                      {intl.formatMessage({
-                                        id: "Registration_form_option1",
-                                      })}
-                                    </option>
-                                    <option>
-                                      {intl.formatMessage({
-                                        id: "Registration_form_option2",
-                                      })}
-                                    </option>
-                                    <option>
-                                      {intl.formatMessage({
-                                        id: "Registration_form_option3",
-                                      })}
-                                    </option>
-                                    <option>
-                                      {intl.formatMessage({
-                                        id: "Registration_form_option4",
-                                      })}
-                                    </option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                            <Switch.Group
-                              as="div"
-                              className="flex gap-x-4 sm:col-span-2"
-                            >
-                              <div className="flex h-6 items-center">
-                                <Switch
-                                  checked={agreed}
-                                  onChange={setAgreed}
-                                  className={classNames(
-                                    agreed ? "bg-accent-1" : "bg-gray-200",
-                                    "flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                  )}
-                                >
-                                  <span className="sr-only">
-                                    Agree to policies
-                                  </span>
-                                  <span
-                                    aria-hidden="true"
-                                    className={classNames(
-                                      agreed
-                                        ? "translate-x-3.5"
-                                        : "translate-x-0",
-                                      "h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"
-                                    )}
-                                  />
-                                </Switch>
-                              </div>
-                              <Switch.Label className="text-sm leading-6 text-gray-600">
-                                {intl.formatMessage({
-                                  id: "Registration_form_Ppolicy",
-                                })}{" "}
-                                <a
-                                  href="#"
-                                  className="font-semibold text-accent-1"
-                                >
-                                  {intl.formatMessage({
-                                    id: "Registration_form_Ppolicy_accent",
-                                  })}
-                                </a>
-                                .
-                              </Switch.Label>
-                            </Switch.Group>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
+                                    id="location"
+                                    {...register("country")}
 
-                    {/* Action buttons */}
-                    <div className="flex-shrink-0 border-t border-gray-200 px-4 py-5 sm:px-6">
-                      <div className="flex justify-end space-x-3">
-                        <button
-                          type="button"
-                          className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                          onClick={() => onSetOpen(false)}
-                        >
-                          {intl.formatMessage({
-                            id: "Registration_form_button1",
-                          })}
-                        </button>
-                        <button
-                          type="submit"
-                          className="inline-flex justify-center rounded-md bg-accent-1 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                        >
-                          {intl.formatMessage({
-                            id: "Registration_form_button2",
-                          })}
-                        </button>
+                                    className="mt-2 block w-full rounded-md border-0 py-2 h-[40px] pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-accent-1 sm:text-sm sm:leading-6"
+                                  >
+                                    <option></option>
+                                    <option>United States</option>
+                                    <option>Canada</option>
+                                    <option>Mexico</option>
+                                  </select>
+                                </div>)}
+                                {/* mensaje */}
+                                <div className="sm:col-span-2">
+                                  <div className="flex justify-between text-sm leading-6">
+                                    <label
+                                      htmlFor="message"
+                                      className="block text-sm font-semibold leading-6 text-gray-900"
+                                    >
+
+
+                                    {intl.formatMessage({id: "contact_form_hcwh",})}
+
+
+
+
+                                     
+                                    </label>
+                                    <p
+                                      id="message-description"
+                                      className="text-gray-400"
+                                    >
+                                      {intl.formatMessage({
+                                        id: "contact_form_hcwh_size",
+                                      })}
+                                    </p>
+                                  </div>
+                                  <div className="mt-2.5">
+                                    <textarea
+                                      {...register("Message", {})}
+                                      rows={4}
+                                      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    />
+                                  </div>
+                                </div>
+                                </div>
+
+
+                              )}
+
+                          
+                            <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
+                              <button
+                                type="submit"
+                                className="rounded-[40px] bg-accent-1 px-6 py-4  font-semibold text-white shadow-sm hover:bg-accent-2 hover:text-accent-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                              >
+                                {" "}
+                                {intl.formatMessage({
+                                  id: "contact_form_button",
+                                })}{" "}
+                              </button>
+                            </div>
+                          </form>
+                        )}
                       </div>
                     </div>
-                  </form>
+                  </div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>

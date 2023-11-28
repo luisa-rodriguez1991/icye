@@ -13,6 +13,7 @@ export default function Footer() {
   const [confirmation, setConfirmation] = useState(false);
   const {
     register,
+    getValues,
     handleSubmit,
     formState: { errors },
   } = useForm();
@@ -29,6 +30,8 @@ export default function Footer() {
       fetch("http://localhost:5001/newsletter", requestOptions) // ⬅️ 1) llamada a la API, el resultado es una Promise
         .then((response) => response.status === 200 && setConfirmation(true)); // ⬅️ 3) aquí ya tenemos la respuesta en formato objeto
   }, [userData]);
+
+  const changeConfirmation = () => setConfirmation(false)
 
   return (
     <footer className="bg-accent-2" aria-labelledby="footer-heading">
@@ -66,7 +69,7 @@ export default function Footer() {
                   <ul role="list" className="mt-6 flex gap-3">
                     <li>
                       <a
-                        href="#"
+                        href="https://www.facebook.com/icye.colombia1981?mibextid=LQQJ4d"
                         className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                       >
                         <img
@@ -80,7 +83,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="https://x.com/icyecol?s=11&t=9YLWP7xQ4sPUbASieVVc8A"
                         className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                       >
                         <img
@@ -94,7 +97,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="https://instagram.com/icyecolombia?igshid=MzRlODBiNWFlZA=="
                         className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                       >
                         <img
@@ -140,7 +143,7 @@ export default function Footer() {
                       height={48}
                     />
                     <a
-                      href="tel:+57 310 7346918"
+                      href="https://wa.link/2bk6ie"
                       className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                     >
                       {intl.formatMessage({ id: "footer_whatsapp" })}
@@ -204,6 +207,7 @@ export default function Footer() {
                         required: true,
                         pattern: /^\S+@\S+$/i,
                       })}
+                      onChange={()=>changeConfirmation()}
                       id="email-address"
                       className="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
                       placeholder={intl.formatMessage({ id: "news_text" })}
@@ -227,7 +231,7 @@ export default function Footer() {
                       </span>
                     )}
                     {confirmation && (
-                      <span className="text-green-400 text-sm">
+                      <span className="text-accent-1 text-sm">
                         {intl.formatMessage({ id: "contact_form_email_sent" })}
                       </span>
                     )}

@@ -1,20 +1,149 @@
-import Head from "next/head";
+
 import { useIntl } from "react-intl";
+import { useCallback } from "react";
+import Particles from "react-particles";
+//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
 export default function Intro({ text, onOpenForm }: any) {
   const intl = useIntl();
 
+  const particlesInit = useCallback(async engine => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    //await loadFull(engine);
+    await loadSlim(engine);
+}, []);
+
+const particlesLoaded = useCallback(async container => {
+    console.log(container);
+}, []);
+
+
+
   return (
-    <div className="bg-white">
-      <Head>
-        <script type="text/javascript" src="/bolas.js" />
-      </Head>
-      <div className="absolute w-full" id="particles-js"></div>{" "}
-      <div className="count-particles">
-        {" "}
-        <span className="js-count-particles"></span>{" "}
+    <div className="bg-white relative">
+
+      <div className="absolute h-full w-full">
+      <Particles
+            id="tsparticles"
+            init={particlesInit}
+            loaded={particlesLoaded}
+
+
+        
+
+
+
+            options={{
+              fullScreen:false,
+              background: {
+                  color: {
+                      value: "#ffffff",
+                  },
+              },
+              fpsLimit: 120,
+              interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: false,
+                        mode: "push"
+                    },
+                    onclick: {
+                        enable: false,
+                        mode: "repulse"
+                    },
+                    resize: true
+                },
+                modes: {
+                   
+                    bubble: {
+                        distance: 400,
+                        size: 4,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 2
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        quantity: 4
+                    },
+                    
+                }
+            },
+              particles: {
+                number: {
+                    value: 10,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#011f7f"
+                },
+                shape: {
+                    type: "circle",
+                    image: {
+                        src: "img/github.svg",
+                        width: 50,
+                        height: 50
+                    }
+                },
+                opacity: {
+                    value: 0.3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 10,
+                    random: false,
+                    anim: {
+                        speed: 5,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: false,
+                    distance: 200,
+                    color: "#ffffff",
+                    opacity: 1,
+                    width: 2
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+              },
+           
+              retina_detect: true
+          }}
+        />
+
+
+
       </div>
-      <div></div>
       <div className="relative">
         <div className="mx-auto max-w-7xl">
           <div className="relative z-10 pt-6 lg:pt-14 lg:w-full lg:max-w-2xl">

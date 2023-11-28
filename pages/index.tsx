@@ -196,18 +196,7 @@ export default function Home({ posts, eventsList, page }: any) {
       <Contributors
         title={page.acf.contributors_title}
         text={page.acf.contributors_text}
-        icon1={page.acf.contributors_icon_1.sizes.thumbnail}
-        icontext1={page.acf.contributors_icon_text_1}
-        icon2={page.acf.contributors_icon_2.sizes.thumbnail}
-        icontext2={page.acf.contributors_icon_text_2}
-        icon3={page.acf.contributors_icon_3.sizes.thumbnail}
-        icontext3={page.acf.contributors_icon_text_3}
-        icon4={page.acf.contributors_icon_4.sizes.thumbnail}
-        icontext4={page.acf.contributors_icon_text_4}
-        icon5={page.acf.contributors_icon_5.sizes.thumbnail}
-        icontext5={page.acf.contributors_icon_text_5}
-        icon6={page.acf.contributors_icon_6.sizes.thumbnail}
-        icontext6={page.acf.contributors_icon_text_6}
+        img={page.acf.contributors_img.sizes.large}
       />
 
       <div className=" px-6 bg-white py-24">
@@ -218,10 +207,9 @@ export default function Home({ posts, eventsList, page }: any) {
         />
       </div>
 
-      <div className="bg-white sm:py-32 lg:py-8">
+      <div className="bg-white sm:py-32 md:py-0 lg:py-8">
         <ListBlog text={page.acf.blog_text} posts={posts} showAll={false} />
       </div>
-      <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     </Layout>
   );
 }

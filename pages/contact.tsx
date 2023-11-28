@@ -24,7 +24,9 @@ export default function Contact({ page }: any) {
       <Breadcrumb
         miVariable={intl.formatMessage({ id: "breadcrumb_contact" })}
       />
-      <ContactContent text={page.acf.contact_text} />
+      <ContactContent
+       text={page.acf.contact_text}
+       img={page.acf.contact_img.sizes.large} />
     </Layout>
   );
 }

@@ -54,7 +54,7 @@ export default function Blog({ text, posts }: any) {
   return (
     // page list blog
     <div className="bg-white pt-8">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8  pb-4">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-4">
         <div className="mx-auto max-w-4xl text-center ">
           <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
             Blog

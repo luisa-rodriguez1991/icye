@@ -37,11 +37,28 @@ export async function getAllPost(locale:any) {
 
   
 
-  export async function getCategoriesByParent(id:any, locale:any) {
+  export async function getCategoriesByParent(id:any, locale:any,order:any) {
     const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/categories?parent=${id}&acf_format=standard&_fields=name,id,slug&lang=${locale}`)
     const info = await data.json();
-      return info
-  }
+
+    let sortedCategories = order ? info.sort(function(a:any, b:any) {
+      const nameA = a.name.toUpperCase();
+      const nameB = b.name.toUpperCase(); 
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      } 
+  }) : info
+
+    
+
+
+  return sortedCategories
+
+
+}
 
   export async function getCategoryNameById(list:any, locale:any) {
     let listNames: any = []

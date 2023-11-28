@@ -4,18 +4,7 @@ import Link from "next/link";
 
 export default function Contributors({
   text,
-  icon1,
-  icontext1,
-  icon2,
-  icontext2,
-  icon3,
-  icontext3,
-  icon4,
-  icontext4,
-  icon5,
-  icontext5,
-  icon6,
-  icontext6,
+ img
 }: any) {
   const intl = useIntl();
   const router = useRouter();
@@ -46,72 +35,14 @@ export default function Contributors({
           </div>
 
           {/* iconos */}
-          <div className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
-            <div className="flex flex-col items-center lg:ml-12">
-              <img
-                className="max-h-12 w-full object-contain mb-4"
-                src={icon1}
-                alt="Statamic"
-                width={147}
-                height={48}
-              />
-              <p>{icontext1}</p>
-            </div>
-
-            <div className="flex flex-col items-center lg:ml-12">
-              <img
-                className="max-h-12 w-full object-contain mb-4"
-                src={icon2}
-                alt="Statamic"
-                width={147}
-                height={48}
-              />
-              <p>{icontext2}</p>
-            </div>
-
-            <div className="flex flex-col items-center lg:ml-12">
-              <img
-                className="max-h-12 w-full object-contain mb-4"
-                src={icon3}
-                alt="Statamic"
-                width={147}
-                height={48}
-              />
-              <p>{icontext3}</p>
-            </div>
-
-            <div className="flex flex-col items-center lg:ml-12">
-              <img
-                className="max-h-12 w-full object-contain mb-4"
-                src={icon4}
-                alt="Statamic"
-                width={147}
-                height={48}
-              />
-              <p>{icontext4}</p>
-            </div>
-
-            <div className="flex flex-col items-center lg:ml-12">
-              <img
-                className="max-h-12 w-full object-contain mb-4"
-                src={icon5}
-                alt="Statamic"
-                width={147}
-                height={48}
-              />
-              <p>{icontext5}</p>
-            </div>
-
-            <div className="flex flex-col items-center lg:ml-12">
-              <img
-                className="max-h-12 w-full object-contain mb-4"
-                src={icon6}
-                alt="Statamic"
-                width={147}
-                height={48}
-              />
-              <p>{icontext6}</p>
-            </div>
+          <div className="mx-auto w-full max-w-xl  items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
+            
+          <img
+            className=""
+            src={img}
+            alt=""
+          />
+  
           </div>
         </div>
       </div>

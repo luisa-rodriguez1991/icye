@@ -117,9 +117,9 @@ export default function Project({ page, listCategories }: any) {
                 </h2>
                 <div className="mt-3">
                   Categories:
-                  <div className="flex  items-center gap-2 my-3 ">
+                  <div className="flex flex-wrap items-center gap-2 my-3 ">
                     {listCategories.map((category: any) => (
-                      <span className="inline-flex   rounded-full bg-accent-2 px-2 py-1 text-xs font-medium text-accent-1">
+                      <span className=" rounded-full bg-accent-2 px-2 py-1 text-xs font-medium text-accent-1">
                         {category}
                       </span>
                     ))}

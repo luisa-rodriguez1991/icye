@@ -12,7 +12,10 @@ export default function Layout({ children, onOpenForm, openForm }: any) {
         <Header onOpenForm={onOpenForm} />
         <main>{children}</main>
       </div>
-      <Footer />
+      <Footer/>
+      {/*   addres={page.acf.footer_contact_address}
+        email={page.acf.footer_contact_address}
+        whatsapp={page.acf.footer_contact_whatsapp} */}
     </>
   );
 }

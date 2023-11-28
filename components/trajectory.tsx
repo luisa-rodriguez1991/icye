@@ -7,7 +7,7 @@ export default function Trajectory({ text, image }: any) {
 
   return (
     <div className="relative isolate overflow-hidden bg-white px-6 lg:pb-24 lg:pt-12 lg:overflow-visible lg:px-0">
-      <div className="flex flex-col lg:flex-row mx-auto max-w-7xl justify-around  lg:px-8">
+      <div className="flex flex-col lg:flex-row mx-auto max-w-7xl justify-around px-6 lg:px-8">
         <div className="basis-12/12 lg:basis-6/12 flex items-center">
           <div className=" flex flex-col">
             <div className="flex">
