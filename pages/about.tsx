@@ -2,13 +2,13 @@ import Layout from "@/components/layout";
 import Breadcrumb from "@/components/breadcrump";
 import AboutUs from "@/components/about-us-content";
 import { useIntl } from "react-intl";
-import { getPage } from "@/lib/api";
+import {getPage, getPost} from "@/lib/api";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-export default function About({ page }: any) {
+export default function About({ page, footer }: any) {
   const [open, setOpen] = useState(false);
 
   const router = useRouter();
@@ -16,7 +16,7 @@ export default function About({ page }: any) {
   const intl = useIntl();
 
   return (
-    <Layout onOpenForm={setOpen} openForm={open}>
+    <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
       <Head>
         <link rel="canonical" href="https://www.icyecolombia.com/about" />
         <meta name="robots" content="noindex, nofollow" />
@@ -62,8 +62,10 @@ export default function About({ page }: any) {
 
 export const getStaticProps: GetStaticProps = async (locale) => {
   const pageInfo = await getPage(419, locale);
+    const footerInfo = await getPost(772, locale);
 
-  return {
-    props: { page: pageInfo },
+
+    return {
+    props: { page: pageInfo, footer: footerInfo },
   };
 };

@@ -2,12 +2,12 @@ import Layout from "@/components/layout";
 import Breadcrumb from "@/components/breadcrump";
 import { useIntl } from "react-intl";
 import { GetStaticProps } from "next";
-import { getPage } from "@/lib/api";
+import {getPage, getPost} from "@/lib/api";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-export default function Privacy({ page }: any) {
+export default function Privacy({ page, footer }: any) {
   const [open, setOpen] = useState(false);
 
   const router = useRouter();
@@ -15,7 +15,7 @@ export default function Privacy({ page }: any) {
   const intl = useIntl();
 
   return (
-    <Layout onOpenForm={setOpen} openForm={open}>
+    <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
       <Head>
         <link
           rel="canonical"
@@ -48,8 +48,9 @@ export default function Privacy({ page }: any) {
 
 export const getStaticProps: GetStaticProps = async (locale) => {
   const pageInfo = await getPage(575, locale);
+    const footerInfo = await getPost(772, locale);
 
   return {
-    props: { page: pageInfo },
+    props: { page: pageInfo, footer: footerInfo},
   };
 };

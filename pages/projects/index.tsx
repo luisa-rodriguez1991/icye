@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/breadcrump";
 import ContentProjects from "@/components/content-projects";
 import Layout from "@/components/layout";
-import { getAllPost, getAllProjects, getCategoriesByParent } from "@/lib/api";
+import {getAllPost, getAllProjects, getCategoriesByParent, getPost} from "@/lib/api";
 import { GetStaticProps } from "next";
 import { Fragment, useEffect, useState } from "react";
 import { Dialog, Disclosure, Transition } from "@headlessui/react";
@@ -14,6 +14,7 @@ export default function Projects({
   listCountries,
   listInterests,
   listTerms,
+    footer
 }: any) {
   const [open, setOpen] = useState(false);
 
@@ -49,7 +50,7 @@ export default function Projects({
   };
 
   return (
-    <Layout onOpenForm={setOpen} openForm={open}>
+    <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
       <Breadcrumb
         miVariable={intl.formatMessage({ id: "breadcrumb_projects" })}
       />
@@ -208,12 +209,14 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const pageInfoCountries = await getCategoriesByParent(17, locale, true);
   const pageInfoInterests = await getCategoriesByParent(19, locale, true);
   const pageInfoTerms = await getCategoriesByParent(18, locale, false);
+  const footerInfo = await getPost(772, locale);
 
   return {
     props: {
       listCountries: pageInfoCountries,
       listInterests: pageInfoInterests,
-      listTerms: pageInfoTerms,
+      listTerms: pageInfoTerms
+      , footer:footerInfo
     },
   };
 };

@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
-export default function Footer() {
+export default function Footer({info}) {
   const intl = useIntl();
   const router = useRouter();
   const { locale } = router;
@@ -34,7 +34,10 @@ export default function Footer() {
   const changeConfirmation = () => setConfirmation(false)
 
   return (
+
+
     <footer className="bg-accent-2" aria-labelledby="footer-heading">
+
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-24 px-14 lg:px-8 lg:pt-32">
         <div className="flex flex-col lg:flex-row ">
           <div className="basis-12/12 md:basis-11/12 lg:basis-9/12">
@@ -120,18 +123,18 @@ export default function Footer() {
                   {/* direccion */}
                   <li>
                     <p className="text-sm leading-6 text-gray-600 ">
-                      {intl.formatMessage({ id: "footer_direccion1" })}
+                      {info.acf.footer_contact_address}
                       <br></br>
-                      {intl.formatMessage({ id: "footer_direccion2" })}
+                      {info.acf.footer_contact_address}
                     </p>
                   </li>
                   {/* email */}
                   <li>
                     <a
-                      href="mailto:icyecol@icyecolombia.com"
+                      href={`mailto:${info.acf.footer_contact__email}`}
                       className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                     >
-                      {intl.formatMessage({ id: "footer_email" })}
+                      {info.acf.footer_contact__email}
                     </a>
                   </li>
                   <li className="flex ">
@@ -146,7 +149,7 @@ export default function Footer() {
                       href="https://wa.link/2bk6ie"
                       className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                     >
-                      {intl.formatMessage({ id: "footer_whatsapp" })}
+                      {info.acf.footer_contact_whatsapp}
                     </a>
                   </li>
                 </ul>

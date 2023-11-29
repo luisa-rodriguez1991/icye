@@ -6,7 +6,7 @@ export default function Sponsors() {
   const [open, setOpen] = useState(false);
 
   return (
-    <Layout onOpenForm={setOpen} openForm={open}>
+    <Layout footerInfo={false} onOpenForm={setOpen} openForm={open}>
       <Breadcrumb miVariable={"Sponsors"} />
      
     </Layout>

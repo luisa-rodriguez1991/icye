@@ -2,17 +2,17 @@ import Breadcrumb from "@/components/breadcrump";
 import Layout from "@/components/layout";
 import Calendar from "@/components/calendar-events";
 import { useIntl } from "react-intl";
-import { getAllEvents } from "@/lib/api";
+import {getAllEvents, getPost} from "@/lib/api";
 import { GetStaticProps } from "next";
 import { useState } from "react";
 
-export default function Index({ events }: any) {
+export default function Index({ events, footer }: any) {
   const [open, setOpen] = useState(false);
 
   const intl = useIntl();
 
   return (
-    <Layout onOpenForm={setOpen} openForm={open}>
+    <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
       <Breadcrumb
         miVariable={intl.formatMessage({ id: "breadcrumb_events" })}
       />
@@ -26,8 +26,9 @@ export default function Index({ events }: any) {
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const allEvents = await getAllEvents(locale);
+    const footerInfo = await getPost(772, locale);
 
   return {
-    props: { events: allEvents },
+    props: { events: allEvents, footer:footerInfo },
   };
 };

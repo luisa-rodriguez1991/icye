@@ -1,5 +1,5 @@
 import Layout from "@/components/layout";
-import { getAllPost, getDetailProject } from "@/lib/api";
+import {getAllPost, getDetailProject, getPost} from "@/lib/api";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Breadcrumb from "@/components/breadcrump";
 import { CalendarIcon } from "@heroicons/react/20/solid";
@@ -7,14 +7,14 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-export default function Blog({ page }: any) {
+export default function Blog({ page, footer }: any) {
   const [open, setOpen] = useState(false);
 
   const router = useRouter();
   const { locale } = router;
 
   return (
-    <Layout onOpenForm={setOpen} openForm={open}>
+    <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
       <Head>
         <link
           rel="canonical"
@@ -97,9 +97,10 @@ export default function Blog({ page }: any) {
 
 export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
   const pageInfo = await getDetailProject(params?.item, locale);
+  const footerInfo = await getPost(772, locale);
 
   return {
-    props: { page: pageInfo[0] },
+    props: { page: pageInfo[0], footer:footerInfo },
   };
 };
 

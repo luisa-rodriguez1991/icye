@@ -3,7 +3,7 @@ import Meta from "./meta";
 import Header from "./header";
 import Form from "./form";
 
-export default function Layout({ children, onOpenForm, openForm }: any) {
+export default function Layout({ children, onOpenForm, openForm, footerInfo }: any) {
   return (
     <>
       <Meta />
@@ -12,10 +12,8 @@ export default function Layout({ children, onOpenForm, openForm }: any) {
         <Header onOpenForm={onOpenForm} />
         <main>{children}</main>
       </div>
-      <Footer/>
-      {/*   addres={page.acf.footer_contact_address}
-        email={page.acf.footer_contact_address}
-        whatsapp={page.acf.footer_contact_whatsapp} */}
+      <Footer info={footerInfo}/>
+
     </>
   );
 }

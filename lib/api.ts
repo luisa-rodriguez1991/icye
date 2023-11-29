@@ -27,6 +27,12 @@ export async function getAllPost(locale:any) {
       return page
   }
 
+export async function getPost(id:any, locale:any) {
+  const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts/${id}?acf_format=standard&_fields=acf&lang=${locale}`)
+  const post = await data.json();
+  return post
+}
+
 
   export async function getDetailProject(slug:any, locale:any) {
     const data = await fetch(`http://184.72.130.92/wp-json/wp/v2/posts?slug=${slug}&acf_format=standard&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,categories&lang=${locale}`)

@@ -10,16 +10,16 @@ import Faqs from "@/components/faqs";
 import Sponsors from "@/components/sponsors";
 import Calendar from "@/components/calendar-events";
 import ListBlog from "@/components/list-blog";
-import { getAllPost, getAllEvents, getPage } from "@/lib/api";
+import {getAllPost, getAllEvents, getPage, getPost} from "@/lib/api";
 import { GetStaticProps } from "next";
 import Contributors from "@/components/contributors";
 import { useState } from "react";
 
-export default function Home({ posts, eventsList, page }: any) {
+export default function Home({ posts, eventsList, page, footer }: any) {
   const [open, setOpen] = useState(false);
 
   return (
-    <Layout openForm={open} onOpenForm={setOpen}>
+    <Layout footerInfo={footer} openForm={open} onOpenForm={setOpen}>
       <Intro onOpenForm={setOpen} text={page.acf.intro_text} />
 
       <Trust
@@ -218,8 +218,10 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const allPostsData = await getAllPost(locale);
   const eventsList = await getAllEvents(locale);
   const pageInfo = await getPage(11, locale);
+  const footerInfo = await getPost(772, locale);
+
 
   return {
-    props: { posts: allPostsData, eventsList: eventsList, page: pageInfo },
+    props: { posts: allPostsData, eventsList: eventsList, page: pageInfo, footer:footerInfo },
   };
 };

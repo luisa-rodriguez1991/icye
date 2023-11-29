@@ -3,7 +3,7 @@ import Layout from "@/components/layout";
 import {
   getAllProjects,
   getCategoryNameById,
-  getDetailProject,
+  getDetailProject, getPost,
 } from "@/lib/api";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Breadcrumb from "@/components/breadcrump";
@@ -12,36 +12,13 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const product = {
-  images: [
-    {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
-      alt: "Two each of gray, white, and black shirts laying flat.",
-    },
-    {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg",
-      alt: "Model wearing plain black basic tee.",
-    },
-    {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg",
-      alt: "Model wearing plain gray basic tee.",
-    },
-    {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg",
-      alt: "Model wearing plain white basic tee.",
-    },
-  ],
-};
-
-// vista projecto
-
-export default function Project({ page, listCategories }: any) {
+export default function Project({ page, listCategories, footer }: any) {
   const [open, setOpen] = useState(false);
 
   const router = useRouter();
   const { locale } = router;
   return (
-    <Layout onOpenForm={setOpen} openForm={open}>
+    <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
       <Head>
         <link
           rel="canonical"
@@ -62,7 +39,7 @@ export default function Project({ page, listCategories }: any) {
             <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
               <img
                 src={page.acf.page_project_img_1.sizes.large}
-                alt={product.images[0].alt}
+                alt={page.title.rendered}
                 className="h-full w-full object-cover object-center"
               />
             </div>
@@ -70,14 +47,14 @@ export default function Project({ page, listCategories }: any) {
               <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
                 <img
                   src={page.acf.page_project_img_2.sizes.large}
-                  alt={product.images[1].alt}
+                  alt={page.title.rendered}
                   className="h-full w-full object-cover object-center"
                 />
               </div>
               <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
                 <img
                   src={page.acf.page_project_img_3.sizes.large}
-                  alt={product.images[2].alt}
+                  alt={page.title.rendered}
                   className="h-full w-full object-cover object-center"
                 />
               </div>
@@ -85,13 +62,13 @@ export default function Project({ page, listCategories }: any) {
             <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
               <img
                 src={page.acf.page_project_img_4.sizes.large}
-                alt={product.images[3].alt}
+                alt={page.title.rendered}
                 className="h-full w-full object-cover object-center"
               />
             </div>
           </div>
 
-          {/* Product info */}
+          {/* Project info */}
           <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
             <div className="lg:col-span-2 px-6 py-6 rounded-t-xl bg-accent-2 lg:border-r lg:border-gray-200 lg:pr-8">
               <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl flex items-center">
@@ -172,9 +149,10 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
   const pageInfo = await getDetailProject(params?.project, locale);
   const listCategoriesIds = pageInfo[0].categories;
   const categoryNames = await getCategoryNameById(listCategoriesIds, locale);
+  const footerInfo = await getPost(772, locale);
 
   return {
-    props: { page: pageInfo[0], listCategories: categoryNames },
+    props: { page: pageInfo[0], listCategories: categoryNames, footer:footerInfo },
   };
 };
 
