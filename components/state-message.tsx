@@ -1,6 +1,6 @@
 import { ArchiveBoxXMarkIcon, CheckCircleIcon } from "@heroicons/react/20/solid";
 
-export default function StateMessage({h1, p, p2, icon}:any) {
+export default function StateMessage({h1, p, p2, icon, a}:any) {
   return (
     <div>
         <div className="shadow-xl p-6 bg-accent-2 h-[400px] flex flex-col items-center justify-center mt-6 rounded-xl">
@@ -22,6 +22,9 @@ export default function StateMessage({h1, p, p2, icon}:any) {
             <p className="mt-2 text-base text-gray-600">
               {p2}
             </p>
+            <a className="mt-2 text-base text-gray-900" href="https://wa.link/2bk6ie">
+              {a}
+            </a>
         </div>
     </div>
     

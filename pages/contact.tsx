@@ -8,7 +8,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-export default function Contact({ page, footer }: any) {
+export default function Contact({ page, footer, footerInfo }: any) {
   const [open, setOpen] = useState(false);
 
   const intl = useIntl();
@@ -26,7 +26,13 @@ export default function Contact({ page, footer }: any) {
       />
       <ContactContent
        text={page.acf.contact_text}
-       img={page.acf.contact_img.sizes.large} />
+       img={page.acf.contact_img.sizes.large}
+       address={page.acf.contact_address}
+       address2={page.acf.contact_address_2}
+       email={page.acf.contact_email}
+       whatsapp={page.acf.contact_whatsapp}
+
+       />
     </Layout>
   );
 }

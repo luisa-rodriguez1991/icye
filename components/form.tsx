@@ -112,7 +112,12 @@ export default function Form({ openIndicator, onSetOpen }: any) {
                         </div>
 
                         {confirmation ? (
-                          <StateMessage h1="Gracias por tu interes!" p="Estaremos pronto en contacto!" p2=" Si tienes preguntas, comunicate al: TODO" icon="checkicon"/>
+                          <StateMessage
+                           h1="Gracias por tu interes!" 
+                           p="Estaremos pronto en contacto!"
+                           p2=" Si tienes preguntas, comunicate al:" 
+                           a="+57 310 7346918"
+                           icon="checkicon"/>
                         ) : (
 
                           // Formulario despues de titulo y texto

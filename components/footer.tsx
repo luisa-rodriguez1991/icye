@@ -5,12 +5,13 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
-export default function Footer({info}) {
+export default function Footer({info}:any) {
   const intl = useIntl();
   const router = useRouter();
   const { locale } = router;
   const [userData, setUserData] = useState();
   const [confirmation, setConfirmation] = useState(false);
+
   const {
     register,
     getValues,
@@ -125,7 +126,7 @@ export default function Footer({info}) {
                     <p className="text-sm leading-6 text-gray-600 ">
                       {info.acf.footer_contact_address}
                       <br></br>
-                      {info.acf.footer_contact_address}
+                      {info.acf.footer_contact_address_2}
                     </p>
                   </li>
                   {/* email */}

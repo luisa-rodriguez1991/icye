@@ -18,7 +18,12 @@ export default function ContentProjects({ list }: any) {
          </div>
        ) : (
           <div>
-            <StateMessage h1="No hay proyectos en esta seleccion" p="Remueve algunos filtros para ver tus proyectos favoritos" p2=" Si tienes preguntas, comunicate al: TODO" icon="box"/>
+            <StateMessage
+             h1="No hay proyectos en esta seleccion" 
+             p="Remueve algunos filtros para ver tus proyectos favoritos" 
+             p2=" Si tienes preguntas, comunicate al whatsapp: " 
+             a="+57 310 7346918"
+             icon="box"/>
           </div>
        )}
     </div>
