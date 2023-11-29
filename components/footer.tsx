@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
-export default function Footer({info}:any) {
+export default function Footer({ info }: any) {
   const intl = useIntl();
   const router = useRouter();
   const { locale } = router;
@@ -32,13 +32,10 @@ export default function Footer({info}:any) {
         .then((response) => response.status === 200 && setConfirmation(true)); // ⬅️ 3) aquí ya tenemos la respuesta en formato objeto
   }, [userData]);
 
-  const changeConfirmation = () => setConfirmation(false)
+  const changeConfirmation = () => setConfirmation(false);
 
   return (
-
-
     <footer className="bg-accent-2" aria-labelledby="footer-heading">
-
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-24 px-14 lg:px-8 lg:pt-32">
         <div className="flex flex-col lg:flex-row ">
           <div className="basis-12/12 md:basis-11/12 lg:basis-9/12">
@@ -211,7 +208,7 @@ export default function Footer({info}:any) {
                         required: true,
                         pattern: /^\S+@\S+$/i,
                       })}
-                      onChange={()=>changeConfirmation()}
+                      onChange={() => changeConfirmation()}
                       id="email-address"
                       className="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
                       placeholder={intl.formatMessage({ id: "news_text" })}

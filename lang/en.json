@@ -120,21 +120,37 @@
 
     "Registration_form_title":"Online form",
     "Registration_form_text":"Thank you for your interest! We will contact you as soon as possible.",
+
+    "Registration_form_subtitle":"I want to participate as:",
+    "Registration_form_interest_1":"Mentor",
+    "Registration_form_interest_2":"Host family",
+    "Registration_form_interest_3":"Participant",
+    "Registration_form_interest_4":"Donor",
+
+
     "Registration_form_name":"First name",
     "Registration_form_name2":"Last name",
     "Registration_form_email":"Email",
     "Registration_form_phone":"Phone number",
-    "Registration_form_program":"Program of interest",
-    "Registration_form_option1":"Workcamp",
-    "Registration_form_option2":"One year",
-    "Registration_form_option3":"Six months",
-    "Registration_form_option4":"Three months",
+
+    "Registration_form_subtitle_p":"Program",
+    "Registration_form_option_1":"Workcamp",
+    "Registration_form_option_2":"Long term",
+    "Registration_form_option_3":"Midel term",
+    "Registration_form_option_4":"Short term",
+   
+    
+    "Registration_form_subtitle_c":"Country",
+
     "Registration_form_Ppolicy":"By selecting this, you agree to our",
     "Registration_form_Ppolicy_accent":"Privacy Policy",
     "Registration_form_button1":"Cancel",
-    "Registration_form_button2":"Send"
+    "Registration_form_button2":"Send",
 
-    
+    "Registration_form_statemessage_green": "Thank you for your interest",
+    "Registration_form_statemessage_h1_blue": "We will be in touch soon!",
+    "Registration_form_statemessage_grey": "If you have any questions, you can contact us at:",
+    "Registration_form_statemessage_a": "+57 310 7346918"
     
     
 }

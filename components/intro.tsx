@@ -1,4 +1,3 @@
-
 import { useIntl } from "react-intl";
 import { useCallback } from "react";
 import Particles from "react-particles";
@@ -8,141 +7,127 @@ import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSli
 export default function Intro({ text, onOpenForm }: any) {
   const intl = useIntl();
 
-  const particlesInit = useCallback(async engine => {
+  const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
     //await loadFull(engine);
     await loadSlim(engine);
-}, []);
+  }, []);
 
-const particlesLoaded = useCallback(async container => {
+  const particlesLoaded = useCallback(async (container) => {
     console.log(container);
-}, []);
-
-
+  }, []);
 
   return (
     <div className="bg-white relative">
-
       <div className="absolute h-full w-full">
-      <Particles
-            id="tsparticles"
-            init={particlesInit}
-            loaded={particlesLoaded}
-
-
-        
-
-
-
-            options={{
-              fullScreen:false,
-              background: {
-                  color: {
-                      value: "#ffffff",
-                  },
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={{
+            fullScreen: false,
+            background: {
+              color: {
+                value: "#ffffff",
               },
-              fpsLimit: 120,
-              interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: {
-                        enable: false,
-                        mode: "push"
-                    },
-                    onclick: {
-                        enable: false,
-                        mode: "repulse"
-                    },
-                    resize: true
-                },
-                modes: {
-                   
-                    bubble: {
-                        distance: 400,
-                        size: 4,
-                        duration: 2,
-                        opacity: 8,
-                        speed: 2
-                    },
-                    repulse: {
-                        distance: 200,
-                        duration: 0.4
-                    },
-                    push: {
-                        quantity: 4
-                    },
-                    
-                }
             },
-              particles: {
-                number: {
-                    value: 10,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
+            fpsLimit: 120,
+            interactivity: {
+              detect_on: "canvas",
+              events: {
+                onhover: {
+                  enable: false,
+                  mode: "push",
                 },
-                color: {
-                    value: "#011f7f"
+                onclick: {
+                  enable: false,
+                  mode: "repulse",
                 },
-                shape: {
-                    type: "circle",
-                    image: {
-                        src: "img/github.svg",
-                        width: 50,
-                        height: 50
-                    }
-                },
-                opacity: {
-                    value: 0.3,
-                    random: true,
-                    anim: {
-                        enable: false,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 10,
-                    random: false,
-                    anim: {
-                        speed: 5,
-                        sync: false
-                    }
-                },
-                line_linked: {
-                    enable: false,
-                    distance: 200,
-                    color: "#ffffff",
-                    opacity: 1,
-                    width: 2
-                },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false,
-                    attract: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                }
+                resize: true,
               },
-           
-              retina_detect: true
+              modes: {
+                bubble: {
+                  distance: 400,
+                  size: 4,
+                  duration: 2,
+                  opacity: 8,
+                  speed: 2,
+                },
+                repulse: {
+                  distance: 200,
+                  duration: 0.4,
+                },
+                push: {
+                  quantity: 4,
+                },
+              },
+            },
+            particles: {
+              number: {
+                value: 10,
+                density: {
+                  enable: true,
+                  value_area: 800,
+                },
+              },
+              color: {
+                value: "#011f7f",
+              },
+              shape: {
+                type: "circle",
+                image: {
+                  src: "img/github.svg",
+                  width: 50,
+                  height: 50,
+                },
+              },
+              opacity: {
+                value: 0.3,
+                random: true,
+                anim: {
+                  enable: false,
+                  speed: 1,
+                  opacity_min: 0.1,
+                  sync: false,
+                },
+              },
+              size: {
+                value: 10,
+                random: false,
+                anim: {
+                  speed: 5,
+                  sync: false,
+                },
+              },
+              line_linked: {
+                enable: false,
+                distance: 200,
+                color: "#ffffff",
+                opacity: 1,
+                width: 2,
+              },
+              move: {
+                enable: true,
+                speed: 2,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+                attract: {
+                  enable: false,
+                  rotateX: 600,
+                  rotateY: 1200,
+                },
+              },
+            },
+
+            retina_detect: true,
           }}
         />
-
-
-
       </div>
       <div className="relative">
         <div className="mx-auto max-w-7xl">

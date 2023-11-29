@@ -2,10 +2,7 @@ import { useIntl } from "react-intl";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-export default function Contributors({
-  text,
- img
-}: any) {
+export default function Contributors({ text, img }: any) {
   const intl = useIntl();
   const router = useRouter();
   const { locale } = router;
@@ -36,13 +33,7 @@ export default function Contributors({
 
           {/* iconos */}
           <div className="mx-auto w-full max-w-xl  items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
-            
-          <img
-            className=""
-            src={img}
-            alt=""
-          />
-  
+            <img className="" src={img} alt="" />
           </div>
         </div>
       </div>

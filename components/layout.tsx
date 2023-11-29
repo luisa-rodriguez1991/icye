@@ -3,7 +3,12 @@ import Meta from "./meta";
 import Header from "./header";
 import Form from "./form";
 
-export default function Layout({ children, onOpenForm, openForm, footerInfo }: any) {
+export default function Layout({
+  children,
+  onOpenForm,
+  openForm,
+  footerInfo,
+}: any) {
   return (
     <>
       <Meta />
@@ -12,8 +17,7 @@ export default function Layout({ children, onOpenForm, openForm, footerInfo }: a
         <Header onOpenForm={onOpenForm} />
         <main>{children}</main>
       </div>
-      <Footer info={footerInfo}/>
-
+      <Footer info={footerInfo} />
     </>
   );
 }

@@ -1,9 +1,9 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
 export default function SearchContent({ searchinfo }: any) {
   const router = useRouter();
-  const {locale} = router
+  const { locale } = router;
   return (
     <ul
       role="list"

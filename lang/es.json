@@ -117,19 +117,38 @@
 
     "Registration_form_title":"Formulario en linea",
     "Registration_form_text":"Gracias por tu interés! Nos contactaremos contigo en el menor tiempo posible.",
+
+    "Registration_form_subtitle":"Quiero participar como:",
+    "Registration_form_interest_1":"Mentor",
+    "Registration_form_interest_2":"Familia Hospedera",
+    "Registration_form_interest_3":"Participante",
+    "Registration_form_interest_4":"Donante",
+
     "Registration_form_name":"Nombre",
     "Registration_form_name2":"Apellido",
     "Registration_form_email":"Email",
     "Registration_form_phone":"Telefono",
-    "Registration_form_program":"Programa de interes",
-    "Registration_form_option1":"Workcamp",
-    "Registration_form_option2":"Un año",
-    "Registration_form_option3":"Seis meses",
-    "Registration_form_option4":"Tres meses",
+    
+    "Registration_form_subtitle_p":"Programa",
+    "Registration_form_option_1":"Workcamp",
+    "Registration_form_option_2":"Larga duracion",
+    "Registration_form_option_3":"Duracion intermedia",
+    "Registration_form_option_4":"Corta duracion",
+    
+    
+    "Registration_form_subtitle_c":"País",
+
     "Registration_form_Ppolicy":"Al seleccionar esto, aceptas nuestra",
     "Registration_form_Ppolicy_accent":"política de privacidad.",
     "Registration_form_button1":"Cancelar",
-    "Registration_form_button2":"Enviar"
+    "Registration_form_button2":"Enviar",
+
+    "Registration_form_statemessage_green":"Gracias por tu interes",
+    "Registration_form_statemessage_h1_blue":"Estaremos pronto en contacto!",
+    "Registration_form_statemessage_grey":"Si tienes preguntas puedes comunicarte al:",
+    "Registration_form_statemessage_a":"+57 310 7346918"
+
+
 
  
 }
