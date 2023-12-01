@@ -18,6 +18,7 @@ export default function Contact({ page, footer, footerInfo }: any) {
   return (
     <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
       <Head>
+      <title>{intl.formatMessage({id:"title_contact"})}</title>
         <link rel="canonical" href="https://www.icyecolombia.com/contact" />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
@@ -37,10 +38,9 @@ export default function Contact({ page, footer, footerInfo }: any) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (locale) => {
-  const pageInfo = await getPage(287, locale);
+export const getStaticProps: GetStaticProps = async ({locale}) => {
+  const pageInfo = await getPage(804, locale);
     const footerInfo = await getPost(772, locale);
-
   return {
     props: { page: pageInfo, footer: footerInfo },
   };

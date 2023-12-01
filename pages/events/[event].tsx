@@ -6,16 +6,18 @@ import { CalendarIcon, MapPinIcon } from "@heroicons/react/20/solid";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { useIntl } from "react-intl";
 
 export default function Event({ page, footer }: any) {
   const [open, setOpen] = useState(false);
-
+  const intl = useIntl();
   const router = useRouter();
   const { locale } = router;
 
   return (
     <Layout footerInfo={false} onOpenForm={setOpen} openForm={open}>
       <Head>
+      <title>{intl.formatMessage({id:"title_event"})}</title>
         <link
           rel="canonical"
           href={`https://www.icyecolombia.com/${page.slug}`}

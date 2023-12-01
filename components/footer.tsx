@@ -69,7 +69,7 @@ export default function Footer({ info }: any) {
                 <div>
                   <ul role="list" className="mt-6 flex gap-3">
                     <li>
-                      <a
+                      <a target="_blank"
                         href="https://www.facebook.com/icye.colombia1981?mibextid=LQQJ4d"
                         className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                       >
@@ -84,7 +84,7 @@ export default function Footer({ info }: any) {
                     </li>
                     <li>
                       <a
-                        href="https://x.com/icyecol?s=11&t=9YLWP7xQ4sPUbASieVVc8A"
+                        href="https://x.com/icyecol?s=11&t=9YLWP7xQ4sPUbASieVVc8A" target="_blank"
                         className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                       >
                         <img
@@ -98,7 +98,7 @@ export default function Footer({ info }: any) {
                     </li>
                     <li>
                       <a
-                        href="https://instagram.com/icyecolombia?igshid=MzRlODBiNWFlZA=="
+                        href="https://instagram.com/icyecolombia?igshid=MzRlODBiNWFlZA==" target="_blank"
                         className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                       >
                         <img
@@ -135,6 +135,7 @@ export default function Footer({ info }: any) {
                       {info.acf.footer_contact__email}
                     </a>
                   </li>
+                  {/* whatsapp */}
                   <li className="flex ">
                     <img
                       className="col-span-2  max-h-6 w-auto object-contain lg:col-span-1 text-accent-1 mr-2"
@@ -144,7 +145,8 @@ export default function Footer({ info }: any) {
                       height={48}
                     />
                     <a
-                      href="https://wa.link/2bk6ie"
+                      href="https://wa.link/2bk6ie" 
+                      
                       className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                     >
                       {info.acf.footer_contact_whatsapp}

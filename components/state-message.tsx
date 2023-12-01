@@ -19,8 +19,13 @@ export default function StateMessage({ h1, p, p2, icon, a }: any) {
           <h1 className=" text-base text-green-600">
             {intl.formatMessage({ id: h1 })}
           </h1>
+          
+          
         ) : (
-          <h1 className="text-base text-gray-600">{h1}</h1>
+          <h1 className="text-base text-gray-600">{h1}
+          {intl.formatMessage({ id: "search_result_message_faild" })}
+          </h1>
+          
         )}
 
         <p className="mt-2 text-2xl text-accent-1 font-bold tracking-tight">
@@ -37,5 +42,7 @@ export default function StateMessage({ h1, p, p2, icon, a }: any) {
         </a>
       </div>
     </div>
+
+    
   );
 }

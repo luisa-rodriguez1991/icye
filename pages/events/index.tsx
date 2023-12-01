@@ -5,14 +5,23 @@ import { useIntl } from "react-intl";
 import {getAllEvents, getPost} from "@/lib/api";
 import { GetStaticProps } from "next";
 import { useState } from "react";
+import { Head } from "next/document";
 
-export default function Index({ events, footer }: any) {
+export default function Index({ events, footer,page }: any) {
   const [open, setOpen] = useState(false);
 
   const intl = useIntl();
 
   return (
     <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
+        <Head>
+        <title>{intl.formatMessage({ id:  "title_events" })}</title>
+        <link
+          rel="canonical"
+          href={`https://www.icyecolombia.com/${page.slug}`}
+        />
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <Breadcrumb
         miVariable={intl.formatMessage({ id: "breadcrumb_events" })}
       />

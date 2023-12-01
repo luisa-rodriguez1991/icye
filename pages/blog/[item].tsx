@@ -6,16 +6,20 @@ import { CalendarIcon } from "@heroicons/react/20/solid";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { useIntl } from "react-intl";
 
 export default function Blog({ page, footer }: any) {
   const [open, setOpen] = useState(false);
 
   const router = useRouter();
+  const intl = useIntl();
+
   const { locale } = router;
 
   return (
     <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
       <Head>
+      <title>{intl.formatMessage({ id:"title_blog"})}</title>
         <link
           rel="canonical"
           href={`https://www.icyecolombia.com/${page.slug}`}

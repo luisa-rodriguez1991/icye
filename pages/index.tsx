@@ -57,6 +57,7 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         item2={page.acf.culture_list_item_2}
         item3={page.acf.culture_list_item_3}
         item4={page.acf.culture_list_item_4}
+        item5={page.acf.culture_list_item_5}
       />
       <Testimonials
         image1={page.acf.testimonials_img_user_1.sizes.large}

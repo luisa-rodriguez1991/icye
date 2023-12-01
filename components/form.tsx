@@ -452,7 +452,7 @@ export default function Form({ openIndicator, onSetOpen }: any) {
                                 </div>
 
                                 {/* Eleccion programa */}
-                                {watch("customerType") !== "donante" && (
+                                {watch("customerType") === "participante" && (
                                   <div>
                                     <label
                                       htmlFor="programm"
@@ -493,25 +493,34 @@ export default function Form({ openIndicator, onSetOpen }: any) {
                                 )}
 
                                 {/* Pais */}
-                                {watch("customerType") !== "donante" && (
+                                {watch("customerType") === "participante" && (
                                   <div>
                                     <label
                                       htmlFor="location"
                                       className="block text-sm font-medium leading-6 text-gray-900"
                                     >
                                       {intl.formatMessage({
-                                        id: "Registration_form_subtitle_c",
-                                      })}
+                                        id: "Registration_form_subtitle_c"})}
                                     </label>
                                     <select
                                       id="location"
                                       {...register("country")}
                                       className="mt-2 block w-full rounded-md border-0 py-2 h-[40px] pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-accent-1 sm:text-sm sm:leading-6"
                                     >
+                                      
                                       <option></option>
-                                      <option>United States</option>
-                                      <option>Canada</option>
-                                      <option>Mexico</option>
+                                      <option>{intl.formatMessage({ id: "form_countries_1"})}</option>
+                                      <option>{intl.formatMessage({ id: "form_countries_2"})}</option>
+                                      <option>{intl.formatMessage({ id: "form_countries_3"})}</option>
+                                      <option>{intl.formatMessage({ id: "form_countries_4"})}</option>
+                                      <option>{intl.formatMessage({ id: "form_countries_5"})}</option>
+                                      <option>{intl.formatMessage({ id: "form_countries_6"})}</option>
+                                      <option>{intl.formatMessage({ id: "form_countries_7"})}</option>
+                                      <option>{intl.formatMessage({ id: "form_countries_8"})}</option>
+                                      <option>{intl.formatMessage({ id: "form_countries_9"})}</option>
+                                      <option>{intl.formatMessage({ id: "form_countries_10"})}</option>
+                                      <option>{intl.formatMessage({ id: "form_countries_11"})}</option>
+                                      <option>{intl.formatMessage({ id: "form_countries_12"})}</option>
                                     </select>
                                   </div>
                                 )}

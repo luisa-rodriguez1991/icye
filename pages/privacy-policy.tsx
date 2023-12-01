@@ -17,6 +17,7 @@ export default function Privacy({ page, footer }: any) {
   return (
     <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
       <Head>
+        <title>{intl.formatMessage({ id:"title_privacy_policy" })}</title>
         <link
           rel="canonical"
           href={`https://www.icyecolombia.com/privacy-policy`}
@@ -46,7 +47,7 @@ export default function Privacy({ page, footer }: any) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (locale) => {
+export const getStaticProps: GetStaticProps = async ({locale}) => {
   const pageInfo = await getPage(575, locale);
     const footerInfo = await getPost(772, locale);
 

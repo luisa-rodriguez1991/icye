@@ -9,12 +9,14 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { FunnelIcon, MinusIcon, PlusIcon } from "@heroicons/react/20/solid";
 import { useRouter } from "next/router";
 import { useIntl } from "react-intl";
+import { Head } from "next/document";
 
 export default function Projects({
   listCountries,
   listInterests,
   listTerms,
-    footer
+  footer,
+  page
 }: any) {
   const [open, setOpen] = useState(false);
 
@@ -51,6 +53,14 @@ export default function Projects({
 
   return (
     <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
+      <Head>
+        <title>{intl.formatMessage({id:"title_projects"})}</title>
+        <link
+          rel="canonical"
+          href={`https://www.icyecolombia.com/${page.slug}`}
+        />
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <Breadcrumb
         miVariable={intl.formatMessage({ id: "breadcrumb_projects" })}
       />

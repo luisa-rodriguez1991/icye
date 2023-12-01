@@ -146,7 +146,47 @@
     "Registration_form_statemessage_green":"Gracias por tu interes",
     "Registration_form_statemessage_h1_blue":"Estaremos pronto en contacto!",
     "Registration_form_statemessage_grey":"Si tienes preguntas puedes comunicarte al:",
-    "Registration_form_statemessage_a":"+57 310 7346918"
+    "Registration_form_statemessage_a":"+57 310 7346918",
+
+    "search_result_title":"Resultado Busqueda:",
+    "search_result_message_faild":"No hay resultado para su busqueda",
+    "search_result_message_faild_blue":"Puede continuar utilizando diferentes terminos",
+    "search_result_message_faild_contact":"En caso de no recibir la información deseada o si tiene alguna pregunta, puede comunicarse con nosotros a través del WhatsApp",
+    "search_result_message_faild_whatsapp":"+57 310 7346918",
+    
+
+    "title_privacy_policy":"Política de privacidad || ICYE Colombia",
+    "title_request_complains":"Reclamos quejas || ICYE Colombia",
+    "title_terms_conditions":"Terminos condiciones || ICYE Colombia",
+    "title_about_us":"Nosotros || ICYE Colombia",
+    "title_contact":"Contacto || ICYE Colombia",
+    "title_blogs":"Blogs || ICYE Colombia",
+    "title_blog":"Blog || ICYE Colombia",
+    "title_events":"Eventos || ICYE Colombia",
+    "title_event":"Evento || ICYE Colombia",
+    "title_projects":"Projectos || ICYE Colombia",
+    "title_project":"Projecto || ICYE Colombia",
+
+    
+    "form_countries_1": "Austria",
+    "form_countries_2": "Brasil",
+    "form_countries_3": "Dinamarca",
+    "form_countries_4": "Francia",
+    "form_countries_5": "Ghana",
+    "form_countries_6": "Kenia",
+    "form_countries_7": "Nueva Zelanda",
+    "form_countries_8": "Suiza",
+    "form_countries_9": "Tailandia",
+    "form_countries_10": "Turquía",
+    "form_countries_11": "Reino Unido",
+    "form_countries_12": "Estados Unidos"
+    
+      
+
+
+    
+
+
 
 
 

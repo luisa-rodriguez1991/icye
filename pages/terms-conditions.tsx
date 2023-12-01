@@ -9,16 +9,14 @@ import { useState } from "react";
 
 export default function Terms({ page, footer }: any) {
   const [open, setOpen] = useState(false);
-
   const router = useRouter();
   const { locale } = router;
-
   const intl = useIntl();
 
   return (
     <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
       <Head>
-        TODO ADD TITLE TAG TO ALL PAGES
+        <title>{intl.formatMessage({ id: "title_terms_conditions"})}</title>
         <link
           rel="canonical"
           href={`https://www.icyecolombia.com/terms-conditions`}
@@ -45,7 +43,7 @@ export default function Terms({ page, footer }: any) {
     </Layout>
   );
 }
-export const getStaticProps: GetStaticProps = async (locale) => {
+export const getStaticProps: GetStaticProps = async ({locale}) => {
   const pageInfo = await getPage(581, locale);
   const footerInfo = await getPost(772, locale);
 

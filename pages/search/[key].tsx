@@ -45,11 +45,18 @@ export default function Key({ page, footer }: any) {
             ICYE
           </p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            TODO Search: {router.query.key}
+          {intl.formatMessage({ id: "search_result_title",})} {router.query.key}
           </h1>
-          <div className="mt-8 ">
+          <div className="mt-8 text-center">
             {results?.length>0}
-            {results?.length>0?(<SearchContent searchinfo={results} />):(<StateMessage h1="TODO no results" p="TODO No results" p2="TDOO no results" icon="box"/>)}
+            {results?.length>0?(<SearchContent searchinfo={results} />):
+
+            (<StateMessage 
+            h1="" 
+            p="Puede continuar utilizando diferentes terminos" 
+            p2="En caso de no recibir la información deseada o si tiene alguna pregunta, puede comunicarse con nosotros a través del WhatsApp" 
+            a="+57 310 7346918"
+            icon="box"/>)}
           </div>
         </div>
       </div>

@@ -2,7 +2,6 @@ import Project from "./project";
 import StateMessage from "./state-message";
 
 export default function ContentProjects({ list }: any) {
-  console.log(list);
   return (
     <div className="col-span-4 lg:col-span-3">
       {list.length > 0 ? (

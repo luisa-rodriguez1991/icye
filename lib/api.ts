@@ -74,7 +74,6 @@ export async function getPost(id:any, locale:any) {
         .then(data => {
           return data.json()
         }).then((obj)=>{
-          console.log(obj[0])
           listNames.push(obj[0].name)
         })
     })).then(()=>listNames);

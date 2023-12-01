@@ -18,6 +18,7 @@ export default function About({ page, footer }: any) {
   return (
     <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
       <Head>
+      <title>{intl.formatMessage({ id: "title_about_us" })}</title>
         <link rel="canonical" href="https://www.icyecolombia.com/about" />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
@@ -60,7 +61,7 @@ export default function About({ page, footer }: any) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (locale) => {
+export const getStaticProps: GetStaticProps = async ({locale}) => {
   const pageInfo = await getPage(419, locale);
     const footerInfo = await getPost(772, locale);
 
