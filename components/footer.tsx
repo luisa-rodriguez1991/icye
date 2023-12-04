@@ -41,6 +41,7 @@ export default function Footer({ info }: any) {
           <div className="basis-12/12 md:basis-11/12 lg:basis-9/12">
             <div className="grow grid grid-cols-1 gap-8 lg:grid-cols-3">
               <div className="mt-10 md:mt-0">
+                {/* ICYE LOGO */}
                 <div className="mb-5">
                   <div className="flex flex-1 min-w-[55px] justify-start">
                     <a href="#" className="-m-1.5 p-1.5 flex">
@@ -61,11 +62,14 @@ export default function Footer({ info }: any) {
                     </a>
                   </div>
                 </div>
+                  {/* CONTACTO */}
                 <div>
                   <p className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                     {intl.formatMessage({ id: "footer_col-1-title" })}
                   </p>
                 </div>
+
+                {/* REDES FACEBOOK TWITER INSTAGRAM */}
                 <div>
                   <ul role="list" className="mt-6 flex gap-3">
                     <li>
@@ -110,10 +114,11 @@ export default function Footer({ info }: any) {
                       </a>
                     </li>
                   </ul>
+
                 </div>
               </div>
 
-              <div className="mt-10 md:mt-0">
+              <div className=" md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
                   {intl.formatMessage({ id: "footer_contact" })}
                 </h3>
@@ -138,15 +143,14 @@ export default function Footer({ info }: any) {
                   {/* whatsapp */}
                   <li className="flex ">
                     <img
-                      className="col-span-2  max-h-6 w-auto object-contain lg:col-span-1 text-accent-1 mr-2"
+                      className="col-span-2  max-h-6 w-auto object-contain lg:col-span-1 text-accent-1 mr-2" 
                       src="/img/whatsapp.svg"
                       alt="Reform"
                       width={158}
                       height={48}
                     />
                     <a
-                      href="https://wa.link/2bk6ie" 
-                      
+                      target="_blank" href="https://wa.link/2bk6ie" 
                       className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                     >
                       {info.acf.footer_contact_whatsapp}
@@ -155,7 +159,7 @@ export default function Footer({ info }: any) {
                 </ul>
               </div>
 
-              <div className="mt-10 md:mt-0">
+              <div className=" md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
                   {intl.formatMessage({ id: "footer_datat" })}
                 </h3>
@@ -204,6 +208,13 @@ export default function Footer({ info }: any) {
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex flex-col">
                   <div className="mt-6 sm:flex sm:max-w-md">
+
+                  <input
+                      type="hidden"
+                      value={locale}
+                      {...register("local")}
+                      id="local"
+                    />
                     <input
                       type="email"
                       {...register("email", {
@@ -225,6 +236,9 @@ export default function Footer({ info }: any) {
                       </button>
                     </div>
                   </div>
+
+
+
                   <div className="mt-4">
                     {errors.email && (
                       <span className="text-red-400 text-sm">

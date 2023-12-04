@@ -18,7 +18,7 @@ export default function Faqs({
   const intl = useIntl();
 
   return (
-    <div className="bg-accent-2 px-5 py-20 ">
+    <div className="bg-accent-2 px-4 py-20 ">
       <div className="mx-auto max-w-4xl text-center ">
         <span className="bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text"></span>
         <div
@@ -29,7 +29,7 @@ export default function Faqs({
         />
       </div>
       <div
-        className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600"
+        className="mx-auto px-4 mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600"
         dangerouslySetInnerHTML={{ __html: text }}
       />
       <div className="mx-auto max-w-7xl px-6 mt-12 lg:px-8">

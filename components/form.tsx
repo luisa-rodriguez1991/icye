@@ -132,7 +132,7 @@ export default function Form({ openIndicator, onSetOpen }: any) {
                                 })}
                               </h3>
 
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                              <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
                                 {watch("customerType") === "mentor" ? (
                                   <div className="relative  border-accent-1 bg-accent-1 text-white px-4 py-3 rounded-lg ">
                                     {/* boton full */}

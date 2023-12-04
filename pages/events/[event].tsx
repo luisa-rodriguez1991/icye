@@ -15,7 +15,7 @@ export default function Event({ page, footer }: any) {
   const { locale } = router;
 
   return (
-    <Layout footerInfo={false} onOpenForm={setOpen} openForm={open}>
+    <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
       <Head>
       <title>{intl.formatMessage({id:"title_event"})}</title>
         <link

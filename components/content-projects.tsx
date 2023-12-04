@@ -18,9 +18,9 @@ export default function ContentProjects({ list }: any) {
       ) : (
         <div>
           <StateMessage
-            h1="No hay proyectos en esta seleccion"
-            p="Remueve algunos filtros para ver tus proyectos favoritos"
-            p2=" Si tienes preguntas, comunicate al whatsapp: "
+            h1="project_faild_message_faild"
+            p="project_faild_message_faild_blue"
+            p2="project_faild_message_faild_contact"
             a="+57 310 7346918"
             icon="box"
           />

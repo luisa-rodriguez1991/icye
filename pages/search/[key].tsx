@@ -52,11 +52,12 @@ export default function Key({ page, footer }: any) {
             {results?.length>0?(<SearchContent searchinfo={results} />):
 
             (<StateMessage 
-            h1="" 
-            p="Puede continuar utilizando diferentes terminos" 
-            p2="En caso de no recibir la información deseada o si tiene alguna pregunta, puede comunicarse con nosotros a través del WhatsApp" 
+            h1="search_result_title" 
+            p="search_result_message_faild"
+            p2="search_result_message_faild_contact" 
             a="+57 310 7346918"
             icon="box"/>)}
+
           </div>
         </div>
       </div>

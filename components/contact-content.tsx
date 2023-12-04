@@ -25,7 +25,7 @@ export default function ContactContent({
         </div>
         <div className="pb-24  sm:pb-32 sm:pb-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pb-24">
           <div className="px-6 lg:px-8">
-            <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+            <div className="lg:mx-auto lg:max-w-xl lg:mx-0 lg:max-w-lg">
               <h2 className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
                 {intl.formatMessage({ id: "contact_content_title" })}
               </h2>
@@ -60,7 +60,7 @@ export default function ContactContent({
                     height={48}
                   />
                   <a
-                    href="https://wa.link/2bk6ie"
+                    target="_blank" href="https://wa.link/2bk6ie"
                     className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                   >
                     {whatsapp}

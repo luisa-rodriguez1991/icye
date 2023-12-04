@@ -53,14 +53,7 @@ export default function Projects({
 
   return (
     <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
-      <Head>
-        <title>{intl.formatMessage({id:"title_projects"})}</title>
-        <link
-          rel="canonical"
-          href={`https://www.icyecolombia.com/${page.slug}`}
-        />
-        <meta name="robots" content="noindex, nofollow" />
-      </Head>
+     
       <Breadcrumb
         miVariable={intl.formatMessage({ id: "breadcrumb_projects" })}
       />

@@ -14,14 +14,7 @@ export default function Index({ posts, footer, page }: any) {
 
   return (
     <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
-      <Head>
-      <title>{intl.formatMessage({ id: "title_blogs" })}</title>
-        <link
-          rel="canonical"
-          href={`https://www.icyecolombia.com/${page.slug}`}
-        />
-        <meta name="robots" content="noindex, nofollow" />
-      </Head>
+     
       <Breadcrumb miVariable={intl.formatMessage({ id: "breadcrumb_blog" })} />
       <div className="bg-white pt-3 pb-24 sm:pb-32">
         <ListBlog posts={posts} showAll={true} />

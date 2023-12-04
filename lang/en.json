@@ -159,6 +159,12 @@
     "search_result_message_faild_contact": "If you do not receive the desired information or if you have any questions, you can contact us through WhatsApp",
     "search_result_message_faild_whatsapp": "+57 310 7346918",
 
+    "project_faild_title":"Project Search Result:",
+    "project_faild_message_faild":"There are no projects in this selection.",
+    "project_faild_message_faild_blue":"Remove some filters to see your favorite projects.",
+    "project_faild_message_faild_contact":"If you have questions, contact us on WhatsApp:",
+    "project_faild_message_faild_whatsapp":"+57 310 7346918",
+
     
     "title_privacy_policy":"Privacy policy || ICYE Colombia",
     "title_request_complains":"Request complains || ICYE Colombia",

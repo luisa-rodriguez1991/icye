@@ -8,25 +8,17 @@ export default function StateMessage({ h1, p, p2, icon, a }: any) {
   const intl = useIntl();
   return (
     <div>
-      <div className="shadow-xl p-6 bg-accent-2 h-[400px] flex flex-col items-center justify-center mt-6 rounded-xl">
+      <div className="shadow-xl p-6 bg-accent-2 h-[400px] flex flex-col items-center justify-center mt-6 rounded-xl text-center">
         {icon === "checkicon" ? (
           <CheckCircleIcon className="text-green-600 h-16 w-16" />
         ) : (
           <ArchiveBoxXMarkIcon className="text-gray-600 h-16 w-16" />
         )}
 
-        {icon === "checkicon" ? (
-          <h1 className=" text-base text-green-600">
-            {intl.formatMessage({ id: h1 })}
-          </h1>
-          
-          
-        ) : (
-          <h1 className="text-base text-gray-600">{h1}
-          {intl.formatMessage({ id: "search_result_message_faild" })}
-          </h1>
-          
-        )}
+
+        <h1 className=" text-base text-green-600">
+          {intl.formatMessage({ id: h1 })}
+        </h1>
 
         <p className="mt-2 text-2xl text-accent-1 font-bold tracking-tight">
           {intl.formatMessage({ id: p })}
@@ -36,7 +28,7 @@ export default function StateMessage({ h1, p, p2, icon, a }: any) {
         </p>
         <a
           className="mt-2 text-base text-gray-900"
-          href="https://wa.link/2bk6ie"
+          target="_blank" href="https://wa.link/2bk6ie"
         >
           {a}
         </a>

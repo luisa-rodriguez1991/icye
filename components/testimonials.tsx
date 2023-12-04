@@ -90,12 +90,13 @@ export default function Testimonials({
         <div className="embla__container">
           {/* 1 */}
           <div className="embla__slide">
-            <div className="bg-accent-2 my-12 pb-20 sm:pb-24 xl:pb-0">
+            <div className="bg-accent-2 my-12  pb-4 lg:pb-20 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
+                    
                     <img
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
                       src={image1}
                       alt=""
                     />
@@ -143,7 +144,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
                       src={image2}
                       alt=""
                     />
@@ -191,7 +192,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
                       src={image3}
                       alt=""
                     />
@@ -239,7 +240,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
                       src={image4}
                       alt=""
                     />
@@ -287,7 +288,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
                       src={image5}
                       alt=""
                     />
@@ -335,7 +336,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
                       src={image6}
                       alt=""
                     />
@@ -383,7 +384,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
                       src={image7}
                       alt=""
                     />
@@ -431,7 +432,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
                       src={image8}
                       alt=""
                     />
@@ -479,7 +480,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
                       src={image9}
                       alt=""
                     />
@@ -527,7 +528,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
                       src={image10}
                       alt=""
                     />

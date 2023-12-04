@@ -16,9 +16,14 @@ export default function Header({ onOpenForm }: any) {
   const intl = useIntl();
 
   const sendSearch = (e: any) => {
-    e.preventDefault();
-    window.location.replace(`/search/${key}`);
-  };
+    e.key === "Enter" && window.location.replace(`/search/${key}`);
+  }; 
+  
+  const onSendSearch = (e: any) => {
+    e.preventDefault()
+    key && window.location.replace(`/search/${key}`);
+  }; 
+
   return (
     <>
       <Transition.Root
@@ -51,22 +56,21 @@ export default function Header({ onOpenForm }: any) {
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel className="mx-auto max-w-xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all">
-                <Combobox
-                  onChange={(person) => alert((window.location = person.url))}
-                >
+                <Combobox>
                   <div className="relative">
                     <form
                       className="flex flex-row align-center"
-                      onSubmit={sendSearch}
+                      onSubmit={onSendSearch}
                     >
                       <MagnifyingGlassIcon
                         className="pointer-events-none absolute left-4 top-3.5 h-5 w-5 text-gray-400"
                         aria-hidden="true"
                       />
 
+
                       <Combobox.Input
-                        value={key}
-                        onChange={(e) => setKey(e.target.value)}
+                      onChange={(e)=>setKey(e.target.value)}                      
+                      onKeyDown={sendSearch}
                         className="outline-0 h-12 w-full border-0 bg-transparent pl-11 pr-4 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
                         placeholder="Search..."
                       />
