@@ -6,8 +6,7 @@ import { useIntl } from "react-intl";
 import { Controller, useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 
-import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
-import { Combobox } from "@headlessui/react";
+
 import StateMessage from "./state-message";
 
 function classNames(...classes: string[]) {
