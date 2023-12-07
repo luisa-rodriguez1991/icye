@@ -10,7 +10,7 @@ import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { Combobox } from "@headlessui/react";
 import StateMessage from "./state-message";
 
-function classNames(...classes) {
+function classNames({...classes}:any) {
   return classes.filter(Boolean).join(" ");
 }
 
