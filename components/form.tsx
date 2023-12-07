@@ -157,7 +157,7 @@ export default function Form({ openIndicator, onSetOpen }: any) {
                                         watch("customerType") !== "mentor"
                                           ? "invisible"
                                           : "",
-                                        "absolute top-1 right-1 h-5 w-5 font-semibold text-white"
+                                          "absolute top-1 right-1 h-5 w-5 font-semibold text-white"
                                       )}
                                       aria-hidden="true"
                                     />
