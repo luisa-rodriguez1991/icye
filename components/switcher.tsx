@@ -8,11 +8,11 @@ const mailingLists = [
   { id: 3, title: 'Trial Users', description: 'Last message sent 4 days ago', users: '2740 users' },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Switcher({register}) {
+export default function Switcher({register}:any) {
   const [selectedMailingLists, setSelectedMailingLists] = useState(mailingLists[0])
 
   return (

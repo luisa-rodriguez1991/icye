@@ -1,5 +1,6 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { useRouter } from "next/router";
+import { Key, ReactElement, JSXElementConstructor, ReactNode, PromiseLikeOfReactNode } from "react";
 
 export default function SearchContent({ searchinfo }: any) {
   const router = useRouter();
@@ -10,7 +11,7 @@ export default function SearchContent({ searchinfo }: any) {
       className="divide-y divide-gray-100 overflow-hidden shadow-xl p-6 bg-accent-2 shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl"
     >
       {searchinfo &&
-        searchinfo.map((result) => (
+        searchinfo.map((result: { id: Key | null | undefined; categories: number[]; slug: any; title: { rendered: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | PromiseLikeOfReactNode | null | undefined; }; excerpt: { rendered: any; }; }) => (
           <li
             key={result.id}
             className="relative flex justify-between gap-x-6 px-4 py-5 bg-white sm:px-6"

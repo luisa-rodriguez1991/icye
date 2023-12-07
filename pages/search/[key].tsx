@@ -47,6 +47,8 @@ export default function Key({ page, footer }: any) {
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           {intl.formatMessage({ id: "search_result_title",})} {router.query.key}
           </h1>
+
+
           <div className="mt-8 text-center">
             {results?.length>0}
             {results?.length>0?(<SearchContent searchinfo={results} />):
@@ -59,6 +61,9 @@ export default function Key({ page, footer }: any) {
             icon="box"/>)}
 
           </div>
+
+
+          
         </div>
       </div>
     </Layout>

@@ -3,11 +3,12 @@ import { useCallback } from "react";
 import Particles from "react-particles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import { Engine } from "tsparticles-engine";
 
 export default function Intro({ text, onOpenForm }: any) {
   const intl = useIntl();
 
-  const particlesInit = useCallback(async (engine) => {
+  const particlesInit = useCallback(async (engine: Engine) => {
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
@@ -15,7 +16,7 @@ export default function Intro({ text, onOpenForm }: any) {
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
+  const particlesLoaded = useCallback(async (container: any) => {
     console.log(container);
   }, []);
 
