@@ -51,7 +51,7 @@ export default function Key({ page, footer }: any) {
 
           <div className="mt-8 text-center">
          
-            {results?.length>0?(<SearchContent searchinfo={results} />):
+            {results?(<SearchContent searchinfo={results} />):
 
             (<StateMessage 
             h1="search_result_title" 
