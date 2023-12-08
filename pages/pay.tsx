@@ -4,7 +4,7 @@ import { useState } from "react";
 import {getPage, getPost} from "@/lib/api";
 import {GetStaticProps} from "next";
 
-export default function Pay({footer}) {
+export default function Pay({footer}:any) {
   const [open, setOpen] = useState(false)
 
   return (

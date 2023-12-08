@@ -4,7 +4,7 @@ import { useState } from "react";
 import {getPage, getPost} from "@/lib/api";
 import {GetStaticProps} from "next";
 
-export default function HostFamilies({footer}) {
+export default function HostFamilies({footer}:any) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -16,9 +16,8 @@ export default function HostFamilies({footer}) {
 }
 
 export const getStaticProps: GetStaticProps = async ({locale}) => {
-    const pageInfo = await getPage(804, locale);
     const footerInfo = await getPost(772, locale);
     return {
-        props: { page: pageInfo, footer: footerInfo },
+        props: { footer: footerInfo },
     };
 };
