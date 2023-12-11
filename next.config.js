@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["https://18.206.205.218/"]
+    domains: ["18.206.205.218"]
   },
 
   i18n: {
