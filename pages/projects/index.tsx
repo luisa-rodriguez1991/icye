@@ -29,7 +29,7 @@ export default function Projects({
 
   useEffect(() => {
     fetch(
-      `http://184.72.130.92/wp-json/wp/v2/posts?categories=4&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,excerpt,categories&lang=${locale}${
+      `http://3.82.223.80/wp-json/wp/v2/posts?categories=4&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,excerpt,categories&lang=${locale}${
         Object.keys(excludedListFilters).length > 0
           ? `&categories_exclude=${excludedListFilters}`
           : ""
