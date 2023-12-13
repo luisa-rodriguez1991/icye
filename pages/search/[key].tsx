@@ -20,7 +20,7 @@ export default function Key({ page, footer }: any) {
   useEffect(() => {
     if (Object.keys(router.query).length > 0) {
       fetch(
-        `http://3.82.223.80/wp-json/wp/v2/posts?search=${router.query.key}&_fields=id,title,categories,excerpt,slug&lang=${locale}`
+        `http://54.243.14.249/wp-json/wp/v2/posts?search=${router.query.key}&_fields=id,title,categories,excerpt,slug&lang=${locale}`
       ) // ⬅️ 1) llamada a la API, el resultado es una Promise
         .then((response) => response.json()) // ⬅️ 2) cuando la petición finalice, transformamos la respuesta a JSON (response.json() también es una Promise)
         .then((dog) => setResults(dog));
