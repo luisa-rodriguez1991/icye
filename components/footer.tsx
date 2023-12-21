@@ -28,7 +28,7 @@ export default function Footer({ info }: any) {
     };
 
     userData &&
-      fetch("http://localhost:5001/newsletter", requestOptions) // ⬅️ 1) llamada a la API, el resultado es una Promise
+      fetch("https://icye-backend-6f70dbadabb9.herokuapp.com/newsletter", requestOptions) // ⬅️ 1) llamada a la API, el resultado es una Promise
         .then((response) => response.status === 200 && setConfirmation(true)); // ⬅️ 3) aquí ya tenemos la respuesta en formato objeto
   }, [userData]);
 
