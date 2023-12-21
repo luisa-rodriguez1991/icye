@@ -110,7 +110,7 @@ export default function Plans({
                   {intl.formatMessage({ id: "plans_button" })}
                 </button>
 
-                <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-600">
+                <ul role="list" className=" grow mt-8 space-y-3 text-sm leading-6 text-gray-600">
 
                   {item1 && ( <li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
@@ -249,7 +249,7 @@ export default function Plans({
 
                 <ul
                   role="list"
-                  className="mt-8 space-y-3 text-sm leading-6 text-gray-600"
+                  className=" grow mt-8 space-y-3 text-sm leading-6 text-gray-600"
                 >
                   {list2item1 && ( <li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
@@ -388,7 +388,7 @@ export default function Plans({
 
                 <ul
                   role="list"
-                  className="mt-8 space-y-3 text-sm leading-6 text-gray-600"
+                  className=" grow mt-8 space-y-3 text-sm leading-6 text-gray-600"
                 >
                   {list3item1 && ( <li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
@@ -527,7 +527,7 @@ export default function Plans({
 
                 <ul
                   role="list"
-                  className="mt-8 space-y-3 text-sm leading-6 text-gray-600"
+                  className=" grow mt-8 space-y-3 text-sm leading-6 text-gray-600"
                 >
 
                   {list4item1 && (<li className="flex gap-x-3 text-accent-1">
