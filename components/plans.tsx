@@ -95,7 +95,7 @@ export default function Plans({
                 </h3>
                 <p className="mt-6 flex flex-col items-baseline gap-x-1">
                   <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">
-                    {" "}
+
                     {price1}
                   </span>
                   <span className="text-sm font-semibold leading-6 text-cyan-500">
@@ -111,83 +111,105 @@ export default function Plans({
                 </button>
 
                 <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-600">
-                  <li className="flex gap-x-3 text-accent-1">
+
+                  {item1 && ( <li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
                       className="h-6 w-5 flex-none text-pink-dark"
                       aria-hidden="true"
                     />
                     {item1}
-                  </li>
-                  <li className="flex gap-x-3 text-accent-1">
+                  </li> )}
+
+
+                 {item2 && (<li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
                       className="h-6 w-5 flex-none text-pink-dark"
                       aria-hidden="true"
                     />
                     {item2}
-                  </li>
-                  <li className="flex gap-x-3 text-accent-1">
+                  </li> )}
+                  
+
+                  {item3 && (<li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
                       className="h-6 w-5 flex-none text-pink-dark"
                       aria-hidden="true"
                     />
                     {item3}
-                  </li>
-                  <li className="flex gap-x-3 text-accent-1">
+                  </li>)}
+                  
+
+                  {item4 && (  <li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
                       className="h-6 w-5 flex-none text-pink-dark"
                       aria-hidden="true"
                     />
                     {item4}
-                  </li>
-                  <li className="flex gap-x-3 text-accent-1">
+                  </li>)}
+                
+
+                  {item5 && (<li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
                       className="h-6 w-5 flex-none text-pink-dark"
                       aria-hidden="true"
                     />
                     {item5}
-                  </li>
-                  <li className="flex gap-x-3 text-accent-1">
+                  </li>)}
+                  
+
+                  {item6 && (<li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
                       className="h-6 w-5 flex-none text-pink-dark"
                       aria-hidden="true"
                     />
                     {item6}
-                  </li>
-                  <li className="flex gap-x-3 text-accent-1">
+                  </li>)}
+                  
+
+                  {item7 && ( <li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
                       className="h-6 w-5 flex-none text-pink-dark"
                       aria-hidden="true"
                     />
                     {item7}
-                  </li>
-                  <li className="flex gap-x-3 text-accent-1">
+                  </li>)}
+                 
+
+                  {item8 && ( <li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
                       className="h-6 w-5 flex-none text-pink-dark"
                       aria-hidden="true"
                     />
                     {item8}
-                  </li>
-                  <li className="flex gap-x-3 text-accent-1">
+                  </li>)}
+                 
+
+                  {item9 && ( <li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
                       className="h-6 w-5 flex-none text-pink-dark"
                       aria-hidden="true"
                     />
                     {item9}
-                  </li>
-                  <li className="flex gap-x-3 text-accent-1">
+                  </li>)}
+                 
+
+                  {item10 && (<li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
                       className="h-6 w-5 flex-none text-pink-dark"
                       aria-hidden="true"
                     />
                     {item10}
-                  </li>
-                  <li className="flex gap-x-3 text-accent-1">
+                  </li>)}
+                  
+
+                  {item11 && (<li className="flex gap-x-3 text-accent-1">
                     <CheckIcon
                       className="h-6 w-5 flex-none text-pink-dark"
                       aria-hidden="true"
                     />
                     {item11}
-                  </li>
+                  </li>)}
+               
 
                   <div>
                     <a
