@@ -14,6 +14,7 @@ import {getAllPost, getAllEvents, getPage, getPost} from "@/lib/api";
 import { GetStaticProps } from "next";
 import Contributors from "@/components/contributors";
 import { useState } from "react";
+import Head from "next/head";
 
 export default function Home({ posts, eventsList, page, footer }: any) {
   const [open, setOpen] = useState(false);
