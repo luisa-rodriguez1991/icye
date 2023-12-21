@@ -88,7 +88,7 @@ export default function Plans({
             {text}
           </p>
           <div className="isolate py-6 mx-auto mt-4 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
-            <div>
+            <div className=" flex justify-around">
               <div className=" flex flex-col justify-around ring-1 ring-accent-1 rounded-3xl p-4 h-[813px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title1}
@@ -226,7 +226,7 @@ export default function Plans({
               </div>
             </div>
 
-            <div>
+            <div className=" flex justify-around">
               <div className=" flex flex-col justify-around ring-1 ring-accent-1 rounded-3xl p-4 h-[813px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title2}
@@ -365,7 +365,7 @@ export default function Plans({
               </div>
             </div>
 
-            <div>
+            <div className=" flex justify-around">
               <div className="flex flex-col justify-around  ring-1 ring-accent-1 rounded-3xl p-4 h-[813px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title3}
@@ -504,7 +504,7 @@ export default function Plans({
               </div>
             </div>
 
-            <div>
+            <div className=" flex justify-around">
               <div className="flex flex-col justify-around  ring-1 ring-accent-1 rounded-3xl p-4 h-[813px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title4}
