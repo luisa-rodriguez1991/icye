@@ -95,7 +95,6 @@ export default function Plans({
                 </h3>
                 <p className="mt-6 flex flex-col items-baseline gap-x-1">
                   <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">
-
                     {price1}
                   </span>
                   <span className="text-sm font-semibold leading-6 text-cyan-500">
@@ -211,7 +210,8 @@ export default function Plans({
                   </li>)}
                
 
-                  <div>
+                </ul>
+                <div>
                     <a
                       className=" flex justify-center items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
                       href={pdf1}
@@ -222,11 +222,10 @@ export default function Plans({
                       {intl.formatMessage({ id: "plans_button_pdf" })}
                     </a>
                   </div>
-                </ul>
               </div>
             </div>
 
-            <div className=" flex justify-around">
+            <div className=" flex ">
               <div className=" flex flex-col justify-around ring-1 ring-accent-1 rounded-3xl p-4 h-[813px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title2}
@@ -350,7 +349,10 @@ export default function Plans({
                   </li>)}
                   
 
-                  <div>
+                
+                </ul>
+
+                <div>
                     <a
                       className=" flex justify-center items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
                       href={pdf2}
@@ -361,11 +363,10 @@ export default function Plans({
                       {intl.formatMessage({ id: "plans_button_pdf" })}
                     </a>
                   </div>
-                </ul>
               </div>
             </div>
 
-            <div className=" flex justify-around">
+            <div className=" flex ">
               <div className="flex flex-col justify-around  ring-1 ring-accent-1 rounded-3xl p-4 h-[813px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title3}
@@ -489,7 +490,9 @@ export default function Plans({
                   </li>)}
                   
 
-                  <div>
+                
+                </ul>
+                <div>
                     <a
                       className=" flex justify-center items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
                       href={pdf3}
@@ -500,11 +503,11 @@ export default function Plans({
                       {intl.formatMessage({ id: "plans_button_pdf" })}
                     </a>
                   </div>
-                </ul>
+
               </div>
             </div>
 
-            <div className=" flex justify-around">
+            <div className=" flex ">
               <div className="flex flex-col justify-around  ring-1 ring-accent-1 rounded-3xl p-4 h-[813px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title4}
@@ -629,7 +632,10 @@ export default function Plans({
                   </li>)}
                   
 
-                  <div>
+                  
+                </ul>
+
+                <div>
                     <a
                       className=" flex justify-center items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
                       href={pdf4}
@@ -640,7 +646,6 @@ export default function Plans({
                       {intl.formatMessage({ id: "plans_button_pdf" })}
                     </a>
                   </div>
-                </ul>
               </div>
             </div>
           </div>

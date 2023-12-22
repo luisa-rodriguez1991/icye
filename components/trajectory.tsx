@@ -24,7 +24,7 @@ export default function Trajectory({ text, image }: any) {
               }}
             />
 
-            {/* <h1 className="mt-6 text-3xl font-bold tracking-tight text-accent-1 sm:text-4xl">{title}</h1> */}
+            
             <p className="mt-6 text-xl leading-8 text-gray-700">{text}</p>
             <div className="flex mt-6 ">
               <Button
@@ -40,8 +40,8 @@ export default function Trajectory({ text, image }: any) {
             className="max-w-[100%]"
             src={image}
             alt=""
-            width={1024}
-            height={921}
+            width={600}
+            height={600}
           />
         </div>
       </div>
