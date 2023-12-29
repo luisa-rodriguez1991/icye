@@ -46,17 +46,17 @@ export default function Footer({ info }: any) {
                   <div className="flex flex-1 min-w-[55px] justify-start">
                     <a href="#" className="-m-1.5 p-1.5 flex">
                       <Image
-                        width={48}
+                        width={50}
                         height={55}
                         className=""
-                        src="/img/icon.png"
+                        src="/img/iconoICYE.png"
                         alt="Icono ICYE Colombia"
                       />
                       <Image
                         width={96}
                         height={58}
                         className="hidden lg:flex ml-2"
-                        src="/img/logo.png"
+                        src="/img/logoSlogan.png"
                         alt="Logo ICYE Colombia"
                       />
                     </a>

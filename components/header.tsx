@@ -103,17 +103,17 @@ export default function Header({ onOpenForm }: any) {
                     {" "}
                     <span className="sr-only">Your Company</span>
                     <Image
-                      width={48}
+                      width={50}
                       height={55}
                       className=""
-                      src="/img/icon.png"
+                      src="/img/iconoICYE.png"
                       alt="Icono ICYE Colombia"
                     />
                     <Image
                       width={96}
                       height={58}
                       className="hidden lg:flex ml-4 mt-1"
-                      src="/img/logo.png"
+                      src="/img/logoSlogan.png"
                       alt="Logo ICYE Colombia"
                     />
                   </Link>
