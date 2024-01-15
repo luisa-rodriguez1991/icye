@@ -79,7 +79,7 @@ export default function Blog({ page, footer }: any) {
                     </div>
                   </div>
                   <div
-                    className="lg:max-w-lg"
+                    className="lg:max-w-lg text-justify"
                     dangerouslySetInnerHTML={{ __html: page.content.rendered }}
                   />
                 </div>
