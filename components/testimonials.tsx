@@ -80,8 +80,6 @@ export default function Testimonials({
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
           {text}
-
-          {JSON.stringify(emblaApi)}
         </p>
       </div>
 
@@ -94,7 +92,6 @@ export default function Testimonials({
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-                    
                     <img
                       className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
                       src={image1}
@@ -570,10 +567,10 @@ export default function Testimonials({
           </div>
         </div>
         <button className="embla__next" onClick={scrollNext}>
-          <ChevronRightIcon className="h-8 w-8 text-gray-600 font-bold" />
+          <ChevronRightIcon className=" h-8 w-8 text-gray-600 font-bold" />
         </button>
         <button className="embla__prev" onClick={scrollPrev}>
-          <ChevronLeftIcon className="h-8 w-8 text-gray-600 font-bold" />
+          <ChevronLeftIcon className=" h-8 w-8 text-gray-600 font-bold" />
         </button>
       </div>
     </div>
