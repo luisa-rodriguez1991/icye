@@ -88,19 +88,23 @@ export default function Plans({
             {text}
           </p>
           <div className="isolate py-6 mx-auto mt-4 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
+
             <div className=" flex ">
-              <div className=" flex flex-col justify-around ring-1 ring-accent-1 rounded-3xl p-4 h-[813px]">
-                <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
+              <div className=" flex flex-col justify-around ring-1 ring-accent-1 rounded-3xl p-4 h-[790px]">
+                <h3 className=" text-center text-accent-1 text-lg font-semibold ">
                   {title1}
                 </h3>
-                <p className="mt-6 flex flex-col items-baseline gap-x-1">
-                  <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">
-                    {price1}
-                  </span>
-                  <span className="text-sm font-semibold leading-6 text-cyan-500">
+
+                <div className="mt-6 flex flex-col  ">
+                  <span className="text-2xl font-bold tracking-tight text-accent-1 ml-2">Desde</span>
+                  <div className=" flex items-end">
+                  <span className="text-3xl font-bold tracking-tight text-accent-1 ml-2">{price1}</span>
+                  <span className="text-1xl font-bold tracking-tight text-accent-1 ml-1">COP</span>
+                  </div>
+                  <span className="text-base font-semibold leading-6 text-cyan-500 ml-2 mt-2">
                     {cyantext1}
                   </span>
-                </p>
+                </div>
 
                 <button
                   onClick={() => onOpenForm(true)}
@@ -112,132 +116,90 @@ export default function Plans({
                 <ul role="list" className=" grow mt-8 space-y-3 text-sm leading-6 text-gray-600">
 
                   {item1 && ( <li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
                     {item1}
                   </li> )}
 
 
-                 {item2 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+                 {item2 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {item2}
                   </li> )}
-                  
 
-                  {item3 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {item3 && (<li className="flex gap-x-4 text-accent-1">
+                  
                     {item3}
                   </li>)}
-                  
 
-                  {item4 && (  <li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {item4 && (  <li className="flex gap-x-4 text-accent-1">
+               
                     {item4}
                   </li>)}
-                
 
-                  {item5 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {item5 && (<li className="flex gap-x-4 text-accent-1">
+                 
                     {item5}
                   </li>)}
-                  
 
-                  {item6 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {item6 && (<li className="flex gap-x-4 text-accent-1">
+                   
                     {item6}
                   </li>)}
-                  
 
-                  {item7 && ( <li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {item7 && ( <li className="flex gap-x-4 text-accent-1">
+                  
                     {item7}
                   </li>)}
-                 
 
-                  {item8 && ( <li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {item8 && ( <li className="flex gap-x-4 text-accent-1">
+                   
                     {item8}
                   </li>)}
-                 
 
-                  {item9 && ( <li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {item9 && ( <li className="flex gap-x-4 text-accent-1">
+                   
                     {item9}
                   </li>)}
-                 
 
-                  {item10 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {item10 && (<li className="flex gap-x-4 text-accent-1">
+                  
                     {item10}
                   </li>)}
-                  
 
-                  {item11 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {item11 && (<li className="flex gap-x-4 text-accent-1">
+                  4
                     {item11}
                   </li>)}
-               
+
 
                 </ul>
-                <div>
-                    <a
-                      className=" flex justify-center items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
-                      href={pdf1}
-                      target="_blank"
-                      title={`Download PDF file about the project: ${title1}`}
-                    >
-                      <DocumentArrowDownIcon className=" h-4 w-4 mr-1" />
-                      {intl.formatMessage({ id: "plans_button_pdf" })}
-                    </a>
-                  </div>
+             
               </div>
             </div>
 
             <div className=" flex ">
-              <div className=" flex flex-col justify-around ring-1 ring-accent-1 rounded-3xl p-4 h-[813px]">
+              <div className=" flex flex-col justify-around ring-1 ring-accent-1 rounded-3xl p-4 h-[790px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title2}
                 </h3>
-                <p className="mt-6 flex flex-col items-baseline gap-x-1">
-                  <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">
-                    {price2}
+                <div className="mt-6 flex flex-col  ">
+                  <span className="text-2xl font-bold tracking-tight text-accent-1 ml-2">Desde</span>
+                  <div className=" flex items-end">
+                  <span className="text-3xl font-bold tracking-tight text-accent-1 ml-2">{price2}</span>
+                  <span className="text-1xl font-bold tracking-tight text-accent-1 ml-1">COP</span>
+                  </div>
+                  <span className="text-base font-semibold leading-6 text-cyan-500 ml-2 mt-2">
+                  {cyantext2}
                   </span>
-                  <span className="text-sm font-semibold leading-6 text-cyan-500">
-                    {cyantext2}
-                  </span>
-                </p>
+                </div>
 
                 <button
                   onClick={() => onOpenForm(true)}
@@ -250,109 +212,76 @@ export default function Plans({
                   role="list"
                   className=" grow mt-8 space-y-3 text-sm leading-6 text-gray-600"
                 >
-                  {list2item1 && ( <li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+                  {list2item1 && ( <li className="flex gap-x-4 text-accent-1">
+                
                     {list2item1}
                   </li>)}
-                 
 
-                  {list2item2 && ( <li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list2item2 && ( <li className="flex gap-x-4 text-accent-1">
+                   
                     {list2item2}
                   </li>)}
-                 
 
-                  {list2item3 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list2item3 && (<li className="flex gap-x-4 text-accent-1">
+                  
                     {list2item3}
                   </li>)}
-                  
 
-                  {list2item4 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list2item4 && (<li className="flex gap-x-4 text-accent-1">
+                   
                     {list2item4}
                   </li>)}
-                
 
-                  {list2item5 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list2item5 && (<li className="flex gap-x-4 text-accent-1">
+                   
                     {list2item5}
                   </li>)}
-                  
 
-                  {list2item6 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list2item6 && (<li className="flex gap-x-4 text-accent-1">
+                 
                     {list2item6}
                   </li>)}
-                  
 
-                  {list2item7 && ( <li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list2item7 && ( <li className="flex gap-x-4 text-accent-1">
+                   
                     {list2item7}
                   </li>)}
-                 
 
-                  {list2item8 && ( <li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list2item8 && ( <li className="flex gap-x-4 text-accent-1">
+                  
                     {list2item8}
                   </li>)}
-                 
 
-                  {list2item9 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list2item9 && (<li className="flex gap-x-4 text-accent-1">
+                   
                     {list2item9}
                   </li>)}
-                  
 
-                  {list2item10 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list2item10 && (<li className="flex gap-x-4 text-accent-1">
+                  
                     {list2item10}
                   </li>)}
-                 
 
-                  {list2item11 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list2item11 && (<li className="flex gap-x-4 text-accent-1">
+                 
                     {list2item11}
                   </li>)}
-                  
 
-                
+
+
                 </ul>
 
-                <div>
+                {/* <div>
                     <a
                       className=" flex justify-center items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
                       href={pdf2}
@@ -362,23 +291,26 @@ export default function Plans({
                       <DocumentArrowDownIcon className=" h-4 w-4 mr-1" />
                       {intl.formatMessage({ id: "plans_button_pdf" })}
                     </a>
-                  </div>
+                  </div> */}
               </div>
             </div>
 
             <div className=" flex ">
-              <div className="flex flex-col justify-around  ring-1 ring-accent-1 rounded-3xl p-4 h-[813px]">
+              <div className="flex flex-col justify-around  ring-1 ring-accent-1 rounded-3xl p-4 h-[790px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title3}
                 </h3>
-                <p className="mt-6 flex flex-col items-baseline gap-x-1">
-                  <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">
-                    {price3}
+
+                <div className="mt-6 flex flex-col  ">
+                  <span className="text-2xl font-bold tracking-tight text-accent-1 ml-2">Desde</span>
+                  <div className=" flex items-end">
+                  <span className="text-3xl font-bold tracking-tight text-accent-1 ml-2">{price3}</span>
+                  <span className="text-1xl font-bold tracking-tight text-accent-1 ml-1">COP</span>
+                  </div>
+                  <span className="text-base font-semibold leading-6 text-cyan-500 ml-2 mt-2">
+                  {cyantext3}
                   </span>
-                  <span className="text-sm font-semibold leading-6 text-cyan-500">
-                    {cyantext3}
-                  </span>
-                </p>
+                </div>
 
                 <button
                   onClick={() => onOpenForm(true)}
@@ -391,135 +323,93 @@ export default function Plans({
                   role="list"
                   className=" grow mt-8 space-y-3 text-sm leading-6 text-gray-600"
                 >
-                  {list3item1 && ( <li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+                  {list3item1 && ( <li className="flex gap-x-4 text-accent-1">
+                   
                     {list3item1}
                   </li>)}
-                 
 
-                  {list3item2 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list3item2 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list3item2}
                   </li>)}
-                  
 
-                  {list3item3 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list3item3 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list3item3}
                   </li>)}
-                  
 
-                  {list3item4 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list3item4 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list3item4}
                   </li>)}
-                  
 
-                  {list3item5 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list3item5 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list3item5}
                   </li>)}
-                  
 
-                  {list3item6 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+                  {list3item6 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list3item6}
                   </li>)}
-                  
 
-                  {list3item7 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list3item7 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list3item7}
                   </li>)}
-                  
 
-                  {list3item8 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list3item8 && (<li className="flex gap-x-4 text-accent-1">
+                   
                     {list3item8}
                   </li>)}
-                  
 
-                  {list3item9 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list3item9 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list3item9}
                   </li>)}
-                 
 
-                  {list3item10 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list3item10 && (<li className="flex gap-x-4 text-accent-1">
+                   
                     {list3item10}
                   </li>)}
-                  
 
-                  {list3item11 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list3item11 && (<li className="flex gap-x-4 text-accent-1">
+                   
                     {list3item11}
                   </li>)}
-                  
 
-                
+
+
                 </ul>
-                <div>
-                    <a
-                      className=" flex justify-center items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
-                      href={pdf3}
-                      target="_blank"
-                      title={`Download PDF file about the project: ${title1}`}
-                    >
-                      <DocumentArrowDownIcon className=" h-4 w-4 mr-1" />
-                      {intl.formatMessage({ id: "plans_button_pdf" })}
-                    </a>
-                  </div>
-
+            
               </div>
             </div>
 
             <div className=" flex ">
-              <div className="flex flex-col justify-around  ring-1 ring-accent-1 rounded-3xl p-4 h-[813px]">
+              <div className="flex flex-col justify-around  ring-1 ring-accent-1 rounded-3xl p-4 h-[790px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title4}
                 </h3>
-                <p className="mt-6 flex flex-col items-baseline gap-x-1">
-                  <span className="text-4xl font-bold tracking-tight text-accent-1 m-2">
-                    {price4}
+
+                <div className="mt-6 flex flex-col  ">
+                  <span className="text-2xl font-bold tracking-tight text-accent-1 ml-2">Desde</span>
+                  <div className=" flex items-end">
+                  <span className="text-3xl font-bold tracking-tight text-accent-1 ml-2">{price4}</span>
+                  <span className="text-1xl font-bold tracking-tight text-accent-1 ml-1">COP</span>
+                  </div>
+                  <span className="text-base font-semibold leading-6 text-cyan-500 ml-2 mt-2">
+                  {cyantext4}
                   </span>
-                  <span className="text-sm font-semibold leading-6 text-cyan-500">
-                    {cyantext4}
-                  </span>
-                </p>
+                </div>
 
                 <button
                   onClick={() => onOpenForm(true)}
@@ -533,111 +423,82 @@ export default function Plans({
                   className=" grow mt-8 space-y-3 text-sm leading-6 text-gray-600"
                 >
 
-                  {list4item1 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+                  {list4item1 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list4item1}
                   </li>)}
-                  
 
-                  {list4item2 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list4item2 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list4item2}
                   </li>)}
-                  
 
-                  {list4item3 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list4item3 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list4item3}
                   </li>)}
-                  
 
-                  {list4item4 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list4item4 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list4item4}
                   </li>)}
-                  
 
-                  {list4item5 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list4item5 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list4item5}
                   </li>)}
-                  
 
-                  {list4item6 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list4item6 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list4item6}
                   </li>)}
-                  
 
-                  {list4item7 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list4item7 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list4item7}
                   </li>)}
-                  
 
-                  {list4item8 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list4item8 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list4item8}
                   </li>)}
-                  
 
-                  {list4item9 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list4item9 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list4item9}
                   </li>)}
-                  
 
-                  {list4item10 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list4item10 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list4item10}
                   </li>)}
-                  
 
-                  {list4item11 && (<li className="flex gap-x-3 text-accent-1">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-pink-dark"
-                      aria-hidden="true"
-                    />
+
+                  {list4item11 && (<li className="flex gap-x-4 text-accent-1">
+                    
                     {list4item11}
                   </li>)}
-                  
 
-                  
+
+
                 </ul>
 
-                <div>
+              
+              </div>
+            </div>
+          </div>
+                 <div className="flex  justify-center">
                     <a
-                      className=" flex justify-center items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
+                      className=" flex justify-center w-1/2 items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
                       href={pdf4}
                       target="_blank"
                       title={`Download PDF file about the project: ${title1}`}
@@ -645,10 +506,7 @@ export default function Plans({
                       <DocumentArrowDownIcon className=" h-4 w-4 mr-1" />
                       {intl.formatMessage({ id: "plans_button_pdf" })}
                     </a>
-                  </div>
-              </div>
-            </div>
-          </div>
+                  </div> 
         </div>
       </div>
     </div>

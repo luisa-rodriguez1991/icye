@@ -35,8 +35,8 @@ export default function Sponsors({
               className="max-h-12 w-full object-contain mb-4 "
               src={icon1}
               alt="Statamic"
-              width={147}
-              height={48}
+              width={150}
+              height={100}
             />
             <p>{texticon1}</p>
           </div>
@@ -46,8 +46,8 @@ export default function Sponsors({
               className="max-h-12 w-full object-contain mb-4"
               src={icon2}
               alt="Statamic"
-              width={147}
-              height={48}
+              width={150}
+              height={100}
             />
             <p>{texticon2}</p>
           </div>
@@ -57,8 +57,8 @@ export default function Sponsors({
               className="max-h-12 w-full object-contain mb-4 "
               src={icon3}
               alt="Statamic"
-              width={147}
-              height={48}
+              width={150}
+              height={100}
             />
             <p>{texticon3}</p>
           </div>
@@ -68,8 +68,8 @@ export default function Sponsors({
               className="max-h-12 w-full object-contain mb-4"
               src={icon4}
               alt="Statamic"
-              width={147}
-              height={48}
+              width={150}
+              height={100}
             />
             <p>{texticon4}</p>
           </div>
