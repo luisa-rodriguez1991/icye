@@ -40,10 +40,10 @@ export default function Blog({ page, footer }: any) {
           </div>
 
           <div className="relative isolate overflow-hidden bg-white py-8 lg:overflow-visible ">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-6">
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 lg:mx-0 lg:max-w-none  lg:items-start lg:gap-y-6">
               <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6 "></div>
 
-              <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 ">
+              <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl  lg:gap-x-8 ">
                 <div className="lg:pr-4">
                   <div className="mb-4 flex items-start text-gray-500">
                     <CalendarIcon
@@ -79,18 +79,12 @@ export default function Blog({ page, footer }: any) {
                     </div>
                   </div>
                   <div
-                    className="lg:max-w-lg text-justify"
+                    className="text-justify"
                     dangerouslySetInnerHTML={{ __html: page.content.rendered }}
                   />
                 </div>
               </div>
-              <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-                <img
-                  className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-                  src={page.jetpack_featured_media_url}
-                  alt=""
-                />
-              </div>
+       
             </div>
           </div>
         </div>

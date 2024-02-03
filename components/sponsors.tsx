@@ -30,7 +30,8 @@ export default function Sponsors({
         </p>
 
         <div className="mx-auto mt-20 mb-8 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10  lg:mx-0 lg:max-w-none lg:grid-cols-4">
-          <div className="flex flex-col items-center text-center lg:ml-12">
+
+          <div className="text-center col-span-2 lg:col-span-1 ">
             <img
               className="max-h-12 w-full object-contain mb-4 "
               src={icon1}
@@ -41,7 +42,7 @@ export default function Sponsors({
             <p>{texticon1}</p>
           </div>
 
-          <div className="flex flex-col items-center text-center lg:ml-12">
+          <div className="text-center col-span-2 lg:col-span-1 ">
             <img
               className="max-h-12 w-full object-contain mb-4"
               src={icon2}
@@ -52,7 +53,7 @@ export default function Sponsors({
             <p>{texticon2}</p>
           </div>
 
-          <div className="flex flex-col items-center text-center lg:ml-12">
+          <div className="text-center col-span-2 lg:col-span-1 ">
             <img
               className="max-h-12 w-full object-contain mb-4 "
               src={icon3}
@@ -63,7 +64,7 @@ export default function Sponsors({
             <p>{texticon3}</p>
           </div>
 
-          <div className="flex flex-col items-center text-center lg:ml-12">
+          <div className="text-center col-span-2 lg:col-span-1">
             <img
               className="max-h-12 w-full object-contain mb-4"
               src={icon4}

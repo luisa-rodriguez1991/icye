@@ -20,7 +20,7 @@ export default function Calendar({ text, events }: any) {
     <li
       key={meeting.id}
       // fondo cuadros eventos
-      className="rounded-xl relative flex space-x-2 p-6  bg-accent-2 my-2 relative"
+      className=" rounded-xl relative flex space-x-2 p-6  bg-accent-2 my-2 relative"
     >
       <Link
         locale={locale}
@@ -101,7 +101,7 @@ export default function Calendar({ text, events }: any) {
   ));
 
   return (
-    <div className="mx-auto max-w-2xl ">
+    <div className="mx-auto max-w-4xl ">
       <h2 className="text-base font-semibold leading-6 text-gray-900"></h2>
       <div className="mx-auto max-w-4xl text-center ">
         {/* titulo */}

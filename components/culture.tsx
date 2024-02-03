@@ -21,7 +21,7 @@ export default function Culture({
             width={1056}
             height={950}
             className="max-w-[100%] rounded-3xl"
-            src="/img/portada_bg.jpg"
+            src="/img/blog4.png"
             alt=""
           />
         </div>

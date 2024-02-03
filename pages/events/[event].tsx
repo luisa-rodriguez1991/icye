@@ -41,6 +41,7 @@ export default function Event({ page, footer }: any) {
                   <div className="min-w-0 flex-1 ">
                     <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
                       {page.title.rendered}
+                      
                     </h2>
 
                     <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6 mb-12">
