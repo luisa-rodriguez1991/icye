@@ -46,7 +46,7 @@ export default function AboutUs({
             aria-hidden="true"
           ></div>
           <div className="">
-            <div className="mx-auto max-w-7xl px-6 pb-32  pt-12 lg:px-8 lg:pt-8">
+            <div className="mx-auto max-w-7xl px-6 pt-12 lg:px-8 lg:pt-8">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-xl">
                   <h1 className="text-4xl font-bold tracking-tight text-accent-1 sm:text-6xl">
@@ -109,63 +109,13 @@ export default function AboutUs({
           </div>
         </div>
 
-        {/* Content section vision*/}
-        <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8 ">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <h2 className="text-3xl font-bold tracking-tight text-accent-1 sm:text-4xl">
-              {intl.formatMessage({ id: "about_us_mission" })}
-            </h2>
-            <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
-              <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
-                <p className="text-xl leading-8 text-gray-600">
-                  {missiontext1}
-                </p>
-                <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
-                  <p>{missiontext2}</p>
-                  <p className="mt-10">{missiontext3}</p>
-                </div>
-              </div>
-              <div className="lg:flex lg:flex-auto lg:justify-center">
-                <dl className="w-64 space-y-8 xl:w-80">
-                  <div className="flex flex-col-reverse gap-y-4">
-                    <dt className="text-base leading-7 text-gray-600">
-                      {dataanalyticlabel1}
-                    </dt>
-                    <dd className="text-5xl font-semibold tracking-tight text-accent-1">
-                      {dataanalytic1}
-                    </dd>
-                  </div>
-
-                  <div className="flex flex-col-reverse gap-y-4">
-                    <dt className="text-base leading-7 text-gray-600">
-                      {dataanalyticlabel2}
-                    </dt>
-                    <dd className="text-5xl font-semibold tracking-tight text-accent-1">
-                      {dataanalytic2}
-                    </dd>
-                  </div>
-
-                  <div className="flex flex-col-reverse gap-y-4">
-                    <dt className="text-base leading-7 text-gray-600">
-                      {dataanalyticlabel3}
-                    </dt>
-                    <dd className="text-5xl font-semibold tracking-tight text-accent-1">
-                      {dataanalytic3}
-                    </dd>
-                  </div>
-                </dl>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Values section mission */}
+        {/* Values section vission */}
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-accent-1 sm:text-4xl">
-              {intl.formatMessage({ id: "about_us_vision" })}
+               {intl.formatMessage({ id: "about_us_mission" })} {intl.formatMessage({ id: "about_us_vision" })}
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">{visiontext}</p>
+            
           </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             <div>
@@ -179,35 +129,35 @@ export default function AboutUs({
               <dt className="font-semibold text-xl text-gray-900">
                 {visionsubtitle2}
               </dt>
-              <dd className="mt-1 text-gray-600">{visiontext1}</dd>
+              <dd className="mt-1 text-gray-600">{visiontext2}</dd>
             </div>
 
             <div>
               <dt className="font-semibold text-xl text-gray-900">
                 {visionsubtitle3}
               </dt>
-              <dd className="mt-1 text-gray-600">{visiontext1}</dd>
+              <dd className="mt-1 text-gray-600">{visiontext3}</dd>
             </div>
 
             <div>
               <dt className="font-semibold text-xl text-gray-900">
                 {visionsubtitle4}
               </dt>
-              <dd className="mt-1 text-gray-600">{visiontext1}</dd>
+              <dd className="mt-1 text-gray-600">{visiontext4}</dd>
             </div>
 
             <div>
               <dt className="font-semibold text-xl text-gray-900">
                 {visionsubtitle5}
               </dt>
-              <dd className="mt-1 text-gray-600">{visiontext1}</dd>
+              <dd className="mt-1 text-gray-600">{visiontext5}</dd>
             </div>
 
             <div>
               <dt className="font-semibold text-xl text-gray-900">
                 {visionsubtitle6}
               </dt>
-              <dd className="mt-1 text-gray-600">{visiontext1}</dd>
+              <dd className="mt-1 text-gray-600">{visiontext6}</dd>
             </div>
           </dl>
         </div>
