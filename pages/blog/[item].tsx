@@ -79,7 +79,7 @@ export default function Blog({ page, footer }: any) {
                     </div>
                   </div>
                   <div
-                    className="text-justify"
+                    className="text-justify css-wordpress"
                     dangerouslySetInnerHTML={{ __html: page.content.rendered }}
                   />
                 </div>

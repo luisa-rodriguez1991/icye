@@ -38,7 +38,7 @@ export default function Privacy({ page, footer }: any) {
             {intl.formatMessage({ id: "breadcrumb_privacy" })}
           </h1>
           <div
-            className="mt-8"
+            className="mt-8 css-wordpress text-justify"
             dangerouslySetInnerHTML={{ __html: page.content.rendered }}
           />
         </div>

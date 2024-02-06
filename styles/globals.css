@@ -50,3 +50,42 @@ body {
  height: 100%;
  width: 100%;
 }
+
+.css-wordpress img{
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+.css-wordpress p{
+  margin-bottom: 20px;
+
+}
+
+.css-wordpress ul{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left:40px;
+  list-style:circle;
+
+}
+
+.css-wordpress ol{
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.css-wordpress li{
+
+  margin-bottom: 5px;
+}
+
+.css-wordpress strong{
+  font-weight:700 ;
+}
+
+.css-wordpress a{
+  color:#172068;
+
+}

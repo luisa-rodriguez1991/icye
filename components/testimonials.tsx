@@ -86,8 +86,9 @@ export default function Testimonials({
       <div className="embla relative" ref={emblaRef}>
         {/* contenerdor slides */}
         <div className="embla__container">
+
           {/* 1 */}
-          <div className="embla__slide">
+          {name1 && (  <div className="embla__slide">
             <div className="bg-accent-2 my-12  pb-4 lg:pb-20 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
@@ -132,10 +133,11 @@ export default function Testimonials({
                 </div>
               </div>
             </div>
-          </div>
+          </div>)}
+        
 
           {/* 2 */}
-          <div className="embla__slide">
+          {name2 && ( <div className="embla__slide">
             <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
@@ -180,10 +182,11 @@ export default function Testimonials({
                 </div>
               </div>
             </div>
-          </div>
+          </div>)}
+         
 
           {/* 3 */}
-          <div className="embla__slide">
+          {name3  && (<div className="embla__slide">
             <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
@@ -228,10 +231,11 @@ export default function Testimonials({
                 </div>
               </div>
             </div>
-          </div>
+          </div>)}
+          
 
           {/* 4 */}
-          <div className="embla__slide">
+          {name4 &&(<div className="embla__slide">
             <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
@@ -276,10 +280,11 @@ export default function Testimonials({
                 </div>
               </div>
             </div>
-          </div>
+          </div>)}
+          
 
           {/* 5 */}
-          <div className="embla__slide">
+          {name5 &&( <div className="embla__slide">
             <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
@@ -324,10 +329,11 @@ export default function Testimonials({
                 </div>
               </div>
             </div>
-          </div>
+          </div>)}
+         
 
           {/* 6 */}
-          <div className="embla__slide">
+          {name6 &&(<div className="embla__slide">
             <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
@@ -372,10 +378,11 @@ export default function Testimonials({
                 </div>
               </div>
             </div>
-          </div>
+          </div>)}
+          
 
           {/* 7 */}
-          <div className="embla__slide">
+          {name7 &&(<div className="embla__slide">
             <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
@@ -420,10 +427,11 @@ export default function Testimonials({
                 </div>
               </div>
             </div>
-          </div>
+          </div>)}
+          
 
           {/* 8 */}
-          <div className="embla__slide">
+          {name8 &&(<div className="embla__slide">
             <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
@@ -468,10 +476,11 @@ export default function Testimonials({
                 </div>
               </div>
             </div>
-          </div>
+          </div>)}
+          
 
           {/* 9 */}
-          <div className="embla__slide">
+          {name9 &&(<div className="embla__slide">
             <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
@@ -516,10 +525,11 @@ export default function Testimonials({
                 </div>
               </div>
             </div>
-          </div>
+          </div>)}
+          
 
           {/* 10 */}
-          <div className="embla__slide">
+          {name10 &&(<div className="embla__slide">
             <div className="bg-accent-2 pb-20 my-12 sm:pb-24 xl:pb-0">
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
@@ -564,7 +574,8 @@ export default function Testimonials({
                 </div>
               </div>
             </div>
-          </div>
+          </div>)}
+          
         </div>
         <button className="embla__next" onClick={scrollNext}>
           <ChevronRightIcon className=" h-8 w-8 text-gray-600 font-bold" />

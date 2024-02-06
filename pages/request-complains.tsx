@@ -37,7 +37,7 @@ export default function Request({ page, footer }: any) {
             {intl.formatMessage({ id: "breadcrumb_Request" })}
           </h1>
           <div
-            className="mt-8"
+            className="mt-8 css-wordpress text-justify"
             dangerouslySetInnerHTML={{ __html: page.content.rendered }}
           />
         </div>
