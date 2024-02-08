@@ -121,56 +121,29 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const values = [
-  {
-    name: 'Experiencia Intercultura',
-    description:
-      'Sumergirse en una nueva cultura durante el voluntariado proporciona una experiencia intercultural enriquecedora, fomentando la comprensión global y la apreciación de la diversidad.',
-  },
-  {
-    name: 'Desarrollo de Habilidades Personales',
-    description:
-      'Participar en un programa de voluntariado social brinda la oportunidad de desarrollar habilidades personales como la empatía, la paciencia, la comunicación efectiva, flexibilidad, capacidad para resolver problemas, entre otras.',
-  },
-  {
-    name: 'Adquisición de Experiencia Laboral',
-    description:
-      'Para aquellos que buscan ingresar al mercado laboral, el voluntariado social puede proporcionar experiencia valiosa que puede destacar en el currículum.',
-  },
-  {
-    name: 'Construcción de Redes de Contactos',
-    description:
-      'Al tener contacto con personas de diversas procedencias y colaborar en proyectos sociales, se establecen conexiones valiosas que pueden ser beneficiosas en el ámbito personal y profesional.',
-  },
-  {
-    name: 'Mejora del Idioma',
-    description:
-      ' Participar en un programa de voluntariado en un entorno donde se habla un idioma diferente puede ayudar a mejorar las habilidades lingüísticas de manera práctica y natural.',
-  },
-  {
-    name: 'Crecimiento Profesional',
-    description:
-      'El voluntariado social puede contribuir al crecimiento profesional al proporcionar oportunidades para adquirir y perfeccionar habilidades específicas relacionadas con el área de trabajo voluntario.',
-  },
-  {
-    name: 'Desarrollo de la Autoconfianza',
-    description:
-      'Enfrentar nuevos desafíos y superar obstáculos durante el voluntariado contribuye al desarrollo de la autoconfianza y la resiliencia.',
-  },
-  {
-    name: 'Conciencia Social',
-    description:
-      ' El voluntariado social fomenta la conciencia social al abordar problemas y desafíos reales, creando una mayor comprensión de las cuestiones sociales y promoviendo la responsabilidad cívica.',
-  },
-  {
-    name: 'Memorias y Experiencias Inolvidables',
-    description:
-      ' El programa de voluntariado social crea recuerdos duraderos y experiencias inolvidables al vivir situaciones únicas y significativas junto con otros voluntarios y miembros de la comunidad.',
-  },
 
-]
 
-export default function Culture({text}:any) {
+export default function Culture({
+  text,
+  item1,
+  item2,
+  item3,
+  item4,
+  item5,
+  item6,
+  item7,
+  item8,
+  item9,
+  textitem1,
+  textitem2,
+  textitem3,
+  textitem4,
+  textitem5,
+  textitem6,
+  textitem7,
+  textitem8,
+  textitem9,
+}:any) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const intl = useIntl();
 
@@ -178,7 +151,7 @@ export default function Culture({text}:any) {
     <div className="bg-white">
      
 
-     <div className="relative isolate overflow-hidden bg-white px-5 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+     <div className="relative isolate overflow-hidden bg-white px-5 pt-12 pb-24  lg:overflow-visible lg:px-0">
        
   
         {/* Values section */}
@@ -207,12 +180,53 @@ export default function Culture({text}:any) {
           </div>
         </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {values.map((value) => (
-              <div key={value.name}>
-                <dt className="font-semibold text-gray-900">{value.name}</dt>
-                <dd className="mt-1 text-gray-600">{value.description}</dd>
-              </div>
-            ))}
+           
+
+            <div>
+                <dt className="font-semibold text-gray-900">{item1}</dt>
+                <dd className="mt-1 text-gray-600">{textitem1}</dd>
+            </div>
+
+            <div>
+                <dt className="font-semibold text-gray-900">{item2}</dt>
+                <dd className="mt-1 text-gray-600">{textitem2}</dd>
+            </div>
+
+            <div>
+                <dt className="font-semibold text-gray-900">{item3}</dt>
+                <dd className="mt-1 text-gray-600">{textitem3}</dd>
+            </div>
+
+            <div>
+                <dt className="font-semibold text-gray-900">{item4}</dt>
+                <dd className="mt-1 text-gray-600">{textitem4}</dd>
+            </div>
+
+            <div>
+                <dt className="font-semibold text-gray-900">{item5}</dt>
+                <dd className="mt-1 text-gray-600">{textitem5}</dd>
+            </div>
+
+            <div>
+                <dt className="font-semibold text-gray-900">{item6}</dt>
+                <dd className="mt-1 text-gray-600">{textitem6}</dd>
+            </div>
+
+            <div>
+                <dt className="font-semibold text-gray-900">{item7}</dt>
+                <dd className="mt-1 text-gray-600">{textitem7}</dd>
+            </div>
+
+            <div>
+                <dt className="font-semibold text-gray-900">{item8}</dt>
+                <dd className="mt-1 text-gray-600">{textitem8}</dd>
+            </div>
+
+            <div>
+                <dt className="font-semibold text-gray-900">{item9}</dt>
+                <dd className="mt-1 text-gray-600">{textitem9}</dd>
+            </div>
+
           </dl>
         </div>
 

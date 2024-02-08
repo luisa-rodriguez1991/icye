@@ -60,11 +60,33 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         onOpenForm={setOpen}
         title={page.acf.culture_title}
         text={page.acf.culture_text}
+        
         item1={page.acf.culture_list_item_1}
+        textitem1={page.acf.culture_list_item_text_1}
+
         item2={page.acf.culture_list_item_2}
+        textitem2={page.acf.culture_list_item_text_2}
+
         item3={page.acf.culture_list_item_3}
+        textitem3={page.acf.culture_list_item_text_3}
+
         item4={page.acf.culture_list_item_4}
+        textitem4={page.acf.culture_list_item_text_4}
+
         item5={page.acf.culture_list_item_5}
+        textitem5={page.acf.culture_list_item_text_5}
+
+        item6={page.acf.culture_list_item_6}
+        textitem6={page.acf.culture_list_item_text_6}
+
+        item7={page.acf.culture_list_item_7}
+        textitem7={page.acf.culture_list_item_text_7}
+        
+        item8={page.acf.culture_list_item_8}
+        textitem8={page.acf.culture_list_item_text_8}
+
+        item9={page.acf.culture_list_item_9}
+        textitem9={page.acf.culture_list_item_text_9}
       />
       <Testimonials
         image1={page.acf.testimonials_img_user_1.sizes.large}

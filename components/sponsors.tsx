@@ -33,7 +33,7 @@ export default function Sponsors({
 
           <div className="text-center col-span-2 lg:col-span-1 ">
             <img
-              className="max-h-20 w-full object-contain mb-4 "
+              className="max-h-24 w-full object-contain mb-4 "
               src={icon1}
               alt="Statamic"
               width={150}
@@ -44,7 +44,7 @@ export default function Sponsors({
 
           <div className="text-center col-span-2 lg:col-span-1 ">
             <img
-              className="max-h-20 w-full object-contain mb-4"
+              className="max-h-24 w-full object-contain mb-4"
               src={icon2}
               alt="Statamic"
               width={150}
@@ -55,7 +55,7 @@ export default function Sponsors({
 
           <div className="text-center col-span-2 lg:col-span-1 ">
             <img
-              className="max-h-20 w-full object-contain mb-4 "
+              className="max-h-24 w-full object-contain mb-4 "
               src={icon3}
               alt="Statamic"
               width={150}
@@ -66,7 +66,7 @@ export default function Sponsors({
 
           <div className="text-center col-span-2 lg:col-span-1">
             <img
-              className="max-h-20 w-full object-contain mb-4"
+              className="max-h-24 w-full object-contain mb-4"
               src={icon4}
               alt="Statamic"
               width={150}
