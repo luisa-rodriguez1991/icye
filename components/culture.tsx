@@ -6,6 +6,7 @@ import { useState } from 'react'
 
 
 export default function Culture({
+  img,
   text,
   item1,
   item2,
@@ -55,7 +56,7 @@ export default function Culture({
           <div className="mt-12 xl:mx-auto xl:max-w-7xl xl:px-8 mb-12">
           <div className="px-6">
             <img
-              src="/img/blog4.png"
+              src={img}
               alt=""
               className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
             />

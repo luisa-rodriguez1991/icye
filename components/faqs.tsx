@@ -18,7 +18,7 @@ export default function Faqs({
   const intl = useIntl();
 
   return (
-    <div className="bg-accent-2 px-4 py-20 ">
+    <div className="bg-accent-2 px-4 py-20  ">
       <div className="mx-auto max-w-4xl text-center ">
         <span className="bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text"></span>
         <div

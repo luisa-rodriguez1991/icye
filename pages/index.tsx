@@ -61,6 +61,8 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         title={page.acf.culture_title}
         text={page.acf.culture_text}
 
+        img={page.acf.culture_img.sizes.large}
+
         item1={page.acf.culture_list_item_1}
         textitem1={page.acf.culture_list_item_text_1}
 

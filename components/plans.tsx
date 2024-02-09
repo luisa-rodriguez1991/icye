@@ -496,7 +496,7 @@ export default function Plans({
               </div>
             </div>
           </div>
-                 <div className="flex  justify-center">
+                 <div className="flex  mb-24 justify-center">
                     <a
                       className=" flex justify-center w-1/2 items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
                       href={pdf4}
