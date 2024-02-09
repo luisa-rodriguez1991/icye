@@ -20,7 +20,7 @@ export default function Contact({ page, footer, footerInfo }: any) {
       <Head>
       <title>{intl.formatMessage({id:"title_contact"})}</title>
         <link rel="canonical" href="https://www.icyecolombia.com/contact" />
-        <meta name="robots" content="noindex, nofollow" />
+        
       </Head>
       <Breadcrumb
         miVariable={intl.formatMessage({ id: "breadcrumb_contact" })}

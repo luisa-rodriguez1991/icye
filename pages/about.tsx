@@ -20,7 +20,7 @@ export default function About({ page, footer }: any) {
       <Head>
       <title>{intl.formatMessage({ id: "title_about_us" })}</title>
         <link rel="canonical" href="https://www.icyecolombia.com/about" />
-        <meta name="robots" content="noindex, nofollow" />
+        
       </Head>
       <Breadcrumb miVariable={intl.formatMessage({ id: "breadcrumb_about" })} />
       {/* <ContactContent text={page.acf.contact_text}/> */}

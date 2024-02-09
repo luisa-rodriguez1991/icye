@@ -24,7 +24,7 @@ export default function Blog({ page, footer }: any) {
           rel="canonical"
           href={`https://www.icyecolombia.com/${page.slug}`}
         />
-        <meta name="robots" content="noindex, nofollow" />
+        
       </Head>
       <Breadcrumb
         middleRoute="/blog"
@@ -51,31 +51,23 @@ export default function Blog({ page, footer }: any) {
                       aria-hidden="true"
                     />
                     <div className=" flex flex-wrap items-center gap-y-1 overflow-hidden  leading-6">
-                      <time dateTime={page.date} className="mr-8">
-                        <span className="capitalize">
-                          {new Date(page.date).toLocaleDateString("es-CO", {
-                            weekday: "long",
-                          })}
-                          ,{" "}
-                        </span>
-                        <span className="capitalize">
-                          {new Date(page.date).toLocaleDateString("es-CO", {
-                            day: "numeric",
-                          })}{" "}
-                        </span>
-                        de{" "}
-                        <span className="capitalize">
-                          {new Date(page.date).toLocaleDateString("es-CO", {
-                            month: "long",
-                          })}{" "}
-                        </span>
-                        del{" "}
-                        <span className="capitalize">
-                          {new Date(page.date).toLocaleDateString("es-CO", {
-                            year: "numeric",
-                          })}{" "}
-                        </span>
-                      </time>
+                      
+
+                        <time dateTime={page.date} className="mr-8">
+                            <span className="capitalize">
+                            {new Date(page.date).toLocaleDateString(locale, {
+                              weekday: "long",
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                              hour: "numeric",
+                              minute: "numeric",
+                              hour12: true
+                            })}
+                            </span>
+                          </time>
+        
+                     
                     </div>
                   </div>
                   <div

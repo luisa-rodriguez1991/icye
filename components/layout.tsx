@@ -12,7 +12,7 @@ export default function Layout({
   return (
     <>
       <Meta />
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-white">
         <Form openIndicator={openForm} onSetOpen={onOpenForm} />
         <Header onOpenForm={onOpenForm} />
         <main>{children}</main>

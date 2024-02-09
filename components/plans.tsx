@@ -72,7 +72,7 @@ export default function Plans({
   const intl = useIntl();
 
   return (
-    <div className="bg-white lg:py-12 sm:pb-24">
+    <div className="bg-white py-12">
       <div className="bg-white  ">
         <div className=" mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
@@ -84,13 +84,13 @@ export default function Plans({
               }}
             />
           </div>
-          <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 text-accent-2">
+          <p className="mx-auto my-20 max-w-6xl text-center text-lg leading-8 text-gray-600 text-accent-2">
             {text}
           </p>
-          <div className="isolate py-6 mx-auto mt-4 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
+          <div className=" py-6 mx-auto mt-4 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
 
-            <div className=" flex ">
-              <div className=" flex flex-col justify-around ring-1 ring-accent-1 rounded-3xl p-4 h-[790px]">
+            <div className="  ">
+              <div className=" flex flex-col justify-around ring-1 ring-accent-1 rounded-3xl p-4 lg:min-h-[790px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold ">
                   {title1}
                 </h3>
@@ -185,8 +185,8 @@ export default function Plans({
               </div>
             </div>
 
-            <div className=" flex ">
-              <div className=" flex flex-col justify-around ring-1 ring-accent-1 rounded-3xl p-4 h-[790px]">
+            <div className="  ">
+              <div className=" flex flex-col justify-around ring-1 ring-accent-1 rounded-3xl p-4 lg:min-h-[790px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title2}
                 </h3>
@@ -295,8 +295,8 @@ export default function Plans({
               </div>
             </div>
 
-            <div className=" flex ">
-              <div className="flex flex-col justify-around  ring-1 ring-accent-1 rounded-3xl p-4 h-[790px]">
+            <div className="  ">
+              <div className="flex flex-col justify-around  ring-1 ring-accent-1 rounded-3xl p-4 lg:min-h-[790px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title3}
                 </h3>
@@ -394,8 +394,8 @@ export default function Plans({
               </div>
             </div>
 
-            <div className=" flex ">
-              <div className="flex flex-col justify-around  ring-1 ring-accent-1 rounded-3xl p-4 h-[790px]">
+            <div className="  ">
+              <div className="flex flex-col justify-around  ring-1 ring-accent-1 rounded-3xl p-4 lg:min-h-[790px]">
                 <h3 className=" text-center text-accent-1 text-lg font-semibold leading-8">
                   {title4}
                 </h3>
@@ -496,18 +496,21 @@ export default function Plans({
               </div>
             </div>
           </div>
-                 <div className="flex  mb-24 justify-center">
-                    <a
-                      className=" flex justify-center w-1/2 items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
-                      href={pdf4}
-                      target="_blank"
-                      title={`Download PDF file about the project: ${title1}`}
-                    >
-                      <DocumentArrowDownIcon className=" h-4 w-4 mr-1" />
-                      {intl.formatMessage({ id: "plans_button_pdf" })}
-                    </a>
-                  </div> 
+            
         </div>
+        <div className=" mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="flex  mb-24 justify-center">
+              <a
+                className=" flex justify-center w-1/2 items-center bg-accent-2 text-accent-1  shadow-sm hover:bg-accent-1 hover:text-white border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-xs font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
+                href={pdf4}
+                target="_blank"
+                title={`Download PDF file about the project: ${title1}`}
+              >
+                <DocumentArrowDownIcon className=" h-4 w-4 mr-1" />
+                {intl.formatMessage({ id: "plans_button_pdf" })}
+              </a>
+            </div> 
+          </div> 
       </div>
     </div>
   );

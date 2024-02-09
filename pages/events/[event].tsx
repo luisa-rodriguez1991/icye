@@ -7,6 +7,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useIntl } from "react-intl";
+import Image from 'next/image'
 
 export default function Event({ page, footer }: any) {
   const [open, setOpen] = useState(false);
@@ -22,7 +23,7 @@ export default function Event({ page, footer }: any) {
           rel="canonical"
           href={`https://www.icyecolombia.com/${page.slug}`}
         />
-        <meta name="robots" content="noindex, nofollow" />
+        
       </Head>
       <Breadcrumb
         middleRoute="/events"
@@ -58,21 +59,36 @@ export default function Event({ page, footer }: any) {
                           className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
                           aria-hidden="true"
                         />
-                        {page.acf.event_date}
+                          <time dateTime={page.acf.event_date}>
+                            <span className="capitalize">
+                            {new Date(page.acf.event_date).toLocaleDateString(locale, {
+                              weekday: "long",
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                              hour: "numeric",
+                              minute: "numeric",
+                              hour12: true
+                            })}
+                            </span>
+                          </time>
+                        
                       </div>
                     </div>
                   </div>
                   <div
-                    className="lg:max-w-lg"
+                    className="lg:max-w-lg css-wordpress"
                     dangerouslySetInnerHTML={{ __html: page.content.rendered }}
                   />
                 </div>
               </div>
               <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-                <img
+                <Image
                   className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-                  src={page.jetpack_featured_media_url}
-                  alt=""
+                  src={page._embedded['wp:featuredmedia']['0'].media_details.sizes.large.source_url}
+                  alt={page._embedded['wp:featuredmedia']['0'].alt_text}
+                  width={page._embedded['wp:featuredmedia']['0'].media_details.sizes.large.width}
+                  height={page._embedded['wp:featuredmedia']['0'].media_details.sizes.large.height}
                 />
               </div>
             </div>

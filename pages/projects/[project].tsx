@@ -26,7 +26,7 @@ export default function Project({ page, listCategories, footer }: any) {
           rel="canonical"
           href={`https://www.icyecolombia.com/${page.slug}`}
         />
-        <meta name="robots" content="noindex, nofollow" />
+        
       </Head>
       <Breadcrumb
         middleRoute="/projects"

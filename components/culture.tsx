@@ -58,7 +58,7 @@ export default function Culture({
             <img
               src={img}
               alt=""
-              className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+              className="aspect-[5/2] w-full object-cover rounded-3xl"
             />
           </div>
         </div>

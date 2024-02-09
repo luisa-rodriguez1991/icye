@@ -2,6 +2,7 @@ import { CalendarIcon, MapPinIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useIntl } from "react-intl";
+import Image from 'next/image'
 
 export default function Calendar({ text, events }: any) {
   const router = useRouter();
@@ -29,15 +30,21 @@ export default function Calendar({ text, events }: any) {
       >
         <span className="absolute inset-0" />
       </Link>
-      <img
-        src={meeting.jetpack_featured_media_url}
-        alt=""
+
+      <Image
         className="h-14 w-14 flex-none rounded-full mx-2 lg:mx-4"
-      />
+        src={meeting._embedded['wp:featuredmedia']['0'].media_details.sizes.thumbnail.source_url}
+                  alt={meeting._embedded['wp:featuredmedia']['0'].alt_text}
+                  width={meeting._embedded['wp:featuredmedia']['0'].media_details.sizes.thumbnail.width}
+                  height={meeting._embedded['wp:featuredmedia']['0'].media_details.sizes.thumbnail.height}     />
+      
+     
 
       <div className="flex-auto ">
+
         <h3 className="pr-10 font-semibold text-gray-900 xl:pr-0">
           {meeting.title.rendered}
+          
         </h3>
         <dl className="mt-2 flex flex-col text-gray-800 xl:flex-row justify-between">
           <div className="flex items-start space-x-3">
@@ -49,40 +56,20 @@ export default function Calendar({ text, events }: any) {
               />
             </dt>
             <dd>
-              <time dateTime={meeting.date}>
-                <span className="capitalize">
-                  {new Date(meeting.acf.event_date).toLocaleDateString(locale, {
-                    weekday: "long",
-                  })}
-                  ,{" "}
-                </span>
-                <span className="capitalize">
-                  {new Date(meeting.acf.event_date).toLocaleDateString(locale, {
-                    day: "numeric",
-                  })}{" "}
-                </span>
-                de{" "}
-                <span className="capitalize">
-                  {new Date(meeting.acf.event_date).toLocaleDateString(locale, {
-                    month: "long",
-                  })}{" "}
-                </span>
-                del{" "}
-                <span className="capitalize">
-                  {new Date(meeting.acf.event_date).toLocaleDateString(locale, {
-                    year: "numeric",
-                  })}{" "}
-                </span>
-                <span className="font-semibold">
-                  {" "}
-                  {new Date(meeting.acf.event_date).toLocaleTimeString(locale, {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                    hour12: true,
-                  })}{" "}
-                  {meeting.acf.timezone}
-                </span>
-              </time>
+              
+            <time dateTime={meeting.acf.event_date}>
+                            <span className="capitalize">
+                            {new Date(meeting.acf.event_date).toLocaleDateString(locale, {
+                              weekday: "long",
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                              hour: "numeric",
+                              minute: "numeric",
+                              hour12: true
+                            })}
+                            </span>
+                          </time>
             </dd>
           </div>
           <div className="mt-2 flex items-end space-x-3 xl:mr-3.5 xl:mt-0  xl:pr-3.5">
@@ -101,15 +88,15 @@ export default function Calendar({ text, events }: any) {
   ));
 
   return (
-    <div className="mx-auto max-w-4xl ">
+    <div className="mx-auto max-w-7xl ">
       <h2 className="text-base font-semibold leading-6 text-gray-900"></h2>
-      <div className="mx-auto max-w-4xl text-center ">
+      <div className="mx-auto max-w-7xl text-center ">
         {/* titulo */}
         <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
           {intl.formatMessage({ id: "calendar_title" })}
         </p>
       </div>
-      <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
+      <p className="mx-auto my-20 max-w-7xl text-justify text-lg leading-8 text-gray-600 ">
         {text}
       </p>
       <div className="lg:grid lg:grid-cols-12 mx-auto max-w-4xl  pt-6 lg:pt-12 sm:pt-24 lg:px-8 ">

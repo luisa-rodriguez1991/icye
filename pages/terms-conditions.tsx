@@ -21,7 +21,7 @@ export default function Terms({ page, footer }: any) {
           rel="canonical"
           href={`https://www.icyecolombia.com/terms-conditions`}
         />
-        <meta name="robots" content="noindex, nofollow" />
+        
       </Head>
 
       <Breadcrumb miVariable={intl.formatMessage({ id: "breadcrumb_terms" })} />

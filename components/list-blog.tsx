@@ -19,27 +19,20 @@ export default function Blog({ text, posts }: any) {
 
       <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
         <time dateTime={post.date} className="mr-8">
-          <span className="capitalize">
-            {new Date(post.date).toLocaleDateString(locale, {
-              weekday: "long",
-            })}
-            ,{" "}
-          </span>
-          <span className="capitalize">
-            {new Date(post.date).toLocaleDateString(locale, {
-              day: "numeric",
-            })}{" "}
-          </span>
-          de{" "}
-          <span className="capitalize">
-            {new Date(post.date).toLocaleDateString(locale, { month: "long" })}{" "}
-          </span>
-          del{" "}
-          <span className="capitalize">
-            {new Date(post.date).toLocaleDateString(locale, {
-              year: "numeric",
-            })}{" "}
-          </span>
+          
+            <time dateTime={post.date}>
+                            <span className="capitalize">
+                            {new Date(post.date).toLocaleDateString(locale, {
+                              weekday: "long",
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                              hour: "numeric",
+                              minute: "numeric",
+                              hour12: true
+                            })}
+                            </span>
+                          </time>
         </time>
       </div>
       <h3 className="mt-3 text-lg font-semibold leading-6 text-white">

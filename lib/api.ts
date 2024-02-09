@@ -8,7 +8,7 @@ export async function getAllPost(locale:any) {
 
 
   export async function getAllEvents(locale:any) {
-    const data = await fetch(`https://editingwp.icyecolombia.com/wp-json/wp/v2/posts?categories=5&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title&orderby=id&orderasc&lang=${locale}`)
+    const data = await fetch(`https://editingwp.icyecolombia.com/wp-json/wp/v2/posts?_embed&categories=5&orderby=id&orderasc&lang=${locale}`)
     const list = await data.json();
       return list
   }
@@ -35,7 +35,7 @@ export async function getPost(id:any, locale:any) {
 
 
   export async function getDetailProject(slug:any, locale:any) {
-    const data = await fetch(`https://editingwp.icyecolombia.com/wp-json/wp/v2/posts?slug=${slug}&acf_format=standard&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,categories&lang=${locale}`)
+    const data = await fetch(`https://editingwp.icyecolombia.com/wp-json/wp/v2/posts?_embed&slug=${slug}&acf_format=standard&lang=${locale}`)
     const info = await data.json();
       return info
   }

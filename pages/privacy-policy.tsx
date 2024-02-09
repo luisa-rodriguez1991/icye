@@ -22,7 +22,7 @@ export default function Privacy({ page, footer }: any) {
           rel="canonical"
           href={`https://www.icyecolombia.com/privacy-policy`}
         />
-        <meta name="robots" content="noindex, nofollow" />
+        
       </Head>
 
       <Breadcrumb

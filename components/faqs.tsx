@@ -19,7 +19,7 @@ export default function Faqs({
 
   return (
     <div className="bg-accent-2 px-4 py-20  ">
-      <div className="mx-auto max-w-4xl text-center ">
+      <div className="mx-auto max-w-6xl text-center ">
         <span className="bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text"></span>
         <div
           className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl"
@@ -29,7 +29,7 @@ export default function Faqs({
         />
       </div>
       <div
-        className="mx-auto px-4 mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600"
+        className="mx-auto px-4 my-20 max-w-6xl text-center text-lg leading-8 text-gray-600 css-wordpress"
         dangerouslySetInnerHTML={{ __html: text }}
       />
       <div className="mx-auto max-w-7xl px-6 mt-12 lg:px-8">
