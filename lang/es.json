@@ -76,7 +76,7 @@
 
     "trust_org":"Con la confianza de las organizaciones más importantes del mundo.",
 
-    "contributors_title":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "contributors_title":"<span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'>Patrocinadores</span> y Donantes",
     "contributors_contact_us":"Contactanos",
 
     "footer_col-1-title":"Asociacion colombiana para el intercambio cultural juvenil",

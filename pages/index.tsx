@@ -60,7 +60,7 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         onOpenForm={setOpen}
         title={page.acf.culture_title}
         text={page.acf.culture_text}
-        
+
         item1={page.acf.culture_list_item_1}
         textitem1={page.acf.culture_list_item_text_1}
 
@@ -213,10 +213,10 @@ export default function Home({ posts, eventsList, page, footer }: any) {
 
       <Sponsors
         text={page.acf.sponsors_text}
-        icon1={page.acf.sponsors_Icon_1.sizes.thumbnail}
-        icon2={page.acf.sponsors_Icon_2.sizes.thumbnail}
-        icon3={page.acf.sponsors_Icon_3.sizes.thumbnail}
-        icon4={page.acf.sponsors_Icon_4.sizes.thumbnail}
+        icon1={page.acf.sponsors_Icon_1.sizes.large}
+        icon2={page.acf.sponsors_Icon_2.sizes.large}
+        icon3={page.acf.sponsors_Icon_3.sizes.large}
+        icon4={page.acf.sponsors_Icon_4.sizes.large}
         texticon1={page.acf.sponsors_icon_text_1}
         texticon2={page.acf.sponsors_icon_text_2}
         texticon3={page.acf.sponsors_icon_text_3}
@@ -226,7 +226,17 @@ export default function Home({ posts, eventsList, page, footer }: any) {
       <Contributors
         title={page.acf.contributors_title}
         text={page.acf.contributors_text}
-        img={page.acf.contributors_img.sizes.large}
+        icon1={page.acf.contributors_icon_1.sizes.large}
+        icon2={page.acf.contributors_icon_2.sizes.large}
+        // icon3={page.acf.contributors_icon_3.sizes.large}
+        // icon4={page.acf.contributors_icon_4.sizes.large}
+        icontext1={page.acf.contributors_icon_text_1}
+        icontext2={page.acf.contributors_icon_text_2}
+        icontext3={page.acf.contributors_icon_text_3}
+        icontext4={page.acf.contributors_icon_text_4}
+        
+
+        
       />
 
       <div className=" px-6 bg-white py-24">

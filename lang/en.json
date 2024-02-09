@@ -77,7 +77,7 @@
     "about_us_vision":"Our vision",
     "about_us_team":"Our Team",
 
-    "contributors_title":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "contributors_title":"<span class='bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text'>Sponsors </span> and Donors",
     "contributors_contact_us":"Contact us",
     
     "footer_col-1-title":"The Colombian Association for Youth Cultural Exchange",
