@@ -24,27 +24,120 @@ export default function Form({ openIndicator, onSetOpen }: any) {
     register,
     handleSubmit,
     watch,
-    setValue,
     formState: { errors },
   } = useForm();
   const onSubmit = (data: any) => {
     setUserData(data);
   };
 
-  console.log(watch("customerType"));
+
 
   useEffect(() => {
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(userData),
-    };
 
-    userData &&
-      fetch("https://icye-backend-6f70dbadabb9.herokuapp.com/form", requestOptions).then(
-        (response) => response.status === 200 && setConfirmation(true)
-      ); // ⬅️ 3) aquí ya tenemos la respuesta en formato objeto
-  }, [userData]);
+    const data =  {
+       "fields": [
+         {
+       "objectTypeId": "0-1",
+           "name": "email",
+           "value": `${userData?.email}`
+         },
+         {
+       "objectTypeId": "0-1",
+           "name": "firstname",
+           "value": `${userData?.firstname}`
+         }
+         ,
+         {
+       "objectTypeId": "0-1",
+           "name": "lastname",
+           "value": `${userData?.lastname}`
+         }
+ 
+         ,
+         {
+       "objectTypeId": "0-1",
+           "name": "phone",
+           "value": `${userData?.phone}`
+         }
+ 
+         ,
+         {
+       "objectTypeId": "0-1",
+           "name": "local",
+           "value": `${userData?.local}`
+         }
+
+         ,
+         {
+       "objectTypeId": "0-1",
+           "name": "country",
+           "value": `${userData?.country}`
+         }
+
+         ,
+         {
+       "objectTypeId": "0-1",
+           "name": "programm",
+           "value": `${userData?.programm}`
+         }
+ 
+         ,
+         {
+       "objectTypeId": "0-1",
+           "name": "message",
+           "value": `${userData?.message}`
+         }
+ 
+         ,
+         {
+       "objectTypeId": "0-1",
+           "name": "customertype",
+           "value": `${userData?.customerType}`
+         }
+       ],
+       "context": {
+         "pageUri": "www.icyecolombia.com",
+         "pageName": "Website ICYE"
+       }
+   
+     }
+ 
+     const postOptionHS = {
+       method: "POST",
+       headers: { "Content-Type": "application/json" },
+       body: JSON.stringify(data),
+     };
+ 
+     const requestOptions = {
+       method: "POST",
+       headers: { "Content-Type": "application/json" },
+       body: JSON.stringify(userData),
+     };
+ 
+      userData &&
+        fetch("https://icye-backend-6f70dbadabb9.herokuapp.com/form", requestOptions).then(
+          (response) => response.status === 200 && setConfirmation(true)
+        ); // ⬅️ 3) aquí ya tenemos la respuesta en formato objeto
+ 
+       userData &&
+       fetch(`https://api.hsforms.com/submissions/v3/integration/submit/25958185/8cf61496-e32f-46ec-b020-16eb6f24a955`, postOptionHS).then(
+         (response) => console.log("works" + response)
+       ); 
+ 
+   }, [userData]);
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
 
   return (
     <Transition.Root show={openIndicator} as={Fragment}>
