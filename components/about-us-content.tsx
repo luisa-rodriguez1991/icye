@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
+
+
+
+
 export default function AboutUs({
   text,
   img1,
@@ -8,16 +12,6 @@ export default function AboutUs({
   img3,
   img4,
   img5,
-  missiontext1,
-  missiontext2,
-  missiontext3,
-  dataanalytic1,
-  dataanalytic2,
-  dataanalytic3,
-  dataanalyticlabel1,
-  dataanalyticlabel2,
-  dataanalyticlabel3,
-  visiontext,
   visionsubtitle1,
   visiontext1,
   visionsubtitle2,
@@ -32,6 +26,50 @@ export default function AboutUs({
   visiontext6,
   ourteamtext,
   ourteamimg,
+  ourteamsubtitledescription1,
+  ourteamsubtitledescription2,
+  ourteamsubtitledescription3,
+  ourteamsubtitledescription4,
+  ourteamsubtitledescription5,
+  ourteamtextdescrption1,
+  ourteamtextdescrption2,
+  ourteamtextdescrption3,
+  ourteamtextdescrption4,
+  ourteamtextdescrption5,
+  teammemberimg1,
+  teammemberimg2,
+  teammemberimg3,
+  teammemberimg4,
+  teammemberimg5,
+  teammemberimg6,
+  teammemberimg7,
+  teammemberimg8,
+  teammembern1,
+  teammembern2,
+  teammembern3,
+  teammembern4,
+  teammembern5,
+  teammembern6,
+  teammembern7,
+  teammembern8,
+  teammemberp1,
+  teammemberp2,
+  teammemberp3,
+  teammemberp4,
+  teammemberp5,
+  teammemberp6,
+  teammemberp7,
+  teammemberp8,
+  teammemberd1,
+  teammemberd2,
+  teammemberd3,
+  teammemberd4,
+  teammemberd5,
+  teammemberd6,
+  teammemberd7,
+  teammemberd8,
+  
+  
 }: any) {
   const intl = useIntl();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -164,7 +202,7 @@ export default function AboutUs({
 
         {/* Our team */}
 
-        <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8 mb-32">
+        <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8 mb-12">
           <div className="mb-20">
             <div className="mx-auto max-w-4xl text-center ">
               <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
@@ -183,7 +221,146 @@ export default function AboutUs({
             />
           </div>
         </div>
+
+        {/* TEAM DESCRIPTION */}
+
+        <div className="sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8 mb-24">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-3xl font-bold tracking-tight text-accent-1 sm:text-3xl mb-16">Conoce al increíble equipo detrás de ICYE Colombia</h2>
+
+          <p className="font-semibold text-2xl text-gray-900">{ourteamsubtitledescription1}</p>
+          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12">
+          {ourteamtextdescrption1}
+          </p>
+
+          <p className="font-semibold text-2xl text-gray-900">{ourteamsubtitledescription2}</p>
+          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12">
+          {ourteamtextdescrption2}
+          </p>
+
+          <p className="font-semibold text-2xl text-gray-900">{ourteamsubtitledescription3}</p>
+          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12">
+          {ourteamtextdescrption3}
+          </p>
+
+          <p className="font-semibold text-2xl text-gray-900">{ourteamsubtitledescription4}</p>
+          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12">
+          {ourteamtextdescrption4}
+          </p>
+
+
+          <p className="font-semibold text-2xl text-gray-900">{ourteamsubtitledescription5}</p>
+          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12 css-wordpress">
+          {ourteamtextdescrption5}
+
+          </p>
+
+        </div>
+
+
+
+        {/* photo + rol */}
+        <ul
+          role="list"
+          className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2"
+
+        > 
+            <li>
+              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg1} alt="" />
+              <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern1}</h3>
+              <p className="text-base leading-7 text-gray-600">{teammemberp1}</p>
+              <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd1}</p>
+             
+            </li>
+            <li>
+              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg2} alt="" />
+              <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern2}</h3>
+              <p className="text-base leading-7 text-gray-600">{teammemberp2}</p>
+              <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd2}</p>
+             
+            </li>
+            <li>
+              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg3} alt="" />
+              <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern3}</h3>
+              <p className="text-base leading-7 text-gray-600">{teammemberp3}</p>
+              <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd3}</p>
+             
+            </li>
+            <li>
+              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg4} alt="" />
+              <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern4}</h3>
+              <p className="text-base leading-7 text-gray-600">{teammemberp4}</p>
+              <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd4}</p>
+             
+            </li>
+            <li>
+              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg5} alt="" />
+              <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern5}</h3>
+              <p className="text-base leading-7 text-gray-600">{teammemberp5}</p>
+              <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd5}</p>
+             
+            </li>
+            <li>
+              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg6} alt="" />
+              <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern6}</h3>
+              <p className="text-base leading-7 text-gray-600">{teammemberp6}</p>
+              <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd6}</p>
+             
+            </li>
+            <li>
+              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg7} alt="" />
+              <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern7}</h3>
+              <p className="text-base leading-7 text-gray-600">{teammemberp7}</p>
+              <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd7}</p>
+             
+            </li>
+            <li>
+              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg8} alt="" />
+              <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern8}</h3>
+              <p className="text-base leading-7 text-gray-600">{teammemberp8}</p>
+              <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd8}</p>
+             
+            </li>
+
+          
+        </ul>
+      </div>
+    </div>
+
+
+
       </main>
     </div>
+
+
+
+
+
+
+
+    
+    
+
+
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
