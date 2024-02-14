@@ -82,7 +82,9 @@ export default function Contributors({
             </div>
           </div>
           <div className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
-            <div className="text-center col-span-2 lg:col-span-1" >
+
+            {/* contibuidor1 */}
+            { icon1 && (<div className="text-center col-span-2 lg:col-span-1" >
               <img
                 className="max-h-24 w-full object-contain "
                 src={icon1}
@@ -91,8 +93,11 @@ export default function Contributors({
                 height={100}
               />
               <p className="mt-2">{icontext1}</p>
-            </div>
-            <div className="text-center col-span-2 lg:col-span-1">
+            </div>)}
+
+            {/* contibuidor2 */}
+
+            { icon2 && (<div className="text-center col-span-2 lg:col-span-1">
             <img
               className="max-h-24 w-full object-contain "
               src={icon2}
@@ -101,7 +106,31 @@ export default function Contributors({
               height={100}
             />
             <p className="mt-2">{icontext2}</p>
-            </div>
+            </div>)}
+
+            {/* contibuidor3 */}
+            { icon3 && (<div className="text-center col-span-2 lg:col-span-1" >
+              <img
+                className="max-h-24 w-full object-contain "
+                src={icon3}
+                alt="Tuple"
+                width={150}
+                height={100}
+              />
+              <p className="mt-2">{icontext1}</p>
+            </div>)}
+
+            {/* contibuidor4 */}
+            { icon4 && (<div className="text-center col-span-2 lg:col-span-1" >
+              <img
+                className="max-h-24 w-full object-contain "
+                src={icon4}
+                alt="Tuple"
+                width={150}
+                height={100}
+              />
+              <p className="mt-2">{icontext1}</p>
+            </div>) }
 
           </div>
         </div>

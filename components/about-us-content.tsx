@@ -261,70 +261,85 @@ export default function AboutUs({
 
 
         {/* photo + rol */}
-        <ul
+        <div
           role="list"
           className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2"
 
         > 
-            <li>
+            {/* member1 */}
+            {teammembern1 && (<div>
               <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg1} alt="" />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern1}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp1}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd1}</p>
              
-            </li>
-            <li>
+            </div>)}
+
+            {/* memeber2 */}
+            {teammembern2 && (<div>
               <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg2} alt="" />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern2}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp2}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd2}</p>
              
-            </li>
-            <li>
+            </div>)}
+
+            {/* memeber3 */}
+            {teammembern3 && (<div>
               <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg3} alt="" />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern3}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp3}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd3}</p>
              
-            </li>
-            <li>
+            </div>)}
+
+            {/* memeber4 */}
+            {teammembern4 && (<div>
               <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg4} alt="" />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern4}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp4}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd4}</p>
              
-            </li>
-            <li>
+            </div>)}
+
+            {/* member5 */}
+            {teammembern5 && (<div>
               <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg5} alt="" />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern5}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp5}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd5}</p>
              
-            </li>
-            <li>
+            </div>)}
+
+            {/* memeber6 */}
+            {teammembern6 && (<div>
               <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg6} alt="" />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern6}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp6}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd6}</p>
              
-            </li>
-            <li>
+            </div>)}
+
+            {/* memeber7 */}
+            {teammembern7 && (<div>
               <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg7} alt="" />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern7}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp7}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd7}</p>
              
-            </li>
-            <li>
+            </div>)}
+
+            {/* memeber8 */}
+            {teammembern8 && (<div>
               <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg8} alt="" />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern8}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp8}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd8}</p>
              
-            </li>
+            </div>)}
 
           
-        </ul>
+        </div>
       </div>
     </div>
 

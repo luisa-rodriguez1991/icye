@@ -96,7 +96,7 @@ export default function Calendar({ text, events }: any) {
           {intl.formatMessage({ id: "calendar_title" })}
         </p>
       </div>
-      <p className="mx-auto my-20 max-w-7xl text-justify text-lg leading-8 text-gray-600 ">
+      <p className="mx-auto my-20 max-w-7xl text-center text-lg leading-8 text-gray-600 ">
         {text}
       </p>
       <div className="lg:grid lg:grid-cols-12 mx-auto max-w-4xl  pt-6 lg:pt-12 sm:pt-24 lg:px-8 ">

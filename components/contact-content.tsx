@@ -52,6 +52,7 @@ export default function ContactContent({
                 </li>
                 {/* whatsapp */}
                 <li className="flex ">
+ 
                   <img
                     className="col-span-2  max-h-6 w-auto object-contain lg:col-span-1 text-accent-1 mr-2"
                     src="/img/whatsapp.svg"

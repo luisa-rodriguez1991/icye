@@ -17,7 +17,18 @@ export default function Form({ openIndicator, onSetOpen }: any) {
   const intl = useIntl();
   const router = useRouter();
   const { locale } = router;
-  const [userData, setUserData] = useState();
+  const [userData, setUserData] = useState({
+    email:"",
+    firstname:"",
+    lastname:"",
+    phone:"",
+    local:"",
+    country:"",
+    programm:"",
+    message:"",
+    customerType:"",
+
+  });
   const [confirmation, setConfirmation] = useState(false);
 
   const {
