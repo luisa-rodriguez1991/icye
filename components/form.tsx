@@ -125,7 +125,7 @@ export default function Form({ openIndicator, onSetOpen }: any) {
        body: JSON.stringify(userData),
      };
  
-      userData &&
+      userData.email !== "" &&
         fetch("https://icye-backend-6f70dbadabb9.herokuapp.com/form", requestOptions).then(
           (response) => response.status === 200 && setConfirmation(true)
         ); // ⬅️ 3) aquí ya tenemos la respuesta en formato objeto

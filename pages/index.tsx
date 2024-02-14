@@ -224,14 +224,14 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         texticon3={page.acf.sponsors_icon_text_3}
         texticon4={page.acf.sponsors_icon_text_4}
       />
-
+        
       <Contributors
         title={page.acf.contributors_title}
         text={page.acf.contributors_text}
-        icon1={page.acf.contributors_icon_1.sizes.large}
-        icon2={page.acf.contributors_icon_2.sizes.large}
-        icon3={page.acf.contributors_icon_3.sizes.large}
-        icon4={page.acf.contributors_icon_4.sizes.large}
+        icon1={page?.acf?.contributors_icon_1?page.acf.contributors_icon_1:""}
+        icon2={page?.acf?.contributors_icon_2?page.acf.contributors_icon_2:""}
+        icon3={page?.acf?.contributors_icon_3?.sizes?.large?page.acf.contributors_icon_3.sizes.large:""}
+        icon4={page?.acf?.contributors_icon_4?.sizes?.large?page.acf.contributors_icon_4.sizes.large:""}
         icontext1={page.acf.contributors_icon_text_1}
         icontext2={page.acf.contributors_icon_text_2}
         icontext3={page.acf.contributors_icon_text_3}
