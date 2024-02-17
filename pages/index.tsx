@@ -31,10 +31,10 @@ export default function Home({ posts, eventsList, page, footer }: any) {
 
       <Trust
         title={page.acf.trust_title}
-        item1={page.acf.trust_icon_1.sizes.thumbnail}
-        item2={page.acf.trust_icon_2.sizes.thumbnail}
-        item3={page.acf.trust_icon_3.sizes.thumbnail}
-        item4={page.acf.trust_icon_4.sizes.thumbnail}
+        item1={page.acf.trust_icon_1}
+        item2={page.acf.trust_icon_2}
+        item3={page.acf.trust_icon_3}
+        item4={page.acf.trust_icon_4}
         item1text={page.acf.trust_icon_text_1}
         item2text={page.acf.trust_icon_text_2}
         item3text={page.acf.trust_icon_text_3}
@@ -44,7 +44,7 @@ export default function Home({ posts, eventsList, page, footer }: any) {
       <Trajectory
         title={page.acf.trajectory_title}
         text={page.acf.trajectory_text}
-        image={page.acf.trajectory_image.sizes.large}
+        image={page.acf.trajectory_image}
       />
 
       <HowToParticipate
@@ -61,7 +61,7 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         title={page.acf.culture_title}
         text={page.acf.culture_text}
 
-        img={page.acf.culture_img.sizes.large}
+        img={page.acf.culture_img}
 
         item1={page.acf.culture_list_item_1}
         textitem1={page.acf.culture_list_item_text_1}
@@ -91,12 +91,12 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         textitem9={page.acf.culture_list_item_text_9}
       />
       <Testimonials
-        image1={page.acf.testimonials_img_user_1.sizes.large}
+        image1={page.acf.testimonials_img_user_1}
         text={page.acf.testimonials_text}
         message1={page.acf.testimonials_user_message_1}
         name1={page.acf.testimonials_user_name_1}
         location1={page.acf.testimonials_user_location_1}
-        image2={page.acf.testimonials_img_user_2.sizes.large}
+        image2={page.acf.testimonials_img_user_2}
         message2={page.acf.testimonials_user_message_2}
         name2={page.acf.testimonials_user_name_2}
         location2={page.acf.testimonials_user_location_2}
@@ -230,15 +230,15 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         text={page.acf.contributors_text}
         icon1={page?.acf?.contributors_icon_1?page.acf.contributors_icon_1:""}
         icon2={page?.acf?.contributors_icon_2?page.acf.contributors_icon_2:""}
-        icon3={page?.acf?.contributors_icon_3?.sizes?.large?page.acf.contributors_icon_3.sizes.large:""}
-        icon4={page?.acf?.contributors_icon_4?.sizes?.large?page.acf.contributors_icon_4.sizes.large:""}
+        icon3={page?.acf?.contributors_icon_3?page.acf.contributors_icon_3:""}
+        icon4={page?.acf?.contributors_icon_4?.sizes?.large?page.acf.contributors_icon_4:""}
         icontext1={page.acf.contributors_icon_text_1}
         icontext2={page.acf.contributors_icon_text_2}
         icontext3={page.acf.contributors_icon_text_3}
         icontext4={page.acf.contributors_icon_text_4}
         
 
-        
+        // aqui esta mi ejemplo Image
       />
 
       <div className=" px-6 bg-white py-24">

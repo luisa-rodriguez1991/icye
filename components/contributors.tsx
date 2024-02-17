@@ -93,7 +93,7 @@ export default function Contributors({
                 width={icon3.sizes["medium-width"]}
                 height={icon3.sizes["medium-width"]}
               />
-              <p className="mt-2">{icontext1}</p>
+              <p className="mt-2">{icontext3}</p>
             </div>)}
 
             {/* contibuidor4 */}
@@ -105,7 +105,7 @@ export default function Contributors({
                 width={icon4.sizes["medium-width"]}
                 height={icon4.sizes["medium-width"]}
               />
-              <p className="mt-2">{icontext1}</p>
+              <p className="mt-2">{icontext4}</p>
             </div>) }
 
           </div>

@@ -1,5 +1,6 @@
 import { useIntl } from "react-intl";
 import { useRouter } from "next/router";
+import Image from 'next/image'
 
 export default function ContactContent({
   text,
@@ -13,16 +14,20 @@ export default function ContactContent({
   const intl = useIntl();
   const { locale } = router;
 
+
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl   py-12  lg:px-8 relative">
         <div className="lg:absolute lg:top-0 lg:bottom-0 lg:left-1/2 lg:right-1 mb-8 px-6">
-          <img
+          <Image
             className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-[70%] lg:mt-16"
-            src={img}
+            src={img.sizes.large}
             alt=""
+            width={img.sizes["large-width"]}
+            height={img.sizes["large-height"]}
           />
         </div>
+
         <div className="pb-24  sm:pb-32 sm:pb-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pb-24">
           <div className="px-6 lg:px-8">
             <div className="lg:mx-auto lg:max-w-xl lg:mx-0 lg:max-w-lg">
@@ -68,6 +73,7 @@ export default function ContactContent({
                   </a>
                 </li>
               </ul>
+              
             </div>
           </div>
         </div>

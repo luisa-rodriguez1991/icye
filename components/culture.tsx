@@ -1,7 +1,6 @@
 import { useIntl } from "react-intl";
-
 import { useState } from 'react'
-
+import Image from 'next/image'
 
 
 
@@ -55,11 +54,16 @@ export default function Culture({
           </div>
           <div className="mt-12 xl:mx-auto xl:max-w-7xl xl:px-8 mb-12">
           <div className="px-6">
-            <img
-              src={img}
-              alt=""
+            <Image
               className="aspect-[5/2] w-full object-cover rounded-3xl"
+              src={img.sizes.large}
+              alt=""
+              width={img.sizes["large-width"]}
+              height={img.sizes["large-height"]}
+              
             />
+           
+
           </div>
         </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">

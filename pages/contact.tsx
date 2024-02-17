@@ -27,7 +27,7 @@ export default function Contact({ page, footer, footerInfo }: any) {
       />
       <ContactContent
        text={page.acf.contact_text}
-       img={page.acf.contact_img.sizes.large}
+       img={page.acf.contact_img}
        address={page.acf.contact_address}
        address2={page.acf.contact_address_2}
        email={page.acf.contact_email}

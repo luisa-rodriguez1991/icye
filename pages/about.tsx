@@ -27,11 +27,11 @@ export default function About({ page, footer }: any) {
 
       <AboutUs
         text={page.acf.about_us_text}
-        img1={page.acf.about_us_img_1.sizes.large}
-        img2={page.acf.about_us_img_2.sizes.large}
-        img3={page.acf.about_us_img_3.sizes.large}
-        img4={page.acf.about_us_img_4.sizes.large}
-        img5={page.acf.about_us_img_5.sizes.large}
+        img1={page.acf.about_us_img_1}
+        img2={page.acf.about_us_img_2}
+        img3={page.acf.about_us_img_3}
+        img4={page.acf.about_us_img_4}
+        img5={page.acf.about_us_img_5}
        
         visionsubtitle1={page.acf.about_us_vision_sub_title_1}
         visiontext1={page.acf.about_us_vision_text_1}
@@ -47,7 +47,7 @@ export default function About({ page, footer }: any) {
         visiontext6={page.acf.about_us_vision_text_6}
 
         ourteamtext={page.acf.about_us_our_team_text}
-        ourteamimg={page.acf.about_us_our_team_img.sizes.large}
+        ourteamimg={page.acf.about_us_our_team_img}
         ourteamsubtitle={page.acf.about_us_our_team_sub_title}
 
         ourteamsubtitledescription1={page.acf.about_us_our_team_sub_title_descrption_1}
@@ -62,14 +62,16 @@ export default function About({ page, footer }: any) {
         ourteamtextdescrption4={page.acf.about_our_team_text_descrption_4}
         ourteamtextdescrption5={page.acf.about_our_team_text_descrption_5}
 
-         teammemberimg1={page.acf.about_us_team_member_img_1.sizes.large}
-         teammemberimg2={page.acf.about_us_team_member_img_2.sizes.large}
-         teammemberimg3={page.acf.about_us_team_member_img_3.sizes.large}
-         teammemberimg4={page.acf.about_us_team_member_img_4.sizes.large}
-         teammemberimg5={page.acf.about_us_team_member_img_5.sizes.large}
-         teammemberimg6={page.acf.about_us_team_member_img_6.sizes.large}
-         teammemberimg7={page.acf.about_us_team_member_img_7.sizes.large}
-         teammemberimg8={page.acf.about_us_team_member_img_8.sizes.large}
+         teammemberimg1={page?.acf?.about_us_team_member_img_1?page.acf.about_us_team_member_img_1:""}
+         teammemberimg2={page?.acf?.about_us_team_member_img_2?page.acf.about_us_team_member_img_2:""}
+         teammemberimg3={page?.acf?.about_us_team_member_img_3?page.acf.about_us_team_member_img_3:""}
+         teammemberimg4={page?.acf?.about_us_team_member_img_4?page.acf.about_us_team_member_img_4:""}
+         teammemberimg5={page?.acf?.about_us_team_member_img_5?page.acf.about_us_team_member_img_5:""}
+         teammemberimg6={page?.acf?.about_us_team_member_img_6?page.acf.about_us_team_member_img_6:""}
+         teammemberimg7={page?.acf?.about_us_team_member_img_7?page.acf.about_us_team_member_img_7:""}
+         teammemberimg8={page?.acf?.about_us_team_member_img_8?page.acf.about_us_team_member_img_8:""}
+
+        //  icon4={page?.acf?.contributors_icon_4?.sizes?.large?page.acf.contributors_icon_4:""}
 
         teammembern1={page.acf.about_us_team_member_name_1}
         teammembern2={page.acf.about_us_team_member_name_2}

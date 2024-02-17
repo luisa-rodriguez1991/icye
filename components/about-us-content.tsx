@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useIntl } from "react-intl";
-
+import Image from 'next/image'
 
 
 
@@ -97,48 +97,67 @@ export default function AboutUs({
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">
-                      <img
-                        src={img1}
-                        alt=""
+                      <Image
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        src={img1.sizes.medium_large}
+                        alt=""
+                        width={img1.sizes["medium_large-width"]}
+                        height={img1.sizes["medium_large-height"]}
+                        
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
+                      
+
                   </div>
                   <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                     <div className="relative">
-                      <img
-                        src={img2}
-                        alt=""
+                      <Image
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        src={img2.sizes.medium_large}
+                        alt=""
+                        width={img2.sizes["medium_large-width"]}
+                        height={img2.sizes["medium_large-height"]}
+                       
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
                     <div className="relative">
-                      <img
-                        src={img3}
-                        alt=""
+                      <Image
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        src={img3.sizes.medium_large}
+                        alt=""
+                        width={img3.sizes["medium_large-width"]}
+                        height={img3.sizes["medium_large-height"]}
+                        
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
                   </div>
                   <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                     <div className="relative">
-                      <img
-                        src={img4}
-                        alt=""
+                      <Image
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        src={img4.sizes.medium_large}
+                        alt=""
+                        width={img4.sizes["medium_large-width"]}
+                        height={img4.sizes["medium_large-height"]}
+                        
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
                     <div className="relative">
-                      <img
-                        src={img5}
-                        alt=""
+                      <Image
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        src={img5.sizes.medium_large}
+                        alt=""
+                        width={img5.sizes["medium_large-width"]}
+                        height={img5.sizes["medium_large-height"]}
+                        
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+
+                     
                     </div>
                   </div>
                 </div>
@@ -214,12 +233,16 @@ export default function AboutUs({
             </p>
           </div>
           <div className="px-6 ">
-            <img
-              src={ourteamimg}
-              alt=""
+            <Image
               className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+              src={ourteamimg.sizes.large}
+              alt=""
+              width={ourteamimg.sizes["large-width"]}
+              height={ourteamimg.sizes["large-height"]}
+              
             />
           </div>
+                      
         </div>
 
         {/* TEAM DESCRIPTION */}
@@ -257,9 +280,6 @@ export default function AboutUs({
           </p>
 
         </div>
-
-
-
         {/* photo + rol */}
         <div
           role="list"
@@ -268,16 +288,29 @@ export default function AboutUs({
         > 
             {/* member1 */}
             {teammembern1 && (<div>
-              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg1} alt="" />
+              <Image className="aspect-[2/2] w-full rounded-2xl object-cover"
+               src={teammemberimg1.sizes.medium_large} 
+               alt=""
+               width={teammemberimg1.sizes["medium_large-width"]}
+               height={teammemberimg1.sizes["medium_large-height"]} />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern1}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp1}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd1}</p>
              
-            </div>)}
+            </div>)} 
+
+            {/* url:{JSON.stringify(teammemberimg1.sizes.medium_large)}<br></br> */}
+           {/* ancho:{JSON.stringify(icon1.sizes["thumbnail-width"])}<br></br>
+            alto:{JSON.stringify(icon1.sizes["thumbnail-height"])}<br></br> */}
 
             {/* memeber2 */}
             {teammembern2 && (<div>
-              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg2} alt="" />
+              <Image className="aspect-[2/2] w-full rounded-2xl object-cover" 
+              src={teammemberimg2.sizes.medium_large} 
+              alt="" 
+              width={teammemberimg2.sizes["medium_large-width"]}
+              height={teammemberimg2.sizes["medium_large-height"]}
+              />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern2}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp2}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd2}</p>
@@ -286,7 +319,13 @@ export default function AboutUs({
 
             {/* memeber3 */}
             {teammembern3 && (<div>
-              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg3} alt="" />
+              <Image className="aspect-[2/2] w-full rounded-2xl object-cover" 
+              src={teammemberimg3.sizes.medium_large} 
+              alt="" 
+              width={teammemberimg3.sizes["medium_large-width"]}
+              height={teammemberimg3.sizes["medium_large-height"]}
+              
+              />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern3}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp3}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd3}</p>
@@ -295,7 +334,12 @@ export default function AboutUs({
 
             {/* memeber4 */}
             {teammembern4 && (<div>
-              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg4} alt="" />
+              <Image className="aspect-[2/2] w-full rounded-2xl object-cover" 
+              src={teammemberimg4.sizes.medium_large} 
+              alt=""
+              width={teammemberimg4.sizes["medium_large-width"]}
+              height={teammemberimg4.sizes["medium_large-height"]}
+              />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern4}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp4}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd4}</p>
@@ -304,7 +348,12 @@ export default function AboutUs({
 
             {/* member5 */}
             {teammembern5 && (<div>
-              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg5} alt="" />
+              <Image className="aspect-[2/2] w-full rounded-2xl object-cover" 
+              src={teammemberimg5.sizes.medium_large} 
+              alt=""
+              width={teammemberimg5.sizes["medium_large-width"]}
+              height={teammemberimg5.sizes["medium_large-height"]}
+               />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern5}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp5}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd5}</p>
@@ -313,7 +362,12 @@ export default function AboutUs({
 
             {/* memeber6 */}
             {teammembern6 && (<div>
-              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg6} alt="" />
+              <Image className="aspect-[2/2] w-full rounded-2xl object-cover" 
+              src={teammemberimg6.sizes.medium_large} 
+              alt=""
+              width={teammemberimg6.sizes["medium_large-width"]}
+              height={teammemberimg6.sizes["medium_large-height"]}
+               />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern6}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp6}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd6}</p>
@@ -322,7 +376,12 @@ export default function AboutUs({
 
             {/* memeber7 */}
             {teammembern7 && (<div>
-              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg7} alt="" />
+              <Image className="aspect-[2/2] w-full rounded-2xl object-cover" 
+              src={teammemberimg7.sizes.medium_large} 
+              alt=""
+              width={teammemberimg7.sizes["medium_large-width"]}
+              height={teammemberimg7.sizes["medium_large-height"]}
+               />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern7}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp7}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd7}</p>
@@ -331,7 +390,12 @@ export default function AboutUs({
 
             {/* memeber8 */}
             {teammembern8 && (<div>
-              <img className="aspect-[2/2] w-full rounded-2xl object-cover" src={teammemberimg8} alt="" />
+              <Image className="aspect-[2/2] w-full rounded-2xl object-cover" 
+              src={teammemberimg8.sizes.medium_large}
+              alt=""
+              width={teammemberimg8.sizes["medium_large-width"]}
+              height={teammemberimg8.sizes["medium_large-height"]}
+               />
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{teammembern8}</h3>
               <p className="text-base leading-7 text-gray-600">{teammemberp8}</p>
               <p className="mt-4 text-base leading-7 text-gray-600">{teammemberd8}</p>

@@ -38,11 +38,12 @@ export default function Trajectory({ text, image }: any) {
         <div className=" flex basis-12/12 lg:basis-6/12 pt-12 justify-center">
           <Image
             className="max-w-[100%]"
-            src={image}
+            src={image.sizes.medium_large}
             alt=""
-            width={600}
-            height={600}
+            width={image.sizes["medium_large-width"]}
+            height={image.sizes["medium_large-height"]}
           />
+          
         </div>
       </div>
     </div>

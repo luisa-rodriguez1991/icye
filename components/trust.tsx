@@ -1,4 +1,5 @@
 import { useIntl } from "react-intl";
+import Image from 'next/image'
 
 export default function Trust({
   item1,
@@ -20,48 +21,50 @@ export default function Trust({
         </h2>
         <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10  lg:mx-0 lg:max-w-none lg:grid-cols-4 lg:mt-12 ">
           <div className=" text-center col-span-2 lg:col-span-1 ">
-            <img
+            <Image
               className="max-h-12 w-full object-contain mb-4"
-              src={item1}
-              alt="Reform"
-              width={150}
-              height={100}
+              src={item1.sizes.medium}
+              alt="Statamic"
+              width={item1.sizes["medium-width"]}
+              height={item1.sizes["medium-height"]}
             />
             <p>{item1text}</p>
           </div>
 
           <div className=" text-center col-span-2 lg:col-span-1">
-            <img
+            <Image
               className=" max-h-12 w-full object-contain mb-4"
-              src={item2}
-              alt="Tuple"
-              width={150}
-              height={100}
+              src={item2.sizes.medium}
+              alt="Statamic"
+              width={item2.sizes["medium-width"]}
+              height={item2.sizes["medium-height"]}
             />
             <p>{item2text}</p>
           </div>
 
           <div className=" text-center col-span-2 lg:col-span-1">
-            <img
+            <Image
               className=" max-h-12 w-full object-contain mb-4"
-              src={item3}
-              alt="SavvyCal"
-              width={150}
-              height={100}
+              src={item3.sizes.medium}
+              alt="Statamic"
+              width={item3.sizes["medium-width"]}
+              height={item3.sizes["medium-height"]}
             />
             <p>{item3text}</p>
           </div>
 
           <div className=" text-center col-span-2 lg:col-span-1">
-            <img
+            <Image
               className=" max-h-12 w-full object-contain mb-4"
-              src={item4}
+              src={item4.sizes.medium}
               alt="Statamic"
-              width={150}
-              height={100}
+              width={item4.sizes["medium-width"]}
+              height={item4.sizes["medium-height"]}
             />
             <p>{item4text}</p>
           </div>
+          
+
         </div>
       </div>
     </div>
