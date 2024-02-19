@@ -1,4 +1,5 @@
 import { useIntl } from "react-intl";
+import Image from 'next/image'
 
 export default function Sponsors({
   text,
@@ -32,49 +33,51 @@ export default function Sponsors({
         <div className="mx-auto mt-20 mb-8 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10  lg:mx-0 lg:max-w-none lg:grid-cols-4">
 
           <div className="text-center col-span-2 lg:col-span-1 ">
-            <img
+            <Image
               className="max-h-24 w-full object-contain mb-4 "
-              src={icon1}
+              src={icon1.sizes.medium}
               alt="Statamic"
-              width={150}
-              height={100}
+              width={icon1.sizes["medium-width"]}
+              height={icon1.sizes["medium-height"]}
             />
             <p>{texticon1}</p>
           </div>
 
           <div className="text-center col-span-2 lg:col-span-1 ">
-            <img
+            <Image
               className="max-h-24 w-full object-contain mb-4"
-              src={icon2}
+              src={icon2.sizes.medium}
               alt="Statamic"
-              width={150}
-              height={100}
+              width={icon2.sizes["medium-width"]}
+              height={icon2.sizes["medium-height"]}
             />
             <p>{texticon2}</p>
           </div>
 
           <div className="text-center col-span-2 lg:col-span-1 ">
-            <img
+            <Image
               className="max-h-24 w-full object-contain mb-4 "
-              src={icon3}
+              src={icon3.sizes.medium}
               alt="Statamic"
-              width={150}
-              height={100}
+              width={icon3.sizes["medium-width"]}
+              height={icon3.sizes["medium-height"]}
             />
             <p>{texticon3}</p>
           </div>
 
           <div className="text-center col-span-2 lg:col-span-1">
-            <img
+            <Image
               className="max-h-24 w-full object-contain mb-4"
-              src={icon4}
+              src={icon4.sizes.medium}
               alt="Statamic"
-              width={150}
-              height={100}
+              width={icon4.sizes["medium-width"]}
+              height={icon4.sizes["medium-height"]}
             />
             <p>{texticon4}</p>
           </div>
+        
         </div>
+        
       </div>
     </div>
   );

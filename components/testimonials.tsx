@@ -199,10 +199,12 @@ export default function Testimonials({
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-                    <img
+                    <Image
                       className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
-                      src={image3}
+                      src={image3.sizes.medium_large}
                       alt=""
+                      width={image3.sizes["medium_large-width"]}
+                      height={image3.sizes["medium_large-height"]}
                     />
                   </div>
                 </div>
@@ -248,10 +250,12 @@ export default function Testimonials({
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-                    <img
+                    <Image
                       className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
-                      src={image4}
+                      src={image4.sizes.medium_large}
                       alt=""
+                      width={image4.sizes["medium_large-width"]}
+                      height={image4.sizes["medium_large-height"]}
                     />
                   </div>
                 </div>
@@ -297,10 +301,12 @@ export default function Testimonials({
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-                    <img
+                    <Image
                       className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
-                      src={image5}
+                      src={image5.sizes.medium_large}
                       alt=""
+                      width={image5.sizes["medium_large-width"]}
+                      height={image5.sizes["medium_large-height"]}
                     />
                   </div>
                 </div>
@@ -346,10 +352,12 @@ export default function Testimonials({
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-                    <img
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
-                      src={image6}
-                      alt=""
+                    <Image
+                     className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
+                     src={image6.sizes.medium_large}
+                     alt=""
+                     width={image6.sizes["medium_large-width"]}
+                     height={image6.sizes["medium_large-height"]}
                     />
                   </div>
                 </div>
@@ -395,10 +403,12 @@ export default function Testimonials({
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-                    <img
+                    <Image
                       className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
-                      src={image7}
+                      src={image7.sizes.medium_large}
                       alt=""
+                      width={image7.sizes["medium_large-width"]}
+                      height={image7.sizes["medium_large-height"]}
                     />
                   </div>
                 </div>
@@ -446,8 +456,10 @@ export default function Testimonials({
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img
                       className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
-                      src={image8}
+                      src={image8.sizes.medium_large}
                       alt=""
+                      width={image8.sizes["medium_large-width"]}
+                      height={image8.sizes["medium_large-height"]}
                     />
                   </div>
                 </div>
@@ -493,10 +505,12 @@ export default function Testimonials({
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-                    <img
+                    <Image
                       className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
-                      src={image9}
+                      src={image9.sizes.medium_large}
                       alt=""
+                      width={image9.sizes["medium_large-width"]}
+                      height={image9.sizes["medium_large-height"]}
                     />
                   </div>
                 </div>
@@ -542,10 +556,12 @@ export default function Testimonials({
               <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-                    <img
+                    <Image
                       className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
-                      src={image10}
+                      src={image10.sizes.medium_large}
                       alt=""
+                      width={image10.sizes["medium_large-width"]}
+                      height={image10.sizes["medium_large-height"]}
                     />
                   </div>
                 </div>

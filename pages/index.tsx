@@ -215,10 +215,10 @@ export default function Home({ posts, eventsList, page, footer }: any) {
 
       <Sponsors
         text={page.acf.sponsors_text}
-        icon1={page.acf.sponsors_Icon_1.sizes.large}
-        icon2={page.acf.sponsors_Icon_2.sizes.large}
-        icon3={page.acf.sponsors_Icon_3.sizes.large}
-        icon4={page.acf.sponsors_Icon_4.sizes.large}
+        icon1={page.acf.sponsors_Icon_1}
+        icon2={page.acf.sponsors_Icon_2}
+        icon3={page.acf.sponsors_Icon_3}
+        icon4={page.acf.sponsors_Icon_4}
         texticon1={page.acf.sponsors_icon_text_1}
         texticon2={page.acf.sponsors_icon_text_2}
         texticon3={page.acf.sponsors_icon_text_3}
