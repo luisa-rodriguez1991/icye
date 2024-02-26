@@ -20,7 +20,7 @@ export default function ContactContent({
       <div className="mx-auto max-w-7xl   py-12  lg:px-8 relative">
         <div className="lg:absolute lg:top-0 lg:bottom-0 lg:left-1/2 lg:right-1 mb-8 px-6">
           <Image
-            className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-[70%] lg:mt-16"
+            className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-[70%] lg:mt-16 rounded-xl "
             src={img.sizes.large}
             alt=""
             width={img.sizes["large-width"]}
