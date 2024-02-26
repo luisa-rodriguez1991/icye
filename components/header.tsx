@@ -184,7 +184,7 @@ export default function Header({ onOpenForm }: any) {
                       <Link
                         href="#"
                         locale="es"
-                        className="flex font-semibold  text-acent-1"
+                        className="flex font-semibold  text-accent-1"
                       >
                         Español
                       </Link>
@@ -192,7 +192,7 @@ export default function Header({ onOpenForm }: any) {
                       <Link
                         locale="en"
                         href="#"
-                        className="flex font-semibold text-acent-1"
+                        className="flex font-semibold text-accent-1"
                       >
                         English
                       </Link>
