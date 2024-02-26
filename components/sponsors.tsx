@@ -40,7 +40,7 @@ export default function Sponsors({
               width={icon1.sizes["medium-width"]}
               height={icon1.sizes["medium-height"]}
             />
-            <p>{texticon1}</p>
+            <p className="text-black">{texticon1}</p>
           </div>
 
           <div className="text-center col-span-2 lg:col-span-1 ">
@@ -51,7 +51,7 @@ export default function Sponsors({
               width={icon2.sizes["medium-width"]}
               height={icon2.sizes["medium-height"]}
             />
-            <p>{texticon2}</p>
+            <p className="text-black">{texticon2}</p>
           </div>
 
           <div className="text-center col-span-2 lg:col-span-1 ">
@@ -62,7 +62,7 @@ export default function Sponsors({
               width={icon3.sizes["medium-width"]}
               height={icon3.sizes["medium-height"]}
             />
-            <p>{texticon3}</p>
+            <p className="text-black">{texticon3}</p>
           </div>
 
           <div className="text-center col-span-2 lg:col-span-1">
@@ -73,7 +73,7 @@ export default function Sponsors({
               width={icon4.sizes["medium-width"]}
               height={icon4.sizes["medium-height"]}
             />
-            <p>{texticon4}</p>
+            <p className="text-black">{texticon4}</p>
           </div>
         
         </div>

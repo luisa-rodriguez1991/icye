@@ -34,7 +34,7 @@ export default function Blog({ page, footer }: any) {
       <div className="bg-white pt-6">
         <div className="mx-auto max-w-7xl px-6 pb-8 py-8  lg:px-8 relative">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-            <h2 className="text-2xl font-bold text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight ">
+            <h2 className="text-2xl font-bold text-gray-900  sm:text-3xl sm:tracking-tight ">
               {page.title.rendered}
             </h2>
           </div>
@@ -71,7 +71,7 @@ export default function Blog({ page, footer }: any) {
                     </div>
                   </div>
                   <div
-                    className="text-justify css-wordpress"
+                    className="text-justify css-wordpress text-black"
                     dangerouslySetInnerHTML={{ __html: page.content.rendered }}
                   />
                 </div>

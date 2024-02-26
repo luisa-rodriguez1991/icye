@@ -62,7 +62,7 @@ export default function Contributors({
                 width={icon1.sizes["medium-width"]}
                 height={icon1.sizes["medium-height"]}
               />
-              <p className="mt-2">{icontext1}</p>
+              <p className="mt-2 text-black">{icontext1}</p>
             </div>)}  
             
             {/* url:{JSON.stringify(icon1.sizes.thumbnail)}<br></br>
@@ -79,7 +79,7 @@ export default function Contributors({
               width={icon2.sizes["medium-width"]}
               height={icon2.sizes["medium-width"]}
             />
-            <p className="mt-2">{icontext2}</p>
+            <p className="mt-2 text-black">{icontext2}</p>
             </div>)}
 
           
@@ -93,7 +93,7 @@ export default function Contributors({
                 width={icon3.sizes["medium-width"]}
                 height={icon3.sizes["medium-width"]}
               />
-              <p className="mt-2">{icontext3}</p>
+              <p className="mt-2 text-black">{icontext3}</p>
             </div>)}
 
             {/* contibuidor4 */}
@@ -105,7 +105,7 @@ export default function Contributors({
                 width={icon4.sizes["medium-width"]}
                 height={icon4.sizes["medium-width"]}
               />
-              <p className="mt-2">{icontext4}</p>
+              <p className="mt-2 text-black">{icontext4}</p>
             </div>) }
 
           </div>

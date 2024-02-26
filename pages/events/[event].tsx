@@ -40,7 +40,7 @@ export default function Event({ page, footer }: any) {
               <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 ">
                 <div className="lg:pr-4">
                   <div className="min-w-0 flex-1 ">
-                    <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+                    <h2 className="text-2xl font-bold leading-7 text-gray-900  sm:text-3xl sm:tracking-tight">
                       {page.title.rendered}
                       
                     </h2>
@@ -77,7 +77,7 @@ export default function Event({ page, footer }: any) {
                     </div>
                   </div>
                   <div
-                    className="lg:max-w-lg css-wordpress"
+                    className="lg:max-w-lg css-wordpress text-black"
                     dangerouslySetInnerHTML={{ __html: page.content.rendered }}
                   />
                 </div>
