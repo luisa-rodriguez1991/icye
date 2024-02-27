@@ -150,7 +150,6 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         item9={page.acf.program_list_1_item_9}
         item10={page.acf.program_list_1_item_10}
         item11={page.acf.program_list_1_item_11}
-        pdf1={page.acf.program_pdf_1}
         title2={page.acf.Programs_title_2}
         price2={page.acf.program_price_2}
         cyantext2={page.acf.program_cyan_text_2}
@@ -165,7 +164,6 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         list2item9={page.acf.program_list_2_item_9}
         list2item10={page.acf.program_list_2_item_10}
         list2item11={page.acf.program_list_2_item_11}
-        pdf2={page.acf.program_pdf_2}
         title3={page.acf.Programs_title_3}
         price3={page.acf.program_price_3}
         cyantext3={page.acf.program_cyan_text_3}
@@ -180,7 +178,6 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         list3item9={page.acf.program_list_3_item_9}
         list3item10={page.acf.program_list_3_item_10}
         list3item11={page.acf.program_list_3_item_11}
-        pdf3={page.acf.program_pdf_3}
         title4={page.acf.Programs_title_4}
         price4={page.acf.program_price_4}
         cyantext4={page.acf.program_cyan_text_4}

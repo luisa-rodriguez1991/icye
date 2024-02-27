@@ -28,7 +28,7 @@ export default function Trust({
               width={item1.sizes["medium-width"]}
               height={item1.sizes["medium-height"]}
             />
-            <p>{item1text}</p>
+            <p className="text-black">{item1text}</p>
           </div>
 
           <div className=" text-center col-span-2 lg:col-span-1">
@@ -39,7 +39,7 @@ export default function Trust({
               width={item2.sizes["medium-width"]}
               height={item2.sizes["medium-height"]}
             />
-            <p>{item2text}</p>
+            <p className="text-black">{item2text}</p>
           </div>
 
           <div className=" text-center col-span-2 lg:col-span-1">
@@ -50,7 +50,7 @@ export default function Trust({
               width={item3.sizes["medium-width"]}
               height={item3.sizes["medium-height"]}
             />
-            <p>{item3text}</p>
+            <p className="text-black">{item3text}</p>
           </div>
 
           <div className=" text-center col-span-2 lg:col-span-1">
@@ -61,7 +61,7 @@ export default function Trust({
               width={item4.sizes["medium-width"]}
               height={item4.sizes["medium-height"]}
             />
-            <p>{item4text}</p>
+            <p className="text-black">{item4text}</p>
           </div>
           
 

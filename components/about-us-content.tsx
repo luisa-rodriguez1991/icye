@@ -250,8 +250,8 @@ export default function AboutUs({
 
         <div className="sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8 mb-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-accent-1 sm:text-3xl mb-16">Conoce al increíble equipo detrás de ICYE Colombia</h2>
+        <div className="mx-auto max-w-2xl lg:mx-0 pr-2">
+          <h2 className="text-3xl font-bold tracking-tight text-accent-1 sm:text-3xl mb-16">{intl.formatMessage({ id: "about_us_team_sub" })}</h2>
 
           <p className="font-semibold text-2xl text-gray-900">{ourteamsubtitledescription1}</p>
           <p className="mt-6 text-lg leading-8 text-gray-600 mb-12">

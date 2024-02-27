@@ -19,7 +19,7 @@ export default function Index({ events, footer,page }: any) {
         miVariable={intl.formatMessage({ id: "breadcrumb_events" })}
       />
 
-      <div className=" pt-12 px-6 bg-white min-h-screen">
+      <div className=" pt-12 pb-12 px-6 bg-white min-h-screen">
         <Calendar events={events} showAll={true} />
       </div>
     </Layout>
