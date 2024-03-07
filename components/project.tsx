@@ -11,7 +11,7 @@ export default function Project({ item }: any) {
 
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-6 pb-16 sm:px-6 sm:py-10 lg:max-w-7xl">
+      <div className="mx-auto max-w-2xl  pb-16 sm:px-6 sm:py-10 lg:max-w-7xl">
         <div className="relative overflow-hidden rounded-lg lg:h-96">
           <div className="absolute inset-0">
             <img
