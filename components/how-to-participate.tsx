@@ -32,11 +32,11 @@ export default function HowToParticipate({
 
   return (
     <div className="bg-accent-2 ">
-      <div className="mx-auto max-w-7xl px-4 lg:py-12 sm:px-6 lg:px-8">
-        <div className="rounded-2xl bg-accent-2 px-6 py-6 lg:py-16 ">
+      <div className="mx-auto max-w-7xl px-6 lg:py-12 ">
+        <div className=" bg-accent-2 py-6  ">
           <div className="mx-auto max-w-xl lg:max-w-none">
             <div className="text-center">
-              <div className="mx-auto max-w-6xl text-center">
+              <div className="mx-auto max-w-7xl text-center">
                 <div className="lg:mb-24 mb-16 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
                   <span className="bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text"></span>
                   <div

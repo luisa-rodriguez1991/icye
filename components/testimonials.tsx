@@ -95,7 +95,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <Image
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-top min-h-[150px] lg:min-h-auto "
                       src={image1.sizes.medium_large}
                       alt=""
                       width={image1.sizes["medium_large-width"]}
@@ -149,7 +149,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <Image
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-top min-h-[150px] lg:min-h-auto "
                       src={image2.sizes.medium_large}
                       alt=""
                       width={image2.sizes["medium_large-width"]}
@@ -200,7 +200,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <Image
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-top min-h-[150px] lg:min-h-auto"
                       src={image3.sizes.medium_large}
                       alt=""
                       width={image3.sizes["medium_large-width"]}
@@ -251,7 +251,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <Image
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-top min-h-[150px] lg:min-h-auto"
                       src={image4.sizes.medium_large}
                       alt=""
                       width={image4.sizes["medium_large-width"]}
@@ -302,7 +302,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <Image
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-top min-h-[150px] lg:min-h-auto"
                       src={image5.sizes.medium_large}
                       alt=""
                       width={image5.sizes["medium_large-width"]}
@@ -353,7 +353,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <Image
-                     className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
+                     className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-top min-h-[150px] lg:min-h-auto"
                      src={image6.sizes.medium_large}
                      alt=""
                      width={image6.sizes["medium_large-width"]}
@@ -404,7 +404,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <Image
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-top min-h-[150px] lg:min-h-auto "
                       src={image7.sizes.medium_large}
                       alt=""
                       width={image7.sizes["medium_large-width"]}
@@ -455,7 +455,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-top min-h-[150px] lg:min-h-auto"
                       src={image8.sizes.medium_large}
                       alt=""
                       width={image8.sizes["medium_large-width"]}
@@ -506,7 +506,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <Image
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-top min-h-[150px] lg:min-h-auto"
                       src={image9.sizes.medium_large}
                       alt=""
                       width={image9.sizes["medium_large-width"]}
@@ -557,7 +557,7 @@ export default function Testimonials({
                 <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                   <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <Image
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover "
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-top min-h-[150px] lg:min-h-auto"
                       src={image10.sizes.medium_large}
                       alt=""
                       width={image10.sizes["medium_large-width"]}

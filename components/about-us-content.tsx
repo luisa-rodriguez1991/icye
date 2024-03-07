@@ -95,10 +95,10 @@ export default function AboutUs({
                   </p>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-                  <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                  <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80 hidden lg:block">
                     <div className="relative">
                       <Image
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg hidden sm:block leg:hidden"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg "
                         src={img1.sizes.medium_large}
                         alt=""
                         width={img1.sizes["medium_large-width"]}
@@ -110,10 +110,10 @@ export default function AboutUs({
                       
 
                   </div>
-                  <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                  <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36 hidden lg:block">
                     <div className="relative">
                       <Image
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg hidden sm:block leg:hidden"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg "
                         src={img2.sizes.medium_large}
                         alt=""
                         width={img2.sizes["medium_large-width"]}
@@ -124,7 +124,7 @@ export default function AboutUs({
                     </div>
                     <div className="relative">
                       <Image
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg hidden sm:block leg:hidden"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg "
                         src={img3.sizes.medium_large}
                         alt=""
                         width={img3.sizes["medium_large-width"]}
@@ -134,7 +134,7 @@ export default function AboutUs({
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
                   </div>
-                  <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+                  <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0 hidden lg:block">
                     <div className="relative ">
                       <Image
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
@@ -159,8 +159,36 @@ export default function AboutUs({
 
                      
                     </div>
+                    
                   </div>
+                  
                 </div>
+                <div className="block lg:hidden flex flex-col sm:flex-row gap-6 sm:mt-44 pt-10 items-center">
+                  <div className="relative max-w-[300px] ">
+                      <Image
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        src={img4.sizes.medium_large}
+                        alt=""
+                        width={img4.sizes["medium_large-width"]}
+                        height={img4.sizes["medium_large-height"]}
+                        
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10 items-center" />
+                    </div>
+                    <div className="relative max-w-[300px]">
+                      <Image
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        src={img5.sizes.medium_large}
+                        alt=""
+                        width={img5.sizes["medium_large-width"]}
+                        height={img5.sizes["medium_large-height"]}
+                        
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+
+                     
+                    </div>
+                    </div>
               </div>
             </div>
           </div>

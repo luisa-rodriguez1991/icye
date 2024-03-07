@@ -33,7 +33,7 @@ export default function Culture({
     <div className="bg-white">
      
 
-     <div className="relative isolate overflow-hidden bg-white px-5 pt-12 pb-24  lg:overflow-visible lg:px-0">
+     <div className="relative isolate overflow-hidden bg-white  pt-12 pb-24  lg:overflow-visible lg:px-0">
        
   
         {/* Values section */}

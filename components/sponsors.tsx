@@ -32,7 +32,7 @@ export default function Sponsors({
           {text} 
         </p>
 
-        <div className="mx-auto mt-20 mb-8 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10  lg:mx-0 lg:max-w-none lg:grid-cols-4">
+        <div className="mx-auto mt-20 mb-8 grid  grid-cols-4 items-center gap-x-12 gap-y-10  lg:mx-0 lg:max-w-none lg:grid-cols-4">
 
           <div className="text-center col-span-2 lg:col-span-1 ">
             <Image
