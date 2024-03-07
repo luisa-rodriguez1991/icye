@@ -92,11 +92,11 @@ export default function Calendar({ text, events }: any) {
       <h2 className="text-base font-semibold leading-6 text-gray-900"></h2>
       <div className="mx-auto max-w-7xl text-center ">
         {/* titulo */}
-        <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
+        <p className="mt-2 text-lg font-bold tracking-tight text-accent-1 sm:text-5xl">
           {intl.formatMessage({ id: "calendar_title" })}
         </p>
       </div>
-      <p className="mx-auto my-20 max-w-7xl text-center text-lg leading-8 text-gray-600 ">
+      <p className="mx-auto my-20 max-w-6xl text-center text-lg leading-8 text-gray-700 ">
         {text}
       </p>
       <div className="lg:grid lg:grid-cols-12 mx-auto max-w-4xl  pt-6 lg:pt-12 sm:pt-24 lg:px-8 ">

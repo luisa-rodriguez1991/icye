@@ -14,6 +14,8 @@ export default function Sponsors({
 }: any) {
   const intl = useIntl();
 
+  // Alaid organizations
+
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -26,8 +28,8 @@ export default function Sponsors({
             }}
           />
         </div>
-        <p className="mx-auto my-20 max-w-7xl text-center text-lg leading-8 text-gray-600">
-          {text}
+        <p className="mx-auto my-20 max-w-6xl text-center text-lg leading-8 text-gray-700">
+          {text} 
         </p>
 
         <div className="mx-auto mt-20 mb-8 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10  lg:mx-0 lg:max-w-none lg:grid-cols-4">
@@ -40,7 +42,7 @@ export default function Sponsors({
               width={icon1.sizes["medium-width"]}
               height={icon1.sizes["medium-height"]}
             />
-            <p className="text-black">{texticon1}</p>
+            <p className="text-black text-lg">{texticon1}</p>
           </div>
 
           <div className="text-center col-span-2 lg:col-span-1 ">
@@ -51,7 +53,7 @@ export default function Sponsors({
               width={icon2.sizes["medium-width"]}
               height={icon2.sizes["medium-height"]}
             />
-            <p className="text-black">{texticon2}</p>
+            <p className="text-black text-lg">{texticon2}</p>
           </div>
 
           <div className="text-center col-span-2 lg:col-span-1 ">
@@ -62,7 +64,7 @@ export default function Sponsors({
               width={icon3.sizes["medium-width"]}
               height={icon3.sizes["medium-height"]}
             />
-            <p className="text-black">{texticon3}</p>
+            <p className="text-black text-lg">{texticon3}</p>
           </div>
 
           <div className="text-center col-span-2 lg:col-span-1">
@@ -73,7 +75,7 @@ export default function Sponsors({
               width={icon4.sizes["medium-width"]}
               height={icon4.sizes["medium-height"]}
             />
-            <p className="text-black">{texticon4}</p>
+            <p className="text-black text-lg">{texticon4}</p>
           </div>
         
         </div>

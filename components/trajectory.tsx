@@ -18,14 +18,14 @@ export default function Trajectory({ text, image }: any) {
 
             <span className="  bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text"></span>
             <div
-              className="mt-6 text-3xl font-bold tracking-tight text-accent-1 sm:text-4xl"
+              className="mt-6 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl"
               dangerouslySetInnerHTML={{
                 __html: intl.formatMessage({ id: "trajectory_title" }),
               }}
             />
 
             
-            <p className="mt-6 text-xl leading-8 text-gray-700">{text}</p>
+            <p className="mt-6 text-lg leading-8 text-gray-700">{text}</p>
             <div className="flex mt-6 ">
               <Button
                 title={intl.formatMessage({ id: "trajectory_button" })}

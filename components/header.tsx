@@ -105,14 +105,14 @@ export default function Header({ onOpenForm }: any) {
                     <Image
                       width={50}
                       height={55}
-                      className=""
+                      className="hidden lg:flex"
                       src="/img/iconoICYE.png"
                       alt="Icono ICYE Colombia"
                     />
                     <Image
                       width={96}
                       height={58}
-                      className="hidden lg:flex ml-4 mt-1"
+                      className="lg:flex ml-4 mt-1"
                       src="/img/logoSlogan.png"
                       alt="Logo ICYE Colombia"
                     />

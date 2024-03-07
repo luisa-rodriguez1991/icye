@@ -36,7 +36,7 @@ export default function HowToParticipate({
         <div className="rounded-2xl bg-accent-2 px-6 py-6 lg:py-16 ">
           <div className="mx-auto max-w-xl lg:max-w-none">
             <div className="text-center">
-              <div className="mx-auto max-w-4xl text-center">
+              <div className="mx-auto max-w-6xl text-center">
                 <div className="lg:mb-24 mb-16 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
                   <span className="bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text"></span>
                   <div
@@ -50,8 +50,9 @@ export default function HowToParticipate({
                 </div>
               </div>
             </div>
-            <div className="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-x-8 gap-y-10 sm:max-w-none lg:grid-cols-3">
-              <div className="text-center sm:flex sm:text-left lg:block lg:text-center">
+            {/* primer paso */}
+            <div className=" mt-12 grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 sm:max-w-none lg:grid-cols-3">
+              <div className="lg:text-center sm:flex sm:text-left lg:block lg:text-center">
                 <div className="sm:flex-shrink-0">
                   <div className="flow-root">
                     <img
@@ -63,11 +64,11 @@ export default function HowToParticipate({
                 </div>
                 <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
                   <h3 className="text-xl font-bold text-gray-900">{title1}</h3>
-                  <p className="mt-2  text-gray-600">{text1}</p>
+                  <p className="mt-2 text-lg leading-7    text-gray-700">{text1}</p>
                 </div>
               </div>
-
-              <div className="text-center sm:flex sm:text-left lg:block lg:text-center">
+              {/* segundo paso */}
+              <div className="lg:text-center sm:flex sm:text-left lg:block lg:text-center">
                 <div className="sm:flex-shrink-0">
                   <div className="flow-root">
                     <img
@@ -79,11 +80,11 @@ export default function HowToParticipate({
                 </div>
                 <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
                   <h3 className="text-xl font-bold text-gray-900">{title2}</h3>
-                  <p className="mt-2  text-gray-600">{text2}</p>
+                  <p className="mt-2 text-lg leading-7  text-gray-600">{text2}</p>
                 </div>
               </div>
-
-              <div className="text-center sm:flex sm:text-left lg:block lg:text-center">
+              {/* tercer paso */}
+              <div className="lg:text-center sm:flex sm:text-left lg:block lg:text-center">
                 <div className="sm:flex-shrink-0">
                   <div className="flow-root">
                     <img
@@ -95,7 +96,7 @@ export default function HowToParticipate({
                 </div>
                 <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
                   <h3 className="text-xl font-bold text-gray-900">{title3}</h3>
-                  <p className="mt-2  text-gray-600">{text3}</p>
+                  <p className="mt-2 text-lg leading-7 text-gray-600">{text3}</p>
                 </div>
               </div>
             </div>

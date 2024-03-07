@@ -81,7 +81,7 @@ export default function Plans({
               }}
             />
           </div>
-          <p className="mx-auto my-20 max-w-6xl text-center text-lg leading-8 text-gray-600 text-accent-2">
+          <p className="mx-auto my-20 max-w-6xl text-center text-lg leading-8 text-gray-700 ">
             {text}
           </p>
           <div className=" py-6 mx-auto mt-4 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">

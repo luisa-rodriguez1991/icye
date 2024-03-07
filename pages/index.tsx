@@ -53,7 +53,7 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         title3={page.acf.participate_title_3}
         text1={page.acf.participate_text_1}
         text2={page.acf.participate_text_2}
-        text3={page.acf.participate_text_2}
+        text3={page.acf.participate_text_3}
       />
 
       <Culture

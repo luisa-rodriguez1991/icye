@@ -18,7 +18,7 @@ export default function Contributors({
   const router = useRouter();
   const { locale } = router;
 
-
+// sponsors and donors
 
   return (
     <div className="bg-accent-2 py-24 sm:py-32">
@@ -27,13 +27,13 @@ export default function Contributors({
           <div className="mx-auto w-full max-w-xl lg:mx-0">
           <span className="  bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text"></span>
           <div
-            className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl"
+            className="mt-2 text-5xl font-bold tracking-tight text-accent-1 sm:text-5xl text"
             dangerouslySetInnerHTML={{
               __html: intl.formatMessage({ id: "contributors_title" }),
             }}
           />
-            <p className="mt-6 text-lg text-black leading-8 ">
-              {text}
+            <p className="mt-6 text-lg  leading-8 text-gray-700 ">
+              {text} 
             </p>
             
             
@@ -42,7 +42,7 @@ export default function Contributors({
               <Link
                  locale={locale}
                  href="/contact"
-                 className="text-base font-semibold text-gray-500 "
+                 className="text-base font-semibold text-accent-1 "
                >
                  {intl.formatMessage({ id: "contributors_contact_us" })}{" "}
                  <span className="ml-1" aria-hidden="true">
@@ -62,7 +62,7 @@ export default function Contributors({
                 width={icon1.sizes["medium-width"]}
                 height={icon1.sizes["medium-height"]}
               />
-              <p className="mt-2 text-black">{icontext1}</p>
+              <p className="mt-2 text-lg text-black">{icontext1}</p>
             </div>)}  
             
             {/* url:{JSON.stringify(icon1.sizes.thumbnail)}<br></br>
@@ -79,7 +79,7 @@ export default function Contributors({
               width={icon2.sizes["medium-width"]}
               height={icon2.sizes["medium-width"]}
             />
-            <p className="mt-2 text-black">{icontext2}</p>
+            <p className="mt-2 text-lg text-black">{icontext2}</p>
             </div>)}
 
           
@@ -93,7 +93,7 @@ export default function Contributors({
                 width={icon3.sizes["medium-width"]}
                 height={icon3.sizes["medium-width"]}
               />
-              <p className="mt-2 text-black">{icontext3}</p>
+              <p className="mt-2 text-lg text-black">{icontext3}</p>
             </div>)}
 
             {/* contibuidor4 */}
@@ -105,7 +105,7 @@ export default function Contributors({
                 width={icon4.sizes["medium-width"]}
                 height={icon4.sizes["medium-width"]}
               />
-              <p className="mt-2 text-black">{icontext4}</p>
+              <p className="mt-2 text-lg text-black">{icontext4}</p>
             </div>) }
 
           </div>

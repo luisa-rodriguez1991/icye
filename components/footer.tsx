@@ -75,10 +75,10 @@ export default function Footer({ info }: any) {
                     <li>
                       <a target="_blank"
                         href="https://www.facebook.com/icye.colombia1981?mibextid=LQQJ4d"
-                        className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                        className="text-sm leading-6  "
                       >
                         <img
-                          className="col-span-2 max-h-8 w-auto object-contain lg:col-span-1 text-accent-1"
+                          className="col-span-2 max-h-8 w-auto object-contain lg:col-span-1 "
                           src="/img/fb.svg"
                           alt="Reform"
                           width={158}

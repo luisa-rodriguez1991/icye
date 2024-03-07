@@ -70,7 +70,7 @@ export default function Testimonials({
   return (
     <div className="bg-white lg:py-6">
       <div className="mb-20 px-6">
-        <div className="mx-auto max-w-4xl text-center ">
+        <div className="mx-auto max-w-2xl text-center ">
           <span className="  bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text"></span>
           <div
             className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl"
@@ -79,7 +79,7 @@ export default function Testimonials({
             }}
           />
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
+        <p className="mx-auto mt-6 max-w-6xl text-center text-lg leading-8 text-gray-700 ">
           {text}
         </p>
       </div>
@@ -123,7 +123,7 @@ export default function Testimonials({
                         x={86}
                       />
                     </svg>
-                    <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9">
+                    <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9 ">
                       <p>{message1}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">

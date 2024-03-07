@@ -98,7 +98,7 @@ export default function AboutUs({
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">
                       <Image
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg hidden sm:block leg:hidden"
                         src={img1.sizes.medium_large}
                         alt=""
                         width={img1.sizes["medium_large-width"]}
@@ -113,7 +113,7 @@ export default function AboutUs({
                   <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                     <div className="relative">
                       <Image
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg hidden sm:block leg:hidden"
                         src={img2.sizes.medium_large}
                         alt=""
                         width={img2.sizes["medium_large-width"]}
@@ -124,7 +124,7 @@ export default function AboutUs({
                     </div>
                     <div className="relative">
                       <Image
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg hidden sm:block leg:hidden"
                         src={img3.sizes.medium_large}
                         alt=""
                         width={img3.sizes["medium_large-width"]}
@@ -135,7 +135,7 @@ export default function AboutUs({
                     </div>
                   </div>
                   <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
-                    <div className="relative">
+                    <div className="relative ">
                       <Image
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                         src={img4.sizes.medium_large}
@@ -235,7 +235,7 @@ export default function AboutUs({
           </div>
           <div className="px-6 ">
             <Image
-              className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+              className="aspect-[5/2] w-full object-cover rounded-3xl"
               src={ourteamimg.sizes.large}
               alt=""
               width={ourteamimg.sizes["large-width"]}

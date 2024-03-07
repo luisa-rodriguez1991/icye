@@ -38,9 +38,9 @@ export default function Culture({
   
         {/* Values section */}
         <div className="mx-auto mt-20 max-w-7xl px-6 sm:mt-40 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-          <div className="mx-auto max-w-4xl text-center mb-12 ">
-          <span className="  bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text"></span>
+          <div className="mx-auto max-w-6xl text-center">
+          <div className="mx-auto max-w-6xl text-center mb-12 ">
+          <span className=" bg-gradient-to-r from-accent-1 via-red-400 to-blue-400 inline-block text-transparent bg-clip-text"></span>
           <div
             className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl"
             dangerouslySetInnerHTML={{
@@ -48,14 +48,14 @@ export default function Culture({
             }}
           />
         </div>
-            <p className=" text-lg leading-8 text-gray-600">
+            <p className=" text-lg leading-8 text-gray-700">
             {text}
             </p>
           </div>
-          <div className="mt-12 xl:mx-auto xl:max-w-7xl xl:px-8 mb-12">
-          <div className="px-6">
+          <div className="mt-12 xl:mx-auto xl:max-w-6xl xl:px-8 mb-12">
+          <div className="">
             <Image
-              className="aspect-[5/2] w-full object-cover rounded-3xl"
+              className="sm:aspect-[5/3] lg:aspect-[5/2] w-full object-cover rounded-3xl"
               src={img.sizes.large}
               alt=""
               width={img.sizes["large-width"]}
@@ -70,48 +70,48 @@ export default function Culture({
            
 
             <div>
-                <dt className="font-semibold text-gray-900">{item1}</dt>
-                <dd className="mt-1 text-gray-600">{textitem1}</dd>
+                <dt className="font-semibold text-xl text-gray-900">{item1}</dt>
+                <dd className="mt-1 text-lg text-gray-600">{textitem1}</dd>
             </div>
 
             <div>
-                <dt className="font-semibold text-gray-900">{item2}</dt>
-                <dd className="mt-1 text-gray-600">{textitem2}</dd>
+                <dt className="font-semibold text-xl text-gray-900">{item2}</dt>
+                <dd className="mt-1 text-lg text-gray-600">{textitem2}</dd>
             </div>
 
             <div>
-                <dt className="font-semibold text-gray-900">{item3}</dt>
-                <dd className="mt-1 text-gray-600">{textitem3}</dd>
+                <dt className="font-semibold text-xl text-gray-900">{item3}</dt>
+                <dd className="mt-1 text-lg text-gray-600">{textitem3}</dd>
             </div>
 
             <div>
-                <dt className="font-semibold text-gray-900">{item4}</dt>
-                <dd className="mt-1 text-gray-600">{textitem4}</dd>
+                <dt className="font-semibold text-xl text-gray-900">{item4}</dt>
+                <dd className="mt-1 text-lg text-gray-600">{textitem4}</dd>
             </div>
 
             <div>
-                <dt className="font-semibold text-gray-900">{item5}</dt>
-                <dd className="mt-1 text-gray-600">{textitem5}</dd>
+                <dt className="font-semibold text-xl text-gray-900">{item5}</dt>
+                <dd className="mt-1 text-lg text-gray-600">{textitem5}</dd>
             </div>
 
             <div>
-                <dt className="font-semibold text-gray-900">{item6}</dt>
-                <dd className="mt-1 text-gray-600">{textitem6}</dd>
+                <dt className="font-semibold text-xl text-gray-900">{item6}</dt>
+                <dd className="mt-1 text-lg text-gray-600">{textitem6}</dd>
             </div>
 
             <div>
-                <dt className="font-semibold text-gray-900">{item7}</dt>
-                <dd className="mt-1 text-gray-600">{textitem7}</dd>
+                <dt className="font-semibold text-xl text-gray-900">{item7}</dt>
+                <dd className="mt-1 text-lg text-gray-600">{textitem7}</dd>
             </div>
 
             <div>
-                <dt className="font-semibold text-gray-900">{item8}</dt>
-                <dd className="mt-1 text-gray-600">{textitem8}</dd>
+                <dt className="font-semibold  text-xl text-gray-900">{item8}</dt>
+                <dd className="mt-1 text-lg text-gray-600">{textitem8}</dd>
             </div>
 
             <div>
-                <dt className="font-semibold text-gray-900">{item9}</dt>
-                <dd className="mt-1 text-gray-600">{textitem9}</dd>
+                <dt className="font-semibold text-xl text-gray-900">{item9}</dt>
+                <dd className="mt-1 text-lg text-gray-600">{textitem9}</dd>
             </div>
 
           </dl>

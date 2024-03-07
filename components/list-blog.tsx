@@ -48,12 +48,12 @@ export default function Blog({ text, posts }: any) {
     // page list blog
     <div className="bg-white pt-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-4">
-        <div className="mx-auto max-w-4xl text-center ">
+        <div className="mx-auto max-w-6xl text-center ">
           <p className="mt-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
             Blog
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 ">
+        <p className="mx-auto mt-12 max-w-6xl text-center text-lg leading-8 text-gray-800 ">
           {text}
         </p>
         <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
