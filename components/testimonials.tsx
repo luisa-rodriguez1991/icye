@@ -124,7 +124,7 @@ export default function Testimonials({
                       />
                     </svg>
                     <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9 ">
-                      <p>{message1}</p>
+                      <p className="text-justify">{message1}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
                       <div
@@ -175,7 +175,7 @@ export default function Testimonials({
                       />
                     </svg>
                     <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9">
-                      <p>{message2}</p>
+                      <p className="text-justify">{message2}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
                       <div
@@ -226,7 +226,7 @@ export default function Testimonials({
                       />
                     </svg>
                     <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9">
-                      <p>{message3}</p>
+                      <p className="text-justify">{message3}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
                       <div
@@ -277,7 +277,7 @@ export default function Testimonials({
                       />
                     </svg>
                     <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9">
-                      <p>{message4}</p>
+                      <p className="text-justify">{message4}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
                       <div
@@ -328,7 +328,7 @@ export default function Testimonials({
                       />
                     </svg>
                     <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9">
-                      <p>{message5}</p>
+                      <p className="text-justify">{message5}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
                       <div
@@ -379,7 +379,7 @@ export default function Testimonials({
                       />
                     </svg>
                     <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9">
-                      <p>{message6}</p>
+                      <p className="text-justify">{message6}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
                       <div
@@ -430,7 +430,7 @@ export default function Testimonials({
                       />
                     </svg>
                     <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9">
-                      <p>{message7}</p>
+                      <p className="text-justify">{message7}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
                       <div
@@ -481,7 +481,7 @@ export default function Testimonials({
                       />
                     </svg>
                     <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9">
-                      <p>{message8}</p>
+                      <p className="text-justify">{message8}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
                       <div
@@ -532,7 +532,7 @@ export default function Testimonials({
                       />
                     </svg>
                     <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9">
-                      <p>{message9}</p>
+                      <p className="text-justify">{message9}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
                       <div
@@ -583,7 +583,7 @@ export default function Testimonials({
                       />
                     </svg>
                     <blockquote className="text-xl font-semibold leading-8 text-accent-1 sm:text-2xl sm:leading-9">
-                      <p>{message10}</p>
+                      <p className="text-justify">{message10}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-base">
                       <div

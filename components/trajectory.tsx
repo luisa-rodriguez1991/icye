@@ -25,7 +25,7 @@ export default function Trajectory({ text, image }: any) {
             />
 
             
-            <p className="mt-6 text-lg leading-8 text-gray-700">{text}</p>
+            <p className="mt-6 text-lg leading-8 text-gray-700 text-justify">{text}</p>
             <div className="flex mt-6 ">
               <Button
                 title={intl.formatMessage({ id: "trajectory_button" })}

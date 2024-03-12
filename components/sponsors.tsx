@@ -28,7 +28,7 @@ export default function Sponsors({
             }}
           />
         </div>
-        <p className="mx-auto my-20 max-w-6xl text-center text-lg leading-8 text-gray-700">
+        <p className="mx-auto my-20 max-w-6xl text-center text-lg leading-8 text-gray-700 ">
           {text} 
         </p>
 

@@ -32,7 +32,7 @@ export default function Contributors({
               __html: intl.formatMessage({ id: "contributors_title" }),
             }}
           />
-            <p className="mt-6 text-lg  leading-8 text-gray-700 ">
+            <p className="mt-6 text-lg  leading-8 text-gray-700 text-justify ">
               {text} 
             </p>
             

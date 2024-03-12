@@ -71,47 +71,47 @@ export default function Culture({
 
             <div>
                 <dt className="font-semibold text-xl text-gray-900">{item1}</dt>
-                <dd className="mt-1 text-lg text-gray-600">{textitem1}</dd>
+                <dd className="mt-1 text-lg text-gray-600 text-justify">{textitem1}</dd>
             </div>
 
             <div>
                 <dt className="font-semibold text-xl text-gray-900">{item2}</dt>
-                <dd className="mt-1 text-lg text-gray-600">{textitem2}</dd>
+                <dd className="mt-1 text-lg text-gray-600 text-justify">{textitem2}</dd>
             </div>
 
             <div>
                 <dt className="font-semibold text-xl text-gray-900">{item3}</dt>
-                <dd className="mt-1 text-lg text-gray-600">{textitem3}</dd>
+                <dd className="mt-1 text-lg text-gray-600 text-justify">{textitem3}</dd>
             </div>
 
             <div>
                 <dt className="font-semibold text-xl text-gray-900">{item4}</dt>
-                <dd className="mt-1 text-lg text-gray-600">{textitem4}</dd>
+                <dd className="mt-1 text-lg text-gray-600 text-justify">{textitem4}</dd>
             </div>
 
             <div>
                 <dt className="font-semibold text-xl text-gray-900">{item5}</dt>
-                <dd className="mt-1 text-lg text-gray-600">{textitem5}</dd>
+                <dd className="mt-1 text-lg text-gray-600 text-justify">{textitem5}</dd>
             </div>
 
             <div>
                 <dt className="font-semibold text-xl text-gray-900">{item6}</dt>
-                <dd className="mt-1 text-lg text-gray-600">{textitem6}</dd>
+                <dd className="mt-1 text-lg text-gray-600 text-justify">{textitem6}</dd>
             </div>
 
             <div>
                 <dt className="font-semibold text-xl text-gray-900">{item7}</dt>
-                <dd className="mt-1 text-lg text-gray-600">{textitem7}</dd>
+                <dd className="mt-1 text-lg text-gray-600 text-justify">{textitem7}</dd>
             </div>
 
             <div>
                 <dt className="font-semibold  text-xl text-gray-900">{item8}</dt>
-                <dd className="mt-1 text-lg text-gray-600">{textitem8}</dd>
+                <dd className="mt-1 text-lg text-gray-600 text-justify">{textitem8}</dd>
             </div>
 
             <div>
                 <dt className="font-semibold text-xl text-gray-900">{item9}</dt>
-                <dd className="mt-1 text-lg text-gray-600">{textitem9}</dd>
+                <dd className="mt-1 text-lg text-gray-600 text-justify">{textitem9}</dd>
             </div>
 
           </dl>

@@ -142,7 +142,7 @@ export default function Intro({ text, onOpenForm }: any) {
                   }}
                 />
 
-                <p className="mt-6 text-lg leading-8 text-gray-800">{text}</p>
+                <p className="mt-6 text-lg leading-8 text-gray-800 text-justify">{text}</p>
                 <div className="mt-6 flex items-center gap-x-6">
                   <button
                     onClick={() => onOpenForm(true)}

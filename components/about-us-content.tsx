@@ -90,7 +90,7 @@ export default function AboutUs({
                   <h1 className="text-4xl font-bold tracking-tight text-accent-1 sm:text-6xl">
                     {intl.formatMessage({ id: "about_us_title" })}
                   </h1>
-                  <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
+                  <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none text-justify">
                     {text}
                   </p>
                 </div>
@@ -208,42 +208,42 @@ export default function AboutUs({
               <dt className="font-semibold text-xl text-gray-900">
                 {visionsubtitle1}
               </dt>
-              <dd className="mt-1 text-gray-600">{visiontext1}</dd>
+              <dd className="mt-1 text-gray-600 text-justify">{visiontext1}</dd>
             </div>
 
             <div>
               <dt className="font-semibold text-xl text-gray-900">
                 {visionsubtitle2}
               </dt>
-              <dd className="mt-1 text-gray-600">{visiontext2}</dd>
+              <dd className="mt-1 text-gray-600 text-justify">{visiontext2}</dd>
             </div>
 
             <div>
               <dt className="font-semibold text-xl text-gray-900">
                 {visionsubtitle3}
               </dt>
-              <dd className="mt-1 text-gray-600">{visiontext3}</dd>
+              <dd className="mt-1 text-gray-600 text-justify">{visiontext3}</dd>
             </div>
 
             <div>
               <dt className="font-semibold text-xl text-gray-900">
                 {visionsubtitle4}
               </dt>
-              <dd className="mt-1 text-gray-600">{visiontext4}</dd>
+              <dd className="mt-1 text-gray-600 text-justify">{visiontext4}</dd>
             </div>
 
             <div>
               <dt className="font-semibold text-xl text-gray-900">
                 {visionsubtitle5}
               </dt>
-              <dd className="mt-1 text-gray-600">{visiontext5}</dd>
+              <dd className="mt-1 text-gray-600 text-justify">{visiontext5}</dd>
             </div>
 
             <div>
               <dt className="font-semibold text-xl text-gray-900">
                 {visionsubtitle6}
               </dt>
-              <dd className="mt-1 text-gray-600">{visiontext6}</dd>
+              <dd className="mt-1 text-gray-600 text-justify">{visiontext6}</dd>
             </div>
           </dl>
         </div>
@@ -282,28 +282,28 @@ export default function AboutUs({
           <h2 className="text-3xl font-bold tracking-tight text-accent-1 sm:text-3xl mb-16">{intl.formatMessage({ id: "about_us_team_sub" })}</h2>
 
           <p className="font-semibold text-2xl text-gray-900">{ourteamsubtitledescription1}</p>
-          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12">
+          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12 text-justify">
           {ourteamtextdescrption1}
           </p>
 
           <p className="font-semibold text-2xl text-gray-900">{ourteamsubtitledescription2}</p>
-          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12">
+          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12 text-justify">
           {ourteamtextdescrption2}
           </p>
 
           <p className="font-semibold text-2xl text-gray-900">{ourteamsubtitledescription3}</p>
-          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12">
+          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12 text-justify">
           {ourteamtextdescrption3}
           </p>
 
           <p className="font-semibold text-2xl text-gray-900">{ourteamsubtitledescription4}</p>
-          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12">
+          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12 text-justify">
           {ourteamtextdescrption4}
           </p>
 
 
           <p className="font-semibold text-2xl text-gray-900">{ourteamsubtitledescription5}</p>
-          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12 css-wordpress">
+          <p className="mt-6 text-lg leading-8 text-gray-600 mb-12 css-wordpress text-justify">
           {ourteamtextdescrption5}
 
           </p>

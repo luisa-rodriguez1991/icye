@@ -36,26 +36,30 @@ export default function Faqs({
         <div className="">
           <dl className="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10">
             <div>
+
               <dt className="text-xl font-semibold leading-7 text-gray-900">
                 {question1}
               </dt>
-              <dd className="mt-2 text-lg leading-7 text-gray-600">
+              <dd className="mt-2 text-lg leading-7 text-gray-600 text-justify">
                 {answer1}
               </dd>
+
             </div>
+
             <div>
               <dt className="text-xl font-semibold leading-7 text-gray-900">
                 {question2}
               </dt>
-              <dd className="mt-2 text-lg leading-7 text-gray-600">
+              <dd className="mt-2 text-lg leading-7 text-gray-600 text-justify">
                 {answer2}
               </dd>
             </div>
+
             <div>
               <dt className="text-xl font-semibold leading-7 text-gray-900">
                 {question3}
               </dt>
-              <dd className="mt-2 text-lg leading-7 text-gray-600">
+              <dd className="mt-2 text-lg leading-7 text-gray-600 text-justify">
                 {answer3}
               </dd>
             </div>
@@ -64,7 +68,7 @@ export default function Faqs({
               <dt className="text-xl font-semibold leading-7 text-gray-900">
                 {question4}
               </dt>
-              <dd className="mt-2 text-lg leading-7 text-gray-600">
+              <dd className="mt-2 text-lg leading-7 text-gray-600 text-justify">
                 {answer4}
               </dd>
             </div>
@@ -73,7 +77,7 @@ export default function Faqs({
               <dt className="text-xl font-semibold leading-7 text-gray-900">
                 {question5}
               </dt>
-              <dd className="mt-2 text-lg leading-7 text-gray-600">
+              <dd className="mt-2 text-lg leading-7 text-gray-600 text-justify">
                 {answer5}
               </dd>
             </div>
@@ -82,10 +86,11 @@ export default function Faqs({
               <dt className="text-xl font-semibold leading-7 text-gray-900">
                 {question6}
               </dt>
-              <dd className="mt-2 text-lg leading-7 text-gray-600">
+              <dd className="mt-2 text-lg leading-7 text-gray-600 text-justify">
                 {answer6}
               </dd>
             </div>
+            
           </dl>
         </div>
       </div>
