@@ -94,7 +94,7 @@ export default function Project({ page, listCategories, footer }: any) {
                 <h2 className="text-3xl text-accent-1 font-bold ">
                   Basic Information
                 </h2>
-                <div className="mt-3">
+                <div className="mt-3 text-black">
                   Categories:
                   <div className="flex flex-wrap items-center gap-2 my-3 ">
                     {listCategories.map((category: any) => (
