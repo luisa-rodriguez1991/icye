@@ -135,7 +135,7 @@ export default function Project({ page, listCategories, footer }: any) {
                 <h3 className="sr-only">Description</h3>
 
                 <div
-                  className="space-y-6 css-wordpress"
+                  className="space-y-6 css-wordpress text-black"
                   dangerouslySetInnerHTML={{ __html: page.content.rendered }}
                 />
               </div>
