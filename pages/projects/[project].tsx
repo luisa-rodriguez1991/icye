@@ -103,7 +103,7 @@ export default function Project({ page, listCategories, footer }: any) {
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center mb-4 mt-2 ml-1 ">
+                  <div className="flex items-center mb-4 mt-2 ml-1 text-black ">
                     Country:{" "}
                     <Flag
                       className="ml-4 mt-1"
@@ -115,9 +115,9 @@ export default function Project({ page, listCategories, footer }: any) {
                 </div>
 
                 {page.acf.pdf && (
-                  <div className="flex items-center">
+                  <div className="flex items-center text-black">
                     Download PDF:{" "}
-                    <a
+                    <a 
                       href={page.acf.pdf}
                       target="_blank"
                       title={`Download PDF file about the project: ${page.title.rendered}`}
