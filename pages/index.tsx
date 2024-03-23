@@ -238,7 +238,7 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         // aqui esta mi ejemplo Image
       />
 
-      <div className=" px-6 bg-white py-24">
+    {/*  <div className=" px-6 bg-white py-24">
         <Calendar
           text={page.acf.event_text}
           events={eventsList}
@@ -248,7 +248,7 @@ export default function Home({ posts, eventsList, page, footer }: any) {
 
       <div className="bg-white sm:py-32 md:py-0 lg:py-8">
         <ListBlog text={page.acf.blog_text} posts={posts} showAll={false} />
-      </div>
+      </div>*/}
     </Layout>
   );
 }
