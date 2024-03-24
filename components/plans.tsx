@@ -93,12 +93,12 @@ export default function Plans({
                 </h3>
 
                 <div className="mt-6 flex flex-col  ">
-                  <span className="text-2xl font-bold tracking-tight text-accent-1 ml-2">Desde</span>
-                  <div className=" flex items-end">
-                  <span className="text-3xl font-bold tracking-tight text-accent-1 ml-2">{price1}</span>
-                  <span className="text-1xl font-bold tracking-tight text-accent-1 ml-1">COP</span>
+                  <span className="text-xl font-bold tracking-tight text-accent-1">Desde</span>
+                  <div className=" flex flex-col">
+                    <span className=" font-bold tracking-tight text-accent-1"><span className="text-3xl">$ {price1}</span> <span className="text-1xl ml-1"> de</span></span>
+                  <span className="text-1xl font-bold tracking-tight text-accent-1">Pesos Colombianos</span>
                   </div>
-                  <span className="text-base font-semibold leading-6 text-cyan-500 ml-2 mt-2">
+                  <span className="text-base font-semibold leading-6 text-cyan-500 mt-2">
                     {cyantext1}
                   </span>
                 </div>
@@ -188,16 +188,15 @@ export default function Plans({
                   {title2}
                 </h3>
                 <div className="mt-6 flex flex-col  ">
-                  <span className="text-2xl font-bold tracking-tight text-accent-1 ml-2">Desde</span>
-                  <div className=" flex items-end">
-                  <span className="text-3xl font-bold tracking-tight text-accent-1 ml-2">{price2}</span>
-                  <span className="text-1xl font-bold tracking-tight text-accent-1 ml-1">COP</span>
+                  <span className="text-xl font-bold tracking-tight text-accent-1">Desde</span>
+                  <div className=" flex flex-col">
+                    <span className=" font-bold tracking-tight text-accent-1"><span className="text-3xl">$ {price2}</span> <span className="text-1xl ml-1"> de</span></span>
+                    <span className="text-1xl font-bold tracking-tight text-accent-1">Pesos Colombianos</span>
                   </div>
-                  <span className="text-base font-semibold leading-6 text-cyan-500 ml-2 mt-2">
-                  {cyantext2}
+                  <span className="text-base font-semibold leading-6 text-cyan-500 mt-2">
+                    {cyantext1}
                   </span>
                 </div>
-
                 <button
                   onClick={() => onOpenForm(true)}
                   className=" bg-accent-1 text-white shadow-sm hover:bg-accent-2 hover:text-accent-1 border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
@@ -299,13 +298,13 @@ export default function Plans({
                 </h3>
 
                 <div className="mt-6 flex flex-col  ">
-                  <span className="text-2xl font-bold tracking-tight text-accent-1 ml-2">Desde</span>
-                  <div className=" flex items-end">
-                  <span className="text-3xl font-bold tracking-tight text-accent-1 ml-2">{price3}</span>
-                  <span className="text-1xl font-bold tracking-tight text-accent-1 ml-1">COP</span>
+                  <span className="text-xl font-bold tracking-tight text-accent-1">Desde</span>
+                  <div className=" flex flex-col">
+                    <span className=" font-bold tracking-tight text-accent-1"><span className="text-3xl">$ {price3}</span> <span className="text-1xl ml-1"> de</span></span>
+                    <span className="text-1xl font-bold tracking-tight text-accent-1">Pesos Colombianos</span>
                   </div>
-                  <span className="text-base font-semibold leading-6 text-cyan-500 ml-2 mt-2">
-                  {cyantext3}
+                  <span className="text-base font-semibold leading-6 text-cyan-500 mt-2">
+                    {cyantext1}
                   </span>
                 </div>
 
@@ -398,13 +397,13 @@ export default function Plans({
                 </h3>
 
                 <div className="mt-6 flex flex-col  ">
-                  <span className="text-2xl font-bold tracking-tight text-accent-1 ml-2">Desde</span>
-                  <div className=" flex items-end">
-                  <span className="text-3xl font-bold tracking-tight text-accent-1 ml-2">{price4}</span>
-                  <span className="text-1xl font-bold tracking-tight text-accent-1 ml-1">COP</span>
+                  <span className="text-xl font-bold tracking-tight text-accent-1">Desde</span>
+                  <div className=" flex flex-col">
+                    <span className=" font-bold tracking-tight text-accent-1"><span className="text-3xl">$ {price4}</span> <span className="text-1xl ml-1"> de</span></span>
+                    <span className="text-1xl font-bold tracking-tight text-accent-1">Pesos Colombianos</span>
                   </div>
-                  <span className="text-base font-semibold leading-6 text-cyan-500 ml-2 mt-2">
-                  {cyantext4}
+                  <span className="text-base font-semibold leading-6 text-cyan-500 mt-2">
+                    {cyantext1}
                   </span>
                 </div>
 
