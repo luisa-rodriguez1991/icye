@@ -21,6 +21,8 @@ export default function Terms({ page, footer }: any) {
           rel="canonical"
           href={`https://www.icyecolombia.com/terms-conditions`}
         />
+        <link rel="alternate" hrefLang="es" href="https://www.icyecolombia.com/es/terms-conditions" />
+        <link rel="alternate" hrefLang="en" href="https://www.icyecolombia.com/en/terms-conditions" />
         
       </Head>
 

@@ -22,7 +22,9 @@ export default function Request({ page, footer }: any) {
           rel="canonical"
           href={`https://www.icyecolombia.com/request-complains`}
         />
-        
+          <link rel="alternate" hrefLang="es" href="https://www.icyecolombia.com/es/request-complains" />
+          <link rel="alternate" hrefLang="en" href="https://www.icyecolombia.com/en/request-complains" />
+
       </Head>
       <Breadcrumb
         miVariable={intl.formatMessage({ id: "breadcrumb_Request" })}

@@ -20,6 +20,8 @@ export default function About({ page, footer }: any) {
       <Head>
       <title>{intl.formatMessage({ id: "title_about_us" })}</title>
         <link rel="canonical" href="https://www.icyecolombia.com/about" />
+          <link rel="alternate" hrefLang="es" href="https://www.icyecolombia.com/es/about" />
+          <link rel="alternate" hrefLang="en" href="https://www.icyecolombia.com/en/about" />
         
       </Head>
       <Breadcrumb miVariable={intl.formatMessage({ id: "breadcrumb_about" })} />

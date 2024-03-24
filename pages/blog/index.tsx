@@ -14,7 +14,15 @@ export default function Index({ posts, footer, page }: any) {
 
   return (
     <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
-     
+     <Head>
+         <title>{intl.formatMessage({ id: "breadcrumb_blog" })}</title>
+         <link
+             rel="canonical"
+             href={`https://www.icyecolombia.com/blog`}
+         />
+         <link rel="alternate" hrefLang="es" href="https://www.icyecolombia.com/es/blog" />
+         <link rel="alternate" hrefLang="en" href="https://www.icyecolombia.com/en/blog" />
+     </Head>
       <Breadcrumb miVariable={intl.formatMessage({ id: "breadcrumb_blog" })} />
       <div className="bg-white pt-3 pb-24 sm:pb-32">
         <ListBlog posts={posts} showAll={true} />

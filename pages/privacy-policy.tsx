@@ -22,6 +22,8 @@ export default function Privacy({ page, footer }: any) {
           rel="canonical"
           href={`https://www.icyecolombia.com/privacy-policy`}
         />
+          <link rel="alternate" hrefLang="es" href="https://www.icyecolombia.com/es/privacy-policy" />
+          <link rel="alternate" hrefLang="en" href="https://www.icyecolombia.com/en/privacy-policy" />
         
       </Head>
 

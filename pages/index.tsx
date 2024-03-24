@@ -25,7 +25,8 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         <Head>
             <title>ICYE Colombia</title>
             <link rel="canonical" href="https://www.icyecolombia.com" />
-            
+            <link rel="alternate" hrefLang="es" href="https://www.icyecolombia.com/es" />
+            <link rel="alternate" hrefLang="en" href="https://www.icyecolombia.com/en" />
         </Head>
       <Intro onOpenForm={setOpen} text={page.acf.intro_text} />
 

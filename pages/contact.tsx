@@ -20,6 +20,8 @@ export default function Contact({ page, footer, footerInfo }: any) {
       <Head>
       <title>{intl.formatMessage({id:"title_contact"})}</title>
         <link rel="canonical" href="https://www.icyecolombia.com/contact" />
+          <link rel="alternate" hrefLang="es" href="https://www.icyecolombia.com/es/contact" />
+          <link rel="alternate" hrefLang="en" href="https://www.icyecolombia.com/en/contact" />
         
       </Head>
       <Breadcrumb
