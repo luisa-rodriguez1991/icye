@@ -408,7 +408,7 @@ export default function Plans({
                 </div>
 
                 <button
-                  onClick={() => onOpenForm(true)}
+                  onClick={() => router.push("https://share-eu1.hsforms.com/1c0fuwQabQeeZRZdCKkfz9wfgdgp")}
                   className=" bg-accent-1 text-white shadow-sm hover:bg-accent-2 hover:text-accent-1 border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
                 >
                   {intl.formatMessage({ id: "plans_button" })}
