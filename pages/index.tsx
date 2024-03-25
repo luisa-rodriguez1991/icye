@@ -1,20 +1,23 @@
 import Layout from "@/components/layout";
-import Intro from "@/components/intro";
-import Trust from "@/components/trust";
-import Trajectory from "@/components/trajectory";
-import Culture from "@/components/culture";
-import Testimonials from "@/components/testimonials";
-import Plans from "@/components/plans";
-import HowToParticipate from "@/components/how-to-participate";
-import Faqs from "@/components/faqs";
-import Sponsors from "@/components/sponsors";
-import Calendar from "@/components/calendar-events";
-import ListBlog from "@/components/list-blog";
 import {getAllPost, getAllEvents, getPage, getPost} from "@/lib/api";
 import { GetStaticProps } from "next";
+/*
 import Contributors from "@/components/contributors";
+*/
 import { useState } from "react";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+
+const Contributors = dynamic(() => import('@/components/contributors'))
+const Sponsors = dynamic(() => import('@/components/sponsors'))
+const HowToParticipate = dynamic(() => import('@/components/how-to-participate'))
+const Intro = dynamic(() => import('@/components/intro'))
+const Trust = dynamic(() => import('@/components/trust'))
+const Trajectory = dynamic(() => import('@/components/trajectory'))
+const Culture = dynamic(() => import('@/components/culture'))
+const Testimonials = dynamic(() => import('@/components/testimonials'))
+const Plans = dynamic(() => import('@/components/plans'))
+
 
 export default function Home({ posts, eventsList, page, footer }: any) {
   const [open, setOpen] = useState(false);
@@ -195,21 +198,22 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         list4item11={page.acf.program_list_4_item_11}
         pdf4={page.acf.program_pdf_4}
       />
-      <Faqs
-        text={page.acf.faqs_text}
-        question1={page.acf.faqs_question_1}
-        answer1={page.acf.faqs_answer_1}
-        question2={page.acf.faqs_question_2}
-        answer2={page.acf.faqs_answer_2}
-        question3={page.acf.faqs_question_3}
-        answer3={page.acf.faqs_answer_3}
-        question4={page.acf.faqs_question_4}
-        answer4={page.acf.faqs_answer_4}
-        question5={page.acf.faqs_question_5}
-        answer5={page.acf.faqs_answer_5}
-        question6={page.acf.faqs_question_6}
-        answer6={page.acf.faqs_answer_6}
-      />
+
+        <Contributors
+            title={page.acf.contributors_title}
+            text={page.acf.contributors_text}
+            icon1={page?.acf?.contributors_icon_1?page.acf.contributors_icon_1:""}
+            icon2={page?.acf?.contributors_icon_2?page.acf.contributors_icon_2:""}
+            icon3={page?.acf?.contributors_icon_3?page.acf.contributors_icon_3:""}
+            icon4={page?.acf?.contributors_icon_4?.sizes?.large?page.acf.contributors_icon_4:""}
+            icontext1={page.acf.contributors_icon_text_1}
+            icontext2={page.acf.contributors_icon_text_2}
+            icontext3={page.acf.contributors_icon_text_3}
+            icontext4={page.acf.contributors_icon_text_4}
+
+
+            // aqui esta mi ejemplo Image
+        />
 
       <Sponsors
         text={page.acf.sponsors_text}
@@ -223,21 +227,7 @@ export default function Home({ posts, eventsList, page, footer }: any) {
         texticon4={page.acf.sponsors_icon_text_4}
       />
         
-      <Contributors
-        title={page.acf.contributors_title}
-        text={page.acf.contributors_text}
-        icon1={page?.acf?.contributors_icon_1?page.acf.contributors_icon_1:""}
-        icon2={page?.acf?.contributors_icon_2?page.acf.contributors_icon_2:""}
-        icon3={page?.acf?.contributors_icon_3?page.acf.contributors_icon_3:""}
-        icon4={page?.acf?.contributors_icon_4?.sizes?.large?page.acf.contributors_icon_4:""}
-        icontext1={page.acf.contributors_icon_text_1}
-        icontext2={page.acf.contributors_icon_text_2}
-        icontext3={page.acf.contributors_icon_text_3}
-        icontext4={page.acf.contributors_icon_text_4}
-        
 
-        // aqui esta mi ejemplo Image
-      />
 
     {/*  <div className=" px-6 bg-white py-24">
         <Calendar

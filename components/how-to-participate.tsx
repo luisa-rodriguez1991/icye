@@ -64,7 +64,7 @@ export default function HowToParticipate({
                 </div>
                 <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6 text-center">
                   <h3 className="text-xl font-bold text-gray-900">{title1}</h3>
-                  <p className="mt-2 text-lg leading-7 text-gray-700">{text1}</p>
+                  <div className="mt-2 text-lg leading-7 text-gray-700 " dangerouslySetInnerHTML={{__html:text1}}/>
                 </div>
               </div>
               {/* segundo paso */}
@@ -80,7 +80,7 @@ export default function HowToParticipate({
                 </div>
                 <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6 text-center">
                   <h3 className="text-xl font-bold text-gray-900">{title2}</h3>
-                  <p className="mt-2 text-lg leading-7  text-gray-600">{text2}</p>
+                  <div className="mt-2 text-lg leading-7 text-gray-700 " dangerouslySetInnerHTML={{__html:text2}}/>
                 </div>
               </div>
               {/* tercer paso */}
@@ -96,8 +96,7 @@ export default function HowToParticipate({
                 </div>
                 <div className="mt-3 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6 text-center">
                   <h3 className="text-xl font-bold text-gray-900">{title3}</h3>
-                  <p className="mt-2 text-lg leading-7 text-gray-600">{text3}</p>
-                </div>
+                  <div className="mt-2 text-lg leading-7 text-gray-700 " dangerouslySetInnerHTML={{__html:text3}}/>                </div>
               </div>
             </div>
           </div>

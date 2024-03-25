@@ -159,6 +159,13 @@ export default function Header({ onOpenForm }: any) {
                           >
                             {intl.formatMessage({ id: "header_item_8" })}
                           </Link>
+                          <Link
+                              locale={locale}
+                              href="/faq"
+                              className="whitespace-nowrap   block rounded-lg px-3 py-2 text-md font-semibold text-gray-700 hover:text-gray-900"
+                          >
+                            FAQ
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -202,8 +209,8 @@ export default function Header({ onOpenForm }: any) {
                   <Link
                     locale={locale}
                     href="#"
-                    onClick={() => onOpenForm(true)}
-                    title="Como participar"
+                    onClick={() => router.push("https://share-eu1.hsforms.com/1c0fuwQabQeeZRZdCKkfz9wfgdgp")}
+                    title={intl.formatMessage({ id: "header_button" })}
                     className="z-[999999] lg:z-[0] lg:ml-7 fixed top-auto bottom-0 left-0 rounded-[0px] lg:rounded-[40px] w-full lg:static text-center lg:w-auto  lg:min-w-[147px] bg-accent-1 p-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-2 hover:text-accent-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     {intl.formatMessage({ id: "header_button" })}

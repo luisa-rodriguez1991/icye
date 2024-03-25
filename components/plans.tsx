@@ -93,10 +93,10 @@ export default function Plans({
                 </h3>
 
                 <div className="mt-6 flex flex-col  ">
-                  <span className="text-xl font-bold tracking-tight text-accent-1">Desde</span>
+                  <span className="text-xl font-bold tracking-tight text-accent-1">{intl.formatMessage({ id: "from" })}</span>
                   <div className=" flex flex-col">
-                    <span className=" font-bold tracking-tight text-accent-1"><span className="text-3xl">$ {price1}</span> <span className="text-1xl ml-1"> de</span></span>
-                  <span className="text-1xl font-bold tracking-tight text-accent-1">Pesos Colombianos</span>
+                    <span className=" font-bold tracking-tight text-accent-1"><span className="text-3xl">$ {price1}</span> </span>
+                  <span className="text-1xl font-bold tracking-tight text-accent-1">{intl.formatMessage({ id: "currency" })}</span>
                   </div>
                   <span className="text-base font-semibold leading-6 text-cyan-500 mt-2">
                     {cyantext1}
@@ -104,7 +104,7 @@ export default function Plans({
                 </div>
 
                 <button
-                  onClick={() => onOpenForm(true)}
+                  onClick={() => router.push("https://share-eu1.hsforms.com/1c0fuwQabQeeZRZdCKkfz9wfgdgp")}
                   className=" bg-accent-1 text-white shadow-sm hover:bg-accent-2 hover:text-accent-1 border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
                 >
                   {intl.formatMessage({ id: "plans_button" })}
@@ -188,17 +188,17 @@ export default function Plans({
                   {title2}
                 </h3>
                 <div className="mt-6 flex flex-col  ">
-                  <span className="text-xl font-bold tracking-tight text-accent-1">Desde</span>
+                  <span className="text-xl font-bold tracking-tight text-accent-1">{intl.formatMessage({ id: "from" })}</span>
                   <div className=" flex flex-col">
-                    <span className=" font-bold tracking-tight text-accent-1"><span className="text-3xl">$ {price2}</span> <span className="text-1xl ml-1"> de</span></span>
-                    <span className="text-1xl font-bold tracking-tight text-accent-1">Pesos Colombianos</span>
+                    <span className=" font-bold tracking-tight text-accent-1"><span className="text-3xl">$ {price2}</span> </span>
+                    <span className="text-1xl font-bold tracking-tight text-accent-1">{intl.formatMessage({ id: "currency" })}</span>
                   </div>
                   <span className="text-base font-semibold leading-6 text-cyan-500 mt-2">
-                    {cyantext1}
+                    {cyantext2}
                   </span>
                 </div>
                 <button
-                  onClick={() => onOpenForm(true)}
+                  onClick={() => router.push("https://share-eu1.hsforms.com/1c0fuwQabQeeZRZdCKkfz9wfgdgp")}
                   className=" bg-accent-1 text-white shadow-sm hover:bg-accent-2 hover:text-accent-1 border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
                 >
                   {intl.formatMessage({ id: "plans_button" })}
@@ -298,18 +298,18 @@ export default function Plans({
                 </h3>
 
                 <div className="mt-6 flex flex-col  ">
-                  <span className="text-xl font-bold tracking-tight text-accent-1">Desde</span>
+                  <span className="text-xl font-bold tracking-tight text-accent-1">{intl.formatMessage({ id: "from" })}</span>
                   <div className=" flex flex-col">
-                    <span className=" font-bold tracking-tight text-accent-1"><span className="text-3xl">$ {price3}</span> <span className="text-1xl ml-1"> de</span></span>
-                    <span className="text-1xl font-bold tracking-tight text-accent-1">Pesos Colombianos</span>
+                    <span className=" font-bold tracking-tight text-accent-1"><span className="text-3xl">$ {price3}</span> </span>
+                    <span className="text-1xl font-bold tracking-tight text-accent-1">{intl.formatMessage({ id: "currency" })}</span>
                   </div>
                   <span className="text-base font-semibold leading-6 text-cyan-500 mt-2">
-                    {cyantext1}
+                    {cyantext3}
                   </span>
                 </div>
 
                 <button
-                  onClick={() => onOpenForm(true)}
+                  onClick={() => router.push("https://share-eu1.hsforms.com/1c0fuwQabQeeZRZdCKkfz9wfgdgp")}
                   className=" bg-accent-1 text-white shadow-sm hover:bg-accent-2 hover:text-accent-1 border border-white mt-6 block rounded-[50px] py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-white"
                 >
                   {intl.formatMessage({ id: "plans_button" })}
@@ -397,13 +397,13 @@ export default function Plans({
                 </h3>
 
                 <div className="mt-6 flex flex-col  ">
-                  <span className="text-xl font-bold tracking-tight text-accent-1">Desde</span>
+                  <span className="text-xl font-bold tracking-tight text-accent-1">{intl.formatMessage({ id: "from" })}</span>
                   <div className=" flex flex-col">
-                    <span className=" font-bold tracking-tight text-accent-1"><span className="text-3xl">$ {price4}</span> <span className="text-1xl ml-1"> de</span></span>
-                    <span className="text-1xl font-bold tracking-tight text-accent-1">Pesos Colombianos</span>
+                    <span className=" font-bold tracking-tight text-accent-1"><span className="text-3xl">$ {price4}</span> </span>
+                    <span className="text-1xl font-bold tracking-tight text-accent-1">{intl.formatMessage({ id: "currency" })}</span>
                   </div>
                   <span className="text-base font-semibold leading-6 text-cyan-500 mt-2">
-                    {cyantext1}
+                    {cyantext4}
                   </span>
                 </div>
 
