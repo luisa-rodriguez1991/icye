@@ -14,15 +14,7 @@ export default function Index({ events, footer,page }: any) {
 
   return (
     <Layout footerInfo={footer} onOpenForm={setOpen} openForm={open}>
-        <Head>
-            <title>{intl.formatMessage({ id: "breadcrumb_events" })}</title>
-            <link
-                rel="canonical"
-                href={`https://www.icyecolombia.com/events`}
-            />
-            <link rel="alternate" hrefLang="es" href="https://www.icyecolombia.com/es/events" />
-            <link rel="alternate" hrefLang="en" href="https://www.icyecolombia.com/en/events" />
-        </Head>
+
       <Breadcrumb
         miVariable={intl.formatMessage({ id: "breadcrumb_events" })}
       />
