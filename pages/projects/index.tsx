@@ -25,30 +25,65 @@ export default function Projects({
   const intl = useIntl();
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [list, setList] = useState([]);
-  const [excludedListFilters, setExcludedListFilters] = useState<any[]>([]);
+  const [includedListFilters, setincludedListFilters] = useState<any[]>([]);
+  const [excludedListFilters, setexcludedListFilters] = useState<any[]>([]);
 
   useEffect(() => {
     fetch(
-      `https://editingwp.icyecolombia.com/wp-json/wp/v2/posts?categories=4&_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,excerpt,categories&lang=${locale}${
-        Object.keys(excludedListFilters).length > 0
-          ? `&categories_exclude=${excludedListFilters}`
+      `https://editingwp.icyecolombia.com/wp-json/wp/v2/categories?parent=18&_fields=id`
+    
+    )
+      .then((response) => response.json())
+      .then((list) => {
+        list.map((item:any)=> setincludedListFilters(oldlist=>!oldlist.includes(item.id)?[...oldlist,item.id]:[...oldlist]))
+      });
+  }, []); // Only re-run the effect if count changes
+
+  useEffect(() => {
+    fetch(
+      `https://editingwp.icyecolombia.com/wp-json/wp/v2/categories?parent=17&_fields=id`
+    
+    )
+      .then((response) => response.json())
+      .then((list) => {
+        list.map((item:any)=> setincludedListFilters(oldlist=>!oldlist.includes(item.id)?[...oldlist,item.id]:[...oldlist]))
+      });
+  }, []); // Only re-run the effect if count changes
+
+  useEffect(() => {
+    fetch(
+      `https://editingwp.icyecolombia.com/wp-json/wp/v2/categories?parent=19&_fields=id`
+    
+    )
+      .then((response) => response.json())
+      .then((list) => {
+        list.map((item:any)=> setincludedListFilters(oldlist=>!oldlist.includes(item.id)?[...oldlist,item.id]:[...oldlist]))
+      });
+  }, []); // Only re-run the effect if count changes
+
+
+  useEffect(() => {
+    fetch(
+      `https://editingwp.icyecolombia.com/wp-json/wp/v2/posts?_fields=acf,jetpack_featured_media_url,id,content,slug,date,title,excerpt,categories&lang=${locale}${
+        Object.keys(includedListFilters).length > 0
+          ? `&categories=${includedListFilters}`
           : ""
-      }`
+      }&per_page=100`
     )
       .then((response) => response.json())
       .then((dog) => setList(dog));
-  }, [excludedListFilters, locale]); // Only re-run the effect if count changes
+  }, [includedListFilters, locale]); // Only re-run the effect if count changes
 
   const setFilters = (categoryId: any, checked: any) => {
-    checked ? removeCategory(categoryId) : addCategory(categoryId);
+    checked ? addCategory(categoryId) : removeCategory(categoryId);
   };
 
   const removeCategory = (categoryId: any) => {
-    setExcludedListFilters(excludedListFilters.filter((a) => a !== categoryId));
+    setincludedListFilters(includedListFilters.filter((a) => a !== categoryId));
   };
 
   const addCategory = (categoryId: any) => {
-    setExcludedListFilters([...excludedListFilters, categoryId]);
+    setincludedListFilters([...includedListFilters, categoryId]);
   };
 
   return (
@@ -67,7 +102,7 @@ export default function Projects({
               <h1 className="mt-6 mb-2 text-4xl font-bold tracking-tight text-accent-1 sm:text-5xl">
                 {intl.formatMessage({ id: "projects_title" })}
               </h1>
-
+             
          
             </div>
 
@@ -120,6 +155,9 @@ export default function Projects({
                           <input
                             id={`filter-${option.id}-${optionIdx}`}
                             name={`${option.id}[]`}
+                            onChange={(x) =>
+                              setFilters(option.id, x.target.checked)
+                            }
                             type="checkbox"
                             defaultChecked={true}
                             className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
@@ -182,6 +220,9 @@ export default function Projects({
                           <input
                             id={`filter-${option.id}-${optionIdx}`}
                             name={`${option.id}[]`}
+                            onChange={(x) =>
+                              setFilters(option.id, x.target.checked)
+                            }
                             type="checkbox"
                             defaultChecked={true}
                             className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
